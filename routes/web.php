@@ -9,6 +9,7 @@ use App\Http\Controllers\StudentController;
 use App\Http\Controllers\KnowledgeController;
 use App\Http\Controllers\GroupController;
 use App\Http\Controllers\TeacherController;
+use App\Http\Controllers\AiController;
 use Illuminate\Support\Facades\Route;
 
 // Redirect the root path to /dashboard
@@ -45,8 +46,11 @@ Route::middleware('auth')->group(function () {
 
         // Common life
         Route::get('common-life', [CommonLifeController::class, 'index'])->name('common-life.index');
+
+        Route::get('/create-questionnary',[AiController::class, 'getIaResponse'])->name('ia.response');
+
+        Route::post('/knowledge-store', [KnowledgeController::class, 'store'])->name('knowledge.store');
     });
 
 });
-
 require __DIR__.'/auth.php';
