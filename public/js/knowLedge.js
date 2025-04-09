@@ -64,6 +64,7 @@
                     modal.style.display = "none";
                     modal.classList.remove("open");
                     select.value = "";
+                    setTimeout(function () { document.location.reload(true); }, 100);
               } else {
                     console.error('Failed to create the Knowledge.');
               }

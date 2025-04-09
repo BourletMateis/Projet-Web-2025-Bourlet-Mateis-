@@ -95,11 +95,11 @@
                     <div class="w-full mt-5">
                     <div class="flex items-baseline flex-wrap lg:flex-nowrap gap-2.5">
                         <select id="mySelect" class="select" name="select" onchange="gererSelection(this)">
-                            <option value="0" disabled selected>-- Sélectionnez une option --</option>
+                            <option value="0" disabled selected>-- Sélectionnez un questionnaire --</option>
                             <option value="add">➕ Ajouter un questionnaire</option> 
-                            <option value="1">Option 1</option>
-                            <option value="2">Option 2</option>
-                            <option value="3">Option 3</option>
+                            @foreach ($knowledge as $knowledges)
+                                <option class="" value="{{ $knowledges->id }}">{{ $knowledges->title }}</option>
+                            @endforeach
                         </select>
                     </div>
                 </div>

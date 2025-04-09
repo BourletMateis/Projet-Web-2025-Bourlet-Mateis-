@@ -949,3 +949,1148 @@ DEBUG:httpcore.http11:response_closed.complete
 DEBUG:httpcore.connection:close.started
 DEBUG:httpcore.connection:close.complete
 DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002606F145700>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x000002606F13C450> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002606EF6CE00>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 16:56:51 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-reset', b'49'), (b'x-ratelimitbysize-remaining-minute', b'467745'), (b'ratelimitbysize-query-cost', b'32255'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-remaining', b'467745'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-ratelimitbysize-remaining-month', b'994522741'), (b'x-envoy-upstream-service-time', b'39571'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'39573'), (b'x-kong-proxy-latency', b'6'), (b'x-kong-request-id', b'71674746cc18bc6044e3a07e9f393c2b'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=knBYTF8I6jimOAWLn4MUSqwNOd0MlWxgQX2AJq_POYY-1744217811-1.0.1.1-6rpzSRkTotXI1HNV4x65Hbr32i3qvH5rgZJidgVFExgSGXyAujWUDvBvQ.UL5RQEStIJsiQisd_xM2xq_eOPfwYwrLut2Ghx6bxq00ROnT4; path=/; expires=Wed, 09-Apr-25 17:26:51 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92db89527a722a32-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001929F7F5700>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x000001929F7EC450> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001929F61CE00>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 16:57:15 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-query-cost', b'32255'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-remaining', b'435490'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-ratelimitbysize-remaining-minute', b'435490'), (b'ratelimitbysize-reset', b'1'), (b'x-ratelimitbysize-remaining-month', b'994490486'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-envoy-upstream-service-time', b'15805'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'15805'), (b'x-kong-proxy-latency', b'7'), (b'x-kong-request-id', b'2b2e25492e8df94984922e67e984971b'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=j80O5TPloDn0ZWTdXygerHT8.7qEEYyVIdGOnTysbyg-1744217835-1.0.1.1-oIKxjLULmEVfb5TDzEm8R7.trF2k6VxbSQGWae6BRXaOOtQlTQ2lSYaluo8khI_2VfngIqOQjcfK6tpwNrKh4LgyPEUmTzfhFeLIOCUN.0g; path=/; expires=Wed, 09-Apr-25 17:27:15 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92db8a79edabf120-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001D7324161B0>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x000001D73240C450> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001D73223CE00>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 17:05:09 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'x-ratelimitbysize-remaining-minute', b'467745'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'ratelimitbysize-query-cost', b'32255'), (b'ratelimitbysize-limit', b'500000'), (b'x-ratelimitbysize-remaining-month', b'994458231'), (b'ratelimitbysize-remaining', b'467745'), (b'ratelimitbysize-reset', b'5'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-envoy-upstream-service-time', b'14501'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'14501'), (b'x-kong-proxy-latency', b'5'), (b'x-kong-request-id', b'0026e62dcc05025bbbe0ad17c8b98421'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=3SuGk2X27F.V1Xt8V0AgXiexv1M3N0jBDsJjRpRdaB8-1744218309-1.0.1.1-c6bxoGLI7sJtNFQkhyUwaAbgkahXEB7yClPJgY6986t9RbJjsf.UZ4PqMInfU.mfDFRYDtYzu74jfu.eIBQE0jaIPtJw_mr5AsAaQZjR1Ks; path=/; expires=Wed, 09-Apr-25 17:35:09 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92db96182800f0f8-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001D5591961B0>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x000001D55918C450> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001D559195700>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 17:06:49 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-query-cost', b'32253'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-remaining', b'467747'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-ratelimitbysize-remaining-month', b'994425978'), (b'ratelimitbysize-reset', b'22'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-remaining-minute', b'467747'), (b'x-envoy-upstream-service-time', b'11242'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'11243'), (b'x-kong-proxy-latency', b'6'), (b'x-kong-request-id', b'cda742588283822483e7db1a9bafd21b'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=hu9iW._qF9uR8JwxVaQehhHVQe3ukdVEAbM4kdWXwyA-1744218409-1.0.1.1-KSdG3m5i7Fhnr.wDieXlLV4qziG3mRKWczQeMMfYwRiCh0hdoVDy0nngsNgPxUUMdtIpUzqHnTFSUKCRhH0r3EeyALxl1oCPiyu5cGXLaZw; path=/; expires=Wed, 09-Apr-25 17:36:49 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92db989ecfc322a4-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001DC063B6270>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x000001DC063AC450> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001DC061DF530>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 18:35:39 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-query-cost', b'32255'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-remaining-minute', b'467745'), (b'x-ratelimitbysize-remaining-month', b'994393723'), (b'ratelimitbysize-reset', b'33'), (b'ratelimitbysize-remaining', b'467745'), (b'ratelimitbysize-limit', b'500000'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-envoy-upstream-service-time', b'11436'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'11437'), (b'x-kong-proxy-latency', b'7'), (b'x-kong-request-id', b'c2aa1124e1bfd14b61a01861bb418a7f'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=dA0EToEDI1bJf7oEIUj65WQ6NVRmH0hPhrYGB2.UG8I-1744223739-1.0.1.1-N7L67HOMBYjV4v61uRLc_XjKHJDPW2PjVK8GwO64483Q7O9iZFeV8SMzgkLsllAdAVa_CT1gt61Lb_hjpJDcpscOsszc2isIDVJ8IiJcq_o; path=/; expires=Wed, 09-Apr-25 19:05:39 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92dc1ab91afad0bb-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x00000229DAF35700>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x00000229DAF2C450> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x00000229DAD5CE00>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 18:36:28 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-remaining-minute', b'444742'), (b'ratelimitbysize-query-cost', b'32255'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-remaining', b'444742'), (b'x-ratelimitbysize-remaining-month', b'994361468'), (b'ratelimitbysize-reset', b'43'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-envoy-upstream-service-time', b'11571'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'11572'), (b'x-kong-proxy-latency', b'5'), (b'x-kong-request-id', b'38c95b0be527f0759db59c1a67ff176d'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=AoJ.BspsTh65V2xaKyVKileddw5h9kuDNhrWCkQG82M-1744223788-1.0.1.1-UVV2aiIS0bgJVIjuvSSIXlg0_Quf8kl9rDrbu_w7Xmnd.t9x6wop_CFx33mAfLEk8v9u2tb3RhJWNbjZf49jqqR55jRht0kigWL8cPdGYAU; path=/; expires=Wed, 09-Apr-25 19:06:28 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92dc1bef5deff0f4-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001B50377B890>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x000001B50394C450> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001B5037BEBA0>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 18:41:17 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'x-ratelimitbysize-remaining-minute', b'467744'), (b'ratelimitbysize-remaining', b'467744'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-ratelimitbysize-remaining-month', b'994329212'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-reset', b'55'), (b'ratelimitbysize-query-cost', b'32256'), (b'x-envoy-upstream-service-time', b'11285'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'11298'), (b'x-kong-proxy-latency', b'6'), (b'x-kong-request-id', b'1474ec63a08cee130d706a776ed2f635'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=M0uBkVdXKv2FK7ULkDw6PoR.4nmGD7M5.fF6crmHWS0-1744224077-1.0.1.1-XtD41UtudIffDFo_IkqEIlR201UoES.Lc6O0wrRHxcW.9ZfsphPUvCjPnfiVeSkJGLM3PLlsgprdferVhlxqyeK8McD5lA6Y3o9SZqPgCOg; path=/; expires=Wed, 09-Apr-25 19:11:17 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92dc22fa0a27d63e-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000021085D96150>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x0000021085D8C450> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000021085D67530>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 18:41:41 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-remaining-minute', b'435489'), (b'ratelimitbysize-query-cost', b'32255'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-remaining', b'435489'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'ratelimitbysize-reset', b'30'), (b'x-ratelimitbysize-remaining-month', b'994296957'), (b'x-envoy-upstream-service-time', b'10937'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'10937'), (b'x-kong-proxy-latency', b'7'), (b'x-kong-request-id', b'e62fcb1e1d30814d3cd12f5add8e3101'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=64iPOD0QGxryxCRx0Q4BzrwyDmofL9pGY04W.z_Zxmw-1744224101-1.0.1.1-w3oCWy0WumyET2FUptTimqoKZwiqx6SSHW9KjGPhD56gSsIBQsQivYvIG36jSl6uCy3JhFqFSu0gs3p6RY7J56fk8ZioleSAiOMS2cZFGLk; path=/; expires=Wed, 09-Apr-25 19:11:41 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92dc23940d082a16-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+ERROR:root:Erreur pendant le décodage : Invalid \escape: line 1 column 7 (char 6)
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000024407EC60C0>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x0000024407EBC450> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000024407D2EC00>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 18:42:58 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-remaining-minute', b'454014'), (b'ratelimitbysize-query-cost', b'32255'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-remaining', b'454014'), (b'x-ratelimitbysize-remaining-month', b'994264702'), (b'ratelimitbysize-reset', b'13'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-envoy-upstream-service-time', b'11377'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'11378'), (b'x-kong-proxy-latency', b'6'), (b'x-kong-request-id', b'd75c1038de6a7640ede0d32d9d6cec7c'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=03L.apqhQC59fGCnacVXupLeZX86t7rcF9UtlLOpGC8-1744224178-1.0.1.1-1L11.pqsYDcoRxaypaODIBUJYSytIwZhyOfrUhXY8VF2pZ92MnIeni_UWnY3cVinfxVYLD8gd3JlikLCEbwNYf6tAYOmxDURcy_LlAb4w8g; path=/; expires=Wed, 09-Apr-25 19:12:58 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92dc2574f9ec0053-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001D394016210>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x000001D39400C450> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001D392EFF530>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 18:44:33 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-query-cost', b'32255'), (b'x-ratelimitbysize-remaining-minute', b'467745'), (b'ratelimitbysize-remaining', b'467745'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-reset', b'38'), (b'x-ratelimitbysize-remaining-month', b'994232447'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-envoy-upstream-service-time', b'11138'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'11139'), (b'x-kong-proxy-latency', b'7'), (b'x-kong-request-id', b'117c36692b766973f774d56fa80f8e7d'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=ZqbC3kND7zO7qMZIN1v8rUQlYtrl48Aktn3GWwjApAk-1744224273-1.0.1.1-.jUvBHTU6urhjppsOlxd7AVesvRzHHTAIN3QLEVDDhXkPbzc.auQ6cdGKQCzBQkiSWGS6ZbS6Dsn0b07GztaAnWe3vACy8GbnK4hUNBgst8; path=/; expires=Wed, 09-Apr-25 19:14:33 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92dc27ca4bd3ebb0-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001D50EE99E20>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x000001D50EF1C450> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001D50EE9A780>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 18:58:48 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-limit', b'500000'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-ratelimitbysize-remaining-minute', b'467745'), (b'x-ratelimitbysize-remaining-month', b'994200192'), (b'ratelimitbysize-remaining', b'467745'), (b'ratelimitbysize-reset', b'23'), (b'ratelimitbysize-query-cost', b'32255'), (b'x-envoy-upstream-service-time', b'11514'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'11515'), (b'x-kong-proxy-latency', b'7'), (b'x-kong-request-id', b'b06ba61e2a208269f440760f6e32d745'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=ITOhJBNwjT6Lbw_okqrUQfLeTKjH1TJ6_WnN9MTJ8Ek-1744225128-1.0.1.1-M5ogLsY5rn6xBT3Iin65UKQezsGaY.oyw_zH2k0IeEn9oluINU4LvxIh.NhiuX.AbClVlhRzWjvTvv558Wt1HS.curBDsu4m8GemsutcH_4; path=/; expires=Wed, 09-Apr-25 19:28:48 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92dc3ca5bf3cd373-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:root:Contenu JSON extrait de l'IA : [
+  {
+    "question": "Quel est le langage utilisé principalement pour le développement d'applications Android ?",
+    "options": ["Java", "Python", "JavaScript"],
+    "answer": 1
+  },
+  {
+    "question": "Quel langage est souvent utilisé pour le développement de scripts côté client dans les navigateurs web ?",
+    "options": ["Java", "CSS", "JavaScript"],
+    "answer": 3
+  },
+  {
+    "question": "Quelle est la différence principale entre Java et JavaScript ?",
+    "options": ["Java est utilisé pour le développement web, JavaScript pour les applications mobiles", "Java est un langage compilé, JavaScript est un langage interprété", "Java est un langage de script, JavaScript est un langage de programmation"],
+    "answer": 2
+  },
+  {
+    "question": "Quel est le type de données utilisé pour stocker une chaîne de caractères en JavaScript ?",
+    "options": ["String", "char", "text"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle est la syntaxe correcte pour déclarer une variable en Java ?",
+    "options": ["var myVar;", "int myVar;", "let myVar;"],
+    "answer": 2
+  },
+  {
+    "question": "Quelle méthode est utilisée pour afficher du texte dans la console en JavaScript ?",
+    "options": ["console.log()", "System.out.println()", "print()"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le framework JavaScript le plus populaire pour le développement d'applications web ?",
+    "options": ["React", "Django", "Spring"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le type de données utilisé pour stocker des nombres entiers en Java ?",
+    "options": ["int", "integer", "number"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le mot-clé utilisé pour définir une fonction en JavaScript ?",
+    "options": ["function", "def", "func"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le principal moteur d'exécution JavaScript utilisé dans les navigateurs web ?",
+    "options": ["V8", "JVM", "Node.js"],
+    "answer": 1
+  }
+]
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001B44D5AA780>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x000001B44D62C450> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001B44C51F530>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 18:59:00 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'x-ratelimitbysize-remaining-minute', b'435490'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'ratelimitbysize-query-cost', b'32255'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-remaining', b'435490'), (b'x-ratelimitbysize-remaining-month', b'994167937'), (b'ratelimitbysize-reset', b'10'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-envoy-upstream-service-time', b'10587'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'10588'), (b'x-kong-proxy-latency', b'6'), (b'x-kong-request-id', b'e867cc0b5c41cc53b6867735c8ffe471'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=gMQI8veJFsH9ETTaS_1vzHnGa4GwhGD.2Q0rTgQ8MbU-1744225140-1.0.1.1-cmTukGXByQDbMR8Y6OZeje8VGHfQvU4QeveraUdVCFP83.1ivyh4yaC1Q5oppng1FWN33x5vPV2awChwcCe8H9FGjnlUNUBnYe0QMa.fUgg; path=/; expires=Wed, 09-Apr-25 19:29:00 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92dc3cf7acc0d128-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:root:Contenu JSON extrait de l'IA : [
+  {
+    "question": "Quel est le langage de programmation utilisé principalement pour le développement web côté client ?",
+    "options": ["Java", "JavaScript", "Python"],
+    "answer": 2
+  },
+  {
+    "question": "Quel est l'outil de gestion de versions le plus couramment utilisé avec Java et JavaScript ?",
+    "options": ["Git", "SVN", "Mercurial"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le langage de programmation orienté objet souvent utilisé pour le développement d'applications d'entreprise ?",
+    "options": ["JavaScript", "Java", "Ruby"],
+    "answer": 2
+  },
+  {
+    "question": "Quel framework JavaScript est souvent utilisé pour créer des interfaces utilisateur dynamiques ?",
+    "options": ["React", "Django", "Spring"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le nom du compilateur Java qui convertit le code source Java en bytecode ?",
+    "options": ["javac", "node", "gcc"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle bibliothèque JavaScript est souvent utilisée pour manipuler le DOM ?",
+    "options": ["JQuery", "Angular", "Hibernate"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le gestionnaire de dépendances le plus couramment utilisé avec Java ?",
+    "options": ["Maven", "npm", "Gradle"],
+    "answer": 3
+  },
+  {
+    "question": "Quel framework Java est souvent utilisé pour développer des applications web ?",
+    "options": ["Spring", "Express", "Django"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le nom du moteur JavaScript développé par Google ?",
+    "options": ["V8", "SpiderMonkey", "Chakra"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le type de fichier utilisé pour distribuer des applications Java ?",
+    "options": ["JAR", "WAR", "EXE"],
+    "answer": 1
+  }
+]
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000024B72A66240>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x0000024B72A5C450> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000024B7291CE00>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 18:59:22 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-query-cost', b'32255'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-remaining', b'415257'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'ratelimitbysize-reset', b'49'), (b'x-ratelimitbysize-remaining-minute', b'415257'), (b'x-ratelimitbysize-remaining-month', b'994135682'), (b'x-envoy-upstream-service-time', b'11015'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'11016'), (b'x-kong-proxy-latency', b'9'), (b'x-kong-request-id', b'de40a1119737a504cd3510480a803c02'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=.jPVk6SYneTSNoAj7.g2_PQRGISSl8aSIyAnOkVLO7c-1744225162-1.0.1.1-vEc_kiEdCCkBXXtegKa7WDEciYuzCJ41sB4LqP4CN.WiT4EBhs9UAGK2ye6SdyNns6wR4dArmB5bDYEA2HaeWMRieGRwkEQRaxVhlzmpRkw; path=/; expires=Wed, 09-Apr-25 19:29:22 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92dc3d7aa9580157-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:root:Contenu JSON extrait de l'IA : [
+  {
+    "question": "Quel est le créateur du langage Python ?",
+    "options": ["Guido van Rossum", "James Gosling", "Bjarne Stroustrup"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le type de données en Python utilisé pour stocker une collection ordonnée et modifiable ?",
+    "options": ["Set", "List", "Tuple"],
+    "answer": 2
+  },
+  {
+    "question": "Quel mot-clé est utilisé pour définir une fonction en Python ?",
+    "options": ["function", "def", "func"],
+    "answer": 2
+  },
+  {
+    "question": "Quelle est la version de Java connue sous le nom de 'Java SE 8' ?",
+    "options": ["Java 1.8", "Java 1.7", "Java 1.9"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le type de données en Java utilisé pour stocker des objets de type caractère ?",
+    "options": ["char", "String", "Character"],
+    "answer": 1
+  },
+  {
+    "question": "Quel mot-clé est utilisé pour définir une classe en Java ?",
+    "options": ["class", "classdef", "classe"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le module standard en Python utilisé pour manipuler les expressions régulières ?",
+    "options": ["regex", "re", "regexp"],
+    "answer": 2
+  },
+  {
+    "question": "Quel est le package en Java utilisé pour effectuer des opérations de base de données ?",
+    "options": ["java.sql", "java.database", "java.db"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le mot-clé utilisé pour déclarer une variable en Python ?",
+    "options": ["var", "let", "aucun mot-clé n'est nécessaire"],
+    "answer": 3
+  },
+  {
+    "question": "Quel est le mécanisme en Java utilisé pour gérer les exceptions ?",
+    "options": ["try-catch", "exception-handle", "error-manage"],
+    "answer": 1
+  }
+]
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x00000242B61C23F0>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x00000242B61BC450> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x00000242B602EC60>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 18:59:44 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-query-cost', b'32256'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-remaining', b'406774'), (b'x-ratelimitbysize-remaining-month', b'994103426'), (b'ratelimitbysize-reset', b'27'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-remaining-minute', b'406774'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-envoy-upstream-service-time', b'11612'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'11615'), (b'x-kong-proxy-latency', b'5'), (b'x-kong-request-id', b'4946243f426b167afcbcfc6167da6314'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=6x7Qx57uZx_y0HWTCqSbo7EsM6UcT5uxm.9Fd0FSNrU-1744225184-1.0.1.1-mWsrBk6mhTkrtUEohT6GePaGD5f4PKD1GYVPcW8_KNy.L6YzUYSgmnyQ9Zrh5TJ7S7qB7LvsvRRw7rxlHtiAeL257o8JRr8pRfPI98V6gLo; path=/; expires=Wed, 09-Apr-25 19:29:44 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92dc3e04986b0163-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:root:Contenu JSON extrait de l'IA : [
+  {
+    "question": "Quel est le langage de balisage utilisé pour créer des pages Web ?",
+    "options": ["HTML", "CSS", "JavaScript"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle balise HTML est utilisée pour créer un lien hypertexte ?",
+    "options": ["<a>", "<link>", "<href>"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle propriété CSS permet de changer la couleur de fond d'un élément ?",
+    "options": ["background-color", "color", "border-color"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le mot-clé utilisé pour définir une fonction en Python ?",
+    "options": ["function", "def", "define"],
+    "answer": 2
+  },
+  {
+    "question": "En Python, quel est l'opérateur utilisé pour comparer l'égalité entre deux valeurs ?",
+    "options": ["==", "=", "==="],
+    "answer": 1
+  },
+  {
+    "question": "Quelle est la classe de base en Java d'où toutes les classes héritent ?",
+    "options": ["Object", "Base", "Root"],
+    "answer": 1
+  },
+  {
+    "question": "En Java, quel mot-clé est utilisé pour définir une constante ?",
+    "options": ["const", "final", "static"],
+    "answer": 2
+  },
+  {
+    "question": "Quelle balise HTML est utilisée pour définir une section de contenu ?",
+    "options": ["<section>", "<div>", "<content>"],
+    "answer": 1
+  },
+  {
+    "question": "En Python, quelle instruction permet de sortir d'une boucle ?",
+    "options": ["exit", "break", "continue"],
+    "answer": 2
+  },
+  {
+    "question": "En Java, quelle méthode est utilisée pour démarrer un thread ?",
+    "options": ["run()", "start()", "execute()"],
+    "answer": 2
+  }
+]
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001B18EF89E20>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x000001B18F0DC450> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001B18EF4EBA0>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 19:00:06 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-query-cost', b'32256'), (b'x-ratelimitbysize-remaining-minute', b'397729'), (b'ratelimitbysize-remaining', b'397729'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-reset', b'6'), (b'x-ratelimitbysize-remaining-month', b'994071170'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-envoy-upstream-service-time', b'11935'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'11936'), (b'x-kong-proxy-latency', b'8'), (b'x-kong-request-id', b'7c186950c4c68d6328515310f7d14336'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=X0kgVACnJbgXBMYubb4HIx1604fHpeNr7gx_msU3YEo-1744225206-1.0.1.1-2F7Y6gdXorqAhabC0_xRpZCtk96nUwv2XXDHDxVeqeiUIFswMA3haP2xv71r8nTY0l1abcA_X7WzkC6KEgATlq_bEG7Ge7LU3CznEAwVgaM; path=/; expires=Wed, 09-Apr-25 19:30:06 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92dc3e8bc803037b-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:root:Contenu JSON extrait de l'IA : [
+  {
+    "question": "Quel est le langage de balisage utilisé pour créer des pages Web ?",
+    "options": ["HTML", "CSS", "JavaScript"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le rôle principal de CSS dans le développement Web ?",
+    "options": ["Structurer le contenu", "Styler les éléments", "Gérer les interactions utilisateur"],
+    "answer": 2
+  },
+  {
+    "question": "Quel est le langage de programmation principalement utilisé pour le développement backend en Java ?",
+    "options": ["Python", "Java", "HTML"],
+    "answer": 2
+  },
+  {
+    "question": "Quel est l'acronyme de HTML ?",
+    "options": ["Hyper Text Markup Language", "Hyperlinks and Text Markup Language", "Highly Typed Markup Language"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est l'acronyme de CSS ?",
+    "options": ["Cascading Style Sheets", "Computer Style Sheets", "Creative Style Sheets"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle est la syntaxe correcte pour définir une variable en Python ?",
+    "options": ["var x = 10", "x = 10", "int x = 10"],
+    "answer": 2
+  },
+  {
+    "question": "Quelle est la méthode correcte pour afficher du texte en Python ?",
+    "options": ["print('Hello, World!')", "console.log('Hello, World!')", "System.out.println('Hello, World!')"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le rôle principal de Java dans le développement d'applications ?",
+    "options": ["Styler les éléments", "Gérer les interactions utilisateur", "Créer des applications robustes et sécurisées"],
+    "answer": 3
+  },
+  {
+    "question": "Quel est le langage de programmation principalement utilisé pour le développement de scripts automatisés ?",
+    "options": ["Java", "HTML", "Python"],
+    "answer": 3
+  },
+  {
+    "question": "Quelle balise HTML est utilisée pour créer un hyperlien ?",
+    "options": ["<a>", "<link>", "<href>"],
+    "answer": 1
+  }
+]
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001D31C26CC20>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x000001D31C3AC450> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001D31C21EC00>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 19:00:28 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-query-cost', b'32255'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'ratelimitbysize-remaining', b'398617'), (b'x-ratelimitbysize-remaining-minute', b'398617'), (b'ratelimitbysize-reset', b'43'), (b'x-ratelimitbysize-remaining-month', b'994038915'), (b'x-envoy-upstream-service-time', b'11391'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'11392'), (b'x-kong-proxy-latency', b'14'), (b'x-kong-request-id', b'79f43d23fb03155082e9520fec73187f'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=eTzPVaQvDMahHmn_RnEkNhwqkKUdrX_smYYo_H6uNfc-1744225228-1.0.1.1-bV4ujWFYdsjpvyPXNUVgwnfFOpkV8f.n9IPkLCoZrWANFevXpu_lNLclvn0GTLWzWGgbVFWt6_IjCda5Qs2Jfb4NHvAkJRtar28AF7Gqjuk; path=/; expires=Wed, 09-Apr-25 19:30:28 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92dc3f16c81f78fb-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:root:Contenu JSON extrait de l'IA : [
+  {
+    "question": "Quel est le langage de programmation qui utilise des indentations pour définir des blocs de code ?",
+    "options": ["Java", "Python", "C++"],
+    "answer": 2
+  },
+  {
+    "question": "Quel est le fichier d'extension principal pour les scripts Python ?",
+    "options": [".py", ".java", ".js"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le type de collection en Python qui est non ordonné et ne permet pas de doublons ?",
+    "options": ["List", "Set", "Tuple"],
+    "answer": 2
+  },
+  {
+    "question": "En Java, quel mot-clé est utilisé pour créer une classe abstraite ?",
+    "options": ["final", "abstract", "static"],
+    "answer": 2
+  },
+  {
+    "question": "Quel est l'opérateur utilisé pour concaténer des chaînes de caractères en Python ?",
+    "options": ["+", "&", "*"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le framework web le plus populaire pour Python ?",
+    "options": ["Django", "Spring", "Flask"],
+    "answer": 1
+  },
+  {
+    "question": "En Java, quel mot-clé est utilisé pour définir une constante ?",
+    "options": ["const", "final", "static"],
+    "answer": 2
+  },
+  {
+    "question": "Quel est le nom de la bibliothèque standard Python utilisée pour manipuler des expressions régulières ?",
+    "options": ["re", "regex", "pattern"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le type de collection en Python qui est ordonné, indexé et permet des doublons ?",
+    "options": ["List", "Set", "Tuple"],
+    "answer": 1
+  },
+  {
+    "question": "En Java, quel est le moteur d'exécution qui convertit le bytecode en code machine ?",
+    "options": ["JVM", "JRE", "JDK"],
+    "answer": 1
+  }
+]
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001A5781F9700>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x000001A57834C450> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001A577F204A0>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 19:00:47 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'x-ratelimitbysize-remaining-month', b'994006660'), (b'ratelimitbysize-reset', b'23'), (b'ratelimitbysize-query-cost', b'32255'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-remaining', b'398945'), (b'x-ratelimitbysize-remaining-minute', b'398945'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-envoy-upstream-service-time', b'10409'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'10412'), (b'x-kong-proxy-latency', b'5'), (b'x-kong-request-id', b'e865073e9bf210196cb354514cb0e317'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=bIKuBdvdJwftx8OHbkBfNC8kw4Y2KnUEWYcQZawx0GU-1744225247-1.0.1.1-xZjmYLjU3yw1ugcEzBtHSrqdZFE9Y8z3vbg1hSKZfw0rOeK3HnT9x6csm4LRWRqAJJd946yOyldFIX_HTD0gFs...y3TxON87j6zCi231bU; path=/; expires=Wed, 09-Apr-25 19:30:47 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92dc3f950c5a6fd6-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:root:Contenu JSON extrait de l'IA : [
+  {
+    'question': 'Quel est le langage de programmation créé par Guido van Rossum ?',
+    'options': ['Python', 'Java', 'C++'],
+    'answer': 1
+  },
+  {
+    'question': 'Quel est le principal framework web pour Python ?',
+    'options': ['Spring', 'Django', 'Ruby on Rails'],
+    'answer': 2
+  },
+  {
+    'question': 'Quel est le type de données en Python utilisé pour stocker une séquence ordonnée de valeurs ?',
+    'options': ['Set', 'Tuple', 'List'],
+    'answer': 3
+  },
+  {
+    'question': 'Quel est l\'environnement d\'exécution pour Java ?',
+    'options': ['JVM', 'CLR', 'Node.js'],
+    'answer': 1
+  },
+  {
+    'question': 'Quelle est la syntaxe pour déclarer une variable en Python ?',
+    'options': ['var x = 10', 'int x = 10', 'x = 10'],
+    'answer': 3
+  },
+  {
+    'question': 'Quel est le principal framework pour les applications Android ?',
+    'options': ['Flask', 'Flutter', 'Android Studio'],
+    'answer': 3
+  },
+  {
+    'question': 'Quelle est la fonction utilisée pour imprimer à l\'écran en Python ?',
+    'options': ['print()', 'echo()', 'printf()'],
+    'answer': 2
+  },
+  {
+    'question': 'Quel est le type de données en Java utilisé pour stocker une séquence d\'éléments de taille fixe ?',
+    'options': ['ArrayList', 'Array', 'Vector'],
+    'answer': 1
+  },
+  {
+    'question': 'Quelle est la boucle en Python utilisée pour parcourir un itérable ?',
+    'options': ['for', 'while', 'do-while'],
+    'answer': 3
+  },
+  {
+    'question': 'Quel est le mot-clé utilisé pour définir une classe en Java ?',
+    'options': ['class', 'def', 'struct'],
+    'answer': 1
+  }
+]
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002BC4FEFB890>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x000002BC4FF7C450> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002BC4FEFA960>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 19:02:08 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-query-cost', b'32258'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-remaining', b'463247'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-ratelimitbysize-remaining-minute', b'463247'), (b'ratelimitbysize-reset', b'5'), (b'x-ratelimitbysize-remaining-month', b'993974402'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-envoy-upstream-service-time', b'12629'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'12629'), (b'x-kong-proxy-latency', b'7'), (b'x-kong-request-id', b'520e585adee1936c3efa5e6a5cbb861d'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=Y1wZtk8T_0Ubfgm4E9AAhdFRez0A7veiZ1f0SJDM8g0-1744225328-1.0.1.1-ITeDBDP2kovHzujgLWNthnsBmfjzX7eq.jbGOABnQS4Es02ApCGDxnXKQj.mO75X6Gw2yHo8p1iqFlMpkcY__rON1hz8RN9YYHHU9.DpCfo; path=/; expires=Wed, 09-Apr-25 19:32:08 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92dc417f8f902a47-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:root:Contenu JSON extrait de l'IA : [
+  {
+    "question": "Quel est le langage de balisage utilisé pour créer des pages Web ?",
+    "options": ["HTML", "CSS", "JavaScript"],
+    "answer": 1
+  },
+  {
+    "question": "Quel langage est utilisé pour styler les pages Web ?",
+    "options": ["CSS", "Python", "Java"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le langage de programmation côté serveur souvent utilisé pour le développement web ?",
+    "options": ["JavaScript", "Python", "HTML"],
+    "answer": 2
+  },
+  {
+    "question": "Quel langage est souvent utilisé pour le développement d'applications Android ?",
+    "options": ["CSS", "Java", "Python"],
+    "answer": 2
+  },
+  {
+    "question": "Quel est le langage de programmation couramment utilisé pour l'intelligence artificielle et l'apprentissage automatique ?",
+    "options": ["JavaScript", "Python", "Java"],
+    "answer": 2
+  },
+  {
+    "question": "Quel langage est souvent utilisé pour ajouter de l'interactivité aux pages Web ?",
+    "options": ["Java", "JavaScript", "HTML"],
+    "answer": 2
+  },
+  {
+    "question": "Quel est le langage de programmation orienté objet le plus utilisé dans le développement d'applications d'entreprise ?",
+    "options": ["Java", "Python", "CSS"],
+    "answer": 1
+  },
+  {
+    "question": "Quel langage est utilisé pour automatiser des tâches de gestion de systèmes ?",
+    "options": ["JavaScript", "Python", "Java"],
+    "answer": 2
+  },
+  {
+    "question": "Quel est le framework JavaScript le plus populaire pour le développement d'applications web ?",
+    "options": ["React", "Django", "Spring"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le langage de programmation utilisé pour le développement de microservices avec Spring Boot ?",
+    "options": ["Java", "Python", "CSS"],
+    "answer": 1
+  }
+]
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001F673FCB890>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x000001F67404C450> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001F673FCA960>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 19:02:21 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-remaining-minute', b'440854'), (b'ratelimitbysize-query-cost', b'32258'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-remaining', b'440854'), (b'x-ratelimitbysize-remaining-month', b'993942144'), (b'ratelimitbysize-reset', b'51'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-envoy-upstream-service-time', b'11338'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'11340'), (b'x-kong-proxy-latency', b'7'), (b'x-kong-request-id', b'6b194e0026133706cb74da516284ea40'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=UDPiY7nfPLEqKQc9sWtq1Xc2mhrNCGZ6pcxGbK0_db4-1744225341-1.0.1.1-COW1cxQfDbRDemnH3Z79QyevYzHt96xYS5WMaB7vnqtD6BE_Zkxn5orn3mS34o.oNG.Rpjiyqb2kjxo6ZEGEkW2p8lxzleyX5F7yGtUy.nc; path=/; expires=Wed, 09-Apr-25 19:32:21 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92dc41d828f32a0f-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:root:Contenu JSON extrait de l'IA : [
+  {
+    "question": "Quel est le langage de balisage utilisé pour créer des pages Web ?",
+    "options": ["HTML", "CSS", "JavaScript"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le langage de programmation souvent utilisé pour le développement web côté client ?",
+    "options": ["Java", "Python", "JavaScript"],
+    "answer": 3
+  },
+  {
+    "question": "Quel est le langage de feuilles de style utilisé pour styliser les pages Web ?",
+    "options": ["CSS", "HTML", "JavaScript"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le langage de programmation le plus couramment utilisé pour le développement d'applications Android ?",
+    "options": ["Python", "Java", "HTML"],
+    "answer": 2
+  },
+  {
+    "question": "Quel est le langage de programmation souvent utilisé pour l'analyse de données et l'intelligence artificielle ?",
+    "options": ["JavaScript", "Python", "Java"],
+    "answer": 2
+  },
+  {
+    "question": "Quelle balise HTML est utilisée pour définir un titre de section ?",
+    "options": ["<h1>", "<div>", "<p>"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le framework JavaScript le plus populaire pour le développement d'applications web monopages ?",
+    "options": ["React", "Django", "Spring"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle est la fonction en Python qui permet d'imprimer quelque chose à l'écran ?",
+    "options": ["print()", "echo()", "console.log()"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle méthode Java est utilisée pour obtenir la longueur d'un tableau ?",
+    "options": ["array.length()", "array.size()", "array.length"],
+    "answer": 3
+  },
+  {
+    "question": "Quelle balise HTML est utilisée pour créer un lien hypertexte ?",
+    "options": ["<a>", "<link>", "<href>"],
+    "answer": 1
+  }
+]
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001B7D1F36300>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x000001B7D1F2C450> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001B7D1ED61E0>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 19:02:44 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-remaining-minute', b'420593'), (b'ratelimitbysize-query-cost', b'32256'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-remaining', b'420593'), (b'x-ratelimitbysize-remaining-month', b'993909888'), (b'ratelimitbysize-reset', b'28'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-envoy-upstream-service-time', b'12449'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'12450'), (b'x-kong-proxy-latency', b'7'), (b'x-kong-request-id', b'6188157abe0c8d5d987f836623a2082f'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=7WVQ088DQwboxNf4IUTGvmq1Bo4RpPwTdVSJ0NUHehA-1744225364-1.0.1.1-OsB5WsIx9FF29sFnHn_LY5iExpf6PP3XRBnhGhqae3HbIGCWQbEWcNbNHAh0CmIqggFsBcAxdWPjxBAUdXNUiK2yc5rfKTsHVv5USqHGa3o; path=/; expires=Wed, 09-Apr-25 19:32:44 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92dc4263aab46ec0-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:root:Contenu JSON extrait de l'IA : [
+  {
+    "question": "Quel est le langage de balisage utilisé pour créer des pages Web ?",
+    "options": ["HTML", "CSS", "JavaScript"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le rôle principal du CSS dans le développement web ?",
+    "options": ["Structurer le contenu", "Styler le contenu", "Interagir avec l'utilisateur"],
+    "answer": 2
+  },
+  {
+    "question": "Quel est le framework Python le plus populaire pour le développement web ?",
+    "options": ["Django", "Java", "React"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle balise HTML est utilisée pour créer un lien hypertexte ?",
+    "options": ["<a>", "<link>", "<href>"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle est la syntaxe correcte pour déclarer une fonction en Python ?",
+    "options": ["function maFonction()", "def maFonction()", "function: maFonction()"],
+    "answer": 2
+  },
+  {
+    "question": "Quelle est la différence entre '==' et '===' en Java ?",
+    "options": ["'==' compare les valeurs et '===' compare les types", "'==' compare les valeurs et '===' compare les références", "'==' compare les références et '===' compare les valeurs"],
+    "answer": 2
+  },
+  {
+    "question": "Quel est l'usage principal de la balise <div> en HTML ?",
+    "options": ["Créer des sections de texte", "Créer des blocs de contenu", "Créer des listes"],
+    "answer": 2
+  },
+  {
+    "question": "Quelle est la commande utilisée pour ajouter un nouveau module en Python à l'aide de pip ?",
+    "options": ["pip add <module>", "pip install <module>", "pip new <module>"],
+    "answer": 2
+  },
+  {
+    "question": "Quel est le rôle de la directive 'import' en Java ?",
+    "options": ["Importer des fichiers", "Importer des classes d'autres packages", "Importer des fonctions"],
+    "answer": 2
+  },
+  {
+    "question": "Quelle propriété CSS est utilisée pour changer la couleur du texte ?",
+    "options": ["color", "text-color", "font-color"],
+    "answer": 1
+  }
+]
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002ACA60DCC20>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x000002ACA621C450> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002ACA5E702C0>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 19:03:17 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-query-cost', b'32255'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-remaining', b'410586'), (b'ratelimitbysize-reset', b'54'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-ratelimitbysize-remaining-minute', b'410586'), (b'x-ratelimitbysize-remaining-month', b'993877633'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-envoy-upstream-service-time', b'10813'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'10814'), (b'x-kong-proxy-latency', b'9'), (b'x-kong-request-id', b'711cf44a0f237c242cdd900b1c463378'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=YeZ0gb4LNkuEF_SQt.E.USBY3zCRjsx2VU._NcM67TY-1744225397-1.0.1.1-03yTiQaNs86jeGzrtersFSzE0cp6MckzXDCOmHbLQmy.PlMAH3xmy6rB8sOu3Uwwwn.BxfpZnJl.XZLMYTlGCXlvx5RHiiXZYn8ns19f3Yw; path=/; expires=Wed, 09-Apr-25 19:33:17 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92dc433b2c8c701b-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:root:Contenu JSON extrait de l'IA : [
+  {
+    "question": "Quel est le langage de balisage utilisé pour créer des pages Web ?",
+    "options": ["HTML", "CSS", "JavaScript"],
+    "answer": 1
+  },
+  {
+    "question": "Quel élément HTML est utilisé pour créer un lien hypertexte ?",
+    "options": ["<link>", "<a>", "<href>"],
+    "answer": 2
+  },
+  {
+    "question": "Quelle balise HTML est utilisée pour définir un titre de section ?",
+    "options": ["<title>", "<header>", "<h1>"],
+    "answer": 3
+  },
+  {
+    "question": "Quel est le sélecteur CSS utilisé pour cibler tous les éléments d'une classe spécifique ?",
+    "options": [".classe", "#id", "element"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle propriété CSS permet de changer la couleur de fond d'un élément ?",
+    "options": ["color", "background-color", "font-color"],
+    "answer": 2
+  },
+  {
+    "question": "Quel est le type de données en Python utilisé pour stocker une collection ordonnée et modifiable d'éléments ?",
+    "options": ["tuple", "list", "set"],
+    "answer": 2
+  },
+  {
+    "question": "Quelle fonction Python renvoie la longueur d'un objet ?",
+    "options": ["size()", "len()", "length()"],
+    "answer": 2
+  },
+  {
+    "question": "Quelle boucle en Python est utilisée pour itérer sur une séquence ?",
+    "options": ["for", "while", "loop"],
+    "answer": 1
+  },
+  {
+    "question": "Quel opérateur Python est utilisé pour concaténer des chaînes de caractères ?",
+    "options": ["+", "*", "&"],
+    "answer": 1
+  },
+  {
+    "question": "Quel mot-clé Python est utilisé pour définir une fonction ?",
+    "options": ["define", "def", "function"],
+    "answer": 2
+  }
+]
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000015B5D466270>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x0000015B5D45C450> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000015B5C211B20>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 19:03:45 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'ratelimitbysize-query-cost', b'32255'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-remaining', b'408103'), (b'x-ratelimitbysize-remaining-month', b'993845378'), (b'ratelimitbysize-reset', b'26'), (b'x-ratelimitbysize-remaining-minute', b'408103'), (b'x-envoy-upstream-service-time', b'10825'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'10826'), (b'x-kong-proxy-latency', b'6'), (b'x-kong-request-id', b'5381221eea3cdf6012acfa3331868c64'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=t3JaxTeyFMWQ_ntsHaF_J8e4PBlvdjnIjRfezKtheIw-1744225425-1.0.1.1-.mzDyQ.I.OiNb0hVoF_s1TbUYMKme9JU08TOqcXfW4l7UpTnstTyGE0HhGazMv6v0.OBOjduB9GM0GzdQoPGLmTwhEySYMYTPbPEJTqn9Dg; path=/; expires=Wed, 09-Apr-25 19:33:45 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92dc43e89bd6d50e-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:root:Contenu JSON extrait de l'IA : [
+  {
+    'question': 'Quel est le créateur du langage de programmation Python ?',
+    'options': ['Guido van Rossum', 'James Gosling', 'Dennis Ritchie'],
+    'answer': 1
+  },
+  {
+    'question': 'Quelle est l\'extension de fichier standard pour un script Python ?',
+    'options': ['.py', '.java', '.js'],
+    'answer': 1
+  },
+  {
+    'question': 'Quel est le créateur du langage de programmation Java ?',
+    'options': ['Dennis Ritchie', 'James Gosling', 'Guido van Rossum'],
+    'answer': 2
+  },
+  {
+    'question': 'Quelle est la classe principale dans un programme Java ?',
+    'options': ['Main', 'Public', 'Class'],
+    'answer': 3
+  },
+  {
+    'question': 'Quel est le mot-clé utilisé pour définir une fonction en Python ?',
+    'options': ['function', 'def', 'func'],
+    'answer': 2
+  },
+  {
+    'question': 'Quel est le type de collection utilisé pour stocker des paires clé-valeur en Python ?',
+    'options': ['Liste', 'Tuple', 'Dictionnaire'],
+    'answer': 3
+  },
+  {
+    'question': 'Quel est le mot-clé utilisé pour définir une classe en Java ?',
+    'options': ['class', 'public', 'interface'],
+    'answer': 1
+  },
+  {
+    'question': 'Quel est le type de collection utilisé pour stocker des éléments ordonnés en Python ?',
+    'options': ['Tuple', 'Dictionnaire', 'Liste'],
+    'answer': 3
+  },
+  {
+    'question': 'Quel est l\'outil de gestion de paquets principalement utilisé en Python ?',
+    'options': ['pip', 'maven', 'npm'],
+    'answer': 1
+  },
+  {
+    'question': 'Quel est le type de collection utilisé pour stocker des éléments uniques en Java ?',
+    'options': ['ArrayList', 'HashSet', 'HashMap'],
+    'answer': 2
+  }
+]
+DEBUG:root:Contenu JSON extrait de l'IA : [
+  {
+    'question': 'Quel est le créateur du langage de programmation Python ?',
+    'options': ['Guido van Rossum', 'James Gosling', 'Dennis Ritchie'],
+    'answer': 1
+  },
+  {
+    'question': 'Quelle est l\'extension de fichier standard pour un script Python ?',
+    'options': ['.py', '.java', '.js'],
+    'answer': 1
+  },
+  {
+    'question': 'Quel est le créateur du langage de programmation Java ?',
+    'options': ['Dennis Ritchie', 'James Gosling', 'Guido van Rossum'],
+    'answer': 2
+  },
+  {
+    'question': 'Quelle est la classe principale dans un programme Java ?',
+    'options': ['Main', 'Public', 'Class'],
+    'answer': 3
+  },
+  {
+    'question': 'Quel est le mot-clé utilisé pour définir une fonction en Python ?',
+    'options': ['function', 'def', 'func'],
+    'answer': 2
+  },
+  {
+    'question': 'Quel est le type de collection utilisé pour stocker des paires clé-valeur en Python ?',
+    'options': ['Liste', 'Tuple', 'Dictionnaire'],
+    'answer': 3
+  },
+  {
+    'question': 'Quel est le mot-clé utilisé pour définir une classe en Java ?',
+    'options': ['class', 'public', 'interface'],
+    'answer': 1
+  },
+  {
+    'question': 'Quel est le type de collection utilisé pour stocker des éléments ordonnés en Python ?',
+    'options': ['Tuple', 'Dictionnaire', 'Liste'],
+    'answer': 3
+  },
+  {
+    'question': 'Quel est l\'outil de gestion de paquets principalement utilisé en Python ?',
+    'options': ['pip', 'maven', 'npm'],
+    'answer': 1
+  },
+  {
+    'question': 'Quel est le type de collection utilisé pour stocker des éléments uniques en Java ?',
+    'options': ['ArrayList', 'HashSet', 'HashMap'],
+    'answer': 2
+  }
+]
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002101C962120>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x000002101CA805D0> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002101C85E0C0>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 19:16:03 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-query-cost', b'32283'), (b'ratelimitbysize-limit', b'500000'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-remaining-month', b'993813095'), (b'ratelimitbysize-reset', b'7'), (b'x-ratelimitbysize-remaining-minute', b'467717'), (b'ratelimitbysize-remaining', b'467717'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-envoy-upstream-service-time', b'10635'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'10635'), (b'x-kong-proxy-latency', b'7'), (b'x-kong-request-id', b'dcc25c006df33b4db2ca713ada6d8f77'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=GonMQ.kz_YksLEbabon9hn2dg.v801q4at__qrx8DME-1744226163-1.0.1.1-.eG.l4VVE8UXcw8NxCLyDAwqw59MC8mCjPwuwxk2ZYuAvVQDcdrgx_.K0StCyw4gxFt1lZEE0FAFLc_pzmvagRrq6MtXcYtG3QZb9Du3KSw; path=/; expires=Wed, 09-Apr-25 19:46:03 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92dc55f23d85c702-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:root:Contenu JSON extrait de l'IA : [
+  {
+    "question": "Quel est le langage de balisage utilisé pour créer des pages Web ?",
+    "options": ["HTML", "CSS", "JavaScript"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle balise HTML est utilisée pour créer un lien hypertexte ?",
+    "options": ["<a>", "<link>", "<href>"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle propriété CSS est utilisée pour changer la couleur du texte ?",
+    "options": ["color", "background-color", "font-color"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle balise HTML est utilisée pour créer une liste non ordonnée ?",
+    "options": ["<ul>", "<ol>", "<li>"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle propriété CSS est utilisée pour définir la taille de la police ?",
+    "options": ["font-size", "text-size", "size"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle balise HTML est utilisée pour insérer une image ?",
+    "options": ["<img>", "<image>", "<picture>"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle propriété CSS est utilisée pour centrer un élément horizontalement ?",
+    "options": ["text-align", "center", "align"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle balise HTML est utilisée pour créer un paragraphe ?",
+    "options": ["<p>", "<paragraph>", "<text>"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle propriété CSS est utilisée pour ajouter une bordure à un élément ?",
+    "options": ["border", "edge", "outline"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle balise HTML est utilisée pour créer un tableau ?",
+    "options": ["<table>", "<tbody>", "<tr>"],
+    "answer": 1
+  }
+]
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor

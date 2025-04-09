@@ -16,7 +16,10 @@ class KnowledgeController extends Controller
      * @return Factory|View|Application|object
      */
     public function index() {
-        return view('pages.knowledge.index');
+        $knowledge = KownLedge::all();
+        return view('pages.knowledge.index',[
+            'knowledge' => $knowledge,
+        ]);
     }
 
     public function store(Request $request) {

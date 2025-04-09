@@ -21,20 +21,16 @@ class AiController extends Controller
                 'message' => 'Invalid input: "languages" must be a non-empty array.',
             ], 400);
         }
-
         // Construct the JSON object with a valid structure
         $jsonInput = json_encode($data['languages'], JSON_UNESCAPED_SLASHES);
-
-        
         // Log the JSON input to verify its structure
         \Log::info('JSON Input to be passed to Python: ' . $jsonInput);
         
         // Concatenate the JSON input with proper escaping (manually add double quotes)
         $escapedJsonInput = '"' . addslashes($jsonInput) . '"';
-
+        
         // Path to the Ai script
         $scriptPath = base_path('storage/app/public/api/questionnary.py');
-        
         $output = [];
         $resultCode = null;
         
@@ -49,13 +45,13 @@ class AiController extends Controller
         // Check if the script executed successfully
         if ($resultCode === 0) {
             return response()->json([
-
                 $output,
             ]);
             // Check if the output is valid JSON
             if (json_last_error() === JSON_ERROR_NONE) {
                 // If the output is valid JSON, return it as a JSON response
                 return response()->json([
+                    'data' => json_decode(implode("\n", $output), true),
                      $resultCode,
                     'status' => 'success',
                 ]);
