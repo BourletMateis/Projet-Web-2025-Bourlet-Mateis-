@@ -77,6 +77,7 @@
             </div>
         </div>
 
+    <!--Form to add KnowLedge -->
     <div class="lg:col-span-1">
             <div class="card h-full">
                 <div class="card-header">
@@ -84,15 +85,25 @@
                         Ajouter un bilan de connaissance
                     </h3>
                 </div>
-                
                 <div class="card-body flex flex-col gap-5" >
                 <form action="{{ route('knowledge.store') }}" method="POST">
                     @csrf
                     <x-forms.input name="name" :label="__('Nom')" />
 
                     <x-forms.input name="description" :label="__('Description')" />
-            
-                    <x-forms.primary-button type="submit" class="w-full mt-5">
+
+                    <div class="w-full mt-5">
+                    <div class="flex items-baseline flex-wrap lg:flex-nowrap gap-2.5">
+                        <select id="mySelect" class="select" name="select" onchange="gererSelection(this)">
+                            <option value="0" disabled selected>-- Sélectionnez une option --</option>
+                            <option value="add">➕ Ajouter un questionnaire</option> 
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                        </select>
+                    </div>
+                </div>
+                    <x-forms.primary-button type="submit" class="w-full mt-5" id="knowledge-submit">
                         {{ __('Valider') }}
                     </x-forms.primary-button>
                     </div>
@@ -100,6 +111,28 @@
             </div>
         </form>
     </div>
+    
+   
+       <!-- Modal that allows adding a questionnaire to the list. -->
+    <div class="modal" data-modal="true" id="modal_7" style="z-index: 90; display: none;" role="dialog" aria-modal="true" tabindex="-1">
+  <div class="modal-content max-w-[600px] top-[50%]">
+    <div class="modal-header">
+      <h3 class="modal-title">
+        Ajouter un questionnaire
+      </h3>
+      <button class="btn btn-xs btn-icon btn-light" data-modal-dismiss="true">
+        <i class="ki-outline ki-cross"></i>
+      </button>
+    </div>
+    <div class="modal-body">
+      <input class="input" data-modal-input-focus="true" placeholder="Modal input..." type="text">
+      <p class="pt-5">
+      </p>
+    </div>
+    <div class="modal-footer">
+  <button class="btn btn-primary" type="button" data-modal-submit="true">Ajouter</button>
+</div>
+</div>
 
 </x-app-layout>
 

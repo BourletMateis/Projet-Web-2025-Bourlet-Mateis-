@@ -6,6 +6,7 @@ use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Foundation\Application;
 use Illuminate\Http\Request;
+use App\Models\KownLedge;
 
 class KnowledgeController extends Controller
 {
@@ -18,15 +19,19 @@ class KnowledgeController extends Controller
         return view('pages.knowledge.index');
     }
 
-    public function store (Request $request) {
-        // Validate the request data
-        $validatedData = $request->validate([
-
+    public function store(Request $request) {
+        $request->validate([
+            'title' => 'required|string|max:255',
+            'questionnary' => 'required|array',
         ]);
 
-        // Store the question and answer in the database
-        // Assuming you have a Question model and a questions table
+        $data = $request->only(['title', 'questionnary']);
 
-        return redirect()->route('knowledge.index')->with('success', 'Question and answer stored successfully.');
+        $knowledge = KownLedge::create($data);
+
+        return redirect()->route('dashboard')->with('success', 'Knowledge entry created successfully.');
+
     }
+
+
 }

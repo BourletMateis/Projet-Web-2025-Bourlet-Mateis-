@@ -50,6 +50,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/create-questionnary',[AiController::class, 'getIaResponse'])->name('ia.response');
 
         Route::post('/knowledge-store', [KnowledgeController::class, 'store'])->name('knowledge.store');
+
     });
 
 });
