@@ -16,6 +16,9 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->json('questionnary');
+            $table->string('number_questions');
+            $table->string('difficulty');
+            $table->json('languages');
             $table->timestamps();
         });
     }

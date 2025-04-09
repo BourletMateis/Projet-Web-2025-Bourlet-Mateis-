@@ -33,14 +33,17 @@ class AiController extends Controller
         $scriptPath = base_path('storage/app/public/api/questionnary.py');
         $output = [];
         $resultCode = null;
-        
+        $numberQuestions =$data['number_questions'];
+        $difficulty = $data['difficulty'];
         // Execute the script with escaped JSON input
-        exec("python {$scriptPath} {$escapedJsonInput}", $output, $resultCode);
+        exec("python {$scriptPath} {$escapedJsonInput} {$numberQuestions} {$difficulty}", $output, $resultCode);
 
         \Log::info('Commande exécutée : python ' . $scriptPath . ' ' . $escapedJsonInput);
         \Log::info('Code de retour : ' . $resultCode);
         \Log::info('Sortie du script : ' . implode("\n", $output));
         \Log::info('JSON des langues : ' . $escapedJsonInput);
+        \Log::info('Nombre de questions : ' . $numberQuestions);
+        \Log::info('Difficulté : ' . $difficulty);
 
         // Check if the script executed successfully
         if ($resultCode === 0) {

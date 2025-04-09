@@ -6,6 +6,7 @@
     const submitBtn = modal.querySelector('[data-modal-submit="true"]');
     const input = modal.querySelector('input[data-modal-input-focus]');
     const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+    const numberQuestionsInput = document.querySelector('input[name="number-questions"]');
 
      // Get the value of the input field TITLE
   
@@ -27,6 +28,7 @@
 
     submitBtn.addEventListener("click", async function () {
       try {
+          const difficulty = getDifficultyValues(); 
           const selectedValues = getCheckedValues();
           const title = input.value; // Get the value of the input field TITLE
           // Step 1 : Create a questionnaire using the /create-questionnary use mistral ai
@@ -38,6 +40,8 @@
               },
               body: JSON.stringify({
                   languages: selectedValues, // Use the selected languages from the checkboxes
+                  number_questions: numberQuestionsInput.value, // Use the value from the input field for number of questions
+                  difficulty: difficulty, // Use the selected difficulty from the dropdown
               })
           });
           if (!response.ok) {
@@ -56,7 +60,10 @@
                   },
                   body: JSON.stringify({
                       title: title, // Title of the knowledge
-                      questionnary: questionnaryIa // Use json questionnay creared by mistral ai
+                      questionnary: questionnaryIa, // Use json questionnay creared by mistral ai
+                      number_questions: numberQuestionsInput.value, // Use the value from the input field for number of questions
+                      difficulty: difficulty, // Use the selected difficulty from the dropdown
+                      languages: selectedValues, // Use the selected languages from the checkboxes
                   })
               });
               if (postResponse.ok) {
@@ -85,3 +92,8 @@ function getCheckedValues() {
   return values;
 }
 
+// Function to get the selected difficulty from the dropdown
+function getDifficultyValues() {
+  const dropdown = document.getElementById("difficulty");
+  return dropdown ? dropdown.value : null;
+}

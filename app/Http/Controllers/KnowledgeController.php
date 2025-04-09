@@ -26,15 +26,16 @@ class KnowledgeController extends Controller
         $request->validate([
             'title' => 'required|string|max:255',
             'questionnary' => 'required|array',
+            'number_questions' => 'string|max:255',
+            'difficulty' => 'string|max:255',
+            'languages' => 'required|array',
         ]);
 
-        $data = $request->only(['title', 'questionnary']);
+        $data = $request->only(['title', 'questionnary', 'number_questions', 'difficulty', 'languages']);
 
         $knowledge = KownLedge::create($data);
 
         return redirect()->route('dashboard')->with('success', 'Knowledge entry created successfully.');
 
     }
-
-
 }

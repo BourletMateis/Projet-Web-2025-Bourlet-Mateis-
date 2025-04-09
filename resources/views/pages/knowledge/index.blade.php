@@ -92,17 +92,19 @@
 
                     <x-forms.input name="description" :label="__('Description')" />
 
-                    <div class="w-full mt-5">
-                    <div class="flex items-baseline flex-wrap lg:flex-nowrap gap-2.5">
-                        <select id="mySelect" class="select" name="select" onchange="gererSelection(this)">
-                            <option value="0" disabled selected>-- Sélectionnez un questionnaire --</option>
-                            <option value="add">➕ Ajouter un questionnaire</option> 
-                            @foreach ($knowledge as $knowledges)
-                                <option class="" value="{{ $knowledges->id }}">{{ $knowledges->title }}</option>
-                            @endforeach
-                        </select>
-                    </div>
-                </div>
+                    <x-forms.dropdown 
+                        name="questionnaire" 
+                        :label="__('Questionnaire')" 
+                        :messages="$errors->get('questionnaire')" 
+                        id="mySelect">  
+                        <option value="0" disabled selected>-- Sélectionnez un questionnaire --</option>
+                        <option value="add">➕ Ajouter un questionnaire</option> 
+                        @foreach ($knowledge as $knowledges)
+                            <option value="{{ $knowledges->id }}">{{ $knowledges->title }}</option>
+                        @endforeach
+                    </x-forms.dropdown>
+
+
                     <x-forms.primary-button type="submit" class="w-full mt-5" id="knowledge-submit">
                         {{ __('Valider') }}
                     </x-forms.primary-button>
@@ -125,7 +127,20 @@
       </button>
     </div>
     <div class="modal-body">
-      <input class="input" data-modal-input-focus="true" placeholder="Titre du questionnaire..." type="text">
+      <input class="input mb-2" data-modal-input-focus="true" placeholder="Titre du questionnaire..." type="text">
+    
+      <x-forms.input name="number-questions" :label="__('Nombre de question')" />
+
+      <x-forms.dropdown 
+                        name="difficulty" 
+                        :label="__('Difficulté du questionnaire')" 
+                        id="difficulty">  
+                        <option value="0" disabled selected>-- Sélectionnez une difficulté --</option>
+                        <option value="easy">Facile</option>
+                        <option value="medium">Moyenne</option>
+                        <option value="hard">Difficile</option>
+     </x-forms.dropdown>
+
     <label class="form-label flex items-center gap-2.5 text-nowrap pt-5">
         <input class="checkbox" name="languages" type="checkbox" value="html/css"/>
         HTML/CSS

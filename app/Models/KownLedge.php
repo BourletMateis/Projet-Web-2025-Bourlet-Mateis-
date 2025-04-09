@@ -10,10 +10,11 @@ class KownLedge extends Model
     use HasFactory;
     protected $table = 'knowledge'; 
 
-    protected $fillable = ['title', 'questionnary']; 
+    protected $fillable = ['title', 'questionnary', 'number_questions', 'difficulty', 'languages']; 
 
     protected $casts = [
         'questionnary' => 'array', 
+        'languages' => 'array',
     ];
 
 }
