@@ -47,7 +47,7 @@ Route::middleware('auth')->group(function () {
         // Common life
         Route::get('common-life', [CommonLifeController::class, 'index'])->name('common-life.index');
 
-        Route::get('/create-questionnary',[AiController::class, 'getIaResponse'])->name('ia.response');
+        Route::post('/create-questionnary',[AiController::class, 'getIaResponse'])->name('ia.response');
 
         Route::post('/knowledge-store', [KnowledgeController::class, 'store'])->name('knowledge.store');
 

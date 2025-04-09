@@ -1,0 +1,951 @@
+DEBUG:root:Argument brut reï¿½u : [python]
+ERROR:root:Erreur lors du dï¿½codage du JSON : Expecting value: line 1 column 2 (char 1)
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reï¿½u : [javascript]
+ERROR:root:Erreur lors du dï¿½codage du JSON : Expecting value: line 1 column 2 (char 1)
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001F6EBD22150>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x000001F6EBD1C350> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001F6EBCF6C00>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 14:19:24 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-query-cost', b'32221'), (b'x-ratelimitbysize-remaining-minute', b'467779'), (b'ratelimitbysize-remaining', b'467779'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-reset', b'47'), (b'x-ratelimitbysize-remaining-month', b'996166252'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-envoy-upstream-service-time', b'11168'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'11169'), (b'x-kong-proxy-latency', b'5'), (b'x-kong-request-id', b'dd4c44266e6dd06b71a68107c7c9456f'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=4oT6ZNPS3jQiHIdBB7tzo1Lt.rLmuwFaAm9DQxUxdk4-1744208364-1.0.1.1-mUqtDNnkJueUVsTH2K4SCzx3GoDPabDWtHZPiNRV1SfzSse7uTyKsNQ8tqwxZgLLOKlA4g36TBgf0SR0XQR89_8fpEAj6rn4EK3lEdea218; path=/; expires=Wed, 09-Apr-25 14:49:24 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92daa35f5d410224-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reï¿½u : { theme :[ python ]}
+ERROR:root:Erreur lors du dï¿½codage du JSON : Expecting property name enclosed in double quotes: line 1 column 3 (char 2)
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reï¿½u : { theme :[ python ]}
+ERROR:root:Erreur lors du dï¿½codage du JSON : Expecting property name enclosed in double quotes: line 1 column 3 (char 2)
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reï¿½u : { theme :[ python ]}
+ERROR:root:Erreur lors du dï¿½codage du JSON : Expecting property name enclosed in double quotes: line 1 column 3 (char 2)
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reï¿½u : { theme :[ python ]}
+ERROR:root:Erreur lors du dï¿½codage du JSON : Expecting property name enclosed in double quotes: line 1 column 3 (char 2)
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reï¿½u : {"theme":["python"]}
+DEBUG:root:Donnï¿½es dï¿½codï¿½es : {'theme': ['python']}
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000024C41A4E990>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x0000024C41A50450> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000024C4088EE70>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 14:38:40 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-reset', b'34'), (b'ratelimitbysize-remaining', b'467779'), (b'ratelimitbysize-query-cost', b'32221'), (b'ratelimitbysize-limit', b'500000'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-remaining-minute', b'467779'), (b'x-ratelimitbysize-remaining-month', b'996069589'), (b'x-envoy-upstream-service-time', b'13828'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'13830'), (b'x-kong-proxy-latency', b'7'), (b'x-kong-request-id', b'088af92d4c0567174ae29c318f638e44'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=NwkD7OKSkzyQrRuS85eyKSpV6xScTlZj.RVBtkevuus-1744209520-1.0.1.1-E1H1TC6IYOSpcBMlhPMXZuuAZ6oOi3yW0p7dXq2PKu7yHOY.hrvSAbaJEY846sIYyBW2X31VpvN7n2wKcxDiPNtjVoCzzocDF1AEmCsWCh0; path=/; expires=Wed, 09-Apr-25 15:08:40 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92dabf895818e0ad-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reï¿½u : {"theme":["html/css"]}
+DEBUG:root:Donnï¿½es dï¿½codï¿½es : {'theme': ['html/css']}
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000026836D768D0>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x0000026836DD0450> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000026835C0EE70>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 14:39:53 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-query-cost', b'32221'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-remaining', b'457817'), (b'x-ratelimitbysize-remaining-month', b'996037368'), (b'ratelimitbysize-reset', b'19'), (b'x-ratelimitbysize-remaining-minute', b'457817'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-envoy-upstream-service-time', b'11958'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'11959'), (b'x-kong-proxy-latency', b'7'), (b'x-kong-request-id', b'60df88289e1f726681e7e455a5ba0d3d'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=McEyvmubpr8oAHBw9Qzq2hpR_ez7RbZyjD.ja1MHaCM-1744209593-1.0.1.1-pltVxGF3_Jx7dRVLkXlxEp9ducSapAVu2Xv_vLq2tgJF_QMo.J4cLWpdomQViTgR0ehZpSLcWvU90FcHfylb.vAd1Y3hEn_rQEUcJ7eKErI; path=/; expires=Wed, 09-Apr-25 15:09:53 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92dac15bddc9d34b-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reï¿½u : {"theme":["html/css"]}
+DEBUG:root:Donnï¿½es dï¿½codï¿½es : {'theme': ['html/css']}
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000024803E91970>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x00000248043C0450> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x00000248031FEE70>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 14:40:32 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'x-ratelimitbysize-remaining-month', b'996005147'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-remaining-minute', b'446900'), (b'ratelimitbysize-remaining', b'446900'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-reset', b'39'), (b'ratelimitbysize-query-cost', b'32221'), (b'x-envoy-upstream-service-time', b'11143'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'11144'), (b'x-kong-proxy-latency', b'7'), (b'x-kong-request-id', b'a62b162c000cdc1db04b20648f37300a'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=b1RDrZ9KKY5xPuRD90Dl1gLwA1kf8v3r6AHSR3qD2Gk-1744209632-1.0.1.1-1XetSODkUFG2C2PmAGRZNuxFHRVwsl5QSqnZVsTdcwIgTD2yaNiyAMqmXmyAEAdJ_BvKSqCtfpt90.S8te.x09FUz7EGS0QZCLxTxr_2juA; path=/; expires=Wed, 09-Apr-25 15:10:32 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92dac253a8f49ec7-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reï¿½u : {"theme":["javascript","c#"]}
+DEBUG:root:Donnï¿½es dï¿½codï¿½es : {'theme': ['javascript', 'c#']}
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000027A75F4E930>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x0000027A75F50450> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000027A75F4E870>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 14:41:19 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-query-cost', b'32223'), (b'ratelimitbysize-limit', b'500000'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'ratelimitbysize-reset', b'57'), (b'ratelimitbysize-remaining', b'437436'), (b'x-ratelimitbysize-remaining-month', b'995972924'), (b'x-ratelimitbysize-remaining-minute', b'437436'), (b'x-envoy-upstream-service-time', b'15880'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'15881'), (b'x-kong-proxy-latency', b'6'), (b'x-kong-request-id', b'59972b0eabd9cb7f52321c4cb58e4a4b'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=s_nZYaO5i8rEx2S1TgqoxuC3fHiEauWmyVgfjEgjJ8E-1744209679-1.0.1.1-Hemkg2b7jDAwwJ4lb94LKC22SWeRPRO2KaQIEm2R1w5B3jd1PRhV3AdBWZSOpVP27zrfxU21OdCnNpUmSLIdae5sTtX.UkkpoQ0CEqUtLOI; path=/; expires=Wed, 09-Apr-25 15:11:19 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92dac35caefd3d13-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reï¿½u : {"theme":["python"]}
+DEBUG:root:Donnï¿½es dï¿½codï¿½es : {'theme': ['python']}
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x00000285E17AD580>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x00000285E2970450> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x00000285E187CE60>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 14:51:13 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-remaining-minute', b'461937'), (b'ratelimitbysize-query-cost', b'32221'), (b'ratelimitbysize-limit', b'500000'), (b'x-ratelimitbysize-remaining-month', b'995908482'), (b'ratelimitbysize-reset', b'11'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'ratelimitbysize-remaining', b'461937'), (b'x-envoy-upstream-service-time', b'24593'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'24642'), (b'x-kong-proxy-latency', b'6'), (b'x-kong-request-id', b'0ae1df58c8e2777aa753203e4a33c657'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=lg2QehSQl9s.BesRK3dB6Ya1kyqnjz7.MaTtgZdo5.8-1744210273-1.0.1.1-AW5qLGmetjP1k1EYqElZ7UuvUn8LNNIYlM5EIeJNI8_rqC0xucAvYvyre4OH7z28aNvNOggSBigTKxXUGI0zyEb3BwcoFyCKzpViHw.hgNU; path=/; expires=Wed, 09-Apr-25 15:21:13 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92dad1a8dc76d135-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reï¿½u : {"theme":["python"]}
+DEBUG:root:Donnï¿½es dï¿½codï¿½es : {'theme': ['python']}
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001551FF1E6C0>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x000001551FF204D0> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001551FE961E0>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 14:52:41 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'x-ratelimitbysize-remaining-month', b'995876259'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-remaining-minute', b'467777'), (b'ratelimitbysize-remaining', b'467777'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-reset', b'33'), (b'ratelimitbysize-query-cost', b'32223'), (b'x-envoy-upstream-service-time', b'14285'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'14286'), (b'x-kong-proxy-latency', b'7'), (b'x-kong-request-id', b'cc1a8f6cb5bf016c4cd7a8045aaee937'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=.wi.rvlIK6KrJCisO6QEh9Ktibij6a9dUZ_B6IFI5OM-1744210361-1.0.1.1-GpN8iQJa3vLvdB9AxOuRIN_WLE6KVQ4YOo2C9dHsisWHT1uWWDPV4ATz0SnG0zQIbr5Slt._R0bO0nuYRAUl0t.bOlpW6z0gwNzn.XsrMQY; path=/; expires=Wed, 09-Apr-25 15:22:41 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92dad40fbbfad121-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reï¿½u : {"theme":["python"]}
+DEBUG:root:Donnï¿½es dï¿½codï¿½es : {'theme': ['python']}
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000017FD69DE6C0>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x0000017FD69E04D0> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000017FD69561E0>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 14:56:43 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-query-cost', b'32223'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-remaining-minute', b'467777'), (b'x-ratelimitbysize-remaining-month', b'995811813'), (b'ratelimitbysize-remaining', b'467777'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-reset', b'54'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-envoy-upstream-service-time', b'37235'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'37236'), (b'x-kong-proxy-latency', b'7'), (b'x-kong-request-id', b'b7bd47007ba3f8658a5dcc4e8dd0f055'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=oDR0KeJRBguPGUCsfZPsLzJ_6PrMR8aGaCIYiRRayvA-1744210603-1.0.1.1-GiVyunPxmTmVF7LdalE_SlF9XwQX2ZXLT5D.9BwwlgZlthqguCGsVnaNQ3jHuBRUmkrMx7zi4txt1rzIbDosZCWpwRpjMyztd9aaEOMFK1Q; path=/; expires=Wed, 09-Apr-25 15:26:43 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92dad967a8dc018c-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reï¿½u : {"theme":["java"]}
+DEBUG:root:Donnï¿½es dï¿½codï¿½es : {'theme': ['java']}
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000024C581AEA20>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x0000024C581B04D0> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000024C58068FB0>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 14:57:39 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'x-ratelimitbysize-remaining-month', b'995779590'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-remaining-minute', b'449833'), (b'ratelimitbysize-remaining', b'449833'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-reset', b'34'), (b'ratelimitbysize-query-cost', b'32223'), (b'x-envoy-upstream-service-time', b'12713'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'12714'), (b'x-kong-proxy-latency', b'6'), (b'x-kong-request-id', b'4c98647cd0582974de4404370e66df12'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=WiqGtl6741hVAEyCIC0qYl5K_qAYoYvE.GSHqTOMFvY-1744210659-1.0.1.1-ClVYZraSHNuYCTY8Abcg0Npfe5BK4DXyqwTf6LAzzuMDJJfIYJRaa44ydV_63hTUwXejTeR6gI3ROOAjiWK1HS6ubuBeAc9pFbTcSanDHRw; path=/; expires=Wed, 09-Apr-25 15:27:39 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92dadb5cfa89d646-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reï¿½u : {"theme":["javascript"]}
+DEBUG:root:Donnï¿½es dï¿½codï¿½es : {'theme': ['javascript']}
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001D5624A4890>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x000001D5625304D0> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001D55F428EC0>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 15:00:18 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-query-cost', b'32223'), (b'x-ratelimitbysize-remaining-month', b'995747367'), (b'ratelimitbysize-remaining', b'467777'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-reset', b'59'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-ratelimitbysize-remaining-minute', b'467777'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-envoy-upstream-service-time', b'16170'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'16170'), (b'x-kong-proxy-latency', b'8'), (b'x-kong-request-id', b'd92a850b48f6732893d0c4601c9b877b'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=jEhYxWPMdBQ0mYw72ZU16AGFqBDoKmxfmN.f6xrSA9U-1744210818-1.0.1.1-ldDOdh03j3JaFsNnMj2mpl_VJeyjqu6uJee3Vxl.RVEfrIwZu6xQYz7Kw1p44ZaoFVNijJrofs.cuokrkHzv7Jky32B2SqDv_zU5jgtOFxw; path=/; expires=Wed, 09-Apr-25 15:30:18 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92dadf270fa2f168-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reï¿½u : {"theme":["java"]}
+DEBUG:root:Donnï¿½es dï¿½codï¿½es : {'theme': ['java']}
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000026507F3EA20>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x0000026507F404D0> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000026507DF8FB0>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 15:01:37 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-query-cost', b'32223'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-remaining', b'448248'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'ratelimitbysize-reset', b'37'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-remaining-minute', b'448248'), (b'x-ratelimitbysize-remaining-month', b'995715144'), (b'x-envoy-upstream-service-time', b'14198'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'14198'), (b'x-kong-proxy-latency', b'6'), (b'x-kong-request-id', b'78b75b35c2a64b3400613a06e7144201'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=pomOVq67N8WD._R_wgWrr08ohgbPAdUycoeZkBsuwoY-1744210897-1.0.1.1-U5UhYxYBo02X2fW7NF0mKg4cBiF7jWv7Npx6Wv74IO3VxwE8dYRwIeUa1WtgDSIKFFhTkiSzk5jZdPgl7t5Kna.iqXO3lZEl07XX8YY0cgk; path=/; expires=Wed, 09-Apr-25 15:31:37 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92dae1268cb57f98-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reï¿½u : {"theme":["python"]}
+DEBUG:root:Donnï¿½es dï¿½codï¿½es : {'theme': ['python']}
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000020CF9FBEBA0>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x0000020CF9FC04D0> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000020CF9E78FB0>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 15:03:15 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-query-cost', b'32223'), (b'ratelimitbysize-limit', b'500000'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-remaining-minute', b'467777'), (b'ratelimitbysize-reset', b'58'), (b'ratelimitbysize-remaining', b'467777'), (b'x-ratelimitbysize-remaining-month', b'995682921'), (b'x-envoy-upstream-service-time', b'13334'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'13335'), (b'x-kong-proxy-latency', b'10'), (b'x-kong-request-id', b'c6ebad666ab9c640e4ecba6c03819827'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=LA3MmX6MNh9VULhh.8Q5yC99FVBd7PyjEmki2QfsJvU-1744210995-1.0.1.1-6feZqwyWAAqIv7ZvDPC9aPEHdy3AJPPXgo6TWDb12rhyAgXFNOfPwo6YnDzan1BwZJzjYk1uuNKjlIGIZIhGuj1dlOsFPsylmM_O0UX0N3s; path=/; expires=Wed, 09-Apr-25 15:33:15 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92dae390c81e0076-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reï¿½u : {"theme":["python"]}
+DEBUG:root:Donnï¿½es dï¿½codï¿½es : {'theme': ['python']}
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000029C69580DD0>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x0000029C695AC4D0> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000029C695B2450>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 15:04:25 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-query-cost', b'32223'), (b'ratelimitbysize-limit', b'500000'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-remaining-minute', b'442199'), (b'ratelimitbysize-reset', b'48'), (b'ratelimitbysize-remaining', b'442199'), (b'x-ratelimitbysize-remaining-month', b'995650698'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-envoy-upstream-service-time', b'13550'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'13551'), (b'x-kong-proxy-latency', b'6'), (b'x-kong-request-id', b'988a6f28ddc306029bc0d24902c80b74'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=.9BadMFd_Fp9I7IZSqPTwTGsTsSIXMlbWDsXhQOOERA-1744211065-1.0.1.1-DiW3VE3XGHhyPD4HLWQoSmlBi.DO3EHVMX0qHaKPl8iVwUjNooOb5ixzAvsbF9ObRvCtUeiVG913a00Of7xQ.ZjNcBaR2dKzuXdXtyue67s; path=/; expires=Wed, 09-Apr-25 15:34:25 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92dae5451cff0367-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reï¿½u : {"theme":["python"]}
+DEBUG:root:Donnï¿½es dï¿½codï¿½es : {'theme': ['python']}
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000028AEFDDA7B0>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x0000028AEFF2C4D0> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000028AEED6EE70>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 15:05:33 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-query-cost', b'32223'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-remaining', b'447768'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'ratelimitbysize-reset', b'38'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-remaining-minute', b'447768'), (b'x-ratelimitbysize-remaining-month', b'995618475'), (b'x-envoy-upstream-service-time', b'10261'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'10261'), (b'x-kong-proxy-latency', b'11'), (b'x-kong-request-id', b'1da35e162ad1ba4fb016c979341fd068'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=TWxFHEvfSRO4EXja70N6FjLWbpKCFCxTpPY5ZmaQOM8-1744211133-1.0.1.1-16NGECojM8auCKqHCrnqukEavkjSzQoUXCONEFJYkeinZX7d32jIauzPl29ThKo6cMQVSq9NG2A0HWa.zfNP5Q9o5ueGOMLvJkHDutPyjk8; path=/; expires=Wed, 09-Apr-25 15:35:33 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92dae6fcded900ca-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reï¿½u : {"theme":["java"]}
+DEBUG:root:Donnï¿½es dï¿½codï¿½es : {'theme': ['java']}
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001F2AE820DD0>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x000001F2AE84C4D0> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001F2AE852450>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 15:07:07 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-query-cost', b'32223'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-remaining', b'466322'), (b'x-ratelimitbysize-remaining-month', b'995586252'), (b'ratelimitbysize-reset', b'3'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-remaining-minute', b'466322'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-envoy-upstream-service-time', b'10404'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'10404'), (b'x-kong-proxy-latency', b'9'), (b'x-kong-request-id', b'add1564fea80b268040fd7728e317c1a'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=BuTQNZ09WiJQ7ZJQqdhVMnjTINwezoAA1bK_.BJOc8w-1744211227-1.0.1.1-2Va6FPRNYQTbs.5yBvYkrvvcj3tmZIJ6qwQ14.ykdp66UvKXBWudlnQxldVpzhtMRwma9MDW4MQK80faGAcrQwgWfwJzcfsIU4m8AFgqdgQ; path=/; expires=Wed, 09-Apr-25 15:37:07 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92dae94b3fd60363-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reï¿½u : {"theme":["java"]}
+DEBUG:root:Donnï¿½es dï¿½codï¿½es : {'theme': ['java']}
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000020526784890>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x00000205268504D0> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x00000205256D6120>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 15:13:49 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-reset', b'50'), (b'x-ratelimitbysize-remaining-month', b'995554029'), (b'ratelimitbysize-query-cost', b'32223'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-remaining', b'467777'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-ratelimitbysize-remaining-minute', b'467777'), (b'x-envoy-upstream-service-time', b'39005'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'39006'), (b'x-kong-proxy-latency', b'6'), (b'x-kong-request-id', b'68e5a51569a36637e2982e6d1125333f'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=AcBiqLdbdsmAK7BJQ3ANv4UOtBw8kqocMAVcXUU.G80-1744211629-1.0.1.1-APDpYgW8O9aNJGhQs5Wy5lBw7rSNA8Y8gB9LxlTlMpdk0Lt0JG77VX1JBkbn_cEOi_S_A.XfpnaCxZqv_WS0rgI3tptlWq6MPQcEcFZVE9Y; path=/; expires=Wed, 09-Apr-25 15:43:49 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92daf2686c2e6fd5-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reï¿½u : {"theme":["java"]}
+DEBUG:root:Donnï¿½es dï¿½codï¿½es : {'theme': ['java']}
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000020F3621F680>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x0000020F373504D0> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000020F361D61E0>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 15:14:49 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-query-cost', b'32223'), (b'ratelimitbysize-limit', b'500000'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-remaining-minute', b'456349'), (b'ratelimitbysize-reset', b'22'), (b'ratelimitbysize-remaining', b'456349'), (b'x-ratelimitbysize-remaining-month', b'995521806'), (b'x-envoy-upstream-service-time', b'11076'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'11076'), (b'x-kong-proxy-latency', b'5'), (b'x-kong-request-id', b'4940931ffcd868591b1be13baa917248'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=MIGiK3HQD5Y8CFFDKV7fujjIiw.7gPZVLj6j9tog3NY-1744211689-1.0.1.1-1.RMbGn8nuHVnfv5D8RSLdg0VOXJVxHw4nvGITB0_qR2p2kBlcDDokqAIP9C9.nF7J1Um0kMw01y4.bd1AUXXFeJfU1BgQb2CrO329FePhk; path=/; expires=Wed, 09-Apr-25 15:44:49 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92daf48fd9c1acc1-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reï¿½u : {"theme":["java"]}
+DEBUG:root:Donnï¿½es dï¿½codï¿½es : {'theme': ['java']}
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002A0C28FE570>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x000002A0C29004D0> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002A0C1808F20>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 15:16:01 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-remaining', b'460421'), (b'ratelimitbysize-query-cost', b'32223'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-remaining-minute', b'460421'), (b'x-ratelimitbysize-remaining-month', b'995489583'), (b'ratelimitbysize-reset', b'14'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-envoy-upstream-service-time', b'14730'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'14730'), (b'x-kong-proxy-latency', b'7'), (b'x-kong-request-id', b'038530665d1c1c77f3cb1b6d4c2a474b'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=gySOJw80X3Ki0uHS3kO8rBJ5GAm5zTeQgpBiMVrud1o-1744211761-1.0.1.1-Y.KkX6L113J.tiFb181Ck2FO_CXtJVzLSRGjGMAhlHNph1knSY.lcd4D3Q2Qdg96YyDeQ2PYLTHdXM9AhBeWcnYMIc98KCcnb0bhPCQhleA; path=/; expires=Wed, 09-Apr-25 15:46:01 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92daf6361a652a6f-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reï¿½u : {"theme":["javascript"]}
+DEBUG:root:Donnï¿½es dï¿½codï¿½es : {'theme': ['javascript']}
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001559515E450>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x00000155951604D0> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001559515E360>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 15:17:32 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-query-cost', b'32223'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-remaining', b'467777'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'ratelimitbysize-reset', b'45'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-remaining-minute', b'467777'), (b'x-ratelimitbysize-remaining-month', b'995457360'), (b'x-envoy-upstream-service-time', b'17079'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'17080'), (b'x-kong-proxy-latency', b'7'), (b'x-kong-request-id', b'ee341b4b5188b4269f44ba6945826f5e'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=j8fYKT3.BJ2edRvkTVBYAy8hqxqkwXIE9MPqZaQSSUI-1744211852-1.0.1.1-.ZZ9lSK6QH0bGsFK7FIbYSyw1zJzo0Um1fWnJ9JZMAFrC9dU_FMbKUaJ0L__bYVqaFbS80DaboCgin_jMtfJcOddgHu5xyj05OUpvWGB8Fs; path=/; expires=Wed, 09-Apr-25 15:47:32 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92daf862eea651e4-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reï¿½u : {"theme":["java"]}
+DEBUG:root:Donnï¿½es dï¿½codï¿½es : {'theme': ['java']}
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002210F7AE780>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x000002210F7B04D0> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002210E582120>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 15:18:48 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-reset', b'29'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'ratelimitbysize-query-cost', b'32223'), (b'ratelimitbysize-limit', b'500000'), (b'x-ratelimitbysize-remaining-minute', b'452603'), (b'ratelimitbysize-remaining', b'452603'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-ratelimitbysize-remaining-month', b'995425137'), (b'x-envoy-upstream-service-time', b'16955'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'16956'), (b'x-kong-proxy-latency', b'4'), (b'x-kong-request-id', b'58ed7a7ccc58695b817a941f42305810'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=M.m5.laF0DijTHzY.hjOHMGqrKsDebJUvAcoQ9nQCFg-1744211928-1.0.1.1-r8dWOaTCpEAxt_1erHLdypAnp_GYqGJb_Ph69wdMLslx4Pg6w_JUexXKQNxAvjY6osj.kVM0uAl_PDk4zwt0RWNL.68zWYJ7JZhsN05WTSw; path=/; expires=Wed, 09-Apr-25 15:48:48 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92dafa4038176f94-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reï¿½u : {"theme":["javascript"]}
+DEBUG:root:Donnï¿½es dï¿½codï¿½es : {'theme': ['javascript']}
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000020D1986E990>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x0000020D198704D0> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000020D16738EC0>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 15:20:17 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-query-cost', b'32223'), (b'x-ratelimitbysize-remaining-minute', b'462296'), (b'ratelimitbysize-remaining', b'462296'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-reset', b'11'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-ratelimitbysize-remaining-month', b'995392914'), (b'x-envoy-upstream-service-time', b'27658'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'27659'), (b'x-kong-proxy-latency', b'6'), (b'x-kong-request-id', b'4fda4255caffaa64c7dff92934856b35'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=SYtTgDcbrvgnwJoNK8GnuaKhZVJxPnyN.DY5rEmL1Bg-1744212017-1.0.1.1-6IBRXBP.6bjS_WF0e8NBd6EwiYSgCD9Za7nPfoSD2hgqeNzLnrF06JgNbF62QZyXLG7iXH7OnhLpU6UPAKCNwcCooOhTRcacsMv3GmZGESc; path=/; expires=Wed, 09-Apr-25 15:50:17 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92dafc280c5bd127-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reï¿½u : {"theme":["javascript"]}
+DEBUG:root:Donnï¿½es dï¿½codï¿½es : {'theme': ['javascript']}
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001B9D4EFE7B0>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x000001B9D4F004D0> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001B9D4EFE6C0>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 15:21:52 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-reset', b'22'), (b'x-ratelimitbysize-remaining-month', b'995360691'), (b'ratelimitbysize-query-cost', b'32223'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-remaining', b'467777'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-ratelimitbysize-remaining-minute', b'467777'), (b'x-envoy-upstream-service-time', b'14388'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'14389'), (b'x-kong-proxy-latency', b'6'), (b'x-kong-request-id', b'adc0f74d4e2a6279e24e484b31f5c760'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=9s2VCTi7eIjm5xP_mSMOx6rsCR6woukoBr8_8a0ji_0-1744212112-1.0.1.1-U79w1yFsGKsRRh8wwHLVvUp0copzcC1YjZAFf3YH9QdELNTYNtFIxr6.EquCxc8cZIi37uctoJdFFacG0pt9bSy.bh01zn9omAW7nx.UCBs; path=/; expires=Wed, 09-Apr-25 15:51:52 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92dafeccafd76f27-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reï¿½u : {"theme":["javascript"]}
+DEBUG:root:Donnï¿½es dï¿½codï¿½es : {'theme': ['javascript']}
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001A380A2E7B0>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x000001A380A304D0> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001A3809A6ED0>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 15:23:08 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-query-cost', b'32223'), (b'ratelimitbysize-limit', b'500000'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-ratelimitbysize-remaining-month', b'995328468'), (b'ratelimitbysize-reset', b'4'), (b'ratelimitbysize-remaining', b'465890'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-remaining-minute', b'465890'), (b'x-envoy-upstream-service-time', b'12459'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'12460'), (b'x-kong-proxy-latency', b'5'), (b'x-kong-request-id', b'fc6f0c78e503ef2a244a8e5c3ab26a61'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=B7iL6DdsajRB_ovFOfj0vClS0T4m3sBFspHrp_R5yq4-1744212188-1.0.1.1-ZNLi0hHYu6Hg.Gi4Y8Zm35zlWtBWf0sj97cSeQfY3Dc.iFKffoPxWnvRe4devnvPgh1FK2JWbwmXb3gPOyLvoFc5C1sS1fxW4sbXxzWi37c; path=/; expires=Wed, 09-Apr-25 15:53:08 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92db00b6de30229a-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reï¿½u : {"theme":["javascript"]}
+DEBUG:root:Donnï¿½es dï¿½codï¿½es : {'theme': ['javascript']}
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002624800E630>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x00000262480104D0> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002624800E570>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 15:25:05 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-query-cost', b'32223'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-remaining', b'467777'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'ratelimitbysize-reset', b'8'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-remaining-minute', b'467777'), (b'x-ratelimitbysize-remaining-month', b'995296245'), (b'x-envoy-upstream-service-time', b'13446'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'13447'), (b'x-kong-proxy-latency', b'6'), (b'x-kong-request-id', b'959b4b0cda23b566e7cd894065a93c62'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=P4lFsm_gbbVPpRVzLEeCpqODHKStrte_dfl.ZCBC2Ew-1744212305-1.0.1.1-9OHTN_n7BLrZUJknlO4skMfalnGcW9YBuPUHbNCy4FTSJns7qn3.Y1Zqf4e6czmOJbeYh_YyxRyg9q9D.wiL1n_AVAwaQmOJ4nXpyZQk2FE; path=/; expires=Wed, 09-Apr-25 15:55:05 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92db0389ea3c343a-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reï¿½u : {"theme":["javascript"]}
+DEBUG:root:Donnï¿½es dï¿½codï¿½es : {'theme': ['javascript']}
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002B695CE63F0>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x000002B695CDC4D0> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002B694B66090>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 15:26:15 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-query-cost', b'32223'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-remaining', b'467777'), (b'x-ratelimitbysize-remaining-month', b'995264022'), (b'ratelimitbysize-reset', b'58'), (b'x-ratelimitbysize-remaining-minute', b'467777'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-envoy-upstream-service-time', b'12607'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'12608'), (b'x-kong-proxy-latency', b'6'), (b'x-kong-request-id', b'0d2ce25d0f38a84c107eb36c7f458115'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=v5kEdedea_lEdGeE0qyJ27bqGADhTLdswhDbeuMxMxY-1744212375-1.0.1.1-xVQEzk_d8rcnw7wrt.0HZibcFJjGvsEqX0YrMPvti.2ZvKbwkt.d3EwgAxcn6LYIcPtI9UJ9KrkiGCofrN55yKcHYuBCqksVpB0P26hWFQY; path=/; expires=Wed, 09-Apr-25 15:56:15 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92db05445f5af097-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reï¿½u : {"theme":["java"]}
+DEBUG:root:Donnï¿½es dï¿½codï¿½es : {'theme': ['java']}
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x00000216BB535700>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x00000216BB52C450> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x00000216BB39EBA0>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 15:27:30 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-remaining-minute', b'445201'), (b'ratelimitbysize-query-cost', b'32223'), (b'ratelimitbysize-limit', b'500000'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'ratelimitbysize-reset', b'43'), (b'x-ratelimitbysize-remaining-month', b'995231799'), (b'ratelimitbysize-remaining', b'445201'), (b'x-envoy-upstream-service-time', b'12872'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'12872'), (b'x-kong-proxy-latency', b'8'), (b'x-kong-request-id', b'fc7f9d37fd6ee34f44c61d4c07ac593d'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=oR2szatP_W2xu4XsiA6Dm311AA5Njl.hSb.3cNXImTQ-1744212450-1.0.1.1-a0eJfYqPP56Q2n6zUvG62p8Xo_SWg.zV2NpYahOEwkMx1PCnLdvVruOBtU4.2FWnxNW3e_Zd96J2b_GGOgWRsV_U9bRB9yXoyorPMSGzkBc; path=/; expires=Wed, 09-Apr-25 15:57:30 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92db0719098ee99d-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reçu : {"theme":["javascript"]}
+DEBUG:root:Données décodées : {'theme': ['javascript']}
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001C97AAA7A40>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x000001C97AACC4D0> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001C979956090>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 15:29:12 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-query-cost', b'32223'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-remaining-minute', b'466339'), (b'ratelimitbysize-remaining', b'466339'), (b'ratelimitbysize-reset', b'3'), (b'ratelimitbysize-limit', b'500000'), (b'x-ratelimitbysize-remaining-month', b'995199576'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-envoy-upstream-service-time', b'15560'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'15561'), (b'x-kong-proxy-latency', b'4'), (b'x-kong-request-id', b'0c1fe43854bee32b4dcf300d4265a469'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=fYKyrRRidiMKVMAsxOE3AfLISzN5SApx8sxR4T.BBbs-1744212552-1.0.1.1-FKJbOllekWZMUvbz7_ywm.12A9kTMqaVqYyRez.a0A_Xp6IZ0IkMgGIKEnHtZCyI8rPFhjmyGBxyb.9mT3Op6fyTDLzRzi5JuCXUiZcsQJg; path=/; expires=Wed, 09-Apr-25 15:59:12 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92db098619b8d337-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reçu : {"theme":["java"]}
+DEBUG:root:Données décodées : {'theme': ['java']}
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000021616353890>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x000002161749C4D0> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002161713F530>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 15:29:39 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-query-cost', b'32223'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-remaining', b'450948'), (b'x-ratelimitbysize-remaining-month', b'995167353'), (b'ratelimitbysize-reset', b'32'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-ratelimitbysize-remaining-minute', b'450948'), (b'x-envoy-upstream-service-time', b'10427'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'10429'), (b'x-kong-proxy-latency', b'5'), (b'x-kong-request-id', b'3fb22c1f834d5c422f6514722efb8035'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=5p9ypJtCK7e.tpr7U3BS7IG71xRzWtrB0gcaa172vVQ-1744212579-1.0.1.1-2swAlQzcsKY.py.nES_tqZXiDYOxwA14WGjjvV7Q8ydlnYc4Uesn.Y2Pqp8a50TAz8hI_xgBGsqQ830uKPeCRgMooounWvxS9d.VmnKqlI8; path=/; expires=Wed, 09-Apr-25 15:59:39 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92db0a49e9c70187-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reçu : {"theme":["javascript"]}
+DEBUG:root:Données décodées : {'theme': ['javascript']}
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x00000230A4ADE5D0>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x00000230A4AE04D0> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x00000230A4ADE4E0>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 15:30:24 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'x-ratelimitbysize-remaining-minute', b'440822'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-ratelimitbysize-remaining-month', b'995135130'), (b'ratelimitbysize-remaining', b'440822'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-reset', b'51'), (b'ratelimitbysize-query-cost', b'32223'), (b'x-envoy-upstream-service-time', b'14829'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'14830'), (b'x-kong-proxy-latency', b'7'), (b'x-kong-request-id', b'049d7f460b5cea06187dd07d0f8a7f47'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=EfyXcN942jrGv_ugrkXouYJWQj9GmbyKQmg3tuum5gU-1744212624-1.0.1.1-exRoQsWXubojkGwVHqjk3X66.108UP3osHVu69HARJFtWqdV0jEKxhd2lK_4TS.cWo8PKI6ow66_3NDkslWM7ygvUgYAskdIpyWlMHOOdeQ; path=/; expires=Wed, 09-Apr-25 16:00:24 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92db0b4b1ec8702c-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reçu : {"theme":["javascript"]}
+DEBUG:root:Données décodées : {'theme': ['javascript']}
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000028F718FA120>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x0000028F71A4C4D0> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000028F71A564B0>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 15:32:56 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-query-cost', b'32223'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-remaining', b'467777'), (b'ratelimitbysize-reset', b'15'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-remaining-minute', b'467777'), (b'x-ratelimitbysize-remaining-month', b'995102907'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-envoy-upstream-service-time', b'10847'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'10848'), (b'x-kong-proxy-latency', b'7'), (b'x-kong-request-id', b'0d349b1ac66cd50a72637f0fac601161'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=6gCiKnh8WXNwMY8Lxni7mCEHb78b0ioL4xEYs4EAsZY-1744212776-1.0.1.1-_Q1iopcIeXyxogPv3ZmBKmUWqSTO.czDHurDNZlmNr1ZFRIllv2KzYbDdjWLtdzVQZcBw0t3TInpzzGTA3q2t7SETHvqmyQpwAK05JqOi_k; path=/; expires=Wed, 09-Apr-25 16:02:56 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92db0f1b1a809d48-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reçu : {"theme":["javascript"]}
+DEBUG:root:Données décodées : {'theme': ['javascript']}
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001795D73A120>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x000001795D88C4D0> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001795D8964B0>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 15:34:23 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-query-cost', b'32223'), (b'x-ratelimitbysize-remaining-minute', b'467777'), (b'x-ratelimitbysize-remaining-month', b'995070684'), (b'ratelimitbysize-remaining', b'467777'), (b'ratelimitbysize-reset', b'51'), (b'ratelimitbysize-limit', b'500000'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-envoy-upstream-service-time', b'13673'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'13674'), (b'x-kong-proxy-latency', b'9'), (b'x-kong-request-id', b'04d0751ae26449725204636766b96301'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=Fu1w3sdvqshdhohE5wI8OZ0WJGGMQxt1GTlhSQdQ278-1744212862-1.0.1.1-jQ5opHSwO5YIgreQu_gaDbvM6f1AZs7nnq.DWBhZmkWcRHsyMsdr.iK2wUdwRX9_Zs4Lxkh1r8lkUOuJsn0W7xhgrHi.Nyf9Pm2tbVLhf.U; path=/; expires=Wed, 09-Apr-25 16:04:22 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92db1123e83a6f30-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reçu : {"theme":["javascript"]}
+DEBUG:root:Données décodées : {'theme': ['javascript']}
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x00000280A494E540>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x00000280A4950450> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x00000280A494E4B0>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 16:00:07 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'x-ratelimitbysize-remaining-month', b'995038461'), (b'ratelimitbysize-remaining', b'467777'), (b'ratelimitbysize-query-cost', b'32223'), (b'ratelimitbysize-limit', b'500000'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-remaining-minute', b'467777'), (b'ratelimitbysize-reset', b'5'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-envoy-upstream-service-time', b'12215'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'12215'), (b'x-kong-proxy-latency', b'7'), (b'x-kong-request-id', b'8454ed7596a45f1f2d92647a8a5a8e61'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=lRbwj90p4SI0BG5DljJ3nusIB8b.LF7gKBwUE9s1sBo-1744214407-1.0.1.1-PYzvH6PMaq64Rg7yiOoDgI2YNEgau3U2I0zYIR94my13u77eqO7n0QLoUpPPnBMGRO40L3Tx2LArkQPv5GlNtnphtAL3HVRWF52khO_BUBA; path=/; expires=Wed, 09-Apr-25 16:30:07 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92db36e3cf670073-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reçu : {"themes":["javascript"]}
+DEBUG:root:Données décodées : {'themes': ['javascript']}
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001986D61E570>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x000001986D620450> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001986D61E4E0>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 16:07:15 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-query-cost', b'32223'), (b'x-ratelimitbysize-remaining-minute', b'467777'), (b'x-ratelimitbysize-remaining-month', b'995006238'), (b'ratelimitbysize-remaining', b'467777'), (b'ratelimitbysize-reset', b'57'), (b'ratelimitbysize-limit', b'500000'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-envoy-upstream-service-time', b'11647'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'11648'), (b'x-kong-proxy-latency', b'6'), (b'x-kong-request-id', b'73f28d3ddc808f041939112e4bea9834'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=8kK2mNYqt09W7Cj96vh._SajL1LxYF_mQ06Gg0WgIYU-1744214835-1.0.1.1-n2v1NG1GBbDG5Aw5snCE5ModMw3pHC4M5UzAjcO13X8bCMtDTd.UiKPQV.DbIB_81d4XavpwnktB2j57W3CeXGnN4s00R6U4D1LdoOlbZVM; path=/; expires=Wed, 09-Apr-25 16:37:15 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92db41580b3402dd-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reçu : 64
+DEBUG:root:Données décodées : 64
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001D19FA5E600>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x000001D19FBA0450> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001D19FB9E390>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 16:09:40 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-limit', b'500000'), (b'x-ratelimitbysize-remaining-month', b'994974017'), (b'ratelimitbysize-query-cost', b'32221'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-ratelimitbysize-remaining-minute', b'467779'), (b'ratelimitbysize-remaining', b'467779'), (b'ratelimitbysize-reset', b'32'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-envoy-upstream-service-time', b'12198'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'12198'), (b'x-kong-proxy-latency', b'6'), (b'x-kong-request-id', b'f7a9eb11a36f8617f1ccd775e93bd153'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=NIwMGwj5zL31Tdpnp3dTrdZlA5CjWb0IyYaNkcjEE7s-1744214980-1.0.1.1-GCUu6MHhyrgATxllWPsU3WkAMxuHz0ZEmkORTD2vemJEuImrvqaqeW9Duw16orOf44d2RBniR2eoBW35XucRXLTRJZup0RV6yM73F3CrVHA; path=/; expires=Wed, 09-Apr-25 16:39:40 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92db44df5f579f0e-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reçu : 64
+DEBUG:root:Données décodées : 64
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002589C736870>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x000002589C790450> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002589C78E510>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 16:10:19 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-query-cost', b'32221'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-remaining', b'438544'), (b'x-ratelimitbysize-remaining-month', b'994941796'), (b'ratelimitbysize-reset', b'55'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-ratelimitbysize-remaining-minute', b'438544'), (b'x-envoy-upstream-service-time', b'13668'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'13669'), (b'x-kong-proxy-latency', b'5'), (b'x-kong-request-id', b'bf559d73f6ace50b1af4ef4adce1d868'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=b01WtYmLp9mK3PCWsEiaV1WWPLHJzXHvn9Wuma4YBzA-1744215019-1.0.1.1-gd80k4gNGhFU2nGhy1fpRi80DpNoq336yeo81JbYLRygZ6kt_AHEFSoE06CbXy5xQhv7uJd.pYVPcIN62SlgDuztpeuqybVrt5_y5eCMusw; path=/; expires=Wed, 09-Apr-25 16:40:19 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92db45c88ab402b5-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reçu : ""
+DEBUG:root:Données décodées : 
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x00000151E1B33890>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x00000151E1B5C450> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x00000151E1AD7530>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 16:10:42 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-query-cost', b'32221'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-remaining-minute', b'420008'), (b'ratelimitbysize-remaining', b'420008'), (b'ratelimitbysize-reset', b'29'), (b'ratelimitbysize-limit', b'500000'), (b'x-ratelimitbysize-remaining-month', b'994909575'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-envoy-upstream-service-time', b'11689'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'11690'), (b'x-kong-proxy-latency', b'6'), (b'x-kong-request-id', b'b4481f7b14d4a74e3c8c3a7fe7a8cc3d'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=wbaaWUbpFC.ukTPI36cRgpE9iXVhHqfASwfI5W343Bk-1744215042-1.0.1.1-osAWpC02TwEor1YBd281AFWa.w.NSWx8z38eDZJ.B0.aJ.ZmTCldXwiO79.CymTUTZlgR1qPMID8qoai17BnbsQsANRblhNXF.PNpUt0BzE; path=/; expires=Wed, 09-Apr-25 16:40:42 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92db4667bbde6fd2-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reçu : {"theme":["javascript"]}
+DEBUG:root:Données décodées : {'theme': ['javascript']}
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000021EF3B0E540>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x0000021EF3B10450> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000021EF3B0E4B0>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 16:13:59 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'x-ratelimitbysize-remaining-minute', b'467777'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-query-cost', b'32223'), (b'x-ratelimitbysize-remaining-month', b'994877352'), (b'ratelimitbysize-remaining', b'467777'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'ratelimitbysize-reset', b'14'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-envoy-upstream-service-time', b'12522'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'12523'), (b'x-kong-proxy-latency', b'5'), (b'x-kong-request-id', b'f44426320f46a25a1211b075da32bd56'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=5WKvgvDJT58GGqewqv_M_rXeibaOvAj2.p.XatZpSqo-1744215239-1.0.1.1-jR4t5d6cWGe18JhpfRVEq5mlSbZZWuFQDuDpwFajY25YfChaIfezAIbIiQ4nj6TfcWbFrcIta4ikumRNdP5gJeJHHUbzxXnaKNbuvs61Rmg; path=/; expires=Wed, 09-Apr-25 16:43:59 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92db4b2e5c620053-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reçu : {"theme":["javascript"]}
+DEBUG:root:Données décodées : {'theme': ['javascript']}
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001CEF04DE540>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x000001CEF04E0450> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001CEF04DE4B0>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 16:14:17 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-query-cost', b'32223'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-remaining', b'438952'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-ratelimitbysize-remaining-minute', b'438952'), (b'ratelimitbysize-reset', b'54'), (b'x-ratelimitbysize-remaining-month', b'994845129'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-envoy-upstream-service-time', b'10911'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'10912'), (b'x-kong-proxy-latency', b'6'), (b'x-kong-request-id', b'fc3e1243d0bcc012562d6a55d934266c'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=emcAww8dErUxsmDzITS8Uekwx9LcKDiwwe4KawGfpDE-1744215257-1.0.1.1-qn0MXA7AIAsG7y1KodmR3XSiU9yn31BmS19BWoho8.s.P323NAVc88OT67yZREW9zH8QXfv1TRu6YTO4CzPMsS772X7ad5oNwv9yfv8lhTE; path=/; expires=Wed, 09-Apr-25 16:44:17 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92db4ba95879d618-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reçu : {"theme":["java"]}
+DEBUG:root:Données décodées : {'theme': ['java']}
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000020F1D346300>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x0000020F1D33C450> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000020F1D1E8F50>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 16:19:00 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-query-cost', b'32223'), (b'ratelimitbysize-remaining', b'467777'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-ratelimitbysize-remaining-minute', b'467777'), (b'x-ratelimitbysize-remaining-month', b'994812906'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-reset', b'33'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-envoy-upstream-service-time', b'33499'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'33500'), (b'x-kong-proxy-latency', b'7'), (b'x-kong-request-id', b'c2ef0c0a4a55455dea9122287bfffe41'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=ZuvraEvCsPAD_15fiOT0tZiBmeNMQ5od4qlf5PS5qTw-1744215540-1.0.1.1-HoD4pCH92ZEa9p4IKzi1fmt1pOt.SRR0Vi4LJUdvCZ2pfQczIDhv15ofhZqB.ET4jnyT7zf2IRdtj_gf5wpCvUfhf7anlyYwte_KNJoF2E8; path=/; expires=Wed, 09-Apr-25 16:49:00 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92db5207aea66f03-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reçu : {"theme":["javascript"]}
+DEBUG:root:Données décodées : {'theme': ['javascript']}
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002BE94B0E570>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x000002BE94B10450> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002BE94B0E4E0>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 16:24:25 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'x-ratelimitbysize-remaining-minute', b'467777'), (b'ratelimitbysize-reset', b'56'), (b'ratelimitbysize-query-cost', b'32223'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-remaining', b'467777'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-ratelimitbysize-remaining-month', b'994780683'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-envoy-upstream-service-time', b'20979'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'20980'), (b'x-kong-proxy-latency', b'5'), (b'x-kong-request-id', b'605e3e1cf1a3e62d6b03806ae6df4042'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=GsZdbcdweF1V0gfnRZOme452heihcbcthPn.0.D5Rho-1744215865-1.0.1.1-q9KNn70Hhu.ZUoFKuSADDYXjmPCmCLvk8SkhPyLXx7gc2QtyzBMQnZOjet_6cEvIXW9Wogj5diS6PK4ofJKAycCDWEysTapm3YoWnbOUiyk; path=/; expires=Wed, 09-Apr-25 16:54:25 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92db5a43ab9dd108-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reçu : ["html/css"]
+DEBUG:root:Données décodées : ['html/css']
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reçu : ["javascript"]
+DEBUG:root:Données décodées : ['javascript']
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002193A6DE6C0>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x000002193A6E04D0> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002193A374AD0>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 16:30:46 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-reset', b'60'), (b'ratelimitbysize-limit', b'500000'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-ratelimitbysize-remaining-month', b'994748462'), (b'ratelimitbysize-remaining', b'467779'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-remaining-minute', b'467779'), (b'ratelimitbysize-query-cost', b'32221'), (b'x-envoy-upstream-service-time', b'45707'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'45709'), (b'x-kong-proxy-latency', b'7'), (b'x-kong-request-id', b'4bebf910d854ce66d087a10ce8ec7e58'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=6RJKGQoeernaJY66W8Vj4Na1r_TgLzLP9ay1Cq9.VI8-1744216246-1.0.1.1-Z0Tr990Y0X.rC8RTZILcm.LYQqvqztPlp7LvnK8hpq.O74BGG5_TU.AWMW48KWWMwv7rkpF3zCOKcwC9o4TOtmvf5KFeSumz04BxuATy8Lc; path=/; expires=Wed, 09-Apr-25 17:00:46 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92db62f4b9986fc0-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reçu : {"theme":"c#"}
+DEBUG:root:Données décodées : {'theme': 'c#'}
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001F17E8BA120>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x000001F17EA10450> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001F17E707530>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 16:34:34 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-query-cost', b'32223'), (b'ratelimitbysize-limit', b'500000'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-ratelimitbysize-remaining-month', b'994716239'), (b'ratelimitbysize-reset', b'38'), (b'ratelimitbysize-remaining', b'467777'), (b'x-ratelimitbysize-remaining-minute', b'467777'), (b'x-envoy-upstream-service-time', b'11183'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'11184'), (b'x-kong-proxy-latency', b'6'), (b'x-kong-request-id', b'15c0e84a4a6ac5170c16a51ce681801d'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=fHg1b9dE9UmhXbHeJYLr8iSSWMW7skGo0X4UavwLHyc-1744216474-1.0.1.1-YZR.mTpSE.L8.TNUHgKBQBSrFONjiarHtYyxXeb6y2hRlnVI2fsZxZbCUsB7YPWGmo60dkfjyL1FSnAWUr1E7AOTcBRctwrKO0dSwYyxRJs; path=/; expires=Wed, 09-Apr-25 17:04:34 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92db695d8a3bf170-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reçu : ["python","java"]
+DEBUG:root:Données décodées : ['python', 'java']
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x00000209AACBA120>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x00000209AAE10450> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x00000209AAB07530>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 16:35:54 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-query-cost', b'32223'), (b'ratelimitbysize-limit', b'500000'), (b'x-ratelimitbysize-remaining-minute', b'458479'), (b'ratelimitbysize-reset', b'18'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'ratelimitbysize-remaining', b'458479'), (b'x-ratelimitbysize-remaining-month', b'994684016'), (b'x-envoy-upstream-service-time', b'12045'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'12046'), (b'x-kong-proxy-latency', b'8'), (b'x-kong-request-id', b'a5b3b56bde70db3d07b6a6093b682f4e'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=P80vAQgV6gMZS0720hmxxup.at4rN33br3qQC73WRoQ-1744216554-1.0.1.1-CdB8v.CyzqhzsEldxo9dBIKS401MPg9zFqV3Cl3SAurufYrblajyHpiXhxAWi58TNlAI4vXZpzmUh774LdFqKoaPROyLrFgpvBmZD.gqDa8; path=/; expires=Wed, 09-Apr-25 17:05:54 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92db6b4f88e802de-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002073C057650>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x000002073C07C450> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002073C054E00>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 16:47:45 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-query-cost', b'32255'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-remaining', b'467745'), (b'ratelimitbysize-reset', b'28'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-ratelimitbysize-remaining-month', b'994651761'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-remaining-minute', b'467745'), (b'x-envoy-upstream-service-time', b'13273'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'13273'), (b'x-kong-proxy-latency', b'6'), (b'x-kong-request-id', b'71aece7961cf89627fabc6423beb0d26'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=5db07dcV8yCQJDw22Kmn1VNIwW9KODlwrnnUbpkwZWs-1744217265-1.0.1.1-G2D0ydUJ2aqqGX.If.w6xmmKaS5.5B4x3bTV.3nlw66H5l.xrbUMZjeP_Afpe_dMu0qhUVD61y0brTsKkICR9JR_x6.l0sZRmjQzVkkMR90; path=/; expires=Wed, 09-Apr-25 17:17:45 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92db7ca27f54bb8a-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x00000255A02A61B0>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x00000255A029C450> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x00000255A00CCE00>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 16:49:27 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-reset', b'44'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-query-cost', b'32255'), (b'x-ratelimitbysize-remaining-month', b'994619506'), (b'ratelimitbysize-remaining', b'467745'), (b'x-ratelimitbysize-remaining-minute', b'467745'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-envoy-upstream-service-time', b'11264'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'11265'), (b'x-kong-proxy-latency', b'6'), (b'x-kong-request-id', b'72bfd14ec9167f3c08cc2218f8114777'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=VEf6.PkABJfEmQbX8xOIlgTGACBEKGLjukndEI2agOg-1744217367-1.0.1.1-nR8Ej0J1Uyo17NCdfRAE8OcOJb00CD7kl7qyxbyLE2.fN1Nhgn9ckxrOGULA1wVaY5XQN8Cqf2SIcEwYBxOF.BxKKyWPlWEEdgmJvF62VOg; path=/; expires=Wed, 09-Apr-25 17:19:27 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92db7f2bfb04008a-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x00000199F7EE7650>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x00000199F7F0C450> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x00000199F7EE4E00>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 16:49:51 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-query-cost', b'32255'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-remaining', b'435490'), (b'x-ratelimitbysize-remaining-month', b'994587251'), (b'ratelimitbysize-reset', b'24'), (b'x-ratelimitbysize-remaining-minute', b'435490'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-envoy-upstream-service-time', b'14178'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'14179'), (b'x-kong-proxy-latency', b'6'), (b'x-kong-request-id', b'4b4a7929b411ec02f1d68415c167a139'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=FrhmbDrRd5o6AkFEjT.J4ehvRcWZkNqEIVZffakfKmk-1744217391-1.0.1.1-n9TZADAXNi20.dzPslCbTvYKHzKJcIKPow2FTIYDI_PzVwHPGXQVp4Ctb3k81CAEFC4qJ9fMC_D3rRNoMl9LyzKH7XHNZgtLWEVoqBT1elE; path=/; expires=Wed, 09-Apr-25 17:19:51 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92db7fad2fb6b6b4-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000022C8C247650>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x0000022C8C26C450> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000022C8C244E00>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 16:50:58 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'x-ratelimitbysize-remaining-minute', b'443462'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'ratelimitbysize-query-cost', b'32255'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-remaining', b'443462'), (b'x-ratelimitbysize-remaining-month', b'994554996'), (b'ratelimitbysize-reset', b'23'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-envoy-upstream-service-time', b'20721'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'20722'), (b'x-kong-proxy-latency', b'6'), (b'x-kong-request-id', b'9da4570859116c3ae21f295d7e57651d'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=2aANWsLFz6T_mVWvbWMESuFQFl6Fy0jkF0i5RLQQay8-1744217458-1.0.1.1-lMpZebdf2IiPtRWRJ..nrD_xDUUvbddNxHR7Z31N1NU7PvQC1b2hexaZHmb5BtHNhjir_vyVQBJWLf_h6SGcw_HhSMg8BSjSmKvXmx4d9lc; path=/; expires=Wed, 09-Apr-25 17:20:58 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92db81279aa70151-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor

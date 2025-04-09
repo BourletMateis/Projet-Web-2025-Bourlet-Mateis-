@@ -125,10 +125,37 @@
       </button>
     </div>
     <div class="modal-body">
-      <input class="input" data-modal-input-focus="true" placeholder="Modal input..." type="text">
-      <p class="pt-5">
-      </p>
-    </div>
+      <input class="input" data-modal-input-focus="true" placeholder="Titre du questionnaire..." type="text">
+    <label class="form-label flex items-center gap-2.5 text-nowrap pt-5">
+        <input class="checkbox" name="languages" type="checkbox" value="html/css"/>
+        HTML/CSS
+    </label>
+
+    <label class="form-label flex items-center gap-2.5 text-nowrap pt-5">
+        <input class="checkbox" name="languages" type="checkbox" value="python"/>
+        PYTHON
+    </label>
+
+    <label class="form-label flex items-center gap-2.5 text-nowrap pt-5">
+        <input class="checkbox" name="languages" type="checkbox" value="java"/>
+        JAVA
+    </label>
+
+    <label class="form-label flex items-center gap-2.5 text-nowrap pt-5">
+        <input class="checkbox" name="languages" type="checkbox" value="javascript"/>
+        JAVASCRIPT
+    </label>
+
+    <label class="form-label flex items-center gap-2.5 text-nowrap pt-5">
+        <input class="checkbox" name="languages" type="checkbox" value="c#"/>
+        C#
+    </label>
+
+    <label class="form-label flex items-center gap-2.5 text-nowrap pt-5">
+        <input class="checkbox" name="languages" type="checkbox" value="c/c++"/>
+        C/C++
+    </label>
+ </div>
     <div class="modal-footer">
   <button class="btn btn-primary" type="button" data-modal-submit="true">Ajouter</button>
 </div>

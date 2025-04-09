@@ -5,6 +5,8 @@
     const dismissBtn = modal.querySelector('[data-modal-dismiss="true"]');
     const submitBtn = modal.querySelector('[data-modal-submit="true"]');
     const input = modal.querySelector('input[data-modal-input-focus]');
+    const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+
      // Get the value of the input field TITLE
   
     // When the "add a questionnaire" option is selected, open the modal
@@ -25,10 +27,19 @@
 
     submitBtn.addEventListener("click", async function () {
       try {
+          const selectedValues = getCheckedValues();
           const title = input.value; // Get the value of the input field TITLE
-          
           // Step 1 : Create a questionnaire using the /create-questionnary use mistral ai
-          const response = await fetch('/create-questionnary');
+          const response = await fetch('/create-questionnary', {
+              method: 'POST',
+              headers: {
+                  'X-CSRF-TOKEN': csrfToken,
+                  'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({
+                  languages: selectedValues, // Use the selected languages from the checkboxes
+              })
+          });
           if (!response.ok) {
               throw new Error('Erreur : ' + response.statusText);
           }
@@ -37,7 +48,6 @@
               const questionnaryIa = data[0]; // Assuming the first element is the questionnaire array
   
               // Step 2 : Create a knowledge using the /knowledge-store and use date json
-              const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
               const postResponse = await fetch('/knowledge-store', {
                   method: 'POST',
                   headers: {
@@ -65,3 +75,12 @@
       }
   });
 });
+
+// Function to get the values of checked checkboxes
+function getCheckedValues() {
+  const checkboxes = document.querySelectorAll('input[name="languages"]:checked');
+  const values = Array.from(checkboxes).map(cb => cb.value);
+  console.log(values); 
+  return values;
+}
+
