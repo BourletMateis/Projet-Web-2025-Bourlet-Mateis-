@@ -7,7 +7,8 @@ use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Foundation\Application;
 use Illuminate\Http\Request;
-use App\Models\KownLedge;
+use App\Models\KnowLedge;
+use App\Models\KnowledgeStudent;
 
 class KnowledgeController extends Controller
 {
@@ -17,11 +18,14 @@ class KnowledgeController extends Controller
      * @return Factory|View|Application|object
      */
     public function index() {
-        $knowledge = KownLedge::all();
+        $knowledge = KnowLedge::all();
         $schools = School::all();
+        $knowledgeStudent = KnowledgeStudent::all();
+        $knowledgeStudents = KnowledgeStudent::with('knowledge')->get();
         return view('pages.knowledge.index',[
             'knowledge' => $knowledge,
             'schools' => $schools,
+            'knowledgeStudent' => $knowledgeStudent,
         ]);
     }
 
@@ -36,7 +40,7 @@ class KnowledgeController extends Controller
 
         $data = $request->only(['title', 'questionnary', 'number_questions', 'difficulty', 'languages']);
 
-        $knowledge = KownLedge::create($data);
+        $knowledge = KnowLedge::create($data);
 
         return redirect()->route('dashboard')->with('success', 'Knowledge entry created successfully.');
 

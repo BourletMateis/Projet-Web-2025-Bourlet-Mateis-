@@ -14,6 +14,7 @@ class KnowledgeStudentController extends Controller
             'title' => 'required|string|max:255',
             'description' => 'required|string',
             'id_knowledge' => 'required|integer',
+            'end_date' => 'required|date',
         ]);
 
         KnowledgeStudent::create($validatedData);

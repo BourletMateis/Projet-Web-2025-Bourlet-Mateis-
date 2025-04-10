@@ -3169,3 +3169,658 @@ DEBUG:root:Contenu JSON extrait de l'IA : [
 DEBUG:httpcore.connection:close.started
 DEBUG:httpcore.connection:close.complete
 DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x00000202AA49DDF0>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x00000202AA4A04D0> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x00000202AA3A14F0>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Thu, 10 Apr 2025 09:57:29 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-remaining-minute', b'467630'), (b'ratelimitbysize-query-cost', b'32370'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-remaining', b'467630'), (b'x-ratelimitbysize-remaining-month', b'993328097'), (b'ratelimitbysize-reset', b'42'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-envoy-upstream-service-time', b'70956'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'70957'), (b'x-kong-proxy-latency', b'6'), (b'x-kong-request-id', b'cdae50709fc7f2780ca6433ea11d6319'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=iklNzsZY2iM9VRhjW3X9SgRn5nUqP_SLOuoHA6InjNM-1744279049-1.0.1.1-UeHBOGslhUv7V.tmY6AYCpfuhtGE6bIUm9cfKLPmUnifrjtaZA7qIWQ5_vce2ybNcLpWNUSOI0648UM15tLmmIOMKUw3q8.MWI_zEHfdxx0; path=/; expires=Thu, 10-Apr-25 10:27:29 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92e15f9d6d89acc1-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:root:Contenu JSON extrait de l'IA : [
+  {
+    "question": "Quelle est la différence entre 'malloc' et 'new' en C++?",
+    "options": ["'malloc' est utilisé pour allouer de la mémoire sur le tas, tandis que 'new' est utilisé pour allouer de la mémoire sur la pile.", "'malloc' est une fonction C pour allouer de la mémoire sur le tas, tandis que 'new' est un opérateur C++ pour allouer de la mémoire sur le tas.", "'malloc' et 'new' sont identiques et interchangeables en C++."],
+    "answer": 2
+  },
+  {
+    "question": "Quel est le rôle du Garbage Collector en Java?",
+    "options": ["Il gère les connexions réseau.", "Il libère automatiquement la mémoire non utilisée.", "Il compile le code Java en bytecode."],
+    "answer": 2
+  },
+  {
+    "question": "Qu'est-ce qu'un pointeur intelligent en C++?",
+    "options": ["Un pointeur qui peut être utilisé pour accéder à des fonctions membres.", "Un objet qui gère automatiquement la mémoire allouée dynamiquement.", "Un pointeur qui ne peut pas être null."],
+    "answer": 2
+  },
+  {
+    "question": "Quelle est la différence entre '==' et '.equals()' en Java?",
+    "options": ["'==' compare les références d'objets, tandis que '.equals()' compare les valeurs des objets.", "'==' compare les valeurs des objets, tandis que '.equals()' compare les références d'objets.", "'==' et '.equals()' sont identiques et interchangeables en Java."],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'un destructeur en C++?",
+    "options": ["Une fonction membre qui initialise un objet.", "Une fonction membre qui libère les ressources allouées par un objet avant sa destruction.", "Une fonction membre qui copie un objet."],
+    "answer": 2
+  },
+  {
+    "question": "Qu'est-ce qu'une interface en Java?",
+    "options": ["Un type de classe qui ne peut pas avoir de méthodes abstraites.", "Un type de classe qui peut avoir des méthodes abstraites et des constantes.", "Un type de classe qui ne peut pas être implémenté par d'autres classes."],
+    "answer": 2
+  },
+  {
+    "question": "Qu'est-ce qu'un modèle de conception singleton en C++?",
+    "options": ["Un modèle qui permet la création de plusieurs instances d'une classe.", "Un modèle qui garantit qu'une classe n'a qu'une seule instance et fournit un point d'accès global à cette instance.", "Un modèle qui permet la création d'instances de classe sans utiliser de constructeur."],
+    "answer": 2
+  },
+  {
+    "question": "Qu'est-ce qu'un 'finalize' en Java?",
+    "options": ["Une méthode qui est appelée avant qu'un objet ne soit détruit par le Garbage Collector.", "Une méthode qui est appelée après qu'un objet ait été détruit par le Garbage Collector.", "Une méthode qui est appelée lorsqu'un objet est créé."],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'un 'friend' en C++?",
+    "options": ["Une classe ou une fonction qui a accès aux membres privés et protégés d'une autre classe.", "Une classe qui ne peut pas être héritée.", "Une fonction qui ne peut pas être appelée en dehors de sa classe."],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'un 'try-catch' en Java?",
+    "options": ["Un bloc utilisé pour gérer les exceptions.", "Un bloc utilisé pour déclencher des exceptions.", "Un bloc utilisé pour ignorer les exceptions."],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'un 'virtual' en C++?",
+    "options": ["Un mot-clé utilisé pour déclarer des fonctions membres qui peuvent être redéfinies dans les classes dérivées.", "Un mot-clé utilisé pour déclarer des variables statiques.", "Un mot-clé utilisé pour déclarer des fonctions inline."],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'un 'abstract' en Java?",
+    "options": ["Un mot-clé utilisé pour déclarer des classes qui ne peuvent pas être instanciées.", "Un mot-clé utilisé pour déclarer des méthodes qui ne peuvent pas être redéfinies.", "Un mot-clé utilisé pour déclarer des variables constantes."],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'un 'template' en C++?",
+    "options": ["Un mécanisme qui permet de créer des fonctions et des classes génériques.", "Un mécanisme qui permet de créer des fonctions et des classes spécifiques.", "Un mécanisme qui permet de créer des fonctions et des classes abstraites."],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'un 'finally' en Java?",
+    "options": ["Un bloc qui est toujours exécuté après un 'try' et un 'catch', indépendamment de la levée d'exception.", "Un bloc qui est exécuté uniquement si une exception est levée.", "Un bloc qui est exécuté uniquement si aucune exception n'est levée."],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'un 'RAII' en C++?",
+    "options": ["Un principe de gestion des ressources où l'acquisition de ressources est liée à l'initialisation d'objets.", "Un principe de gestion des ressources où l'acquisition de ressources est liée à la destruction d'objets.", "Un principe de gestion des ressources où l'acquisition de ressources est liée à la copie d'objets."],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'un 'synchronized' en Java?",
+    "options": ["Un mot-clé utilisé pour contrôler l'accès concurrent à une méthode ou un bloc de code.", "Un mot-clé utilisé pour déclarer des méthodes abstraites.", "Un mot-clé utilisé pour déclarer des variables finales."],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'un 'namespace' en C++?",
+    "options": ["Un mécanisme pour organiser le code en groupes nommés.", "Un mécanisme pour organiser le code en classes.", "Un mécanisme pour organiser le code en fonctions."],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'un 'volatile' en Java?",
+    "options": ["Un mot-clé utilisé pour indiquer qu'une variable peut être modifiée par plusieurs threads.", "Un mot-clé utilisé pour indiquer qu'une variable ne peut pas être modifiée.", "Un mot-clé utilisé pour indiquer qu'une variable est constante."],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'un 'constexpr' en C++?",
+    "options": ["Un mot-clé utilisé pour déclarer des constantes qui sont évaluées à la compilation.", "Un mot-clé utilisé pour déclarer des variables qui sont évaluées à l'exécution.", "Un mot-clé utilisé pour déclarer des fonctions qui sont évaluées à l'exécution."],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'un 'transient' en Java?",
+    "options": ["Un mot-clé utilisé pour indiquer qu'une variable ne doit pas être sérialisée.", "Un mot-clé utilisé pour indiquer qu'une variable doit être sérialisée.", "Un mot-clé utilisé pour indiquer qu'une variable est temporaire."],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'un 'move constructor' en C++?",
+    "options": ["Un constructeur qui transfère les ressources d'un objet temporaire à un nouvel objet.", "Un constructeur qui copie les ressources d'un objet temporaire à un nouvel objet.", "Un constructeur qui initialise un nouvel objet avec des valeurs par défaut."],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'un 'native' en Java?",
+    "options": ["Un mot-clé utilisé pour indiquer qu'une méthode est implémentée en code natif.", "Un mot-clé utilisé pour indiquer qu'une méthode est implémentée en Java.", "Un mot-clé utilisé pour indiquer qu'une méthode est implémentée en bytecode."],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'un 'explicit' en C++?",
+    "options": ["Un mot-clé utilisé pour empêcher les conversions implicites.", "Un mot-clé utilisé pour permettre les conversions implicites.", "Un mot-clé utilisé pour forcer les conversions implicites."],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'un 'strictfp' en Java?",
+    "options": ["Un mot-clé utilisé pour garantir que les calculs en virgule flottante sont effectués de manière stricte.", "Un mot-clé utilisé pour garantir que les calculs en virgule flottante sont effectués de manière approximative.", "Un mot-clé utilisé pour garantir que les calculs en virgule flottante sont effectués de manière aléatoire."],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'un 'noexcept' en C++?",
+    "options": ["Un mot-clé utilisé pour indiquer qu'une fonction ne lance pas d'exception.", "Un mot-clé utilisé pour indiquer qu'une fonction lance des exceptions.", "Un mot-clé utilisé pour indiquer qu'une fonction peut lancer des exceptions."],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'un 'assert' en Java?",
+    "options": ["Un mot-clé utilisé pour tester une assertion pendant le développement.", "Un mot-clé utilisé pour tester une assertion pendant l'exécution.", "Un mot-clé utilisé pour tester une assertion pendant la compilation."],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'un 'static_assert' en C++?",
+    "options": ["Un mot-clé utilisé pour effectuer des assertions à la compilation.", "Un mot-clé utilisé pour effectuer des assertions à l'exécution.", "Un mot-clé utilisé pour effectuer des assertions pendant le développement."],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'un 'suppressWarnings' en Java?",
+    "options": ["Une annotation utilisée pour désactiver les avertissements spécifiques du compilateur.", "Une annotation utilisée pour activer les avertissements spécifiques du compilateur.", "Une annotation utilisée pour ignorer les avertissements spécifiques du compilateur."],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'un 'const_cast' en C++?",
+    "options": ["Un opérateur utilisé pour enlever ou ajouter la constance ou la volatilité d'un type.", "Un opérateur utilisé pour enlever ou ajouter la constance ou la volatilité d'une variable.", "Un opérateur utilisé pour enlever ou ajouter la constance ou la volatilité d'une fonction."],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'une 'enum' en Java?",
+    "options": ["Un type de données qui représente un ensemble de constantes nommées.", "Un type de données qui représente un ensemble de variables nommées.", "Un type de données qui représente un ensemble de fonctions nommées."],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'un 'reinterpret_cast' en C++?",
+    "options": ["Un opérateur utilisé pour interpréter les bits d'un type comme ceux d'un autre type.", "Un opérateur utilisé pour interpréter les bits d'un type comme ceux d'un autre type de manière sûre.", "Un opérateur utilisé pour interpréter les bits d'un type comme ceux d'un autre type de manière non sûre."],
+    "answer": 1
+  }
+]
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x00000256701A24E0>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x000002567019C4D0> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002566FF7F530>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Thu, 10 Apr 2025 09:58:45 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-query-cost', b'32370'), (b'ratelimitbysize-limit', b'500000'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-remaining-minute', b'458865'), (b'ratelimitbysize-reset', b'17'), (b'ratelimitbysize-remaining', b'458865'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-ratelimitbysize-remaining-month', b'993295727'), (b'x-envoy-upstream-service-time', b'61941'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'61941'), (b'x-kong-proxy-latency', b'5'), (b'x-kong-request-id', b'c3ca4e0925ff2b71e6b1940b57364561'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=kgUzXwID0W.Y6KBvGKJ5EsL43CMsWgymLcnX52vcs_A-1744279125-1.0.1.1-txkaevcBxZLV_JRk3bZzQgJ6xUvXaLytV8Ba87pssen8JDxa6DoYbGdXicNCDDxuhYfrSXnUTBqkyFtRdL4McE4CN0IwwIYLSkZPsB_ty3g; path=/; expires=Thu, 10-Apr-25 10:28:45 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92e161b44dbe6fa5-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:root:Contenu JSON extrait de l'IA : [
+  {
+    "question": "Quelle est la différence entre '==' et '.equals()' en Java ?",
+    "options": ["'==' compare les références, '.equals()' compare les valeurs", "'==' compare les valeurs, '.equals()' compare les références", "'==' et '.equals()' sont identiques"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le rôle du mot-clé 'final' en Java ?",
+    "options": ["Il rend une méthode abstraite", "Il empêche l'héritage d'une classe", "Il rend une variable constante"],
+    "answer": 3
+  },
+  {
+    "question": "Qu'est-ce qu'un 'garbage collector' en Java ?",
+    "options": ["Un outil pour collecter les déchets", "Un mécanisme pour libérer la mémoire inutilisée", "Un compilateur de code"],
+    "answer": 2
+  },
+  {
+    "question": "Quelle est la différence entre 'checked' et 'unchecked' exceptions en Java ?",
+    "options": ["Les 'checked' exceptions doivent être déclarées ou capturées, les 'unchecked' exceptions ne le sont pas", "Les 'checked' exceptions sont toujours des erreurs de programme, les 'unchecked' exceptions sont des erreurs de logique", "Les 'checked' exceptions sont des erreurs de compilation, les 'unchecked' exceptions sont des erreurs d'exécution"],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'un 'iterator' en Java ?",
+    "options": ["Un objet qui permet de parcourir une collection", "Un objet qui permet de trier une collection", "Un objet qui permet de créer une nouvelle collection"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle est la différence entre un 'Set' et une 'List' en Java ?",
+    "options": ["Un 'Set' ne permet pas de duplicata, une 'List' permet des duplicata", "Un 'Set' est toujours trié, une 'List' n'est pas triée", "Un 'Set' est immuable, une 'List' est muable"],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'un 'stream' en Java 8 ?",
+    "options": ["Une séquence d'éléments supportant des opérations séquentielles et parallèles", "Un flux de données en temps réel", "Un mécanisme de gestion de la mémoire"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle est la différence entre '\u6df1\u62f7\u8d1d' et '\u6d45\u62f7\u8d1d' en Java ?",
+    "options": ["'\u6df1\u62f7\u8d1d' copie les objets et leurs références, '\u6d45\u62f7\u8d1d' copie uniquement les références", "'\u6df1\u62f7\u8d1d' copie uniquement les références, '\u6d45\u62f7\u8d1d' copie les objets et leurs références", "'\u6df1\u62f7\u8d1d' et '\u6d45\u62f7\u8d1d' sont identiques"],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'un 'lambda expression' en Java ?",
+    "options": ["Une expression qui crée une instance d'une interface fonctionnelle", "Une expression qui crée une nouvelle classe", "Une expression qui crée une nouvelle exception"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle est la différence entre 'synchronized' et 'volatile' en Java ?",
+    "options": ["'synchronized' garantit l'atomicité, 'volatile' garantit la visibilité", "'synchronized' garantit la visibilité, 'volatile' garantit l'atomicité", "'synchronized' et 'volatile' sont identiques"],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'un 'thread' en Java ?",
+    "options": ["Un flux d'exécution dans un programme", "Un mécanisme de gestion de la mémoire", "Un outil pour collecter les déchets"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle est la différence entre 'abstract class' et 'interface' en Java ?",
+    "options": ["Une 'abstract class' peut avoir des méthodes concrètes, une 'interface' ne peut pas", "Une 'abstract class' ne peut pas avoir de constructeurs, une 'interface' peut", "Une 'abstract class' et une 'interface' sont identiques"],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'un 'generic' en Java ?",
+    "options": ["Un mécanisme pour créer des classes et des méthodes réutilisables avec différents types de données", "Un mécanisme pour gérer les exceptions", "Un mécanisme pour collecter les déchets"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle est la différence entre 'ArrayList' et 'LinkedList' en Java ?",
+    "options": ["'ArrayList' utilise un tableau dynamique, 'LinkedList' utilise une liste chaînée", "'ArrayList' est toujours triée, 'LinkedList' n'est pas triée", "'ArrayList' est immuable, 'LinkedList' est muable"],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'un 'singleton' en Java ?",
+    "options": ["Un design pattern qui restreint l'instanciation d'une classe à un seul objet", "Un design pattern qui permet de créer plusieurs objets", "Un design pattern qui gère les exceptions"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle est la différence entre 'Java SE' et 'Java EE' ?",
+    "options": ["'Java SE' est pour les applications standards, 'Java EE' est pour les applications d'entreprise", "'Java SE' est pour les applications d'entreprise, 'Java EE' est pour les applications standards", "'Java SE' et 'Java EE' sont identiques"],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'un 'JVM' en Java ?",
+    "options": ["Une machine virtuelle qui exécute le bytecode Java", "Un compilateur de code Java", "Un outil pour collecter les déchets"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle est la différence entre 'int' et 'Integer' en Java ?",
+    "options": ["'int' est un type primitif, 'Integer' est une classe enveloppe", "'int' est une classe enveloppe, 'Integer' est un type primitif", "'int' et 'Integer' sont identiques"],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'un 'annotation' en Java ?",
+    "options": ["Un mécanisme pour ajouter des métadonnées au code source", "Un mécanisme pour gérer les exceptions", "Un mécanisme pour collecter les déchets"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle est la différence entre 'Java' et 'C++'?",
+    "options": ["'Java' est un langage orienté objet pur, 'C++' est un langage orienté objet et procédural", "'Java' est un langage procédural, 'C++' est un langage orienté objet", "'Java' et 'C++' sont identiques"],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'un 'pointeur' en C++ ?",
+    "options": ["Une variable qui stocke l'adresse mémoire d'une autre variable", "Une variable qui stocke la valeur d'une autre variable", "Une variable qui stocke le type d'une autre variable"],
+    "answer": 1
+  }
+]
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000022874FEFF80>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x00000228750204D0> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000022873F0A0C0>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Thu, 10 Apr 2025 09:59:24 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'x-ratelimitbysize-remaining-month', b'993263356'), (b'ratelimitbysize-remaining', b'467629'), (b'ratelimitbysize-query-cost', b'32371'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-remaining-minute', b'467629'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-reset', b'59'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-envoy-upstream-service-time', b'22977'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'22977'), (b'x-kong-proxy-latency', b'6'), (b'x-kong-request-id', b'd586081f54181969a8fba15b3c063a76'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=l5MoUDgy3ouDiOxJDXDZ9bCG68KJNJ68v5dXBKnmOpA-1744279164-1.0.1.1-n1yWGDRjrV4vqA7irtMEFgUFkOGC8J2HqBX52WL5bioW.a1EUGf0IH5YdQjPVITfqH8yVKOMNoL68LgtOxTMB4ojk7Lj0tJUgrsXNjcQ.fg; path=/; expires=Thu, 10-Apr-25 10:29:24 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92e16398bae50348-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:root:Contenu JSON extrait de l'IA : [
+  {
+    "question": "Quelle est la différence principale entre Java et JavaScript ?",
+    "options": ["Java est orienté objet et JavaScript est fonctionnel", "Java est utilisé pour le développement backend et JavaScript pour le frontend", "Java est un langage compilé et JavaScript est un langage interprété"],
+    "answer": 3
+  },
+  {
+    "question": "Quel est le mécanisme de gestion de la mémoire en C++ ?",
+    "options": ["Garbage Collection", "RAII (Resource Acquisition Is Initialization)", "Manuel avec malloc et free"],
+    "answer": 2
+  },
+  {
+    "question": "Comment gère-t-on les exceptions en Java ?",
+    "options": ["Avec des blocs try-catch-finally", "Avec des blocs if-else", "Avec des blocs switch-case"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le rôle de la fonction 'prototype' en JavaScript ?",
+    "options": ["Elle permet de créer des objets", "Elle permet de définir des méthodes et propriétés partagées par toutes les instances d'un objet", "Elle permet de cloner des objets"],
+    "answer": 2
+  },
+  {
+    "question": "Quelle est la différence entre 'stack' et 'heap' en C++ ?",
+    "options": ["La stack est utilisée pour les variables locales et la heap pour les variables dynamiques", "La stack est utilisée pour les variables dynamiques et la heap pour les variables locales", "La stack et la heap sont interchangeables"],
+    "answer": 1
+  },
+  {
+    "question": "Comment fonctionne le ramasse-miettes (Garbage Collector) en Java ?",
+    "options": ["Il libère automatiquement la mémoire des objets non référencés", "Il libère manuellement la mémoire des objets non référencés", "Il ne libère jamais la mémoire des objets non référencés"],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'une promesse (Promise) en JavaScript ?",
+    "options": ["Un objet représentant une opération asynchrone", "Un objet représentant une opération synchrone", "Un objet représentant une boucle infinie"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle est la différence entre '==' et '===' en JavaScript ?",
+    "options": ["'==' compare la valeur et le type, '===' compare seulement la valeur", "'==' compare seulement la valeur, '===' compare la valeur et le type", "'==' et '===' sont équivalents"],
+    "answer": 2
+  },
+  {
+    "question": "Qu'est-ce qu'un pointeur en C++ ?",
+    "options": ["Une variable qui stocke l'adresse d'une autre variable", "Une variable qui stocke la valeur d'une autre variable", "Une variable qui stocke le type d'une autre variable"],
+    "answer": 1
+  },
+  {
+    "question": "Qu'est-ce qu'une classe abstraite en Java ?",
+    "options": ["Une classe qui ne peut pas être instanciée directement", "Une classe qui peut être instanciée directement", "Une classe qui ne contient que des méthodes statiques"],
+    "answer": 1
+  }
+]
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000016F6058D3D0>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x0000016F605904D0> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000016F600020C0>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Thu, 10 Apr 2025 12:25:17 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-query-cost', b'32370'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-remaining', b'467630'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'ratelimitbysize-reset', b'53'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-remaining-minute', b'467630'), (b'x-ratelimitbysize-remaining-month', b'993230986'), (b'x-envoy-upstream-service-time', b'10940'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'10941'), (b'x-kong-proxy-latency', b'6'), (b'x-kong-request-id', b'2a7d6a2f4c68153f2a2877319e01f205'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=qphDPngOSoGpGVnFPn9S4CByAahEfLq.WSCeqDKWgK8-1744287917-1.0.1.1-jhag1p.RW0bsRED1GvoYy5qMK5ZnJO83Gk5YU6t0sIEFBaHPy93TE6G.1542KOZsyFoqGaSVcZgveOfgl4FosAImWG3ok1aamyxNxV.AKCw; path=/; expires=Thu, 10-Apr-25 12:55:17 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92e2399ac8a42a23-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:root:Contenu JSON extrait de l'IA : [
+  {
+    "question": "Quel est le langage de balisage utilisé pour créer des pages Web ?",
+    "options": ["HTML", "CSS", "JavaScript"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le rôle principal de CSS dans le développement web ?",
+    "options": ["Structurer le contenu", "Styler les éléments", "Exécuter des scripts"],
+    "answer": 2
+  },
+  {
+    "question": "Comment insère-t-on un commentaire en HTML ?",
+    "options": ["<!-- Commentaire -->", "/* Commentaire */", "// Commentaire"],
+    "answer": 1
+  },
+  {
+    "question": "Quel attribut HTML est utilisé pour lier une feuille de style externe ?",
+    "options": ["href", "src", "link"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle balise HTML est utilisée pour créer un hyperlien ?",
+    "options": ["<a>", "<link>", "<href>"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le symbole utilisé pour les commentaires en Python ?",
+    "options": ["//", "#", "/* */"],
+    "answer": 2
+  },
+  {
+    "question": "Quelle fonction Python est utilisée pour afficher du texte à l'écran ?",
+    "options": ["print()", "display()", "show()"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le type de données retourné par la fonction len() en Python ?",
+    "options": ["int", "str", "float"],
+    "answer": 1
+  },
+  {
+    "question": "Comment déclare-t-on une variable en Python ?",
+    "options": ["var x = 5", "x = 5", "int x = 5"],
+    "answer": 2
+  },
+  {
+    "question": "Quelle est la syntaxe correcte pour définir une fonction en Python ?",
+    "options": ["function maFonction():", "def maFonction():", "maFonction():"],
+    "answer": 2
+  }
+]
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001500104E870>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x00000150010504D0> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001500104E7E0>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Thu, 10 Apr 2025 15:11:04 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'x-ratelimitbysize-remaining-minute', b'467632'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'ratelimitbysize-query-cost', b'32368'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-remaining', b'467632'), (b'x-ratelimitbysize-remaining-month', b'993198618'), (b'ratelimitbysize-reset', b'19'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-envoy-upstream-service-time', b'22805'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'22806'), (b'x-kong-proxy-latency', b'6'), (b'x-kong-request-id', b'6e10c4420eaa4d40ebbc3e0c67b81e6b'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=2nHBtvMY_jGYRHuZG.BwsheIGVW5zqltrbjVx4WsxxQ-1744297864-1.0.1.1-cpdVlhWnPjkajMVAfVnTEG.W4eDWaB65Uqby8Kl5w8NAPl4hws74AdrGSC3Uj5lLtUdXnrfLKRd4rxRQLRWDSi2dY0lP.0CVmXx6RfQ6XN8; path=/; expires=Thu, 10-Apr-25 15:41:04 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92e32c25aefaf0e8-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:root:Contenu JSON extrait de l'IA : [
+  {
+    "question": "Quel est le langage de programmation utilisé pour le développement d'applications Android ?",
+    "options": ["Java", "Swift", "Python"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le protocole utilisé pour envoyer des courriels ?",
+    "options": ["HTTP", "SMTP", "FTP"],
+    "answer": 2
+  },
+  {
+    "question": "Quel est le rôle principal d'un pare-feu dans un réseau informatique ?",
+    "options": ["Accélérer la vitesse de connexion", "Filtrer le trafic entrant et sortant", "Stocker les données"],
+    "answer": 2
+  },
+  {
+    "question": "Quel est le langage utilisé pour styliser les pages Web ?",
+    "options": ["HTML", "CSS", "JavaScript"],
+    "answer": 2
+  },
+  {
+    "question": "Quel est le système de gestion de bases de données relationnelles le plus couramment utilisé ?",
+    "options": ["MySQL", "MongoDB", "Apache"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est l'outil utilisé pour versionner le code source dans le développement logiciel ?",
+    "options": ["Git", "Docker", "Jenkins"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le format de fichier utilisé pour les feuilles de calcul ?",
+    "options": [".docx", ".xlsx", ".pptx"],
+    "answer": 2
+  },
+  {
+    "question": "Quel est le principal avantage de l'utilisation de conteneurs dans le développement logiciel ?",
+    "options": ["Réduction des coûts de stockage", "Portabilité et isolation des applications", "Amélioration de la vitesse de réseau"],
+    "answer": 2
+  },
+  {
+    "question": "Quel est le langage de programmation connu pour son utilisation dans le développement de jeux vidéo ?",
+    "options": ["C#", "Ruby", "PHP"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le protocole utilisé pour transférer des fichiers sur le Web ?",
+    "options": ["HTTP", "FTP", "SMTP"],
+    "answer": 3
+  }
+]
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002888C4D7C80>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x000002888C7E04D0> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002888C7DCA40>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Thu, 10 Apr 2025 15:13:31 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-query-cost', b'32368'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-remaining', b'467632'), (b'x-ratelimitbysize-remaining-month', b'993166250'), (b'ratelimitbysize-reset', b'52'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-remaining-minute', b'467632'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-envoy-upstream-service-time', b'23353'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'23354'), (b'x-kong-proxy-latency', b'14'), (b'x-kong-request-id', b'd5f2326cd23ea759b5ced05b4d889524'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=Fl67tNvzl69CXahI_Wklu1O9pJ192QtNS2KNSH4idt4-1744298011-1.0.1.1-TDaSV8hHMG54nZddHym4nkvZHjMo.u9EzW3_4.EW9PJGtJ4Ve12yRGErqer__FVD4Qzkf3EqYQL73Rd7GrjEZQZI8guJmU5PS_o2WToRUZY; path=/; expires=Thu, 10-Apr-25 15:43:31 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92e32fbbc8dd0173-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:root:Contenu JSON extrait de l'IA : [
+  {
+    "question": "Quel est l'élément de base pour structurer le contenu dans une page HTML ?",
+    "options": ["<div>", "<section>", "<article>"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle est la fonction principale de CSS dans le développement web ?",
+    "options": ["Ajouter de l'interactivité", "Styler les éléments", "Gérer les bases de données"],
+    "answer": 2
+  },
+  {
+    "question": "Quel est le rôle de JavaScript dans une application web ?",
+    "options": ["Ajouter du style", "Créer des interactions dynamiques", "Structurer le contenu"],
+    "answer": 2
+  },
+  {
+    "question": "Quel est le format de fichier utilisé pour les feuilles de style CSS ?",
+    "options": [".css", ".html", ".js"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle balise HTML est utilisée pour créer un lien hypertexte ?",
+    "options": ["<a>", "<link>", "<href>"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est l'outil de versionnage le plus couramment utilisé dans le développement logiciel ?",
+    "options": ["Git", "SVN", "Mercurial"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle est la fonction principale de SQL dans le développement d'applications ?",
+    "options": ["Gérer les bases de données", "Créer des interfaces utilisateur", "Styler les éléments"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le langage de programmation souvent utilisé pour le développement backend ?",
+    "options": ["Python", "HTML", "CSS"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le rôle d'un framework comme React.js dans le développement frontend ?",
+    "options": ["Ajouter du style", "Créer des composants réutilisables", "Gérer les bases de données"],
+    "answer": 2
+  },
+  {
+    "question": "Quelle est la balise HTML utilisée pour insérer une image dans une page web ?",
+    "options": ["<img>", "<picture>", "<image>"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le format de fichier utilisé pour les scripts JavaScript ?",
+    "options": [".js", ".json", ".java"],
+    "answer": 1
+  }
+]
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000019A2A26D3D0>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x0000019A2A2A04D0> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000019A29D120C0>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Thu, 10 Apr 2025 15:24:12 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-reset', b'39'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'ratelimitbysize-query-cost', b'32370'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'ratelimitbysize-remaining', b'467630'), (b'ratelimitbysize-limit', b'500000'), (b'x-ratelimitbysize-remaining-month', b'993133880'), (b'x-ratelimitbysize-remaining-minute', b'467630'), (b'x-envoy-upstream-service-time', b'50380'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'50381'), (b'x-kong-proxy-latency', b'30'), (b'x-kong-request-id', b'db54907f031c03534b57825b72b4f504'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=Ylb2Ys01cphktYh6QAJMJD03XsujtmKjmrENMwH3QXw-1744298652-1.0.1.1-lGFf3bbcnlmfiOGNkq2fh4fW_ejYsN6gi0o0FeVc.uE96gvUdiqfqYN8G60jaAMphyv_vPSVCvQHVL8eRdySYe9bRgk.VZ3SLjDgI94MHYY; path=/; expires=Thu, 10-Apr-25 15:54:12 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92e33eb5de8fd152-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:root:Contenu JSON extrait de l'IA : [
+  {
+    "question": "Quel est le type de données utilisé pour stocker une séquence ordonnée et modifiable d'éléments en Python ?",
+    "options": ["Liste", "Tuple", "Ensemble"],
+    "answer": 1
+  },
+  {
+    "question": "En Java, quel mot-clé est utilisé pour définir une classe ?",
+    "options": ["class", "def", "interface"],
+    "answer": 1
+  },
+  {
+    "question": "Comment s'appelle le fichier contenant le point d'entrée principal d'un programme Java ?",
+    "options": ["Main.java", "Program.java", "Entry.java"],
+    "answer": 1
+  },
+  {
+    "question": "En Python, quelle fonction permet de convertir une chaîne de caractères en entier ?",
+    "options": ["int()", "str()", "float()"],
+    "answer": 1
+  },
+  {
+    "question": "En Java, quel type de boucle est utilisé pour itérer sur une collection ou un tableau ?",
+    "options": ["for-each", "while", "do-while"],
+    "answer": 1
+  },
+  {
+    "question": "En Python, quel mot-clé est utilisé pour définir une fonction ?",
+    "options": ["def", "func", "function"],
+    "answer": 1
+  },
+  {
+    "question": "En Java, quel est le type de données utilisé pour stocker un seul caractère ?",
+    "options": ["char", "string", "byte"],
+    "answer": 1
+  },
+  {
+    "question": "En Python, quel module est utilisé pour manipuler les expressions rationnelles ?",
+    "options": ["re", "regex", "pattern"],
+    "answer": 1
+  },
+  {
+    "question": "En Java, quel mot-clé est utilisé pour hériter d'une classe ?",
+    "options": ["extends", "implements", "inherits"],
+    "answer": 1
+  },
+  {
+    "question": "En Python, quel est le résultat de l'opération 5 // 2 ?",
+    "options": ["2", "2.5", "3"],
+    "answer": 1
+  }
+]
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor

@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class KownLedge extends Model
+class KnowLedge extends Model
 {
     use HasFactory;
     protected $table = 'knowledge'; 
@@ -17,4 +17,7 @@ class KownLedge extends Model
         'languages' => 'array',
     ];
 
+
 }
+
+

@@ -19,6 +19,7 @@ return new class extends Migration
             $table->text('description');
             $table->unsignedBigInteger('id_knowledge');
             $table->foreign('id_knowledge')->references('id')->on('knowledge')->onDelete('cascade');
+            $table->date('end_date');
             $table->timestamps();
         });
     }

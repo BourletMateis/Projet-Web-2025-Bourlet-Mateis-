@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const modal = document.getElementById("modal_7");
     const dismissBtn = modal.querySelector('[data-modal-dismiss="true"]');
     const submitBtn = modal.querySelector('[data-modal-submit="true"]');
-    const input = modal.querySelector('input[data-modal-input-focus]');
+    const input = modal.querySelector('input[name="title"]');
     const numberQuestionsInput = document.querySelector('input[name="number-questions"]');
 
      // Get the value of the input field TITLE
@@ -22,6 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
   
     // When the modal is closed, reset the select value
     dismissBtn.addEventListener("click", function () {
+      console.log('Bouton Annuler cliqué');
+
       modal.style.display = "none";
       modal.classList.remove("open");
       select.value = "0";
@@ -94,6 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
           title = document.getElementById("knowledge-title").value;
           description = document.getElementById("knowledge-description").value;
           questionnary = parseInt(getQuestionnaryValues()) ;
+          endDate = document.getElementById("end-date").value;
           
           const postResponse = await fetch('/knowledge-student-store', {
             method: 'POST',
@@ -105,7 +108,8 @@ document.addEventListener("DOMContentLoaded", function () {
               title: title,
               description: description,
               id_knowledge: questionnary,
-              school_id: school
+              school_id: school,
+              end_date: endDate,
             })
           });
           if (postResponse.ok) {
@@ -117,6 +121,61 @@ document.addEventListener("DOMContentLoaded", function () {
           console.log('Form is valid. Proceeding with submission...');
         });
       });
+
+      document.addEventListener("DOMContentLoaded", function() {
+        const clickableRows = document.querySelectorAll(".clickable-row");
+        const modal = document.getElementById("knowledgeModal");
+        const dismissBtn = modal.querySelector('[data-modal-dismiss="true"]');
+        const editBtn = document.getElementById("editButton");
+      
+        clickableRows.forEach(row => {
+            row.addEventListener("click", function() {
+                const school = this.getAttribute("data-school");
+                const title = this.getAttribute("data-title");
+                const description = this.getAttribute("data-description");
+                const knowledgeTitle = this.getAttribute("data-knowledge-title");
+                const languages = this.getAttribute("data-languages");
+                const endDate = this.getAttribute("data-end-date");
+        
+                document.getElementById("modalTitle").value = title;
+                document.getElementById("modalSchool").value = school; 
+                document.getElementById("modalDescription").value = description;
+                document.getElementById("modalKnowledgeTitle").value = knowledgeTitle; 
+                document.getElementById("modalLanguages").value = languages; 
+                document.getElementById("modalEndDate").value = endDate;
+        
+                modal.style.display = "block"; 
+                modal.classList.add("open");
+            });
+        });
+    
+        dismissBtn.addEventListener("click", function() {
+            modal.classList.remove("open"); 
+            setTimeout(() => modal.style.display = "none", 300);
+        });
+    
+        editBtn.addEventListener("click", function() {
+          const modalDescription = document.getElementById("modalDescription");
+          const modalTitle = document.getElementById("modalTitle");
+          const endDateInput = document.getElementById("modalEndDate");
+          const isReadOnly = endDateInput.hasAttribute("readonly");
+
+          if (isReadOnly) {
+            modalDescription.removeAttribute("readonly");
+            modalTitle.removeAttribute("readonly");
+            endDateInput.removeAttribute("readonly");
+            
+          }
+          else {
+            modalDescription.setAttribute("readonly", true);
+            modalTitle.setAttribute("readonly", true);
+            endDateInput.setAttribute("readonly", true);
+          }
+            editBtn.innerText = isReadOnly ? "Enregistrer" : "Modifier"; 
+        });
+    });
+    
+    
 
 // Function to get the values of checked checkboxes
 function getCheckedValues() {
