@@ -5,7 +5,7 @@
       <h3 class="modal-title">
         Ajouter un questionnaire
       </h3>
-      <button class="btn btn-xs btn-icon btn-light" data-modal-dismiss="true">
+        <button class="btn btn-xs btn-icon btn-light" data-modal-dismiss="true" id="closeBtn">
         <i class="ki-outline ki-cross"></i>
       </button>
     </div>
@@ -14,7 +14,8 @@
             <x-forms.input name="title" :label="__('Titre')" />
         </div>
         <div class="mb-4">
-            <x-forms.input name="number-questions" :label="__('Nombre de question')" />
+            <label class="form-label font-normal text-gray-900">Nombre de questions</label>
+            <input type="number" name="number-questions" min="1" max="20" placeholder="Maximum 20 questions" class="input font-normal  "required/>
        </div>
       <x-forms.dropdown 
                         name="difficulty" 
@@ -54,7 +55,7 @@
     <div class="modal-footer flex justify-end mr-5 mt-1 pb-3">
     </div>
     <div class="modal-footer flex justify-end mr-5 mt-1 pb-3 gap-3">
-        <button class="btn btn-light" type="button" data-modal-dismiss="true">Annuler</button>
+        <button class="btn btn-light" type="button" id="cancelBtn" data-modal-dismiss="true">Fermer</button>
         <button class="btn btn-primary" type="button" data-modal-submit="true">Ajouter</button>
     </div>
 </div>

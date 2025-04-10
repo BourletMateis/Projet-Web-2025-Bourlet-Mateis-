@@ -21,4 +21,30 @@ class KnowledgeStudentController extends Controller
 
         return redirect()->route('knowledge.index')->with('success', 'Question and answer stored successfully.');
     }
+    public function update (Request $request, $id) {
+        // Validate the request data
+        $validatedData = $request->validate([
+            'title' => 'required|string|max:255',
+            'description' => 'required|string',
+            'end_date' => 'required|date',
+        ]);
+
+        $knowledgeStudent = KnowledgeStudent::findOrFail($id);
+        $knowledgeStudent->update($validatedData);
+
+        return response()->json([
+            'message' => 'Knowledge student updated successfully.',
+            'knowledgeStudent' => $knowledgeStudent,
+        ]);
+    }
+    public function destroy($id)
+    {
+        $knowledgeStudent = KnowledgeStudent::findOrFail($id);
+        $knowledgeStudent->delete();
+
+        return response()->json([
+            'message' => 'Knowledge student updated successfully.',
+            'knowledgeStudent' => $knowledgeStudent,
+        ]);
+    }
 }

@@ -85,7 +85,8 @@
 <script src="{{ asset('metronic/js/core.bundle.js') }}"></script>
 <script src="{{ asset('metronic/vendors/apexcharts/apexcharts.min.js') }}"></script>
 <script src="{{ asset('metronic/js/widgets/general.js') }}"></script>
-<script src="{{ asset('js/knowLedge.js') }}"></script>
+<script src="{{ asset('js/knowledge/knowledge-student-details.js') }}"></script>
+<script src="{{ asset('js/knowledge/knowledge-student-create.js') }}"></script>
 <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 <!-- End of Scripts -->

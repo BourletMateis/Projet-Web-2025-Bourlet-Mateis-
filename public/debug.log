@@ -3824,3 +3824,488 @@ DEBUG:root:Contenu JSON extrait de l'IA : [
 DEBUG:httpcore.connection:close.started
 DEBUG:httpcore.connection:close.complete
 DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000025F6FA4D3D0>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x0000025F6FA504D0> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000025F6F4C20C0>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Thu, 10 Apr 2025 17:11:45 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-query-cost', b'32368'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-remaining', b'467632'), (b'ratelimitbysize-reset', b'17'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-remaining-minute', b'467632'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-ratelimitbysize-remaining-month', b'993101512'), (b'x-envoy-upstream-service-time', b'61465'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'61466'), (b'x-kong-proxy-latency', b'5'), (b'x-kong-request-id', b'ecab7d1015b94556a36a927ca007355e'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=vZbYJZrfj_5Gv0J3MN0X3dTv4erY4wdp1xJrHqhKr.Q-1744305105-1.0.1.1-0xm.Z2X4Ttgdl7PlKWM5zrHcHwe9ObeGshL4k_uK9IMcAyQgRMEX8h3QXm..fpZhp.2CAO_VDoFG1ntsyoMqzBPzXujWO6byxUHhSWKv6xI; path=/; expires=Thu, 10-Apr-25 17:41:45 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92e3dbfa78f8d136-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:root:Contenu JSON extrait de l'IA : [
+  {
+    "question": "Qu'est-ce qu'un JVM en Java ?",
+    "options": ["Un langage de programmation", "La machine virtuelle Java", "Un éditeur de code"],
+    "answer": 2
+  },
+  {
+    "question": "Quel mot-clé est utilisé pour définir une classe en Java ?",
+    "options": ["class", "define", "new"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le type de retour d'une méthode qui ne retourne rien ?",
+    "options": ["null", "void", "empty"],
+    "answer": 2
+  },
+  {
+    "question": "Quelle est la différence entre JDK et JRE ?",
+    "options": ["JDK inclut JRE et les outils de développement", "JRE inclut JDK et les outils de développement", "JDK et JRE sont identiques"],
+    "answer": 1
+  },
+  {
+    "question": "Comment déclare-t-on un tableau en Java ?",
+    "options": ["int[] arr = new int[10];", "int arr[] = new int(10);", "int arr = new int[];"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le rôle de l'opérateur 'this' en Java ?",
+    "options": ["Faire référence à l'objet courant", "Créer un nouvel objet", "Accéder à une variable statique"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle méthode est utilisée pour lire une ligne de texte à partir de la console en Java ?",
+    "options": ["readLine()", "nextLine()", "inputLine()"],
+    "answer": 2
+  },
+  {
+    "question": "Quel mot-clé est utilisé pour hériter d'une classe en Java ?",
+    "options": ["extends", "inherit", "super"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle est la différence entre '==' et '.equals()' en Java ?",
+    "options": ["'==' compare les références, '.equals()' compare les valeurs", "'==' compare les valeurs, '.equals()' compare les références", "'==' et '.equals()' sont identiques"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le mot-clé utilisé pour définir une interface en Java ?",
+    "options": ["interface", "class", "abstract"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle classe est utilisée pour gérer les exceptions en Java ?",
+    "options": ["Exception", "Error", "Throwable"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le rôle de la méthode 'main' en Java ?",
+    "options": ["Point d'entrée du programme", "Méthode de sortie du programme", "Méthode de gestion des exceptions"],
+    "answer": 1
+  },
+  {
+    "question": "Quel mot-clé est utilisé pour empêcher l'héritage d'une classe en Java ?",
+    "options": ["final", "private", "static"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle méthode est utilisée pour ajouter un élément à une ArrayList en Java ?",
+    "options": ["add()", "insert()", "append()"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le package par défaut pour les classes Java ?",
+    "options": ["java.lang", "java.util", "java.io"],
+    "answer": 1
+  },
+  {
+    "question": "Quel mot-clé est utilisé pour définir une constante en Java ?",
+    "options": ["const", "final", "static"],
+    "answer": 2
+  },
+  {
+    "question": "Quelle est la différence entre 'checked' et 'unchecked' exceptions en Java ?",
+    "options": ["'Checked' exceptions doivent être gérées, 'unchecked' exceptions ne le sont pas", "'Checked' exceptions ne doivent pas être gérées, 'unchecked' exceptions doivent l'être", "'Checked' et 'unchecked' exceptions sont identiques"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le rôle de la méthode 'toString()' en Java ?",
+    "options": ["Convertir un objet en chaîne de caractères", "Convertir une chaîne de caractères en objet", "Comparer deux objets"],
+    "answer": 1
+  },
+  {
+    "question": "Quel mot-clé est utilisé pour définir une méthode abstraite en Java ?",
+    "options": ["abstract", "virtual", "override"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle classe est utilisée pour lire des fichiers en Java ?",
+    "options": ["FileReader", "FileWriter", "File"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le rôle de la méthode 'equals()' en Java ?",
+    "options": ["Comparer deux objets pour l'égalité", "Créer un nouvel objet", "Convertir un objet en chaîne de caractères"],
+    "answer": 1
+  },
+  {
+    "question": "Quel mot-clé est utilisé pour définir une variable de classe en Java ?",
+    "options": ["static", "final", "volatile"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle méthode est utilisée pour obtenir la longueur d'un tableau en Java ?",
+    "options": ["length()", "size()", "length"],
+    "answer": 3
+  },
+  {
+    "question": "Quel est le rôle de la méthode 'hashCode()' en Java ?",
+    "options": ["Retourner un code de hachage pour un objet", "Comparer deux objets pour l'égalité", "Convertir un objet en chaîne de caractères"],
+    "answer": 1
+  },
+  {
+    "question": "Quel mot-clé est utilisé pour définir une classe interne en Java ?",
+    "options": ["inner", "nested", "internal"],
+    "answer": 2
+  },
+  {
+    "question": "Quelle classe est utilisée pour gérer les threads en Java ?",
+    "options": ["Thread", "Runnable", "Executor"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le rôle de la méthode 'wait()' en Java ?",
+    "options": ["Mettre un thread en attente", "Réveiller un thread", "Terminer un thread"],
+    "answer": 1
+  },
+  {
+    "question": "Quel mot-clé est utilisé pour définir une méthode synchronisée en Java ?",
+    "options": ["synchronized", "volatile", "transient"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle classe est utilisée pour gérer les collections en Java ?",
+    "options": ["Collection", "Collections", "List"],
+    "answer": 2
+  },
+  {
+    "question": "Quel est le rôle de la méthode 'notify()' en Java ?",
+    "options": ["Réveiller un thread en attente", "Mettre un thread en attente", "Terminer un thread"],
+    "answer": 1
+  },
+  {
+    "question": "Quel mot-clé est utilisé pour définir une méthode native en Java ?",
+    "options": ["native", "external", "foreign"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle classe est utilisée pour gérer les dates en Java ?",
+    "options": ["Date", "Calendar", "Time"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le rôle de la méthode 'clone()' en Java ?",
+    "options": ["Créer une copie d'un objet", "Comparer deux objets", "Convertir un objet en chaîne de caractères"],
+    "answer": 1
+  },
+  {
+    "question": "Quel mot-clé est utilisé pour définir une variable volatile en Java ?",
+    "options": ["volatile", "transient", "synchronized"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle classe est utilisée pour gérer les ensembles en Java ?",
+    "options": ["Set", "HashSet", "TreeSet"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le rôle de la méthode 'compareTo()' en Java ?",
+    "options": ["Comparer deux objets", "Créer une copie d'un objet", "Convertir un objet en chaîne de caractères"],
+    "answer": 1
+  },
+  {
+    "question": "Quel mot-clé est utilisé pour définir une méthode finale en Java ?",
+    "options": ["final", "static", "abstract"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle classe est utilisée pour gérer les maps en Java ?",
+    "options": ["Map", "HashMap", "TreeMap"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le rôle de la méthode 'getClass()' en Java ?",
+    "options": ["Obtenir la classe d'un objet", "Créer une copie d'un objet", "Convertir un objet en chaîne de caractères"],
+    "answer": 1
+  },
+  {
+    "question": "Quel mot-clé est utilisé pour définir une méthode statique en Java ?",
+    "options": ["static", "final", "abstract"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle classe est utilisée pour gérer les listes en Java ?",
+    "options": ["List", "ArrayList", "LinkedList"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le rôle de la méthode 'notifyAll()' en Java ?",
+    "options": ["Réveiller tous les threads en attente", "Mettre tous les threads en attente", "Terminer tous les threads"],
+    "answer": 1
+  }
+]
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001F32CEBE9C0>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x000001F32CEC04D0> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001F32CC9CE00>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Thu, 10 Apr 2025 17:12:44 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'x-ratelimitbysize-remaining-minute', b'467632'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'ratelimitbysize-query-cost', b'32368'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-remaining', b'467632'), (b'x-ratelimitbysize-remaining-month', b'993069144'), (b'ratelimitbysize-reset', b'51'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-envoy-upstream-service-time', b'35746'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'35746'), (b'x-kong-proxy-latency', b'7'), (b'x-kong-request-id', b'a311c8480e818175922be7367d23cd1b'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=YcvQNc1xZY_rzHPSrd3jCjUCaYmHVOUG1pcatV_c5vs-1744305164-1.0.1.1-CTVkb9Ab9YIQXFqYtXVV4jJe7knHSkg3n.ar8R8GbBCTpOVh6nh05OozcJ8mtXBO9flWVf.mYgMI0Nr1bJXSejJvx5.NK5KUnXxlEpESitI; path=/; expires=Thu, 10-Apr-25 17:42:44 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92e3de114c782a5b-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:root:Contenu JSON extrait de l'IA : [
+  {
+    "question": "Quel est le type de données utilisé pour stocker une séquence de caractères en Python ?",
+    "options": ["list", "tuple", "str"],
+    "answer": 3
+  },
+  {
+    "question": "Comment définir une fonction en Python ?",
+    "options": ["function nom_de_la_fonction()", "def nom_de_la_fonction()", "nom_de_la_fonction()"],
+    "answer": 2
+  },
+  {
+    "question": "Quel est le résultat de l'expression 5 // 2 en Python ?",
+    "options": ["2.5", "2", "3"],
+    "answer": 2
+  },
+  {
+    "question": "Comment importer un module en Python ?",
+    "options": ["import module", "include module", "using module"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le type de données retourné par la fonction range() ?",
+    "options": ["list", "tuple", "range"],
+    "answer": 3
+  },
+  {
+    "question": "Comment ouvrir un fichier en mode lecture en Python ?",
+    "options": ["open('fichier.txt', 'r')", "open('fichier.txt', 'w')", "open('fichier.txt', 'a')"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le résultat de l'expression 3 ** 2 en Python ?",
+    "options": ["6", "9", "8"],
+    "answer": 2
+  },
+  {
+    "question": "Comment vérifier si un élément existe dans une liste en Python ?",
+    "options": ["if elem in list", "if list contains elem", "if elem exists in list"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le type de données utilisé pour stocker une séquence ordonnée et modifiable d'éléments en Python ?",
+    "options": ["set", "list", "tuple"],
+    "answer": 2
+  },
+  {
+    "question": "Comment itérer sur les éléments d'une liste en Python ?",
+    "options": ["for elem in list", "while elem in list", "foreach elem in list"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le résultat de l'expression 'a' + 'b' en Python ?",
+    "options": ["ab", "a+b", "Error"],
+    "answer": 1
+  },
+  {
+    "question": "Comment définir une liste vide en Python ?",
+    "options": ["list()", "[]", "{}"],
+    "answer": 2
+  },
+  {
+    "question": "Quel est le type de données utilisé pour stocker une séquence ordonnée et non modifiable d'éléments en Python ?",
+    "options": ["set", "list", "tuple"],
+    "answer": 3
+  },
+  {
+    "question": "Comment accéder au dernier élément d'une liste en Python ?",
+    "options": ["list[-1]", "list.last()", "list[len(list)-1]"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le résultat de l'expression 10 % 3 en Python ?",
+    "options": ["3", "1", "0"],
+    "answer": 2
+  },
+  {
+    "question": "Comment ajouter un élément à la fin d'une liste en Python ?",
+    "options": ["list.append(elem)", "list.add(elem)", "list.push(elem)"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le type de données utilisé pour stocker une collection non ordonnée d'éléments uniques en Python ?",
+    "options": ["set", "list", "tuple"],
+    "answer": 1
+  },
+  {
+    "question": "Comment supprimer un élément d'une liste en Python ?",
+    "options": ["list.remove(elem)", "list.delete(elem)", "list.pop(elem)"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le résultat de l'expression 'Python'[1] en Python ?",
+    "options": ["P", "y", "h"],
+    "answer": 2
+  },
+  {
+    "question": "Comment créer un dictionnaire vide en Python ?",
+    "options": ["dict()", "{}", "[]"],
+    "answer": 2
+  },
+  {
+    "question": "Quel est le type de données utilisé pour stocker des paires clé-valeur en Python ?",
+    "options": ["set", "list", "dict"],
+    "answer": 3
+  },
+  {
+    "question": "Comment obtenir la longueur d'une liste en Python ?",
+    "options": ["len(list)", "list.length()", "list.size()"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le résultat de l'expression 7 / 2 en Python ?",
+    "options": ["3.5", "3", "4"],
+    "answer": 1
+  },
+  {
+    "question": "Comment trier une liste en Python ?",
+    "options": ["list.sort()", "sort(list)", "list.order()"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le type de données utilisé pour stocker des valeurs booléennes en Python ?",
+    "options": ["bool", "int", "str"],
+    "answer": 1
+  },
+  {
+    "question": "Comment concaténer deux listes en Python ?",
+    "options": ["list1 + list2", "list1.concat(list2)", "list1.join(list2)"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le résultat de l'expression 'Python'.upper() en Python ?",
+    "options": ["PYTHON", "python", "Python"],
+    "answer": 1
+  },
+  {
+    "question": "Comment créer une copie d'une liste en Python ?",
+    "options": ["list.copy()", "copy(list)", "list.duplicate()"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le type de données utilisé pour stocker des nombres à virgule flottante en Python ?",
+    "options": ["float", "int", "double"],
+    "answer": 1
+  },
+  {
+    "question": "Comment inverser une liste en Python ?",
+    "options": ["list.reverse()", "reverse(list)", "list.invert()"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le résultat de l'expression '123'.isdigit() en Python ?",
+    "options": ["True", "False", "Error"],
+    "answer": 1
+  },
+  {
+    "question": "Comment vérifier si une clé existe dans un dictionnaire en Python ?",
+    "options": ["if key in dict", "if dict contains key", "if key exists in dict"],
+    "answer": 1
+  }
+]
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000016EF93DEA80>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x0000016EF93E04D0> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000016EF92E14F0>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Thu, 10 Apr 2025 19:47:22 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'x-ratelimitbysize-remaining-month', b'993036776'), (b'ratelimitbysize-reset', b'55'), (b'ratelimitbysize-query-cost', b'32368'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-remaining', b'467632'), (b'x-ratelimitbysize-remaining-minute', b'467632'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-envoy-upstream-service-time', b'16347'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'16348'), (b'x-kong-proxy-latency', b'64'), (b'x-kong-request-id', b'7365293be2268b07b3f23b409af15713'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=fyGkevz3BkWVSwDEzOfOfI3VZRszs1TWE4YwlRVdfy8-1744314442-1.0.1.1-_bJ_KUGjbaJGicayviUbiTrZuEkLUs1M6GxE82ensCX5k3oufpeiH9kF6uYLDZ5nhvJmiOFW_aDRdaxPbFv1mTYID3CVZXDyCBmMPRxy1zY; path=/; expires=Thu, 10-Apr-25 20:17:22 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92e4c109eaa07a75-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:root:Contenu JSON extrait de l'IA : [
+  {
+    "question": "Quelle est la fonction utilisée pour imprimer quelque chose à l'écran en Python ?",
+    "options": ["print()", "display()", "show()"],
+    "answer": 1
+  },
+  {
+    "question": "Comment définir une fonction en Python ?",
+    "options": ["function ma_fonction():", "def ma_fonction():", "ma_fonction():"],
+    "answer": 2
+  },
+  {
+    "question": "Quel est le type de données utilisé pour stocker une séquence ordonnée et modifiable d'éléments en Python ?",
+    "options": ["tuple", "list", "set"],
+    "answer": 2
+  },
+  {
+    "question": "Comment importer un module en Python ?",
+    "options": ["import module", "include module", "require module"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le résultat de l'expression 5 // 2 en Python ?",
+    "options": ["2.5", "2", "3"],
+    "answer": 2
+  },
+  {
+    "question": "Comment ouvrir un fichier en mode lecture en Python ?",
+    "options": ["open('fichier.txt', 'r')", "open('fichier.txt', 'w')", "open('fichier.txt', 'a')"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle méthode est utilisée pour ajouter un élément à la fin d'une liste en Python ?",
+    "options": ["list.add()", "list.append()", "list.insert()"],
+    "answer": 2
+  },
+  {
+    "question": "Comment vérifier si une clé existe dans un dictionnaire en Python ?",
+    "options": ["if clé in dictionnaire:", "if dictionnaire.has_key(clé):", "if dictionnaire.contains(clé):"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le résultat de l'expression 'bonjour' * 3 en Python ?",
+    "options": ["'bonjourbonjourbonjour'", "'bonjour, bonjour, bonjour'", "'bonjour'"],
+    "answer": 1
+  },
+  {
+    "question": "Comment créer une liste de nombres de 0 à 9 en Python ?",
+    "options": ["list(range(10))", "list(0:10)", "list(0, 10)"],
+    "answer": 1
+  }
+]
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor

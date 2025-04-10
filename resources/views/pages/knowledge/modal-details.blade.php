@@ -5,7 +5,7 @@
         <h3 class="">
             Détails du bilan de connaissance
         </h3>
-      <button class="btn btn-xs btn-icon btn-light" data-modal-dismiss="true">
+        <button class="btn btn-xs btn-icon btn-light" data-modal-dismiss="true" id="closeBtn">
         <i class="ki-outline ki-cross"></i>
       </button>
     </div>
@@ -35,9 +35,12 @@
         <input id="modalEndDate" type="date" class="input" readonly />
       </div>
     </div>
-    <div class="modal-footer p-4 text-right border-t">
-      <button id="editButton" class="btn-edit p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-all">Modifier</button>
-      <button class="btn-close p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-all" data-modal-dismiss="true">Fermer</button>
+    <div class="modal-footer flex items-center justify-between p-4 border-t">
+            <button id="deleteButton" class="btn btn-danger">Supprimer</button>
+        <div class="flex gap-2">
+            <button class="btn btn-light" type="button" id="cancelBtn">Fermer</button>
+            <button id="editButton" class="btn btn-primary">Modifier</button>
+        </div>
     </div>
   </div>
 </div>

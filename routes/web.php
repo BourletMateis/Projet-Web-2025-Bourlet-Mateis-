@@ -54,6 +54,10 @@ Route::middleware('auth')->group(function () {
 
         Route::post('/knowledge-student-store', [KnowledgeStudentController::class, 'store'])->name('knowledge.student.store');
 
+        Route::post('/knowledge-student-update/{id}', [KnowledgeStudentController::class, 'update'])->name('knowledge.student.update');
+        
+        Route::delete('/knowledge-student-delete/{id}', [KnowledgeStudentController::class, 'destroy'])->name('knowledge.student.delete');
+
     });
 
 });
