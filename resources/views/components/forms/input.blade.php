@@ -6,7 +6,8 @@
     'value'         => '',
     'resetLink'     => false,
     'disabled'      => false,
-    'messages'      => false
+    'messages'      => false,
+    'id'            => 'input_id',
 ])
 
 <div {{ $attributes->merge(['class' => 'flex flex-col gap-1']) }}>
@@ -33,7 +34,7 @@
         @if($label)
             <label class="form-label font-normal text-gray-900">{{ $label }}</label>
         @endif
-        <input class="input" {{ $disabled ? 'disabled' : '' }} name="{{ $name }}"
+        <input class="input" {{ $disabled ? 'disabled' : '' }} name="{{ $name }}" id="{{ $id }}"
                placeholder="{{ $placeholder }}" type="{{ $type }}" value="{{ $value }}"/>
     @endif
 

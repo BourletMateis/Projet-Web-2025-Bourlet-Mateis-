@@ -3099,3 +3099,73 @@ DEBUG:root:Contenu JSON extrait de l'IA : [
 DEBUG:httpcore.connection:close.started
 DEBUG:httpcore.connection:close.complete
 DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000029318F224E0>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x0000029318F1C4D0> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000029318CFF530>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Thu, 10 Apr 2025 09:33:37 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-query-cost', b'32370'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-remaining', b'467630'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-ratelimitbysize-remaining-minute', b'467630'), (b'ratelimitbysize-reset', b'39'), (b'x-ratelimitbysize-remaining-month', b'993360467'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-envoy-upstream-service-time', b'16152'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'16153'), (b'x-kong-proxy-latency', b'6'), (b'x-kong-request-id', b'96d31903fa44557149e2212eead94a0e'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=9oToYn90zwiJAVD5Pf9uVaNL2F_AX5zcJ9L53AVx3Ig-1744277617-1.0.1.1-uJcG_acTPILgIL9NeHhi13jLluQJy1X9Oc.zkaTbQ9RaCCMVMN9c3GRZPj..62c9HQBZJdq6gV1yXVM96AHj.RLBXtDRSwCpeCJnhLUZ6ZI; path=/; expires=Thu, 10-Apr-25 10:03:37 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92e13e032835ed85-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:root:Contenu JSON extrait de l'IA : [
+  {
+    "question": "Quelle est la différence entre '==' et '===' en JavaScript ?",
+    "options": ["'==' compare la valeur et le type, '===' compare uniquement la valeur", "'==' compare uniquement la valeur, '===' compare la valeur et le type", "'==' et '===' sont identiques"],
+    "answer": 2
+  },
+  {
+    "question": "Comment définir une fonction en Python ?",
+    "options": ["function maFonction() {}", "def maFonction():", "maFonction = function() {}"],
+    "answer": 2
+  },
+  {
+    "question": "Quel est le sélecteur CSS qui cible tous les éléments de type 'div' ?",
+    "options": ["div {}", ".div {}", "div[]"],
+    "answer": 1
+  },
+  {
+    "question": "Comment itérer sur une liste en Python ?",
+    "options": ["for i in liste: {}", "for each i in liste: {}", "for (i = 0; i < liste.length; i++) {}"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle est la différence entre 'display: none;' et 'visibility: hidden;' en CSS ?",
+    "options": ["'display: none;' supprime l'élément du flux, 'visibility: hidden;' le rend invisible mais garde sa place", "'display: none;' rend l'élément invisible mais garde sa place, 'visibility: hidden;' supprime l'élément du flux", "'display: none;' et 'visibility: hidden;' sont identiques"],
+    "answer": 1
+  },
+  {
+    "question": "Comment importer un module en Python ?",
+    "options": ["import module", "include module", "require('module')"],
+    "answer": 1
+  },
+  {
+    "question": "Quel attribut HTML permet de lier une feuille de style CSS externe ?",
+    "options": ["<link rel='stylesheet' href='styles.css'>", "<style src='styles.css'>", "<css href='styles.css'>"],
+    "answer": 1
+  },
+  {
+    "question": "Comment définir une classe en Python ?",
+    "options": ["class MaClasse():", "class MaClasse {}", "def MaClasse():"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle est la différence entre 'margin' et 'padding' en CSS ?",
+    "options": ["'margin' ajoute de l'espace à l'extérieur de la bordure, 'padding' ajoute de l'espace à l'intérieur de la bordure", "'margin' ajoute de l'espace à l'intérieur de la bordure, 'padding' ajoute de l'espace à l'extérieur de la bordure", "'margin' et 'padding' sont identiques"],
+    "answer": 1
+  },
+  {
+    "question": "Comment gérer les exceptions en Python ?",
+    "options": ["try: {} except: {} finally: {}", "try {} catch {}", "if error: {}"],
+    "answer": 1
+  }
+]
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor

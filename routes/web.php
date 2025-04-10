@@ -10,6 +10,7 @@ use App\Http\Controllers\KnowledgeController;
 use App\Http\Controllers\GroupController;
 use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\AiController;
+use App\Http\Controllers\KnowledgeStudentController;
 use Illuminate\Support\Facades\Route;
 
 // Redirect the root path to /dashboard
@@ -50,6 +51,8 @@ Route::middleware('auth')->group(function () {
         Route::post('/create-questionnary',[AiController::class, 'getIaResponse'])->name('ia.response');
 
         Route::post('/knowledge-store', [KnowledgeController::class, 'store'])->name('knowledge.store');
+
+        Route::post('/knowledge-student-store', [KnowledgeStudentController::class, 'store'])->name('knowledge.student.store');
 
     });
 

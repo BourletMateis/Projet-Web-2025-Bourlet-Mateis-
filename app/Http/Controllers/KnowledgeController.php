@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\School;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Foundation\Application;
@@ -17,8 +18,10 @@ class KnowledgeController extends Controller
      */
     public function index() {
         $knowledge = KownLedge::all();
+        $schools = School::all();
         return view('pages.knowledge.index',[
             'knowledge' => $knowledge,
+            'schools' => $schools,
         ]);
     }
 

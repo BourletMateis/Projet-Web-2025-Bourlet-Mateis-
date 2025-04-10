@@ -86,11 +86,10 @@
                     </h3>
                 </div>
                 <div class="card-body flex flex-col gap-5" >
-                <form action="{{ route('knowledge.store') }}" method="POST">
-                    @csrf
-                    <x-forms.input name="name" :label="__('Nom')" />
+                    <x-forms.input name="knowledge-title" id="knowledge-title" :label="__('Nom')" />
 
-                    <x-forms.input name="description" :label="__('Description')" />
+
+                    <x-forms.input name="knowledge-description" id="knowledge-description" :label="__('Description')" />
 
                     <x-forms.dropdown 
                         name="questionnaire" 
@@ -101,6 +100,16 @@
                         <option value="add">➕ Ajouter un questionnaire</option> 
                         @foreach ($knowledge as $knowledges)
                             <option value="{{ $knowledges->id }}">{{ $knowledges->title }}</option>
+                        @endforeach
+                    </x-forms.dropdown>
+
+                    <x-forms.dropdown 
+                        name="school" 
+                        :label="__('Promotion')" 
+                        id="school-list">  
+                        <option value="0" disabled selected>-- Sélectionnez une promotion --</option>
+                        @foreach ($schools as $school)
+                            <option value="{{ $school->id }}">{{ $school->name }}</option>
                         @endforeach
                     </x-forms.dropdown>
 
@@ -170,10 +179,10 @@
         <input class="checkbox" name="languages" type="checkbox" value="c/c++"/>
         C/C++
     </label>
- </div>
-    <div class="modal-footer">
-  <button class="btn btn-primary" type="button" data-modal-submit="true">Ajouter</button>
-</div>
+    </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="button" data-modal-submit="true">Ajouter</button>
+        </div>
 </div>
 
 </x-app-layout>
