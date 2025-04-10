@@ -1,8 +1,8 @@
     <!-- Modal that allows to display the details of the knowledge. -->
     <div class="modal fixed inset-0 z-[9999] flex items-center justify-center bg-black/50 border-grey" id="knowledgeModal" style="display: none;" role="dialog" aria-modal="true" tabindex="-1">
-    <div class="modal-content max-w-[600px] top-[50%]">
+    <div class="modal-content max-w-[600px] top-[50%] border border-gray-300 rounded-lg  shadow-lg">
     <div class="modal-header">
-        <h3 class="">
+        <h3 class="modal-title">
             Détails du bilan de connaissance
         </h3>
         <button class="btn btn-xs btn-icon btn-light" data-modal-dismiss="true" id="closeBtn">
@@ -11,27 +11,27 @@
     </div>
     <div class="modal-body p-4">
       <div class="mb-4">
-        <label for="modalTitle" class="block text-sm font-medium text-gray-700">Titre</label>
-        <input id="modalTitle" type="text" class="input" readonly />
+        <label for="modalTitle" class=" form-label font-normal text-gray-900 pb-1">Titre</label>
+        <input id="modalTitle" type="text" class="input text-white" readonly />
       </div>
       <div class="mb-4">
-        <label for="modalDescription" class="block text-sm font-medium text-gray-700">Description</label>
+        <label for="modalDescription" class="form-label font-normal text-gray-900 pb-1">Description</label>
         <input id="modalDescription" type="text" class="input" readonly></input>
       </div>
       <div class="mb-4">
-        <label for="modalSchool" class="block text-sm font-medium text-gray-700">École</label>
+        <label for="modalSchool" class="form-label font-normal text-gray-900 pb-1">École</label>
         <input id="modalSchool" type="text" class="input" readonly />
       </div>
       <div class="mb-4">
-        <label for="modalKnowledgeTitle" class="block text-sm font-medium text-gray-700">Questionnaire</label>
+        <label for="modalKnowledgeTitle" class="form-label font-normal text-gray-900 pb-1">Questionnaire</label>
         <input id="modalKnowledgeTitle" type="text" class="input" readonly />
       </div>
       <div class="mb-4">
-        <label for="modalLanguages" class="block text-sm font-medium text-gray-700">Langages</label>
+        <label for="modalLanguages" class="form-label font-normal text-gray-900 pb-1">Langages</label>
         <input id="modalLanguages" type="text" class="input" readonly />
       </div>
       <div class="mb-4">
-        <label for="modalEndDate" class="block text-sm font-medium text-gray-700">Date de fin</label>
+        <label for="modalEndDate" class="form-label font-normal text-gray-900 pb-1">Date de fin</label>
         <input id="modalEndDate" type="date" class="input" readonly />
       </div>
     </div>

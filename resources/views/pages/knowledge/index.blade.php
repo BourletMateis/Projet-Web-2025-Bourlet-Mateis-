@@ -1,5 +1,7 @@
 
 <x-app-layout>
+
+
     <x-slot name="header">
     </x-slot>
     <div class="grid lg:grid-cols-3 gap-5 lg:gap-7.5 items-stretch">
@@ -49,30 +51,32 @@
                                     </thead>
                                     <tbody>
                                         @foreach ($knowledgeStudent as $knowledgeStudents)
+                                        @php
+                                            $studentLink = '<a class="leading-none font-medium text-sm text-gray-900 hover:text-primary clickable-row"
+                                                data-id="' . $knowledgeStudents->id . '"
+                                                data-school="' . $knowledgeStudents->school->name . '"
+                                                data-title="' . $knowledgeStudents->title . '"
+                                                data-description="' . $knowledgeStudents->description . '"
+                                                data-knowledge-title="' . $knowledgeStudents->knowledge->title . '"
+                                                data-languages="' . implode(', ', $knowledgeStudents->knowledge->languages) . '"
+                                                data-end-date="' . $knowledgeStudents->end_date . '">';
+                                            $studentLinkClose = '</a>';
+                                        @endphp
                                         <tr>
                                             <td>
-                                                <a class="leading-none font-medium text-sm text-gray-900 hover:text-primary clickable-row"
-                                                    data-id="{{ $knowledgeStudents->id }}"
-                                                    data-school="{{ $knowledgeStudents->school->name }}"
-                                                    data-title="{{ $knowledgeStudents->title }}"
-                                                    data-description="{{ $knowledgeStudents->description }}"
-                                                    data-knowledge-title="{{ $knowledgeStudents->knowledge->title }}"
-                                                    data-languages="{{ implode(', ', $knowledgeStudents->knowledge->languages) }}"
-                                                    data-end-date="{{ $knowledgeStudents->end_date }}">
-                                                    {{ $knowledgeStudents->school->name }}
-                                                </a>
+                                            {!! $studentLink !!}{{ $knowledgeStudents->school->name }}{!! $studentLinkClose !!}
                                             </td>
-                                            <td>{{ $knowledgeStudents->title }}</td>
-                                            <td>{{ $knowledgeStudents->description }}</td>
+                                            <td>{!! $studentLink !!}{{ $knowledgeStudents->title }}{!! $studentLinkClose !!}</td>
+                                            <td>{!! $studentLink !!}{{ $knowledgeStudents->description }}{!! $studentLinkClose !!}</td>
                                             <td>
                                                 <div class="flex flex-col">
-                                                    <span>{{ $knowledgeStudents->knowledge->title }}</span>
+                                                    <span>{!! $studentLink !!}{{ $knowledgeStudents->knowledge->title }}{!! $studentLinkClose !!}</span>
                                                     <span class="text-2sm text-gray-700 font-normal leading-3">
-                                                        {{ implode(', ', $knowledgeStudents->knowledge->languages) }}
+                                                     {{ implode(', ', $knowledgeStudents->knowledge->languages) }}
                                                     </span>
                                                 </div>
                                             </td>
-                                            <td>{{ $knowledgeStudents->end_date }}</td>
+                                            <td>{!! $studentLink !!}{{ $knowledgeStudents->end_date }}{!! $studentLinkClose !!}</td>
                                         </tr>
                                         @endforeach
                                     </tbody>

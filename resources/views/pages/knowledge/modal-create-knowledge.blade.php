@@ -1,6 +1,6 @@
 <!-- Modal that allows adding a questionnaire to the list. -->
 <div class="modal" data-modal="true" id="modal_7" style="z-index: 90; display: none;" role="dialog" aria-modal="true" tabindex="-1">
-  <div class="modal-content max-w-[600px] top-[50%]">
+<div class="modal-content max-w-[600px] top-[50%] border border-gray-300 rounded-lg  shadow-lg">
     <div class="modal-header">
       <h3 class="modal-title">
         Ajouter un questionnaire
@@ -14,8 +14,8 @@
             <x-forms.input name="title" :label="__('Titre')" />
         </div>
         <div class="mb-4">
-            <label class="form-label font-normal text-gray-900">Nombre de questions</label>
-            <input type="number" name="number-questions" min="1" max="20" placeholder="Maximum 20 questions" class="input font-normal  "required/>
+            <label class="form-label font-normal text-gray-900">Nombre de questions (1 à 25)</label>
+            <input type="number" name="number-questions" min="1" max="25" class="input font-normal"required/>
        </div>
       <x-forms.dropdown 
                         name="difficulty" 
@@ -26,8 +26,8 @@
                         <option value="medium">Moyenne</option>
                         <option value="hard">Difficile</option>
      </x-forms.dropdown>
-     
-    <label class="form-label flex items-center gap-2.5 text-nowrap mt-4">
+     <label class="form-label font-normal text-gray-900 mt-4 mb-1">Languages de programmation :</label>
+    <label class="form-label flex items-center gap-2.5 text-nowrap ">
         <input class="checkbox" name="languages" type="checkbox" value="html/css"/>
         HTML/CSS
     </label>
