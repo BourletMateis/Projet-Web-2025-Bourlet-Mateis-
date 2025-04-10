@@ -4309,3 +4309,103 @@ DEBUG:root:Contenu JSON extrait de l'IA : [
 DEBUG:httpcore.connection:close.started
 DEBUG:httpcore.connection:close.complete
 DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001EA208F1700>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x000001EA20920550> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001EA207C53D0>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Thu, 10 Apr 2025 20:57:05 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'x-ratelimitbysize-remaining-month', b'993004377'), (b'ratelimitbysize-remaining', b'467601'), (b'ratelimitbysize-query-cost', b'32399'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-ratelimitbysize-remaining-minute', b'467601'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-reset', b'9'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-envoy-upstream-service-time', b'14509'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'14509'), (b'x-kong-proxy-latency', b'6'), (b'x-kong-request-id', b'ce4a5802da54de5a2a11574ac74a853a'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=VvGzvNlyQj6C5H55BKJd9JEy5AacdeuzkZJ7rAir9Pc-1744318625-1.0.1.1-3VP78IbtNGKBfphy.3Jfzf47QI8qAwuu955nbWD.wP9ql86l1VKHcFdSHNqbknOhbITVrstjMxxnhiD87zfHWSN3iMzQxbdajd9iDlDzMSE; path=/; expires=Thu, 10-Apr-25 21:27:05 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92e527390f276ec1-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:root:Contenu JSON extrait de l'IA : [
+  {
+    "question": "En Java, quelle est la différence principale entre '==' et le méthode 'equals()' ?",
+    "options": ["'==' compare les références d'objets tandis que 'equals()' compare les valeurs.", "'==' compare les valeurs tandis que 'equals()' compare les références d'objets.", "'==' et 'equals()' font la même chose."],
+    "answer": 1,
+    "explanation": "'==' compare les références d'objets tandis que 'equals()' compare les valeurs."
+  },
+  {
+    "question": "En C#, quel est le rôle du 'Garbage Collector' ?",
+    "options": ["Il gère la mémoire automatiquement en libérant les objets non utilisés.", "Il optimise le code pour une exécution plus rapide.", "Il vérifie les erreurs de syntaxe dans le code."],
+    "answer": 1,
+    "explanation": "Le 'Garbage Collector' gère la mémoire automatiquement en libérant les objets non utilisés."
+  },
+  {
+    "question": "En C++, quelle est la différence entre un pointeur et une référence ?",
+    "options": ["Un pointeur peut être null tandis qu'une référence ne peut pas.", "Une référence peut être réassignée tandis qu'un pointeur ne peut pas.", "Les deux sont interchangeables et ont les mêmes fonctionnalités."],
+    "answer": 1,
+    "explanation": "Un pointeur peut être null tandis qu'une référence ne peut pas."
+  },
+  {
+    "question": "En Java, quelle est la classe de base pour toutes les exceptions en Java ?",
+    "options": ["RuntimeException", "Throwable", "Exception"],
+    "answer": 2,
+    "explanation": "Throwable est la classe de base pour toutes les exceptions en Java."
+  },
+  {
+    "question": "En C#, quelle est la différence entre 'value type' et 'reference type' ?",
+    "options": ["Les 'value types' sont stockés sur le heap tandis que les 'reference types' sont stockés sur la stack.", "Les 'value types' sont stockés sur la stack tandis que les 'reference types' sont stockés sur le heap.", "Les deux types sont stockés de la même manière."],
+    "answer": 2,
+    "explanation": "Les 'value types' sont stockés sur la stack tandis que les 'reference types' sont stockés sur le heap."
+  }
+]
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001EF089E4860>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x000001EF08B404D0> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001EF08B3E6C0>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Thu, 10 Apr 2025 20:59:22 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-query-cost', b'32407'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-remaining', b'467593'), (b'x-ratelimitbysize-remaining-month', b'992971970'), (b'ratelimitbysize-reset', b'48'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-remaining-minute', b'467593'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-envoy-upstream-service-time', b'9589'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'9590'), (b'x-kong-proxy-latency', b'8'), (b'x-kong-request-id', b'774f0c724df95d326f773e67ca38161f'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=8jkvcSzyTdAPlU6bz0VavTE2AX1wmJPYtrZ7YEXvzgI-1744318762-1.0.1.1-4cxAfPBbWn9B80S7UdzLuTs7SCQwma9WcBbpHtoqDHOZOhnLUfBV4jYnG0KxGw75yCOa5M3LPi5d76of5BOYz2J2sin37rxI_WVyX9tvwTo; path=/; expires=Thu, 10-Apr-25 21:29:22 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92e52aadfdde3d07-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:root:Contenu JSON extrait de l'IA : [
+  {
+    "question": "Quel est le sélecteur CSS qui cible tous les éléments de type 'div' ?",
+    "options": ["div {}", ".div {}", "#div {}"],
+    "answer": 1,
+    "explanation": "Le sélecteur 'div {}' cible tous les éléments de type 'div'."
+  },
+  {
+    "question": "Quelle est la fonction en Python utilisée pour lire le contenu d'un fichier ?",
+    "options": ["read()", "write()", "open()"],
+    "answer": 1,
+    "explanation": "La fonction read() est utilisée pour lire le contenu d'un fichier en Python."
+  },
+  {
+    "question": "En C++, quel mot-clé est utilisé pour définir une constante ?",
+    "options": ["const", "static", "final"],
+    "answer": 1,
+    "explanation": "Le mot-clé 'const' est utilisé pour définir une constante en C++."
+  },
+  {
+    "question": "Quel est l'élément HTML utilisé pour créer un lien hypertexte ?",
+    "options": ["<link>", "<a>", "<href>"],
+    "answer": 2,
+    "explanation": "L'élément '<a>' est utilisé pour créer un lien hypertexte en HTML."
+  },
+  {
+    "question": "En Python, quel est le résultat de l'expression '5 // 2' ?",
+    "options": ["2", "2.5", "2.0"],
+    "answer": 1,
+    "explanation": "L'opérateur '//' en Python effectue une division entière, donc '5 // 2' donne 2."
+  }
+]
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
