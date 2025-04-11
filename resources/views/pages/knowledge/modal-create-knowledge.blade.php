@@ -26,7 +26,7 @@
                         <option value="medium">Moyenne</option>
                         <option value="hard">Difficile</option>
      </x-forms.dropdown>
-     <label class="form-label font-normal text-gray-900 mt-4 mb-1">Languages de programmation :</label>
+     <label class="form-label font-normal text-gray-900 mt-4 mb-1">Languages de programmation</label>
     <label class="form-label flex items-center gap-2.5 text-nowrap ">
         <input class="checkbox" name="languages" type="checkbox" value="html/css"/>
         HTML/CSS

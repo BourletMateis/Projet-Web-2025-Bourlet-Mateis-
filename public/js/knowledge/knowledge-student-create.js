@@ -48,47 +48,69 @@ document.addEventListener("DOMContentLoaded", function () {
                   languages: selectedValues, // Use the selected languages from the checkboxes
                   number_questions: numberQuestionsInput.value, // Use the value from the input field for number of questions
                   difficulty: difficulty, // Use the selected difficulty from the dropdown
+                  title: title // Use the value from the input field for title
               })
           });
-          if (!response.ok) {
-              throw new Error('Erreur : ' + response.statusText);
+          if (response.ok) {
+              console.log('Questionnary successfully created.');  
+              setTimeout(function () { document.location.reload(true); }, 100);
+            }
+          else {
+              console.error('Failed to create the Questionnary.');
           }
-          const data = await response.json();
-          if (Array.isArray(data) && Array.isArray(data[0])) {
-              const questionnaryIa = data[0]; // Assuming the first element is the questionnaire array
-  
-              // Step 2 : Create a knowledge using the /knowledge-store and use date json
-              const postResponse = await fetch('/knowledge-store', {
-                  method: 'POST',
-                  headers: {
-                      'X-CSRF-TOKEN': csrfToken,
-                      'Content-Type': 'application/json'
-                  },
-                  body: JSON.stringify({
-                      title: title, // Title of the knowledge
-                      questionnary: questionnaryIa, // Use json questionnay creared by mistral ai
-                      number_questions: numberQuestionsInput.value, // Use the value from the input field for number of questions
-                      difficulty: difficulty, // Use the selected difficulty from the dropdown
-                      languages: selectedValues, // Use the selected languages from the checkboxes
-                  })
-              });
-              if (postResponse.ok) {
-                    console.log('Knowledge successfully created.');
-                    modal.style.display = "none";
-                    modal.classList.remove("open");
-                    select.value = "";
-                    setTimeout(function () { document.location.reload(true); }, 100);
-              } else {
-                    console.error('Failed to create the Knowledge.');
-              }
-          } else {
-                console.error('Unexpected format for the questionnaire:', data);
-          }
-      } catch (error) {
+        }catch (error) {
             console.error('Caught error:', error.message);
-      }
-  });
-});
+        }});
+      });
+
+
+
+          
+
+
+          
+
+
+
+//           if (!response.ok) {
+//               throw new Error('Erreur : ' + response.statusText);
+//           }
+//           const data = await response.json();
+//           if (Array.isArray(data) && Array.isArray(data[0])) {
+//               const questionnaryIa = data[0]; // Assuming the first element is the questionnaire array
+  
+//               // Step 2 : Create a knowledge using the /knowledge-store and use date json
+//               const postResponse = await fetch('/knowledge-store', {
+//                   method: 'POST',
+//                   headers: {
+//                       'X-CSRF-TOKEN': csrfToken,
+//                       'Content-Type': 'application/json'
+//                   },
+//                   body: JSON.stringify({
+//                       title: title, // Title of the knowledge
+//                       questionnary: questionnaryIa, // Use json questionnay creared by mistral ai
+//                       number_questions: numberQuestionsInput.value, // Use the value from the input field for number of questions
+//                       difficulty: difficulty, // Use the selected difficulty from the dropdown
+//                       languages: selectedValues, // Use the selected languages from the checkboxes
+//                   })
+//               });
+//               if (postResponse.ok) {
+//                     console.log('Knowledge successfully created.');
+//                     modal.style.display = "none";
+//                     modal.classList.remove("open");
+//                     select.value = "";
+//                     setTimeout(function () { document.location.reload(true); }, 100);
+//               } else {
+//                     console.error('Failed to create the Knowledge.');
+//               }
+//           } else {
+//                 console.error('Unexpected format for the questionnaire:', data);
+//           }
+//       } catch (error) {
+//             console.error('Caught error:', error.message);
+//       }
+//   });
+// });
 
 // Function for link knowledge to student and save it in the database
 document.addEventListener("DOMContentLoaded", function () {

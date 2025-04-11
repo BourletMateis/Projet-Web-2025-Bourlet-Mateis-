@@ -22,4 +22,6 @@ class KnowledgeStudent extends Model
     {
         return $this->belongsTo(school::class, 'school_id');
     }
+
+
 }

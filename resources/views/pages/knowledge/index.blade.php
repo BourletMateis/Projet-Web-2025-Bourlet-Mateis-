@@ -59,10 +59,12 @@
                                                 data-description="' . $knowledgeStudents->description . '"
                                                 data-knowledge-title="' . $knowledgeStudents->knowledge->title . '"
                                                 data-languages="' . implode(', ', $knowledgeStudents->knowledge->languages) . '"
-                                                data-end-date="' . $knowledgeStudents->end_date . '">';
+                                                data-end-date="' . $knowledgeStudents->end_date . '"
+                                                data-questionnary=\'' . json_encode($knowledgeStudents->knowledge->questionnary) . '\'>';
                                             $studentLinkClose = '</a>';
                                         @endphp
-                                        <tr>
+                                                <div id="question-container-{{ $knowledgeStudents->id }}" data-questionnary='@json($knowledgeStudents->knowledge->questionnary)'></div>
+                                                <tr>
                                             <td>
                                             {!! $studentLink !!}{{ $knowledgeStudents->school->name }}{!! $studentLinkClose !!}
                                             </td>
@@ -72,7 +74,7 @@
                                                 <div class="flex flex-col">
                                                     <span>{!! $studentLink !!}{{ $knowledgeStudents->knowledge->title }}{!! $studentLinkClose !!}</span>
                                                     <span class="text-2sm text-gray-700 font-normal leading-3">
-                                                     {{ implode(', ', $knowledgeStudents->knowledge->languages) }}
+                                                   {{implode(', ', $knowledgeStudents->knowledge->languages)}}
                                                     </span>
                                                 </div>
                                             </td>
@@ -118,7 +120,7 @@
                         <option value="0" disabled selected>-- Sélectionnez un questionnaire --</option>
                         <option value="add">➕ Ajouter un questionnaire</option> 
                         @foreach ($knowledge as $knowledges)
-                            <option value="{{ $knowledges->id }}">{{ $knowledges->title }} -> {{ implode(', ', $knowledges->languages) }}
+                            <option value="{{ $knowledges->id }}">{{ $knowledges->title }} -> {{implode(" , ",$knowledges->languages) }}
                             </option>
                         @endforeach
                     </x-forms.dropdown>

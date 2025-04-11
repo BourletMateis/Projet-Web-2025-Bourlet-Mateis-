@@ -9,7 +9,7 @@
         <i class="ki-outline ki-cross"></i>
       </button>
     </div>
-    <div class="modal-body p-4">
+    <div class="modal-body p-4  scrollable-y py-0 my-5 pl-6 pr-3 mr-3 h-[300px] max-h-[95%]" >
       <div class="mb-4">
         <label for="modalTitle" class=" form-label font-normal text-gray-900 pb-1">Titre</label>
         <input id="modalTitle" type="text" class="input text-white" readonly />
@@ -34,6 +34,7 @@
         <label for="modalEndDate" class="form-label font-normal text-gray-900 pb-1">Date de fin</label>
         <input id="modalEndDate" type="date" class="input" readonly />
       </div>
+      <div id="questionContainer"></div>
     </div>
     <div class="modal-footer flex items-center justify-between p-4 border-t">
             <button id="deleteButton" class="btn btn-danger">Supprimer</button>

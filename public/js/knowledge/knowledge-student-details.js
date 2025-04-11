@@ -9,14 +9,20 @@ document.addEventListener("DOMContentLoaded", function() {
     const cancelBtn = modal.querySelector('#cancelBtn');
     const deleteBtn = document.getElementById("deleteButton");
     let id;
+    
     clickableRows.forEach(row => {
         row.addEventListener("click", function() {
+            modal.style.display = "block"; 
+            modal.classList.add("open");
+
             const school = this.getAttribute("data-school");
             const title = this.getAttribute("data-title");
             const description = this.getAttribute("data-description");
             const knowledgeTitle = this.getAttribute("data-knowledge-title");
             const languages = this.getAttribute("data-languages");
             const endDate = this.getAttribute("data-end-date");
+            const questionnary = this.getAttribute("data-questionnary");
+      
             id = this.getAttribute("data-id");
             document.getElementById("modalTitle").value = title;
             document.getElementById("modalSchool").value = school; 
@@ -25,8 +31,10 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById("modalLanguages").value = languages; 
             document.getElementById("modalEndDate").value = endDate;
 
-            modal.style.display = "block"; 
-            modal.classList.add("open");
+            const rawData = document.getElementById(`question-container-${id}`).dataset.questionnary;
+
+            displayQuestionContent(rawData, "questionContainer");
+
         });
     });
 
@@ -115,4 +123,52 @@ fetch(`/knowledge-student-update/${id}`, {
   console.error('Erreur lors de la mise à jour:', error);
   alert("Une erreur est survenue lors de la mise à jour.");
 });
+}
+
+function displayQuestionContent(json, divId) {
+  
+  json = JSON.parse(json); 
+
+  const div = document.getElementById(divId);
+  div.innerHTML = "";
+  
+  if (div) {
+    const questionsContainer = document.createElement('div');
+    json.forEach((questionData, index) => {
+      const questionElement = document.createElement('h2');
+      questionElement.textContent = questionData.question;
+
+      const optionsList = document.createElement('ul');
+
+      if (Array.isArray(questionData.options)) {
+        questionData.options.forEach((option, i) => {
+          const listItem = document.createElement('li');
+          listItem.textContent = option;
+
+          if (i === questionData.answer - 1) {
+            listItem.style.fontWeight = 'bold';
+            listItem.style.color = 'green';
+          }
+
+          optionsList.appendChild(listItem);
+        });
+      } else {
+        console.error('La propriété "options" est manquante ou invalide.');
+      }
+
+      const explanationElement = document.createElement('p');
+      explanationElement.textContent = questionData.explanation;
+
+      const questionBlock = document.createElement('div');
+      questionBlock.appendChild(questionElement);
+      questionBlock.appendChild(optionsList);
+      questionBlock.appendChild(explanationElement);
+
+      questionsContainer.appendChild(questionBlock);
+    });
+
+    div.appendChild(questionsContainer);
+  } else {
+    console.error(`Le div avec l'id ${divId} n'a pas été trouvé.`);
+  }
 }

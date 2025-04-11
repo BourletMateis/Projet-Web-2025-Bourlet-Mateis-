@@ -22,10 +22,12 @@ class KnowledgeController extends Controller
         $schools = School::all();
         $knowledgeStudent = KnowledgeStudent::all();
         $knowledgeStudents = KnowledgeStudent::with('knowledge')->get();
+
         return view('pages.knowledge.index',[
             'knowledge' => $knowledge,
             'schools' => $schools,
             'knowledgeStudent' => $knowledgeStudent,
+
         ]);
     }
 
