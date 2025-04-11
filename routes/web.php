@@ -48,7 +48,6 @@ Route::middleware('auth')->group(function () {
         // Common life
         Route::get('common-life', [CommonLifeController::class, 'index'])->name('common-life.index');
 
-        Route::post('/create-questionnary',[AiController::class, 'getIaResponse'])->name('ia.response');
 
         Route::post('/knowledge-store', [KnowledgeController::class, 'store'])->name('knowledge.store');
 
@@ -57,6 +56,10 @@ Route::middleware('auth')->group(function () {
         Route::post('/knowledge-student-update/{id}', [KnowledgeStudentController::class, 'update'])->name('knowledge.student.update');
         
         Route::delete('/knowledge-student-delete/{id}', [KnowledgeStudentController::class, 'destroy'])->name('knowledge.student.delete');
+
+        Route::post('/generate-questionnary', [AiController::class, 'generate'])->name('ai.generate');
+
+        Route::get('/get-questionnary/{id}', [KnowledgeStudentController::class, 'getQuestionnary'])->name('knowledge.student.get.questionnary');
 
     });
 

@@ -32,96 +32,122 @@ document.addEventListener("DOMContentLoaded", function () {
       select.value = "0"; 
     });
 
+    // Generate a questionnaire when the submit button is clicked
     submitBtn.addEventListener("click", async function () {
-      try {
-          const difficulty = getDifficultyValues(); 
-          const selectedValues = getCheckedValues();
-          const title = input.value; // Get the value of the input field TITLE
-          // Step 1 : Create a questionnaire using the /create-questionnary use mistral ai
-          const response = await fetch('/create-questionnary', {
+
+      // Step 1: Title validation at the very beginning
+      const title = input.value; // Get the value of the TITLE input field
+      const numberQuestions = numberQuestionsInput.value; // Get the value of the number of questions input field
+    
+      // Check if the title is valid before proceeding
+      if (!title || !/^[A-Za-z0-9\s]+$/.test(title)) {
+        Swal.fire({
+          title: "Erreur",
+          text: "Veuillez entrer un titre valide. Le titre ne doit pas être vide et ne doit contenir que des lettres, des chiffres et des espaces.",
+          icon: "error"
+        });
+        return; 
+      }
+      // Check if the number of questions is valid
+      if (!numberQuestions || isNaN(numberQuestions) || numberQuestions <= 0 || numberQuestions > 50) {
+        Swal.fire({
+          title: "Erreur",
+          text: "Veuillez entrer un nombre valide de questions (entre 1 et 50).",
+          icon: "error"
+        });
+        return; 
+      }
+    
+
+    
+      Swal.fire({
+        title: "Confirmer la création du questionnaire",
+        text: "Êtes-vous sûr de vouloir créer ce questionnaire avec les informations saisies ?",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonText: "Oui, créer le questionnaire !",
+        cancelButtonText: "Non, annuler !",
+        reverseButtons: true
+      }).then(async (result) => {
+        if (result.isConfirmed) {
+          const loadingSwal = Swal.fire({
+            title: 'Création en cours...',
+            text: 'Veuillez patienter, cela peut prendre quelques instants.',
+            icon: 'info',
+            showConfirmButton: false,
+            allowOutsideClick: false,
+            didOpen: () => {
+              Swal.showLoading();
+            }
+          });
+    
+          try {
+            const difficulty = getDifficultyValues(); 
+            const selectedValues = getCheckedValues();
+    
+            // Step 2: Create the questionnaire using /create-questionnary and Mistral AI
+            const response = await fetch('/generate-questionnary', {
               method: 'POST',
               headers: {
-                  'X-CSRF-TOKEN': csrfToken,
-                  'Content-Type': 'application/json'
+                'X-CSRF-TOKEN': csrfToken,
+                'Content-Type': 'application/json'
               },
               body: JSON.stringify({
-                  languages: selectedValues, // Use the selected languages from the checkboxes
-                  number_questions: numberQuestionsInput.value, // Use the value from the input field for number of questions
-                  difficulty: difficulty, // Use the selected difficulty from the dropdown
-                  title: title // Use the value from the input field for title
+                languages: selectedValues, // Use the selected languages from the checkboxes
+                number_questions:numberQuestions, // Use the value from the input field for number of questions
+                difficulty: difficulty, // Use the selected difficulty from the dropdown
+                title: title // Use verified title
               })
-          });
-          if (response.ok) {
-              console.log('Questionnary successfully created.');  
+            });
+    
+            loadingSwal.close();
+    
+            if (response.ok) {
+              Swal.fire({
+                title: "Questionnaire créé !",
+                text: "Le questionnaire a été créé avec succès.",
+                icon: "success"
+              });
               setTimeout(function () { document.location.reload(true); }, 100);
+            } else {
+              Swal.fire({
+                title: "Erreur",
+                text: "Une erreur s'est produite lors de la création du questionnaire.",
+                icon: "error"
+              });
             }
-          else {
-              console.error('Failed to create the Questionnary.');
-          }
-        }catch (error) {
+          } catch (error) {
             console.error('Caught error:', error.message);
-        }});
+            loadingSwal.close();
+            Swal.fire({
+              title: "Erreur",
+              text: "Une erreur s'est produite lors de la création du questionnaire.",
+              icon: "error"
+            });
+          }
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+          Swal.fire({
+            title: "Annulé",
+            text: "La création du questionnaire a été annulée.",
+            icon: "error"
+          });
+        }
       });
+    });
+});    
+    
+   
 
-
-
-          
-
-
-          
-
-
-
-//           if (!response.ok) {
-//               throw new Error('Erreur : ' + response.statusText);
-//           }
-//           const data = await response.json();
-//           if (Array.isArray(data) && Array.isArray(data[0])) {
-//               const questionnaryIa = data[0]; // Assuming the first element is the questionnaire array
-  
-//               // Step 2 : Create a knowledge using the /knowledge-store and use date json
-//               const postResponse = await fetch('/knowledge-store', {
-//                   method: 'POST',
-//                   headers: {
-//                       'X-CSRF-TOKEN': csrfToken,
-//                       'Content-Type': 'application/json'
-//                   },
-//                   body: JSON.stringify({
-//                       title: title, // Title of the knowledge
-//                       questionnary: questionnaryIa, // Use json questionnay creared by mistral ai
-//                       number_questions: numberQuestionsInput.value, // Use the value from the input field for number of questions
-//                       difficulty: difficulty, // Use the selected difficulty from the dropdown
-//                       languages: selectedValues, // Use the selected languages from the checkboxes
-//                   })
-//               });
-//               if (postResponse.ok) {
-//                     console.log('Knowledge successfully created.');
-//                     modal.style.display = "none";
-//                     modal.classList.remove("open");
-//                     select.value = "";
-//                     setTimeout(function () { document.location.reload(true); }, 100);
-//               } else {
-//                     console.error('Failed to create the Knowledge.');
-//               }
-//           } else {
-//                 console.error('Unexpected format for the questionnaire:', data);
-//           }
-//       } catch (error) {
-//             console.error('Caught error:', error.message);
-//       }
-//   });
-// });
-
-// Function for link knowledge to student and save it in the database
+// Link student to knowledge
 document.addEventListener("DOMContentLoaded", function () {
   const submitBtn = document.getElementById("knowledge-submit");
 
   submitBtn.addEventListener("click", async function () {
-    school =parseInt( getSchoolValues());
-    title = document.getElementById("knowledge-title").value;
-    description = document.getElementById("knowledge-description").value;
-    questionnary = parseInt(getQuestionnaryValues()) ;
-    endDate = document.getElementById("end-date").value;
+    const school = parseInt(getSchoolValues());
+    const title = document.getElementById("knowledge-title").value;
+    const description = document.getElementById("knowledge-description").value;
+    const questionnary = parseInt(getQuestionnaryValues());
+    const endDate = document.getElementById("end-date").value;
     
     const postResponse = await fetch('/knowledge-student-store', {
       method: 'POST',
@@ -138,10 +164,31 @@ document.addEventListener("DOMContentLoaded", function () {
       })
     });
     if (postResponse.ok) {
-      setTimeout(function () { document.location.reload(true); }, 100);
+      Swal.fire({
+        title: 'Succès',
+        text: 'La connaissance a été liée à l\'étudiant avec succès!',
+        icon: 'success',
+        confirmButtonText: 'OK',
+        customClass: {
+          confirmButton: 'btn btn-success'
+        }
+      }).then(() => {
+        document.location.reload(true);
+      });
+    } else {
+      Swal.fire({
+        title: 'Erreur',
+        text: 'Une erreur est survenue lors de la sauvegarde de la connaissance.',
+        icon: 'error',
+        confirmButtonText: 'OK',
+        customClass: {
+          confirmButton: 'btn btn-danger'
+        }
+      });
     }
   });
 });
+
 
 // Function to get the values of checked checkboxes
 function getCheckedValues() {

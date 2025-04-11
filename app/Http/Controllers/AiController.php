@@ -5,98 +5,80 @@ namespace App\Http\Controllers;
 use Egulias\EmailValidator\Result\Reason\Reason;
 use Illuminate\Http\Request;
 use App\Models\KnowLedge;
-
+use App\Services\GeminiService;
 class AiController extends Controller
 {
-    public function getIaResponse()
-    {
-        // Retrieve the JSON body from the request
-        $requestData = request()->getContent();
-        $data = json_decode($requestData, true);
-        
-        // Log the input data for debugging
-        \Log::info('Request Data:', $data);
-        
-        if (!isset($data['languages']) || !is_array($data['languages'])) {
-            return response()->json([
-                'status' => 'error',
-                'message' => 'Invalid input: "languages" must be a non-empty array.',
-            ], 400);
-        }
-        // Construct the JSON object with a valid structure
-        $jsonInput = json_encode($data['languages'], JSON_UNESCAPED_SLASHES);
-        // Log the JSON input to verify its structure
-        \Log::info('JSON Input to be passed to Python: ' . $jsonInput);
-        
-        // Concatenate the JSON input with proper escaping (manually add double quotes)
-        $escapedJsonInput = '"' . addslashes($jsonInput) . '"';
-        
-        // Path to the Ai script
-        $scriptPath = base_path('storage/app/public/api/questionnary.py');
-        $output = [];
-        $resultCode = null;
-        $numberQuestions =$data['number_questions'];
-        $difficulty = $data['difficulty'];
-        $title= $data['title'];
-        $languages = $data['languages'];
-        // Execute the script with escaped JSON input
-        exec("python {$scriptPath} {$escapedJsonInput} {$numberQuestions} {$difficulty}", $output, $resultCode);
 
-        \Log::info('Commande exécutée : python ' . $scriptPath . ' ' . $escapedJsonInput);
-        \Log::info('Code de retour : ' . $resultCode);
-        \Log::info('Sortie du script : ' . implode("\n", $output));
-        \Log::info('JSON des langues : ' . $escapedJsonInput);
-        \Log::info('Nombre de questions : ' . $numberQuestions);
-        \Log::info('Difficulté : ' . $difficulty);
-        \Log::info('Titre : ' . $title);
-        \Log::info('langages : ' . json_encode($data['languages']));
+    public function generate(Request $request, GeminiService $gemini)
+{
+    $requestData = request()->getContent();
+    $data = json_decode($requestData, true);
+    $jsonInput = json_encode($data['languages'], flags: JSON_UNESCAPED_SLASHES);
+    $escapedJsonInput = '"' . addslashes($jsonInput) . '"';
+    $numberQuestions =$data['number_questions'];
+    $difficulty = $data['difficulty'];
+    $title= $data['title'];
+    $languages = $data['languages'];
 
-        $questionnary = json_decode(implode("\n", $output), true);
+    // Prompt for generating the questionnaire
+    $prompt = "
+    Tu dois générer un questionnaire de {$numberQuestions} questions en français sur le thème : {$jsonInput}. Il s'agit d'un test avant d'entrer en première année de bachelor. Je veux des questions techniques avec un niveau de difficulté = {$difficulty}.
+    
+    Le résultat doit être exclusivement un tableau JSON valide (sans explication ni introduction). Chaque élément du tableau représente une question avec les champs suivants :
+    - \"question\" : la question en français (chaîne de caractères) et courte
+    - \"options\" : une liste de 3 choix court (chaînes de caractères), dont un seul est correct
+    - \"answer\" : un entier entre 1 et 3 représentant la position (index) de la bonne réponse
+    - \"explanation\" : Une courte explication de la réponse
+    
+    Important :
+    - Le JSON doit être strictement valide : utilise uniquement des guillemets doubles \" pour les clés et les chaînes.
+    - La position de la bonne réponse doit être aléatoirement répartie entre les positions 1, 2 et 3. Il doit y avoir une distribution équilibrée.
+    - Encode correctement les caractères spéciaux en UTF-8 (é, è, à, etc.).
+    - Ne renvoie aucun texte autour du JSON, uniquement ce bloc brut.
+    
+    Exemple de format attendu :
+    
+    [
+      {
+        \"question\": \"Quel est le langage de balisage utilisé pour créer des pages Web ?\",
+        \"options\": [\"HTML\", \"CSS\", \"JavaScript\"],
+        \"answer\": 1,
+        \"explanation\": \"HTML est le langage de balisage standard pour créer des pages Web.\"
+      }
+    ]
+    ";
+    // System prompt for context 
+    $systemPrompt ="Tu es un assistant qui génère uniquement des réponses JSON strictes. 
+    Tu ne dois jamais ajouter de texte, d’explications ou de commentaires. 
+    Tu dois respecter rigoureusement la syntaxe JSON (guillemets doubles, UTF-8, etc.).
+    Oublie aucune virgule entre les éléments du tableau JSON. ";
+    
+    // Call the Gemini API to generate the questionnaire
+    $response = $gemini->generateText($systemPrompt,$prompt);
+    // Remove any leading or trailing whitespace
+    $cleaned = preg_replace('/```json|```/', '', $response);
+    //Json decode the cleaned response
+    $Json = json_decode($cleaned, true);
 
+        // Prepare the data to be saved
+        $data = [
+            'title' => $title,
+            'questionnary' => $Json,
+            'number_questions' => $numberQuestions,
+            'difficulty' => $difficulty,
+            'languages' => $languages,
+        ];
         
+        // Create a new Knowledge entry
+        $knowledge = KnowLedge::create($data);
 
-        
-            // If $resultCode is 0, process the data
-            if ($resultCode === 0) {
-                
-                // Prepare the data to be saved
-                $data = [
-                    'title' => $title,
-                    'questionnary' => $questionnary,
-                    'number_questions' => $numberQuestions,
-                    'difficulty' => $difficulty,
-                    'languages' => $languages,
-                ];
-                
-                // Create a new Knowledge entry
-                $knowledge = KnowLedge::create($data);
-        
-                // Redirect with success message
-                return Response()->json([
-                    'data' => $knowledge,
-                    'resultCode' => $resultCode,
-                    'status' => 'success',
-                ]);
-        
-            } else {
-                // Check if the output is valid JSON
-                if (json_last_error() === JSON_ERROR_NONE) {
-                    // If the output is valid JSON, return it as a JSON response
-                    return response()->json([
-                        'data' => json_decode(implode("\n", $output), true),
-                        'resultCode' => $resultCode,
-                        'status' => 'success',
-                    ]);
-                } else {
-                    // If the output is not valid JSON, return an error response
-                    return response()->json([
-                        'status' => 'error',
-                        'message' => 'Invalid JSON format returned by the script.',
-                        'code' => $resultCode,
-                    ], 500);
-                }
-            }
-            
-        }
+        // Redirect with success message
+        return Response()->json([
+            'data' => $knowledge,
+            'status' => 'success',
+        ]);
     }
+}
+
+
         

@@ -1,3 +1,4 @@
+
 const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 
 // This script handles the modal for editing knowledge details
@@ -6,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const modal = document.getElementById("knowledgeModal");
     const dismissBtn = modal.querySelector('[data-modal-dismiss="true"]');
     const editBtn = document.getElementById("editButton");
-    const cancelBtn = modal.querySelector('#cancelBtn');
     const deleteBtn = document.getElementById("deleteButton");
     let id;
     
@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", function() {
             const knowledgeTitle = this.getAttribute("data-knowledge-title");
             const languages = this.getAttribute("data-languages");
             const endDate = this.getAttribute("data-end-date");
-            const questionnary = this.getAttribute("data-questionnary");
       
             id = this.getAttribute("data-id");
             document.getElementById("modalTitle").value = title;
@@ -31,23 +30,24 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById("modalLanguages").value = languages; 
             document.getElementById("modalEndDate").value = endDate;
 
-            const rawData = document.getElementById(`question-container-${id}`).dataset.questionnary;
-
-            displayQuestionContent(rawData, "questionContainer");
+            getQuestionnary(id);
 
         });
     });
+
+    const swalWithBootstrapButtons = Swal.mixin({
+      customClass: {
+          confirmButton: "btn btn-success",
+          cancelButton: "btn btn-danger"
+      },
+      buttonsStyling: false
+  });
 
     // Close the modal when click X
     dismissBtn.addEventListener("click", function() {
         modal.classList.remove("open"); 
         setTimeout(() => modal.style.display = "none", 300);
     });
-    // Close the modal when click button close
-    cancelBtn.addEventListener("click", function () {
-        modal.style.display = "none";
-        modal.classList.remove("open");
-      });
     // Management of the edit button 
     editBtn.addEventListener("click", function() {
       const modalDescription = document.getElementById("modalDescription");
@@ -64,111 +64,251 @@ document.addEventListener("DOMContentLoaded", function() {
         const updatedDescription = modalDescription.value;
         const updatedTitle = modalTitle.value;
         const updatedEndDate = endDateInput.value;
-
-        updateData(updatedDescription, updatedTitle, updatedEndDate, id);
-
-        modalDescription.setAttribute("readonly", true);
-        modalTitle.setAttribute("readonly", true);
-        endDateInput.setAttribute("readonly", true);
-        editBtn.innerText = "Modifier";
+      
+        // Confirmation before saving
+        Swal.fire({
+          title: "Voulez-vous sauvegarder les modifications ?",
+          text: "Vous ne pourrez pas revenir en arrière après avoir sauvegardé !",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonText: "Oui, sauvegarder",
+          cancelButtonText: "Non, annuler",
+          reverseButtons: true
+        }).then((result) => {
+          if (result.isConfirmed) {
+            // user confirms, proceed with the update
+            fetch(`/knowledge-student-update/${id}`, {
+              method: 'POST',
+              body: JSON.stringify({
+                description: updatedDescription,
+                title: updatedTitle,
+                end_date: updatedEndDate,
+              }),
+              headers: {
+                'Content-Type': 'application/json',
+                'X-CSRF-TOKEN': csrfToken
+              }
+            })
+            .then(response => {
+              if (response.ok) {
+                Swal.fire({
+                  title: "Mis à jour !",
+                  text: "Les modifications ont été enregistrées avec succès.",
+                  icon: "success"
+                });
+                setTimeout(function () { document.location.reload(true); }, 100);
+              } else {
+                Swal.fire({
+                  title: "Erreur",
+                  text: "Une erreur est survenue lors de la mise à jour de l'élément.",
+                  icon: "error"
+                });
+              }
+            })
+            .catch(error => {
+              console.error('Erreur:', error);
+              Swal.fire({
+                title: "Erreur",
+                text: "Une erreur est survenue. Essayez à nouveau.",
+                icon: "error"
+              });
+            });
+          } else if (result.dismiss === Swal.DismissReason.cancel) {
+            Swal.fire({
+              title: "Annulé",
+              text: "La mise à jour a été annulée. L'élément reste inchangé.",
+              icon: "error"
+            });
+          }
+        });
       }
-        editBtn.innerText = isReadOnly ? "Enregistrer" : "Modifier"; 
     });
+        
     // Management of the delete button
     deleteBtn.addEventListener("click", function () {
-      const confirmation = confirm("Êtes-vous sûr de vouloir supprimer cet élément ?");
-      if (confirmation) {
-        fetch(`/knowledge-student-delete/${id}`, {
-          method: 'DELETE',
-          headers: {
-            'X-CSRF-TOKEN': csrfToken,
-            'Content-Type': 'application/json'
-          }
-        })
-        .then(response => {
-          if (response.ok) {
-            alert("L'élément a été supprimé avec succès.");
-            setTimeout(function () { document.location.reload(true); }, 100);
-          } else {
-            alert("Erreur lors de la suppression de l'élément.");
-          }
-        })
-        .catch(error => console.error('Erreur:', error));
-      }
+      Swal.fire({
+        title: "Êtes-vous sûr ?",
+        text: "Vous ne pourrez pas revenir en arrière !",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonText: "Oui, supprimez-le !",
+        cancelButtonText: "Non, annulez !",
+        reverseButtons: true
+      }).then((result) => {
+        if (result.isConfirmed) {
+          fetch(`/knowledge-student-delete/${id}`, {
+            method: 'DELETE',
+            headers: {
+              'X-CSRF-TOKEN': csrfToken,
+              'Content-Type': 'application/json'
+            }
+          })
+          .then(response => {
+            if (response.ok) {
+              Swal.fire({
+                title: "Supprimé !",
+                text: "L'élément a été supprimé avec succès.",
+                icon: "success"
+              });
+              setTimeout(function () { document.location.reload(true); }, 1000);
+            } else {
+              Swal.fire({
+                title: "Erreur",
+                text: "Erreur lors de la suppression de l'élément.",
+                icon: "error"
+              });
+            }
+          })
+          .catch(error => {
+            console.error('Erreur:', error);
+            Swal.fire({
+              title: "Erreur",
+              text: "Une erreur est survenue. Essayez à nouveau.",
+              icon: "error"
+            });
+          });
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+          Swal.fire({
+            title: "Annulé",
+            text: "L'élément est toujours en place :)",
+            icon: "error"
+          });
+        }
+      });
     });
 });
-
-
-// Function to update the data in the database
-function updateData(description, title, endDate, id) {
-fetch(`/knowledge-student-update/${id}`, {
-  method: 'POST',
-  body: JSON.stringify({
-    description: description,
-    title: title,
-    end_date: endDate
-  }),
-  headers: {
-    'Content-Type': 'application/json',
-    'X-CSRF-TOKEN': csrfToken
-  }
-})
-.then(response => response.json())
-.then(data => {
-  // Affiche un message de confirmation ou une notification
-  alert("Les informations ont été mises à jour avec succès !");
-  setTimeout(function () { document.location.reload(true); }, 100);
-})
-.catch(error => {
-  console.error('Erreur lors de la mise à jour:', error);
-  alert("Une erreur est survenue lors de la mise à jour.");
-});
-}
 
 function displayQuestionContent(json, divId) {
+  const questions = typeof json === 'string' ? JSON.parse(json) : json;
+  const container = document.getElementById(divId);
   
-  json = JSON.parse(json); 
-
-  const div = document.getElementById(divId);
-  div.innerHTML = "";
-  
-  if (div) {
-    const questionsContainer = document.createElement('div');
-    json.forEach((questionData, index) => {
-      const questionElement = document.createElement('h2');
-      questionElement.textContent = questionData.question;
-
-      const optionsList = document.createElement('ul');
-
-      if (Array.isArray(questionData.options)) {
-        questionData.options.forEach((option, i) => {
-          const listItem = document.createElement('li');
-          listItem.textContent = option;
-
-          if (i === questionData.answer - 1) {
-            listItem.style.fontWeight = 'bold';
-            listItem.style.color = 'green';
-          }
-
-          optionsList.appendChild(listItem);
-        });
-      } else {
-        console.error('La propriété "options" est manquante ou invalide.');
-      }
-
-      const explanationElement = document.createElement('p');
-      explanationElement.textContent = questionData.explanation;
-
-      const questionBlock = document.createElement('div');
-      questionBlock.appendChild(questionElement);
-      questionBlock.appendChild(optionsList);
-      questionBlock.appendChild(explanationElement);
-
-      questionsContainer.appendChild(questionBlock);
-    });
-
-    div.appendChild(questionsContainer);
-  } else {
-    console.error(`Le div avec l'id ${divId} n'a pas été trouvé.`);
+  if (!container) {
+    console.error(`Container with id ${divId} not found`);
+    return;
   }
+
+  container.innerHTML = '';
+  container.className = 'min-h-screen bg-gray-100 dark:bg-gray-900 p-3';
+  
+  const questionsWrapper = document.createElement('div');
+  questionsWrapper.className = 'max-w-2xl mx-auto space-y-4';
+  
+  questions.forEach((questionData, index) => {
+    const questionBlock = document.createElement('div');
+    questionBlock.className = 'bg-gray-100 dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 mb-3';
+    
+    // Question Header
+    const header = document.createElement('div');
+    header.className = 'p-3 border-b border-gray-200 dark:border-gray-700';
+    header.innerHTML = `
+      <span class="text-[10px] font-medium text-primary dark:text-primary">
+        Question ${index + 1}
+      </span>
+      <h2 class="text-sm font-medium text-gray-900 dark:text-white mt-0.5">
+        ${questionData.question}
+      </h2>
+    `;
+    
+    // Options List
+    const optionsList = document.createElement('ul');
+    optionsList.className = 'p-3 space-y-1.5';
+    
+    questionData.options.forEach((option, i) => {
+      const isCorrect = i === questionData.answer - 1;
+      const listItem = document.createElement('li');
+      listItem.className = `flex items-center p-1.5 rounded ${
+        isCorrect
+          ? 'bg-primary/10 dark:bg-primary/10 border border-primary/20 dark:border-primary/20'
+          : 'bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600'
+      }`;
+      
+      const iconContainer = document.createElement('div');
+      iconContainer.className = 'flex-shrink-0 w-4 h-4 mr-1.5';
+      
+      if (isCorrect) {
+        iconContainer.innerHTML = `
+          <svg class="w-4 h-4 text-primary dark:text-primary" 
+               fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+          </svg>
+        `;
+      }
+      
+      const optionText = document.createElement('span');
+      optionText.className = `text-xs ${
+        isCorrect
+          ? 'font-medium text-primary dark:text-primary'
+          : 'text-gray-900 dark:text-gray-100'
+      }`;
+      optionText.textContent = option;
+      
+      listItem.appendChild(iconContainer);
+      listItem.appendChild(optionText);
+      optionsList.appendChild(listItem);
+    });
+    
+    // Explanation
+    const explanation = document.createElement('div');
+    explanation.className = 'p-3 bg-primary/10 dark:bg-primary/10 rounded-b-lg';
+    explanation.innerHTML = `
+      <div class="flex items-center mb-1">
+        <svg class="w-4 h-4 mr-1 text-primary dark:text-primary" 
+             fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <span class="text-xs font-medium text-primary dark:text-primary">
+          Explication
+        </span>
+      </div>
+      <p class="text-xs text-gray-900 dark:text-gray-100">${questionData.explanation}</p>
+    `;
+    
+    questionBlock.appendChild(header);
+    questionBlock.appendChild(optionsList);
+    questionBlock.appendChild(explanation);
+    questionsWrapper.appendChild(questionBlock);
+  });
+  
+  container.appendChild(questionsWrapper);
+}
+
+const swalWithBootstrapButtons = Swal.mixin({
+  customClass: {
+    confirmButton: "btn btn-success",
+    cancelButton: "btn btn-danger"
+  },
+  buttonsStyling: false
+});
+
+function getQuestionnary(id) {
+  fetch(`/get-questionnary/${id}`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-CSRF-TOKEN': csrfToken
+    },
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
+
+    if (data && Array.isArray(data)) {
+      displayQuestionContent(data, "questionContainer");
+    } else {
+      Swal.fire({
+        title: "Erreur",
+        text: "Le questionnaire est vide ou mal formaté.",
+        icon: "error"
+      });
+    }
+  })
+  .catch(error => {
+    console.error('Erreur:', error);
+    Swal.fire({
+      title: "Erreur",
+      text: "Une erreur est survenue lors de la récupération du questionnaire.",
+      icon: "error"
+    });
+  });
 }

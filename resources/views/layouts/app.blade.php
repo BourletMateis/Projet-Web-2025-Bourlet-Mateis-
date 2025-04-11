@@ -89,6 +89,6 @@
 <script src="{{ asset('js/knowledge/knowledge-student-create.js') }}"></script>
 <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
-<!-- End of Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script><!-- End of Scripts -->
 </body>
 </html>

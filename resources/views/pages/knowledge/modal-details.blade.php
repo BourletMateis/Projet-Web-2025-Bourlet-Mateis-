@@ -19,7 +19,7 @@
         <input id="modalDescription" type="text" class="input" readonly></input>
       </div>
       <div class="mb-4">
-        <label for="modalSchool" class="form-label font-normal text-gray-900 pb-1">École</label>
+        <label for="modalSchool" class="form-label font-normal text-gray-900 pb-1">Promotion</label>
         <input id="modalSchool" type="text" class="input" readonly />
       </div>
       <div class="mb-4">
@@ -34,13 +34,17 @@
         <label for="modalEndDate" class="form-label font-normal text-gray-900 pb-1">Date de fin</label>
         <input id="modalEndDate" type="date" class="input" readonly />
       </div>
-      <div id="questionContainer"></div>
     </div>
-    <div class="modal-footer flex items-center justify-between p-4 border-t">
+    <div class="card transition-all duration-300 hidden" id="collapsible_content">
+      <div class="card-body">
+        <div id="questionContainer"></div>   
+      </div>
+    </div>
+    <div class="modal-footer flex items-center justify-between p-4 border-t ">
             <button id="deleteButton" class="btn btn-danger">Supprimer</button>
         <div class="flex gap-2">
-            <button class="btn btn-light" type="button" id="cancelBtn">Fermer</button>
             <button id="editButton" class="btn btn-primary">Modifier</button>
+            <button class="btn btn-primary " data-collapse="#collapsible_content">Afficher le questionnaire</button>
         </div>
     </div>
   </div>

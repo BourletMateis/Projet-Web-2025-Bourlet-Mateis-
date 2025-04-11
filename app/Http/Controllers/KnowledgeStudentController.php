@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\KnowledgeStudent;
+use App\Models\KnowLedge;
 
 class KnowledgeStudentController extends Controller
 {
@@ -46,5 +47,15 @@ class KnowledgeStudentController extends Controller
             'message' => 'Knowledge student updated successfully.',
             'knowledgeStudent' => $knowledgeStudent,
         ]);
+    }
+    public function getQuestionnary($id)
+    {
+        $knowledgeStudent = KnowledgeStudent::findOrFail($id);
+        $idKnowledge = $knowledgeStudent->id_knowledge;
+        $knowledge = KnowLedge::where('id', $idKnowledge)->first();
+        $questionnary = $knowledge->questionnary;
+    
+        return response()->json($questionnary);
+
     }
 }

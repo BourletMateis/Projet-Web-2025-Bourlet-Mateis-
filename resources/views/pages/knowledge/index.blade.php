@@ -1,7 +1,5 @@
 
 <x-app-layout>
-
-
     <x-slot name="header">
     </x-slot>
     <div class="grid lg:grid-cols-3 gap-5 lg:gap-7.5 items-stretch">
@@ -59,11 +57,9 @@
                                                 data-description="' . $knowledgeStudents->description . '"
                                                 data-knowledge-title="' . $knowledgeStudents->knowledge->title . '"
                                                 data-languages="' . implode(', ', $knowledgeStudents->knowledge->languages) . '"
-                                                data-end-date="' . $knowledgeStudents->end_date . '"
-                                                data-questionnary=\'' . json_encode($knowledgeStudents->knowledge->questionnary) . '\'>';
+                                                data-end-date="' . $knowledgeStudents->end_date . '">';
                                             $studentLinkClose = '</a>';
                                         @endphp
-                                                <div id="question-container-{{ $knowledgeStudents->id }}" data-questionnary='@json($knowledgeStudents->knowledge->questionnary)'></div>
                                                 <tr>
                                             <td>
                                             {!! $studentLink !!}{{ $knowledgeStudents->school->name }}{!! $studentLinkClose !!}
@@ -120,7 +116,7 @@
                         <option value="0" disabled selected>-- Sélectionnez un questionnaire --</option>
                         <option value="add">➕ Ajouter un questionnaire</option> 
                         @foreach ($knowledge as $knowledges)
-                            <option value="{{ $knowledges->id }}">{{ $knowledges->title }} -> {{implode(" , ",$knowledges->languages) }}
+                            <option value="{{ $knowledges->id }}">{{ $knowledges->title }} -> {{implode(" , ",$knowledges->languages)  }} -> {{ $knowledges-> number_questions }} questions</option>
                             </option>
                         @endforeach
                     </x-forms.dropdown>
