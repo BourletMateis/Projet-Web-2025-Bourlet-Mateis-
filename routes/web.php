@@ -67,12 +67,12 @@ Route::middleware('auth')->group(function () {
         // Create knowledge link to student
         Route::post('/knowledge-student-store', [KnowledgeStudentController::class, 'store'])->name('knowledge.student.store');
 
+        Route::post ('/knowledge-student-save-score', [KnowledgeStudentController::class, 'saveScore'])->name('knowledge.student.save.score');
+
     });
 
-
-
     Route::middleware('role:student')->group(function () {
-
+        Route::post ('/knowledge-student-save-score', [KnowledgeStudentController::class, 'saveScore'])->name('knowledge.student.save.score');
     });
 
 });

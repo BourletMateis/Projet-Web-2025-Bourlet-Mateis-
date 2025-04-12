@@ -37,12 +37,45 @@
                         <p class="text-gray-700 mt-2"><strong>Minuteur:</strong> {{ $knowledgeStudents->time_finish }}</p>
                     </div>
                     <div class="card-footer text-center p-4">
-                    <button class="btn btn-primary" onclick="window.location.href='/playQuestionnary/{{ $knowledgeStudents->id_knowledge }}'">Faire le questionnaire</button>
+                    <button class="btn btn-primary btnPlay"  data-knowlege-score ="{{ $knowledgeStudents->score }}"  data-number-question="{{ $knowledgeStudents->knowledge->number_questions }}" data-user-id="{{ $user ->id }}" data-knowledge-id="{{ $knowledgeStudents -> id_knowledge}}">Faire le questionnaire</button>
                     </div>
                 </div>
                 @endforeach
             </div>
         </div>
 
+        <script>   
+            document.querySelectorAll('.btnPlay').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const knowledgeId = btn.getAttribute('data-knowledge-id');
+                    console.log(knowledgeId);
+                    const jsonScore = btn.getAttribute('data-knowlege-score');
+                    console.log(jsonScore);
+                    const userId = btn.getAttribute('data-user-id');
+                    const numberQuestion = btn.getAttribute('data-number-question');
+                    console.log(numberQuestion);
+
+                    if (jsonScore && jsonScore.trim() !== '') {
+                        try {
+                            const parsedJsonScore = JSON.parse(jsonScore);
+                            if (!parsedJsonScore.hasOwnProperty(userId)) {
+                                window.location.href = '/playQuestionnary/' + knowledgeId;
+                            } else {
+                                Swal.fire({
+                                    title: 'Vous avez déjà réalisé ce questionnaire !',
+                                    text: 'Votre score est de ' + parsedJsonScore[userId] + ' sur ' + numberQuestion,
+                                    icon: 'warning',
+                                })
+                            }
+                        } catch (error) {
+                            console.error('Erreur lors du parsing du JSON:', error);
+                        }
+                    } else {
+                        window.location.href = '/playQuestionnary/' + knowledgeId;
+                    }
+                });
+            });
+        </script>
+        
 <link href="{{ asset('css/custom-knowledge.css') }}" rel="stylesheet">
 </x-app-layout>

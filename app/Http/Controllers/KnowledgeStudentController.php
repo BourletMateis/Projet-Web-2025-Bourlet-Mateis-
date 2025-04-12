@@ -41,6 +41,7 @@ class KnowledgeStudentController extends Controller
             $knowledgeStudent = KnowledgeStudent::where('school_id', $schoolId)->get();
             return view('pages.knowledge.index-student',[
                 'knowledgeStudent' => $knowledgeStudent,
+                'user' => $user,
             ]);
         }
     }
@@ -99,10 +100,37 @@ class KnowledgeStudentController extends Controller
 
     public function playQuestionnary($id)
     {
-
-        return view('pages.knowledge.questionnary', [
-
+        $knowledgeStudent = KnowledgeStudent::findOrFail($id);
+        $idKnowledge = $knowledgeStudent->id_knowledge;
+        $knowledge = KnowLedge::where('id', $idKnowledge)->first();
+        $questionnary = $knowledge->questionnary;
+        return view('pages.knowledge.questionnary', compact('questionnary') ,
+        [
+            'knowledgeStudent' => $knowledgeStudent,
         ]);
 
+    }
+
+    public function saveScore(Request $request)
+    {
+        $validatedData = $request->validate([
+            'knowledge_student_id' => 'required|integer',
+            'score' => 'required|integer',
+        ]);
+        $user_id = auth()->user()->id;
+        $knowledgeStudent = KnowledgeStudent::findOrFail($validatedData['knowledge_student_id']);
+        $scores = json_decode($knowledgeStudent->score, true) ?? []; 
+        if (array_key_exists($user_id, $scores)) {
+            return response()->json([
+                'message' => 'Un score existe déjà pour cet utilisateur',
+            ], 400);
+        }
+        $scores[$user_id] = $validatedData['score'];
+        $knowledgeStudent->score = json_encode($scores); 
+        $knowledgeStudent->save();
+        return response()->json([
+            'message' => 'Score sauvegardé avec succès',
+            'knowledgeStudent' => $knowledgeStudent,
+        ]);
     }
 }

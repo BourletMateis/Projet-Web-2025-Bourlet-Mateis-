@@ -1,7 +1,14 @@
 
 const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 
-// This script handles the modal for editing knowledge details
+/**
+ * Handles the behavior of a modal for editing knowledge entries in a student questionnaire.
+ * - When a row with class `.clickable-row` is clicked, the modal is opened, and the data from the clicked row is displayed in the modal's input fields.
+ * - The modal contains an edit button which toggles between read-only and editable fields.
+ * - If the "Save" button is clicked after editing, the fields are validated (description, title, end date), and the user is prompted with a confirmation before saving.
+ * - Upon confirmation, the updated data is sent to the server using a POST request. Success or error messages are displayed based on the response.
+ * - The modal can be dismissed by clicking the "X" button.
+ */
 document.addEventListener("DOMContentLoaded", function() {
     const clickableRows = document.querySelectorAll(".clickable-row");
     const modal = document.getElementById("knowledgeModal");
@@ -184,7 +191,14 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
         
-    // Management of the delete button
+  /**
+   * Handles the deletion of a knowledge entry when the delete button is clicked.
+   * - When the delete button is clicked, a confirmation prompt (SweetAlert) appears asking if the user is sure they want to delete the item.
+   * - If the user confirms, a DELETE request is sent to the server to remove the knowledge entry identified by `id`.
+   * - Upon success, a success message is shown, and the page reloads after 1 second.
+   * - If the deletion fails, an error message is displayed.
+   * - If the user cancels the deletion, a message confirming the item is still in place is displayed.
+   */
     deleteBtn.addEventListener("click", function () {
       Swal.fire({
         title: "Êtes-vous sûr ?",
@@ -237,7 +251,22 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     });
 });
-
+/**
+ * Displays a list of questions and their corresponding options on the page.
+ * 
+ * @param {Object|String} json - The JSON object or string containing the questions data.
+ * @param {String} divId - The ID of the container div where the questions will be displayed.
+ * 
+ * This function does the following:
+ * 1. Parses the provided JSON data (if it's a string).
+ * 2. Clears the container div before rendering new content.
+ * 3. Creates a wrapper element to hold the questions.
+ * 4. Loops through each question, creating elements to display:
+ *    - The question text.
+ *    - The options with a visual indicator for the correct answer.
+ *    - An explanation for each question.
+ * 5. Appends each question block to the container.
+ */
 function displayQuestionContent(json, divId) {
   const questions = typeof json === 'string' ? JSON.parse(json) : json;
   const container = document.getElementById(divId);
@@ -332,15 +361,20 @@ function displayQuestionContent(json, divId) {
   
   container.appendChild(questionsWrapper);
 }
-
-const swalWithBootstrapButtons = Swal.mixin({
-  customClass: {
-    confirmButton: "btn btn-success",
-    cancelButton: "btn btn-danger"
-  },
-  buttonsStyling: false
-});
-
+/**
+ * Fetches the questionnaire data from the server based on the provided ID.
+ * 
+ * @param {String} id - The ID used to fetch the specific questionnaire data.
+ * 
+ * This function performs the following:
+ * 1. Sends a GET request to the server at `/get-questionnary/${id}`.
+ * 2. Includes a CSRF token in the request headers for security.
+ * 3. Parses the JSON response from the server.
+ * 4. If the response contains valid question data (an array), it calls the `displayQuestionContent` function 
+ *    to render the questions on the page.
+ * 5. If the response data is invalid (not an array or empty), it shows an error message with SweetAlert.
+ * 6. If an error occurs during the fetch operation (network error, etc.), it shows a generic error message.
+ */
 function getQuestionnary(id) {
   fetch(`/get-questionnary/${id}`, {
     method: 'GET',

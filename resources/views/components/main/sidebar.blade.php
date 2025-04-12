@@ -9,6 +9,7 @@
             <span class="text-base font-medium text-gray-900 grow justify-start">
                 Coding ToolBox
             </span>
+            <div id="timeDisplay" class="text-base font-medium text-gray-900 grow justify-start"></div>
         </div>
         <div class="pt-2.5 px-3.5 mb-1">
             <div class="input">

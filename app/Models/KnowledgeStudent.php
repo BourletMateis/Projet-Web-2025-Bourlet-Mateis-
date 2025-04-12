@@ -11,7 +11,7 @@ class KnowledgeStudent extends Model
     use HasFactory;
     protected $table = 'knowledge_student'; 
 
-    protected $fillable = ['school_id', 'title', 'description', 'id_knowledge', 'end_date', 'time_finish'];
+    protected $fillable = ['school_id', 'title', 'description', 'id_knowledge', 'end_date', 'time_finish', 'score'];
 
     public function knowledge()
     {

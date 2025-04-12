@@ -32,7 +32,17 @@ document.addEventListener("DOMContentLoaded", function () {
       select.value = "0"; 
     });
 
-    // Generate a questionnaire when the submit button is clicked
+    /**
+     * Handles the click event on the submit button to create a questionnaire.
+     * This process includes:
+     * 1. Title validation (checking if it is not empty and contains only letters, numbers, and spaces).
+     * 2. Validation of the number of questions (between 1 and 50).
+     * 3. Asking for confirmation before creating the questionnaire.
+     * 4. Generating the questionnaire using the Mistral AI API.
+     * 
+     * If any validation fails, an error message is displayed using SweetAlert.
+     * If the creation is successful, a success message is shown and the page reloads.
+     */
     submitBtn.addEventListener("click", async function () {
 
       // Step 1: Title validation at the very beginning
@@ -57,7 +67,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
         return; 
       }
-
       Swal.fire({
         title: "Confirmer la création du questionnaire",
         text: "Êtes-vous sûr de vouloir créer ce questionnaire avec les informations saisies ?",
@@ -78,7 +87,6 @@ document.addEventListener("DOMContentLoaded", function () {
               Swal.showLoading();
             }
           });
-    
           try {
             const difficulty = getDifficultyValues(); 
             const selectedValues = getCheckedValues();
@@ -134,7 +142,17 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });    
 
-// Link student to knowledge
+  /*
+  * This function handles the following:
+  * 1. Retrieves form input values for school, title, description, questionnaire, end date, and finish time.
+  * 2. Validates all the required fields. If any field is empty or invalid, it shows an error message using SweetAlert.
+  * 3. Validates the title and description to ensure they only contain letters, numbers, and spaces.
+  * 4. Checks if the time finish value is a valid integer.
+  * 5. Verifies that the end date is later than the current date.
+  * 6. Sends a POST request to the server to store the knowledge data if all validations pass.
+  * 7. If the POST request is successful, it displays a success message and reloads the page.
+  * 8. If the request fails, it shows an error message with SweetAlert.
+  */
 document.addEventListener("DOMContentLoaded", function () {
   const submitBtn = document.getElementById("knowledge-submit");
 
