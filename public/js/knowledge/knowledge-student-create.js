@@ -144,9 +144,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const description = document.getElementById("knowledge-description").value;
     const questionnary = parseInt(getQuestionnaryValues());
     const endDate = document.getElementById("end-date").value;
+    const timeFinish = document.getElementById("time-finish").value;
 
     //validate all the fields is not nul 
-    if (!school || !title || !description || !questionnary || !endDate) {
+    if (!school || !title || !description || !questionnary || !endDate || !timeFinish) {
       Swal.fire({
         title: 'Erreur',
         text: 'Veuillez remplir tous les champs.',
@@ -186,6 +187,18 @@ document.addEventListener("DOMContentLoaded", function () {
       }); 
       return;
     }
+    if (!timeFinish || isNaN(parseInt(timeFinish))) {
+      Swal.fire({
+      title: 'Erreur',
+      text: 'Veuillez entrer une valeur entière valide pour le temps.',
+      icon: 'error',
+      confirmButtonText: 'OK',
+      customClass: {
+        confirmButton: 'btn btn-danger'
+      }
+      });
+      return;
+    }
 
     // Validate the end date
     const currentDate = new Date();
@@ -215,6 +228,7 @@ document.addEventListener("DOMContentLoaded", function () {
         id_knowledge: questionnary,
         school_id: school,
         end_date: endDate,
+        time_finish: timeFinish
       })
     });
     if (postResponse.ok) {

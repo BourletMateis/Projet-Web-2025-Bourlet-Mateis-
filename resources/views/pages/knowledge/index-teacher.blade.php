@@ -44,6 +44,12 @@
                                                 <span class="sort-icon"></span>
                                             </span>
                                         </th>
+                                        <th class="min-w-[50px]">
+                                            <span class="sort">
+                                                <span class="sort-label">Minuteur</span>
+                                                <span class="sort-icon"></span>
+                                            </span>
+                                        </th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -56,6 +62,7 @@
                                                 data-description="' . $knowledgeStudents->description . '"
                                                 data-knowledge-title="' . $knowledgeStudents->knowledge->title . '"
                                                 data-languages="' . implode(', ', $knowledgeStudents->knowledge->languages) . '"
+                                                data-finish="' . $knowledgeStudents->time_finish . '"
                                                 data-end-date="' . $knowledgeStudents->end_date . '">';
                                             $studentLinkClose = '</a>';
                                         @endphp
@@ -74,6 +81,12 @@
                                                 </div>
                                             </td>
                                             <td>{!! $studentLink !!}{{ $knowledgeStudents->end_date }}{!! $studentLinkClose !!}</td>
+                                            <td>
+                                                <div class="flex flex-col"></div>
+                                                    <span>{!! $studentLink !!}{{ $knowledgeStudents->time_finish }}{!! $studentLinkClose !!}</span>
+                                                    <span class="text-2sm text-gray-700 font-normal leading-3">Minutes</span>
+                                                </div>
+                                            </td>
                                         </tr>
                                         @endforeach
                                     </tbody>
@@ -132,6 +145,12 @@
                         <label class="form-label font-normal text-gray-900">Date de fin</label>
                         <input type="datetime-local" name="end-date" class="form-control input" id="end-date" required>
                     </div>
+
+                    <div class="flex flex-col gap-1">
+                        <label class="form-label font-normal text-gray-900">Minuteur (en minutes)</label>
+                        <input type="number" name="time-finish" class="form-control input" id="time-finish" min="1" placeholder="Entrez la durée en minutes" required>
+                    </div>
+                    
                     <x-forms.primary-button type="submit" class="w-full mt-5" id="knowledge-submit">
                         {{ __('Valider') }}
                     </x-forms.primary-button>
@@ -143,7 +162,6 @@
 
 @include('pages.knowledge.modal-details')
 @include('pages.knowledge.modal-create-knowledge')
-<script src="{{ asset('js/knowledge/knowledge-student-details.js') }}"></script>
-<script src="{{ asset('js/knowledge/knowledge-student-create.js') }}"></script>
+
 </x-app-layout>
 

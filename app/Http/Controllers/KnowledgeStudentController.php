@@ -53,6 +53,7 @@ class KnowledgeStudentController extends Controller
             'description' => 'required|string',
             'id_knowledge' => 'required|integer',
             'end_date' => 'required|date',
+            'time_finish' => 'required|integer',
         ]);
 
         KnowledgeStudent::create($validatedData);
@@ -93,6 +94,15 @@ class KnowledgeStudentController extends Controller
         $questionnary = $knowledge->questionnary;
     
         return response()->json($questionnary);
+
+    }
+
+    public function playQuestionnary($id)
+    {
+
+        return view('pages.knowledge.questionnary', [
+
+        ]);
 
     }
 }

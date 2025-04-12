@@ -21,7 +21,8 @@ document.addEventListener("DOMContentLoaded", function() {
             const knowledgeTitle = this.getAttribute("data-knowledge-title");
             const languages = this.getAttribute("data-languages");
             const endDate = this.getAttribute("data-end-date");
-      
+            const finish = this.getAttribute("data-finish");
+
             id = this.getAttribute("data-id");
             document.getElementById("modalTitle").value = title;
             document.getElementById("modalSchool").value = school; 
@@ -29,7 +30,8 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById("modalKnowledgeTitle").value = knowledgeTitle; 
             document.getElementById("modalLanguages").value = languages; 
             document.getElementById("modalEndDate").value = endDate;
-
+            document.getElementById("modalFinish").value = finish + " minutes";
+           
             getQuestionnary(id);
 
         });

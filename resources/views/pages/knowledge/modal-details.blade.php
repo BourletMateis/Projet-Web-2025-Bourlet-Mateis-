@@ -34,6 +34,10 @@
         <label for="modalEndDate" class="form-label font-normal text-gray-900 pb-1">Date de fin</label>
         <input id="modalEndDate" type="date" class="input" readonly />
       </div>
+      <div class="mb-4">
+        <label for="modalFinish" class="form-label font-normal text-gray-900 pb-1">Minuteur</label>
+        <input id="modalFinish" type="text" class="input" readonly /> 
+      </div>
     </div>
     <div class="card transition-all duration-300 hidden" id="collapsible_content">
       <div class="card-body">

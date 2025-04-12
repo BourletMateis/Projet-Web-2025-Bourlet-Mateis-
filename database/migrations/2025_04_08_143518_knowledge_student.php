@@ -20,6 +20,7 @@ return new class extends Migration
             $table->unsignedBigInteger('id_knowledge');
             $table->foreign('id_knowledge')->references('id')->on('knowledge')->onDelete('cascade');
             $table->date('end_date');
+            $table->unsignedBigInteger('time_finish'); 
             $table->timestamps();
         });
     }

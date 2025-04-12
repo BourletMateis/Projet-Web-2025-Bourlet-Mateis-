@@ -47,6 +47,10 @@ Route::middleware('auth')->group(function () {
         // Common life
         Route::get('common-life', [CommonLifeController::class, 'index'])->name('common-life.index');
 
+        Route::get('/playQuestionnary/{id}', [KnowledgeStudentController::class, 'playQuestionnary'])->name('knowledge.play.questionnary');
+
+        // Get questionnary for modal detail
+        Route::get('/get-questionnary/{id}', action: [KnowledgeStudentController::class, 'getQuestionnary'])->name('knowledge.student.get.questionnary');
 
         
     });
@@ -62,8 +66,7 @@ Route::middleware('auth')->group(function () {
         Route::post('/knowledge-student-update/{id}', [KnowledgeStudentController::class, 'update'])->name('knowledge.student.update');
         // Create knowledge link to student
         Route::post('/knowledge-student-store', [KnowledgeStudentController::class, 'store'])->name('knowledge.student.store');
-        // Get questionnary for modal detail
-        Route::get('/get-questionnary/{id}', [KnowledgeStudentController::class, 'getQuestionnary'])->name('knowledge.student.get.questionnary');
+
     });
 
 

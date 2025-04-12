@@ -34,10 +34,10 @@
                         <p class="text-gray-700 mt-2"><strong>Difficulté:</strong> {{ $knowledgeStudents->knowledge->difficulty }}</p>
                         <p class="text-gray-700 mt-2"><strong>Langues:</strong> {{ implode(', ', $knowledgeStudents->knowledge->languages) }}</p>
                         <p class="text-gray-700 mt-2"><strong>Nombre de questions:</strong> {{ $knowledgeStudents->knowledge->number_questions }}</p>
-                        <p class="text-gray-700 mt-2"><strong>Minuteur:</strong> 10 minutes</p>
+                        <p class="text-gray-700 mt-2"><strong>Minuteur:</strong> {{ $knowledgeStudents->time_finish }}</p>
                     </div>
                     <div class="card-footer text-center p-4">
-                        <button class="btn btn-primary" data-id="{{ $knowledgeStudents->id }}">Faire le questionnaire</button>
+                    <button class="btn btn-primary" onclick="window.location.href='/playQuestionnary/{{ $knowledgeStudents->id_knowledge }}'">Faire le questionnaire</button>
                     </div>
                 </div>
                 @endforeach
