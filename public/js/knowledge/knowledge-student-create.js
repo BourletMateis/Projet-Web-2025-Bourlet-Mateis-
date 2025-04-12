@@ -57,9 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
         return; 
       }
-    
 
-    
       Swal.fire({
         title: "Confirmer la création du questionnaire",
         text: "Êtes-vous sûr de vouloir créer ce questionnaire avec les informations saisies ?",
@@ -135,8 +133,6 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
 });    
-    
-   
 
 // Link student to knowledge
 document.addEventListener("DOMContentLoaded", function () {
@@ -148,7 +144,65 @@ document.addEventListener("DOMContentLoaded", function () {
     const description = document.getElementById("knowledge-description").value;
     const questionnary = parseInt(getQuestionnaryValues());
     const endDate = document.getElementById("end-date").value;
-    
+
+    //validate all the fields is not nul 
+    if (!school || !title || !description || !questionnary || !endDate) {
+      Swal.fire({
+        title: 'Erreur',
+        text: 'Veuillez remplir tous les champs.',
+        icon: 'error',
+        confirmButtonText: 'OK',
+        customClass: {
+          confirmButton: 'btn btn-danger'
+        }
+      });
+      return;
+    }
+
+    // Validate the title
+    if (!title || !/^[A-Za-z0-9\s]+$/.test(title)) {
+      Swal.fire({
+        title: 'Erreur',
+        text: 'Veuillez entrer un titre valide. Le titre ne doit pas être vide et ne doit contenir que des lettres, des chiffres et des espaces.',
+        icon: 'error',
+        confirmButtonText: 'OK',
+        customClass: {
+          confirmButton: 'btn btn-danger'
+        }
+      });
+      return;
+    }
+
+    // Validate the description
+    if (!description || !/^[A-Za-z0-9\s]+$/.test(description)) {
+      Swal.fire({
+        title: 'Erreur',
+        text: 'Veuillez entrer une description valide. La description ne doit pas être vide et ne doit contenir que des lettres, des chiffres et des espaces.',
+        icon: 'error',
+        confirmButtonText: 'OK',
+        customClass: {
+          confirmButton: 'btn btn-danger'
+        }
+      }); 
+      return;
+    }
+
+    // Validate the end date
+    const currentDate = new Date();
+    const selectedDate = new Date(endDate);
+    if (selectedDate < currentDate) {
+      Swal.fire({
+        title: 'Erreur',
+        text: 'La date de fin doit être supérieure à la date actuelle.',
+        icon: 'error',
+        confirmButtonText: 'OK',
+        customClass: {
+          confirmButton: 'btn btn-danger'
+        }
+      });
+      return;
+    }
+
     const postResponse = await fetch('/knowledge-student-store', {
       method: 'POST',
       headers: {

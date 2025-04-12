@@ -64,7 +64,65 @@ document.addEventListener("DOMContentLoaded", function() {
         const updatedDescription = modalDescription.value;
         const updatedTitle = modalTitle.value;
         const updatedEndDate = endDateInput.value;
-      
+
+       //validate all the fields is not nul 
+      if (!updatedDescription || !updatedTitle || !updatedEndDate) {
+        Swal.fire({
+          title: 'Erreur',
+          text: 'Veuillez remplir tous les champs.',
+          icon: 'error',
+          confirmButtonText: 'OK',
+          customClass: {
+            confirmButton: 'btn btn-danger'
+          }
+        });
+        return;
+      }
+
+      // Validate the title
+      if (!updatedTitle || !/^[A-Za-z0-9\s]+$/.test(updatedTitle)) {
+        Swal.fire({
+          title: 'Erreur',
+          text: 'Veuillez entrer un titre valide. Le titre ne doit pas être vide et ne doit contenir que des lettres, des chiffres et des espaces.',
+          icon: 'error',
+          confirmButtonText: 'OK',
+          customClass: {
+            confirmButton: 'btn btn-danger'
+          }
+        });
+        return;
+      }
+
+    // Validate the description
+    if (!updatedDescription || !/^[A-Za-z0-9\s]+$/.test(updatedDescription)) {
+      Swal.fire({
+        title: 'Erreur',
+        text: 'Veuillez entrer une description valide. La description ne doit pas être vide et ne doit contenir que des lettres, des chiffres et des espaces.',
+        icon: 'error',
+        confirmButtonText: 'OK',
+        customClass: {
+          confirmButton: 'btn btn-danger'
+        }
+      }); 
+      return;
+    }
+
+    // Validate the end date
+    const currentDate = new Date();
+    const selectedDate = new Date(updatedEndDate);
+    if (selectedDate < currentDate) {
+      Swal.fire({
+        title: 'Erreur',
+        text: 'La date de fin doit être supérieure à la date actuelle.',
+        icon: 'error',
+        confirmButtonText: 'OK',
+        customClass: {
+          confirmButton: 'btn btn-danger'
+        }
+      });
+      return;
+    }
+        
         // Confirmation before saving
         Swal.fire({
           title: "Voulez-vous sauvegarder les modifications ?",
