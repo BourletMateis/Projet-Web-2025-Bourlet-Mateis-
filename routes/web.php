@@ -12,7 +12,6 @@ use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\AiController;
 use App\Http\Controllers\KnowledgeStudentController;
 use Illuminate\Support\Facades\Route;
-
 // Redirect the root path to /dashboard
 Route::redirect('/', 'dashboard');
 
@@ -37,7 +36,7 @@ Route::middleware('auth')->group(function () {
         Route::get('students', [StudentController::class, 'index'])->name('student.index');
 
         // Knowledge
-        Route::get('knowledge', [KnowledgeController::class, 'index'])->name('knowledge.index');
+        Route::get('knowledge', [KnowledgeStudentController::class, 'index'])->name('knowledge.index');
 
         // Groups
         Route::get('groups', [GroupController::class, 'index'])->name('group.index');
@@ -49,17 +48,27 @@ Route::middleware('auth')->group(function () {
         Route::get('common-life', [CommonLifeController::class, 'index'])->name('common-life.index');
 
 
-        Route::post('/knowledge-store', [KnowledgeController::class, 'store'])->name('knowledge.store');
-
-        Route::post('/knowledge-student-store', [KnowledgeStudentController::class, 'store'])->name('knowledge.student.store');
-
-        Route::post('/knowledge-student-update/{id}', [KnowledgeStudentController::class, 'update'])->name('knowledge.student.update');
         
-        Route::delete('/knowledge-student-delete/{id}', [KnowledgeStudentController::class, 'destroy'])->name('knowledge.student.delete');
+    });
 
+    Route::middleware('role:admin,teacher')->group(function () {
+        // Create questionnary whith ai
         Route::post('/generate-questionnary', [AiController::class, 'generate'])->name('ai.generate');
-
+        // Create knowledge 
+        Route::post('/knowledge-store', [KnowledgeController::class, 'store'])->name('knowledge.store');
+        // Delete knowledge link to student
+        Route::delete('/knowledge-student-delete/{id}', [KnowledgeStudentController::class, 'destroy'])->name('knowledge.student.delete');
+        // Update knowledge link to student
+        Route::post('/knowledge-student-update/{id}', [KnowledgeStudentController::class, 'update'])->name('knowledge.student.update');
+        // Create knowledge link to student
+        Route::post('/knowledge-student-store', [KnowledgeStudentController::class, 'store'])->name('knowledge.student.store');
+        // Get questionnary for modal detail
         Route::get('/get-questionnary/{id}', [KnowledgeStudentController::class, 'getQuestionnary'])->name('knowledge.student.get.questionnary');
+    });
+
+
+
+    Route::middleware('role:student')->group(function () {
 
     });
 

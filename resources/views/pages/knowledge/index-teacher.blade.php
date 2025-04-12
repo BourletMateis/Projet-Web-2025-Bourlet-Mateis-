@@ -1,4 +1,3 @@
-
 <x-app-layout>
     <x-slot name="header">
     </x-slot>
@@ -144,5 +143,7 @@
 
 @include('pages.knowledge.modal-details')
 @include('pages.knowledge.modal-create-knowledge')
+<script src="{{ asset('js/knowledge/knowledge-student-details.js') }}"></script>
+<script src="{{ asset('js/knowledge/knowledge-student-create.js') }}"></script>
 </x-app-layout>
 

@@ -5,9 +5,46 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\KnowledgeStudent;
 use App\Models\KnowLedge;
+use App\Models\School;
 
 class KnowledgeStudentController extends Controller
 {
+
+    public function index() {
+        $user = auth()->user();
+        $userRole = \App\Models\UserSchool::where('user_id', $user->id)->first();
+
+        if ($userRole){
+            $role = $userRole->role;
+        } else {
+            $role = 'student';
+        }
+
+        if ($role == 'admin' || $role == 'teacher') {
+            $knowledge = KnowLedge::all();
+            $schools = School::all();
+            $knowledgeStudent = KnowledgeStudent::all();
+            return view('pages.knowledge.index-teacher',[
+                'knowledge' => $knowledge,
+                'schools' => $schools,
+                'knowledgeStudent' => $knowledgeStudent,
+            ]);
+        }
+        else {
+            $userSchool = \App\Models\UserSchool::where('user_id', $user->id)->first();
+
+            if ($userSchool) {
+                $schoolId = $userSchool->school_id;
+            } else {
+                $schoolId = null;
+            }
+            $knowledgeStudent = KnowledgeStudent::where('school_id', $schoolId)->get();
+            return view('pages.knowledge.index-student',[
+                'knowledgeStudent' => $knowledgeStudent,
+            ]);
+        }
+    }
+
     public function store (Request $request) {
         // Validate the request data
         $validatedData = $request->validate([

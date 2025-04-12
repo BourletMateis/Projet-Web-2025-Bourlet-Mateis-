@@ -17,19 +17,7 @@ class KnowledgeController extends Controller
      *
      * @return Factory|View|Application|object
      */
-    public function index() {
-        $knowledge = KnowLedge::all();
-        $schools = School::all();
-        $knowledgeStudent = KnowledgeStudent::all();
-        $knowledgeStudents = KnowledgeStudent::with('knowledge')->get();
 
-        return view('pages.knowledge.index',[
-            'knowledge' => $knowledge,
-            'schools' => $schools,
-            'knowledgeStudent' => $knowledgeStudent,
-
-        ]);
-    }
 
     public function store(Request $request) {
         $request->validate([
