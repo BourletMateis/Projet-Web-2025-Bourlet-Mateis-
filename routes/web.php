@@ -27,6 +27,7 @@ Route::middleware('auth')->group(function () {
 
         // Cohorts
         Route::get('/cohorts', [CohortController::class, 'index'])->name('cohort.index');
+        
         Route::get('/cohort/{cohort}', [CohortController::class, 'show'])->name('cohort.show');
 
         // Teachers
@@ -61,12 +62,9 @@ Route::middleware('auth')->group(function () {
         // Send questionnary json to session for play
         Route::post('/play-training-questionnary', [KnowledgeStudentController::class, 'playTrainingQuestionnary']);
 
-
-        
     });
 
     Route::middleware('role:admin,teacher')->group(function () {
-
         // Create knowledge 
         Route::post('/knowledge-store', [KnowledgeController::class, 'store'])->name('knowledge.store');
         // Delete knowledge link to student
@@ -77,15 +75,13 @@ Route::middleware('auth')->group(function () {
         Route::post('/knowledge-student-store', [KnowledgeStudentController::class, 'store'])->name('knowledge.student.store');
         // Save score questionnary to bdd
         Route::post ('/knowledge-student-save-score', [KnowledgeStudentController::class, 'saveScore'])->name('knowledge.student.save.score');
-
-
+        // Get all score questionnary for admin panel
+        Route::get('/get-score/{id}', [KnowledgeStudentController::class, 'getScore'])->name('knowledge.student.get.score');
     });
 
     Route::middleware('role:student')->group(function () {
         // Save score questionnary to bdd
         Route::post ('/knowledge-student-save-score', [KnowledgeStudentController::class, 'saveScore'])->name('knowledge.student.save.score');
-
-
     });
 
 });

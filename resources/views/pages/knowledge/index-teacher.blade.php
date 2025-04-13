@@ -73,7 +73,7 @@
                                                 data-description="' . $knowledgeStudents->description . '"
                                                 data-knowledge-title="' . $knowledgeStudents->knowledge->title . '"
                                                 data-languages="' . implode(', ', $knowledgeStudents->knowledge->languages) . '"
-                                                data-finish="' . $knowledgeStudents->time_finish . '"
+                                                data-finish="' . $knowledgeStudents->time_finish .'"
                                                 data-creator="' . $knowledgeStudents->creator->last_name. ' ' . $knowledgeStudents->creator->first_name . '"
                                                 data-end-date="' . $knowledgeStudents->end_date . '">';
                                             $studentLinkClose = '</a>';

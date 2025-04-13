@@ -5,14 +5,22 @@ use Illuminate\Support\Facades\Http;
 
 class GeminiService
 {   
-    /**
-     * The endpoint for the Gemini API.
-     *
-     * @var string
-     */
-    // The endpoint for the Gemini API.
-    protected $endpoint = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent";
 
+    /**
+     * Sends a prompt to the Gemini API and retrieves a generated text response.
+     *
+     * This function:
+     * - Defines the request payload with both a system prompt (to guide behavior)
+     *   and a user prompt (the actual instruction).
+     * - Sends a POST request to the Gemini API endpoint with the API key.
+     * - If the response is successful, returns the generated text from the first candidate.
+     * - If the request fails, logs the error details and returns null.
+     *
+     * @param string $systemPrompt A system-level instruction to guide the model's behavior.
+     * @param string $userPrompt The user's actual question or content request.
+     * @return string|null The generated response text, or null if the request failed.
+     */
+    protected $endpoint = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent";
     public function generateText(string $systemPrompt, string $userPrompt): ?string
     {
         $response = Http::post($this->endpoint . '?key=' . config('services.gemini.api_key'), [
@@ -31,7 +39,6 @@ class GeminiService
                 ]
             ]
         ]);
-
         if ($response->successful()) {
             return $response->json()['candidates'][0]['content']['parts'][0]['text'] ?? null;
         }

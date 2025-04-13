@@ -96,14 +96,10 @@ function submitQuiz() {
     questionnary.forEach((q, index) => {
         const selectedOption = document.querySelector(`input[name="question${index}"]:checked`);
         const selectedAnswer = selectedOption ? parseInt(selectedOption.value) : null;
-
         const isCorrect = selectedAnswer === q.answer - 1;
-
         if (isCorrect) {
             correctAnswers++; 
         }
-
-        // Escape any potential HTML to prevent XSS
         q.question = escapeHTML(q.question);
         q.explanation = escapeHTML(q.explanation);
         q.options = q.options.map(option => escapeHTML(option));
@@ -125,7 +121,6 @@ function submitQuiz() {
                 <p class="explanation-text">${q.explanation}</p>
             </div>
         `;
-
         modalContentHTML += `
             <div class="modal-question ${isCorrect ? 'correct' : 'incorrect'}">
                 <h4>Question ${index + 1}</h4>
@@ -139,7 +134,6 @@ function submitQuiz() {
 
     let scorePercentage = (correctAnswers / totalQuestions) * 100;
     scorePercentage = scorePercentage.toFixed(0);
-
     const modalContent = `
         <div class="score-header">
             <h2>Résultat Final</h2>
@@ -152,28 +146,21 @@ function submitQuiz() {
         </p>
         ${modalContentHTML}
     `;
-
     document.getElementById('modal-content-container').innerHTML = modalContent;
 
     const allInputs = document.querySelectorAll('input[type="radio"]');
     allInputs.forEach(input => input.disabled = true);
-
     const allLabels = document.querySelectorAll('.option-label');
     allLabels.forEach(label => {
         label.style.cursor = 'not-allowed'; 
         label.classList.add('disabled'); 
     });
-
     submitQuestionnary = true;
     isRunning = false;
-
-    // Show results modal
     modal.classList.remove('hidden');
     modal.classList.add('open');
     modal.classList.add('modal-open');
     modal.style.display = 'block';   
-
-    // Save result
     saveQuiz(knowledgeStudentId, correctAnswers);
 }
 
@@ -256,7 +243,6 @@ function saveQuiz(knowledgeStudentId, score) {
     .then(response => response.json())
     .then(data => {
       if (data.message === 'Score sauvegardé avec succès') {
-        // Optional: feedback on success
       } else {
         Swal.fire({
           title: 'Error',

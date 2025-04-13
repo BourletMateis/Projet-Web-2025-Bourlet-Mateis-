@@ -16,6 +16,19 @@ btnCreate.forEach(btn => {
     btn.addEventListener('click', submitQuestionnaire);
 });
 
+/**
+ * Handles the click event on all buttons with the class `.btnPlay`.
+ * 
+ * For each button:
+ * 1. Retrieves the quiz (knowledge) ID, score JSON, user ID, number of questions, and the quiz's end date.
+ * 2. Compares the current date with the quiz's end date:
+ *    - If the quiz has expired, shows an alert.
+ * 3. If the quiz is still available:
+ *    - Parses the JSON score to check if the current user has already played.
+ *    - If not, redirects the user to the play route.
+ *    - If the user has already played, shows their score using SweetAlert2.
+ * 4. If there's no score data, assumes it's the first time and redirects to the play page.
+ */
 document.querySelectorAll('.btnPlay').forEach(btn => {
     btn.addEventListener('click', function() {
         const knowledgeId = btn.getAttribute('data-knowledge-id');
@@ -54,12 +67,21 @@ document.querySelectorAll('.btnPlay').forEach(btn => {
     });
 });
 
+/**
+ * Handles the questionnaire generation process when the user submits the form.
+ * 
+ * This function:
+ * 1. Retrieves the selected number of questions, difficulty, and programming languages.
+ * 2. Validates the inputs (number between 1–30, difficulty selected, at least one language selected).
+ * 3. Shows a loading popup while the questionnaire is being generated.
+ * 4. Sends a POST request to the backend (`/generate-questionnary`) to generate the training questionnaire using AI.
+ * 5. If successful, sends the generated data to `/play-training-questionnary` and redirects the user to the training view.
+ * 6. Displays error messages using SweetAlert2 if validation fails or an error occurs during processing.
+ */
 async function submitQuestionnaire() {
     const numberQuestions = document.querySelector('input[name="number-questions"]').value;
     const languages = Array.from(document.querySelectorAll('input[name="languages[]"]:checked')).map(el => el.value);
     const dropdown = document.getElementById("difficulty");
-    
-    // Validation for the number of questions
     if (numberQuestions < 1 || numberQuestions > 30) {
         Swal.fire({
             title: 'Erreur',
@@ -68,8 +90,6 @@ async function submitQuestionnaire() {
         });
         return;
     }
-    
-    // Validation for the difficulty
     if (dropdown.value == 0 || !dropdown.value) {
         Swal.fire({
             title: 'Erreur',
@@ -78,8 +98,6 @@ async function submitQuestionnaire() {
         });
         return;
     }
-
-    // Validation for the languages
     if (languages.length === 0) {
         Swal.fire({
             title: 'Erreur',
@@ -97,7 +115,6 @@ async function submitQuestionnaire() {
             Swal.showLoading(); 
         }
     });
-        // Create questionnary whith ai
         const response = await fetch('/generate-questionnary', {
             method: 'POST',
             headers: {

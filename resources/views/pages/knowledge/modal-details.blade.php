@@ -15,6 +15,9 @@
 
     <!-- Modal body with details form -->
     <div class="modal-body p-4 scrollable-y py-0 my-5 pl-6 pr-3 mr-3 h-[300px] max-h-[95%]">
+
+    <div id="modalId" class="hidden"></div>
+
       
       <!-- Creator field -->
       <div class="mb-4">
@@ -71,13 +74,21 @@
         <div id="questionContainer"></div>   
       </div>
     </div>
+    <!-- Hidden collapsible card for displaying all scores -->
+    <div class="card transition-all duration-300 hidden" id="collapsible_score">
+      <div class="card-body">
+      <button id="download-button">Télécharger</button>
+        <div id="score-details"></div>
+      </div>
+    </div>
 
-    <!-- Modal footer with actions (delete, edit, show questions) -->
+    <!-- Modal footer with actions (delete, edit, show questions,scores) -->
     <div class="modal-footer flex items-center justify-between p-4 border-t">
       <button id="deleteButton" class="btn btn-danger">Supprimer</button>
       <div class="flex gap-2">
         <button id="editButton" class="btn btn-primary">Modifier</button>
-        <button class="btn btn-primary" data-collapse="#collapsible_content">Afficher le questionnaire</button>
+        <button class="btn btn-primary" data-collapse="#collapsible_content">Questionnaire</button>
+        <button class="btn btn-primary" data-collapse="#collapsible_score">Résultats</button>
       </div>
     </div>
 

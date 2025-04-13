@@ -9,6 +9,22 @@ use App\Services\GeminiService;
 class AiController extends Controller
 {
 
+    /**
+     * Generates a questionnaire using AI (Gemini) based on the provided parameters.
+     *
+     * This method:
+     * - Retrieves and decodes JSON data from the incoming request (title, topics, number of questions, difficulty, training mode...).
+     * - Builds a detailed prompt in French to instruct the AI, specifying the strict JSON format required.
+     * - Sends the prompt and a system prompt to the Gemini service (to enforce JSON-only output).
+     * - Cleans the AI response by removing any markdown formatting (e.g., ```json).
+     * - Decodes the cleaned JSON into a PHP array.
+     * - If not in training mode, saves the generated questionnaire to the database via the `KnowLedge` model.
+     * - If in training mode (`training == true`), returns the questionnaire as JSON without saving it.
+     *
+     * @param Request $request HTTP request containing questionnaire parameters.
+     * @param GeminiService $gemini Custom service to interact with the Gemini API.
+     * @return \Illuminate\Http\JsonResponse JSON response with either the saved knowledge entry or raw questionnaire data.
+     */
     public function generate(Request $request, GeminiService $gemini)
 {
     $requestData = request()->getContent();
@@ -56,9 +72,7 @@ class AiController extends Controller
     
     // Call the Gemini API to generate the questionnaire
     $response = $gemini->generateText($systemPrompt,$prompt);
-    // Remove any leading or trailing whitespace
     $cleaned = preg_replace('/```json|```/', '', $response);
-    //Json decode the cleaned response
     $Json = json_decode($cleaned, true);
 
         // Prepare the data to be saved

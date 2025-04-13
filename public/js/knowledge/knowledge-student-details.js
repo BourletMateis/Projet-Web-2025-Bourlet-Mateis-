@@ -9,13 +9,16 @@ const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute
  * - Upon confirmation, the updated data is sent to the server using a POST request. Success or error messages are displayed based on the response.
  * - The modal can be dismissed by clicking the "X" button.
  */
+var score;
+let id;
 document.addEventListener("DOMContentLoaded", function() {
     const clickableRows = document.querySelectorAll(".clickable-row");
     const modal = document.getElementById("knowledgeModal");
     const dismissBtn = modal.querySelector('[data-modal-dismiss="true"]');
     const editBtn = document.getElementById("editButton");
     const deleteBtn = document.getElementById("deleteButton");
-    let id;
+    
+    
     
     clickableRows.forEach(row => {
         row.addEventListener("click", function() {
@@ -30,8 +33,10 @@ document.addEventListener("DOMContentLoaded", function() {
             const endDate = this.getAttribute("data-end-date");
             const finish = this.getAttribute("data-finish");
             const creator = this.getAttribute("data-creator");
+             id = this.getAttribute("data-id");
 
             id = this.getAttribute("data-id");
+            document.getElementById("modalId").value = id;
             document.getElementById("modalTitle").value = title;
             document.getElementById("modalSchool").value = school; 
             document.getElementById("modalDescription").value = description;
@@ -42,6 +47,7 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById("modalCreator").value = creator;
            
             getQuestionnary(id);
+            getScore(id);
 
         });
     });
@@ -354,7 +360,6 @@ function displayQuestionContent(json, divId) {
       </div>
       <p class="text-xs text-gray-900 dark:text-gray-100">${questionData.explanation}</p>
     `;
-    
     questionBlock.appendChild(header);
     questionBlock.appendChild(optionsList);
     questionBlock.appendChild(explanation);
@@ -387,8 +392,6 @@ function getQuestionnary(id) {
   })
   .then(response => response.json())
   .then(data => {
-    console.log(data);
-
     if (data && Array.isArray(data)) {
       displayQuestionContent(data, "questionContainer");
     } else {
@@ -408,3 +411,135 @@ function getQuestionnary(id) {
     });
   });
 }
+/**
+ * getScore(id)
+ * ------------
+ * This function fetches the quiz results of a specific test (`id`) from the backend.
+ * It then dynamically populates a section of the DOM with student names and their scores
+ * (including the total number of questions). If the fetch fails, an error is logged.
+ */
+
+function getScore(id) {
+  // Make an API call to retrieve the score data based on the given ID
+  fetch(`/get-score/${id}`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-CSRF-TOKEN': csrfToken
+    },
+  })
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Échec de la récupération des scores');
+    }
+    return response.json();
+  })
+  .then(data => {
+    let finalScore = data.scores;  
+    let title = data.title;       
+    let numberQuestions = data.numberQuestions; 
+    
+    if(finalScore && Object.keys(finalScore).length > 0) {
+      const scoreContainer = document.getElementById("score-details");
+      scoreContainer.innerHTML = ''; 
+
+      // Loop through the scores and create elements for each
+      Object.entries(finalScore).forEach(([name, scoreValue], index) => {
+        const scoreItem = document.createElement('div');
+        scoreItem.className = 'score-item';
+        scoreItem.innerHTML = `
+          <span class="text-sm font-medium text-gray-900 dark:text-white">
+            ${name} → Note : ${scoreValue} / ${numberQuestions}
+          </span>
+        `;
+        scoreContainer.appendChild(scoreItem);
+      });
+    }
+  })
+  .catch(error => {
+    // Log errors if fetch fails
+    console.error('Erreur lors de la récupération des scores:', error);
+  });
+}
+
+/**
+* Event listener for "download-button":
+* --------------------------------------
+* When the user clicks the download button, it shows a SweetAlert2 modal that lets them 
+* choose between exporting the results in Excel or PDF format. The data is formatted and 
+* downloaded accordingly using either `xlsx.js` for Excel or `jsPDF` for PDF.
+ */
+document.getElementById('download-button').addEventListener('click', function () {
+  // Make an API call to get the score again before downloading
+  fetch(`/get-score/${id}`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-CSRF-TOKEN': csrfToken
+    },
+  })
+  .then(response => response.json())
+  .then(data => {
+    const finalScore = data.scores;  
+    const title = data.title;       
+    const numberQuestions = data.numberQuestions; 
+
+    if (finalScore && Object.keys(finalScore).length > 0) {
+      Swal.fire({
+        title: 'Choisissez un format de téléchargement',
+        showCancelButton: true,
+        confirmButtonText: 'Télécharger',
+        cancelButtonText: 'Annuler',
+        input: 'radio',
+        inputOptions: {
+          'excel': 'Excel',
+          'pdf': 'PDF'
+        },
+        inputValidator: (value) => {
+          if (!value) {
+            return 'Vous devez choisir un format!';
+          }
+        }
+      }).then((result) => {
+        if (result.isConfirmed) {
+          const choice = result.value;
+          
+          // If Excel format is selected
+          if (choice === 'excel') {
+            const rows = [['Titre', title], ['Élève', 'Note' , 'Nombre de questions']]; 
+            Object.entries(finalScore).forEach(([name, scoreValue]) => {
+              rows.push([name, scoreValue , numberQuestions]);
+            });
+            const ws = XLSX.utils.aoa_to_sheet(rows);
+            const wb = XLSX.utils.book_new();
+            XLSX.utils.book_append_sheet(wb, ws, 'Scores');
+            XLSX.writeFile(wb, 'score.xlsx');
+          }
+
+          // If PDF format is selected
+          if (choice === 'pdf') {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+            doc.setFontSize(16);
+            doc.text(`Questionnaire - ${title}`, 20, 20);
+            let y = 30; // Initial Y position for content
+
+            // Loop through scores and write each entry to PDF
+            Object.entries(finalScore).forEach(([name, scoreValue]) => {
+              const cleanedname = name.replace(/[^\w\s]/g, '');  
+              const cleanedScoreValue = scoreValue.toString().replace(/[^\w\s]/g, ''); 
+              console.log(cleanedname);
+              console.log(cleanedScoreValue);
+              doc.text(`${cleanedname} : ${cleanedScoreValue} / ${numberQuestions}`, 20, y);
+              y += 10; 
+            });
+            doc.save('score.pdf');
+          }
+        }
+      });
+    }
+  })
+  .catch(error => {
+    console.error('Erreur lors du téléchargement du fichier:', error);
+  });
+});

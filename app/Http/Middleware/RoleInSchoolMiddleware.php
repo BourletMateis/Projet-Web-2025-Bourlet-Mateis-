@@ -9,11 +9,20 @@ use Symfony\Component\HttpFoundation\Response;
 class RoleInSchoolMiddleware
 {
     /**
-     * Handle an incoming request.
+     * Middleware to restrict access based on user roles.
      *
-     * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
+     * This function:
+     * - Retrieves the authenticated user.
+     * - Checks if the user has at least one of the specified roles (passed as variadic arguments).
+     * - If the user does not have the required role, aborts the request with a 403 Forbidden error.
+     * - If the user has the correct role, allows the request to proceed to the next middleware/controller.
+     *
+     * @param Request $request The incoming HTTP request.
+     * @param Closure $next The next middleware or controller.
+     * @param mixed ...$role One or more roles that are authorized to access the route.
+     * @return Response
      */
-    public function handle(Request $request, Closure $next, ...$role): Response
+     public function handle(Request $request, Closure $next, ...$role): Response
     {
         $user = auth()->user();
         $hasRole = \App\Models\UserSchool::where('user_id', $user->id)

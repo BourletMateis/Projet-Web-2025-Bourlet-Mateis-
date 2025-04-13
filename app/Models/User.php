@@ -68,19 +68,39 @@ class User extends Authenticatable
         return $this->first_name . ' ' . $this->last_name[0] . '.';
     }
 
-    /**
-     * Retrieve the school of the user
-     */
+
 
     /**
-     * @return (Model&object)|null
+     * Retrieve the first associated school of the user.
+     * 
+     * This method fetches the first school associated with the user from the 'users_schools' pivot table, 
+     * including the 'role' field. If no associated school is found, it returns null.
+     * 
+     * @return School|null
      */
-    public function school() {
-        // With this, the user can only have 1 school
-        return $this->belongsToMany(School::class, 'users_schools')
-            ->withPivot('role')
-            ->first();
+    public function school(): ?School
+    {
+        $school = $this->belongsToMany(School::class, 'users_schools')->withPivot('role')->first();
+        if ($school) {
+            return $school;
+        }
+        return null;
     }
+
+    /**
+     * Retrieve all associated schools of the user.
+     * 
+     * This method fetches all schools associated with the user from the 'users_schools' pivot table, 
+     * including the 'role' field. It returns a collection of all related schools.
+     * 
+     * @return \Illuminate\Database\Eloquent\Collection
+     */
+    public function schools(): \Illuminate\Database\Eloquent\Collection
+    {
+        $schools = $this->belongsToMany(School::class, 'users_schools')->withPivot('role')->get();
+        return $schools;
+    }
+    
 
     public function schoolRoles(){
         return $this -> hasMany(UserSchool::class);
