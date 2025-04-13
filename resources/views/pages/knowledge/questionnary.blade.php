@@ -4,8 +4,8 @@
 
     </x-slot>
     <form id="quizForm">
-    <div id="time" data-knowledge-time="{{ $knowledgeStudent->time_finish }}"></div>
-    <div id="id" data-knowledge-id="{{ $knowledgeStudent->id }}"> </div>
+    <div id="time" data-knowledge-time={{ $knowledgeStudent->time_finish ?? "Training" }}></div>
+    <div id="id" data-knowledge-id="{{ $knowledgeStudent->id ?? "Training" }}"> </div>
     @foreach ($questionnary as $index => $q)
         <div class="question-card">
             <h2 class="question-title">{{ $index + 1 }}. {{ $q['question'] }} </h2>

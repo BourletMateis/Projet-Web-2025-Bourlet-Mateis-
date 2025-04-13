@@ -209,6 +209,9 @@ function updateTimeDisplay(seconds) {
  * - Submits the quiz once the timer runs out and stops the interval.
  */
 function startTimer() {
+    if(knowledgeTime === "Training") {
+        return;
+    }
     let minutes = parseInt(knowledgeTime);
     remainingSeconds = minutes * 60;
 
@@ -228,6 +231,9 @@ function startTimer() {
 }
 
 function saveQuiz(knowledgeStudentId, score) {
+    if(knowledgeStudentId ==="Training"){
+        return;
+    }
     fetch('/knowledge-student-save-score', {
       method: 'POST',
       headers: {
@@ -242,11 +248,6 @@ function saveQuiz(knowledgeStudentId, score) {
     .then(response => response.json())
     .then(data => {
       if (data.message === 'Score sauvegardé avec succès') {
-        Swal.fire({
-          title: 'Success',
-          text: data.message ,
-          icon: 'success',
-        });
       } else {
         Swal.fire({
           title: 'Error',

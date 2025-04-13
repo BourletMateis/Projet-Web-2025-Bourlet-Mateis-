@@ -52,12 +52,21 @@ Route::middleware('auth')->group(function () {
         // Get questionnary for modal detail
         Route::get('/get-questionnary/{id}', action: [KnowledgeStudentController::class, 'getQuestionnary'])->name('knowledge.student.get.questionnary');
 
+        // Create questionnary whith ai
+        Route::post('/generate-questionnary', [AiController::class, 'generate'])->name('ai.generate');
+
+        // Route GET pour afficher la page
+Route::get('/play-training-questionnary', [KnowledgeStudentController::class, 'showQuestionnary'])->name('play-training-questionnary');
+
+// Route POST pour traiter les données envoyées
+Route::post('/play-training-questionnary', [KnowledgeStudentController::class, 'playTrainingQuestionnary']);
+
+
         
     });
 
     Route::middleware('role:admin,teacher')->group(function () {
-        // Create questionnary whith ai
-        Route::post('/generate-questionnary', [AiController::class, 'generate'])->name('ai.generate');
+
         // Create knowledge 
         Route::post('/knowledge-store', [KnowledgeController::class, 'store'])->name('knowledge.store');
         // Delete knowledge link to student
@@ -73,6 +82,8 @@ Route::middleware('auth')->group(function () {
 
     Route::middleware('role:student')->group(function () {
         Route::post ('/knowledge-student-save-score', [KnowledgeStudentController::class, 'saveScore'])->name('knowledge.student.save.score');
+
+
     });
 
 });

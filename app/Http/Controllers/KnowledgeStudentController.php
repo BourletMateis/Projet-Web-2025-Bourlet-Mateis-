@@ -93,9 +93,7 @@ class KnowledgeStudentController extends Controller
         $idKnowledge = $knowledgeStudent->id_knowledge;
         $knowledge = KnowLedge::where('id', $idKnowledge)->first();
         $questionnary = $knowledge->questionnary;
-    
         return response()->json($questionnary);
-
     }
 
     public function playQuestionnary($id)
@@ -110,6 +108,25 @@ class KnowledgeStudentController extends Controller
         ]);
 
     }
+
+    public function playTrainingQuestionnary(Request $request)
+    {
+        $data = $request->json()->all();
+        session(['questionnary' => $data]);
+        return response()->json([
+            'redirect_url' => '/play-training-questionnary'
+        ]);
+    }
+
+    public function showQuestionnary()
+{
+    $questionnary = session('questionnary');  
+    $questionnaryClear = isset($questionnary['data']) ? $questionnary['data'] : $questionnary;
+    return view('pages.knowledge.questionnary', [
+        'questionnary' => $questionnaryClear,
+    ]);
+}
+
 
     public function saveScore(Request $request)
     {

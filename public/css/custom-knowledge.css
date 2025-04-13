@@ -34,3 +34,68 @@
     background: linear-gradient(to right, #4F46E5, #3B82F6) !important; /* from-indigo-400 to-blue-400 */
     border-radius: 0.75rem !important;
 }
+
+
+.dropdown-checkbox {
+    position: relative;
+    display: inline-block;
+
+  }
+  
+  .dropdown-checkbox .select-box {
+    padding: 13px ;
+  }
+  
+  
+  .dropdown-checkbox .options {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    z-index: 99;
+    border: 1px solid ;
+    border-radius: 4px;
+
+    overflow-y: auto;
+    display: none;
+    margin-top: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .dropdown-checkbox.open .options {
+    display: block;
+  }
+  
+  .dropdown-checkbox label {
+    display: block;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    ;
+  }
+  
+  .dropdown-checkbox label:hover {
+    background-color: #f8f9fa;
+  }
+  
+  .dropdown-checkbox .options::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .dropdown-checkbox .options::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+  }
+  
+  .dropdown-checkbox .options::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+  }
+  
+  .dropdown-checkbox .options::-webkit-scrollbar-thumb:hover {
+    background: #adb5bd;
+  }
+
+  .select-custom{
+    padding-inline-start: 0 !important;
+  }

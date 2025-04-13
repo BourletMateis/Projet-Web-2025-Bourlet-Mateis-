@@ -19,6 +19,7 @@ class AiController extends Controller
     $difficulty = $data['difficulty'];
     $title= $data['title'];
     $languages = $data['languages'];
+    $training = $data['training'];
 
     // Prompt for generating the questionnaire
     $prompt = "
@@ -68,15 +69,21 @@ class AiController extends Controller
             'difficulty' => $difficulty,
             'languages' => $languages,
         ];
-        
-        // Create a new Knowledge entry
-        $knowledge = KnowLedge::create($data);
+         // Create a new Knowledge entry
+        if(!$training){
+            $knowledge = KnowLedge::create($data);
+            return Response()->json([
+                'data' => $knowledge,
+                'status' => 'success',
+            ]);
+        }
+        if($training){
+            return Response()->json([
+                'data' => $Json,
+                'status' => 'success',
+            ]);
 
-        // Redirect with success message
-        return Response()->json([
-            'data' => $knowledge,
-            'status' => 'success',
-        ]);
+        }
     }
 }
 

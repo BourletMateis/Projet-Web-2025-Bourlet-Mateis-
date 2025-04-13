@@ -102,7 +102,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 languages: selectedValues, // Use the selected languages from the checkboxes
                 number_questions:numberQuestions, // Use the value from the input field for number of questions
                 difficulty: difficulty, // Use the selected difficulty from the dropdown
-                title: title // Use verified title
+                title: title, // Use verified title
+                training: false
               })
             });
     
