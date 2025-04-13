@@ -55,11 +55,11 @@ Route::middleware('auth')->group(function () {
         // Create questionnary whith ai
         Route::post('/generate-questionnary', [AiController::class, 'generate'])->name('ai.generate');
 
-        // Route GET pour afficher la page
-Route::get('/play-training-questionnary', [KnowledgeStudentController::class, 'showQuestionnary'])->name('play-training-questionnary');
+        // launch questionnary
+        Route::get('/play-training-questionnary', [KnowledgeStudentController::class, 'showQuestionnary'])->name('play-training-questionnary');
 
-// Route POST pour traiter les données envoyées
-Route::post('/play-training-questionnary', [KnowledgeStudentController::class, 'playTrainingQuestionnary']);
+        // Send questionnary json to session for play
+        Route::post('/play-training-questionnary', [KnowledgeStudentController::class, 'playTrainingQuestionnary']);
 
 
         
@@ -75,12 +75,14 @@ Route::post('/play-training-questionnary', [KnowledgeStudentController::class, '
         Route::post('/knowledge-student-update/{id}', [KnowledgeStudentController::class, 'update'])->name('knowledge.student.update');
         // Create knowledge link to student
         Route::post('/knowledge-student-store', [KnowledgeStudentController::class, 'store'])->name('knowledge.student.store');
-
+        // Save score questionnary to bdd
         Route::post ('/knowledge-student-save-score', [KnowledgeStudentController::class, 'saveScore'])->name('knowledge.student.save.score');
+
 
     });
 
     Route::middleware('role:student')->group(function () {
+        // Save score questionnary to bdd
         Route::post ('/knowledge-student-save-score', [KnowledgeStudentController::class, 'saveScore'])->name('knowledge.student.save.score');
 
 

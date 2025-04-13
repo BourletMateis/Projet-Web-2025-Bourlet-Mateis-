@@ -7,19 +7,18 @@ let knowledgeTime;
 const questionnary = window.questionnary;
 let submitQuestionnary = false;
 let knowledgeStudentId;
+let endDate;
 
 /**
- * Executes once the window has fully loaded:
- * - Retrieves the initial knowledge time from the data attribute.
- * - Displays a SweetAlert modal with a message about the quiz and time limit.
- * - If the user clicks "OK", it starts the timer.
- * - If the user cancels, it redirects to the '/knowledge' page.
+ * Triggered when the window finishes loading.
+ * - Gets the quiz time, student ID, and end date from data attributes.
+ * - Displays a confirmation popup before starting the quiz.
+ * - Starts the timer if the user confirms, otherwise redirects.
  */
 window.onload = () => {
     knowledgeTime = document.getElementById('time').dataset.knowledgeTime;
-    knowledgeStudentId = document.getElementById('id').dataset.knowledgeId;    
-    console.log(knowledgeStudentId);
-    console.log(knowledgeTime);
+    knowledgeStudentId = document.getElementById('id').dataset.knowledgeId;   
+    endDate = document.getElementById('end-date').dataset.knowledgeEndDate;
     Swal.fire({
         title: 'Prêt à commencer ?',
         text: 'Nous allons commencer un questionnaire pour évaluer vos connaissances. Votre temps sera limité et le chronomètre s’affichera dans la barre de navigation en haut à gauche. Cliquez sur "OK" pour débuter.',
@@ -34,13 +33,12 @@ window.onload = () => {
             window.location.href = '/knowledge';  
         }
     });
-};;
+};
 
 /**
- * Initializes option selection behavior once the DOM is fully loaded:
- * - Attaches click listeners to all answer options.
- * - Ensures only one option can be selected per question.
- * - Visually highlights the selected option using custom icons and CSS classes.
+ * After the DOM is fully loaded:
+ * - Enables one-answer-only selection per question.
+ * - Updates icon and style based on selection.
  */
 document.addEventListener('DOMContentLoaded', () => {
     const allOptions = document.querySelectorAll('.options-container');
@@ -78,13 +76,12 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /**
- * Handles the quiz submission logic:
- * - Checks if the quiz has already been submitted.
- * - Compares user-selected answers with the correct ones.
- * - Calculates the final score and builds result/explanation HTML.
- * - Displays a modal with detailed feedback for each question.
- * - Disables all inputs to prevent further changes.
- * - Stops the timer and marks the quiz as submitted.
+ * Submits the quiz:
+ * - Prevents resubmission.
+ * - Compares selected answers to correct ones.
+ * - Calculates score and displays feedback per question.
+ * - Disables all inputs.
+ * - Saves result in the database (if eligible).
  */
 function submitQuiz() {
     if (submitQuestionnary) {
@@ -106,6 +103,7 @@ function submitQuiz() {
             correctAnswers++; 
         }
 
+        // Escape any potential HTML to prevent XSS
         q.question = escapeHTML(q.question);
         q.explanation = escapeHTML(q.explanation);
         q.options = q.options.map(option => escapeHTML(option));
@@ -169,21 +167,19 @@ function submitQuiz() {
     submitQuestionnary = true;
     isRunning = false;
 
-    // Open response modal
+    // Show results modal
     modal.classList.remove('hidden');
     modal.classList.add('open');
     modal.classList.add('modal-open');
     modal.style.display = 'block';   
-    // Save the score to the database
+
+    // Save result
     saveQuiz(knowledgeStudentId, correctAnswers);
 }
 
 /**
- * Determines the score class based on the percentage score.
- * - Returns 'excellent' if the score is 80% or above.
- * - Returns 'good' if the score is between 60% and 79%.
- * - Returns 'average' if the score is between 40% and 59%.
- * - Returns 'needs-improvement' if the score is below 40%.
+ * Returns a CSS class name based on the score percentage.
+ * Used to change color of the score circle.
  */
 function getScoreClass(percentage) {
     if (percentage >= 80) return 'excellent';
@@ -191,9 +187,9 @@ function getScoreClass(percentage) {
     if (percentage >= 40) return 'average';
     return 'needs-improvement';
 }
+
 /**
- * Updates the time display with the formatted time (MM:SS).
- * @param {number} seconds - The total seconds to display, which will be converted into minutes and seconds.
+ * Updates the countdown timer text in MM:SS format.
  */
 function updateTimeDisplay(seconds) {
     let minutes = Math.floor(seconds / 60);
@@ -202,11 +198,9 @@ function updateTimeDisplay(seconds) {
     let sec = remainingSec < 10 ? `0${remainingSec}` : remainingSec;
     timeDisplay.textContent = `${min}:${sec}`;
 }
+
 /**
- * Starts the timer for the quiz.
- * - Initializes the remaining time based on the knowledgeTime.
- * - Updates the time every second and displays it using updateTimeDisplay.
- * - Submits the quiz once the timer runs out and stops the interval.
+ * Starts the countdown timer if the quiz is not "Training".
  */
 function startTimer() {
     if(knowledgeTime === "Training") {
@@ -230,7 +224,21 @@ function startTimer() {
     isRunning = true;
 }
 
+/**
+ * Sends the final score to the backend only if within deadline.
+ */
 function saveQuiz(knowledgeStudentId, score) {
+    const currentDate = new Date();
+    const end = new Date(endDate + 'T23:59:59'); 
+    if (currentDate > end) {
+        Swal.fire({
+            title: 'Le questionnaire est terminé ! Depuis le ' + endDate,
+            text: 'Votre score n\'a pas été enregistré !',
+            icon: 'warning',
+            confirmButtonText: 'OK'
+        });
+        return; 
+    }
     if(knowledgeStudentId ==="Training"){
         return;
     }
@@ -248,6 +256,7 @@ function saveQuiz(knowledgeStudentId, score) {
     .then(response => response.json())
     .then(data => {
       if (data.message === 'Score sauvegardé avec succès') {
+        // Optional: feedback on success
       } else {
         Swal.fire({
           title: 'Error',
@@ -264,9 +273,12 @@ function saveQuiz(knowledgeStudentId, score) {
         icon: 'error',
       });
     });
-  }
-  
-  function escapeHTML(str) {
+}
+
+/**
+ * Escapes HTML tags from strings to prevent XSS attacks.
+ */
+function escapeHTML(str) {
     str = String(str);
     return str.replace(/[&<>"']/g, function (char) {
       return {
@@ -277,4 +289,4 @@ function saveQuiz(knowledgeStudentId, score) {
         "'": '&#39;',
       }[char];
     });
-  }
+}

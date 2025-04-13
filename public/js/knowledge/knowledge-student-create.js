@@ -59,10 +59,10 @@ document.addEventListener("DOMContentLoaded", function () {
         return; 
       }
       // Check if the number of questions is valid
-      if (!numberQuestions || isNaN(numberQuestions) || numberQuestions <= 0 || numberQuestions > 50) {
+      if (!numberQuestions || isNaN(numberQuestions) || numberQuestions <= 0 || numberQuestions > 30) {
         Swal.fire({
           title: "Erreur",
-          text: "Veuillez entrer un nombre valide de questions (entre 1 et 50).",
+          text: "Veuillez entrer un nombre valide de questions (entre 1 et 30).",
           icon: "error"
         });
         return; 

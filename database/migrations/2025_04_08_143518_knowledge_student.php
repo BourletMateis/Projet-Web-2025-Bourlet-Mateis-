@@ -22,6 +22,8 @@ return new class extends Migration
             $table->date('end_date');
             $table->unsignedBigInteger('time_finish');
             $table->json('score')->nullable();
+            $table->unsignedBigInteger('creator_id')->nullable();
+            $table->foreign('creator_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }

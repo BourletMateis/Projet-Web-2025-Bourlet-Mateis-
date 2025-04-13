@@ -11,7 +11,7 @@ class KnowledgeStudent extends Model
     use HasFactory;
     protected $table = 'knowledge_student'; 
 
-    protected $fillable = ['school_id', 'title', 'description', 'id_knowledge', 'end_date', 'time_finish', 'score'];
+    protected $fillable = ['school_id', 'title', 'description', 'id_knowledge', 'end_date', 'time_finish', 'score','creator_id'];
 
     public function knowledge()
     {
@@ -21,6 +21,11 @@ class KnowledgeStudent extends Model
     public function school()
     {
         return $this->belongsTo(school::class, 'school_id');
+    }
+
+    public function creator()
+    {
+        return $this->belongsTo(User::class, 'creator_id');
     }
 
 
