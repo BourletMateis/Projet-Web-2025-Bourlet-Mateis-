@@ -12,6 +12,8 @@ use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\AiController;
 use App\Http\Controllers\KnowledgeStudentController;
 use Illuminate\Support\Facades\Route;
+use Pusher\Pusher;
+
 // Redirect the root path to /dashboard
 Route::redirect('/', 'dashboard');
 
@@ -62,7 +64,10 @@ Route::middleware('auth')->group(function () {
         // Send questionnary json to session for play
         Route::post('/play-training-questionnary', [KnowledgeStudentController::class, 'playTrainingQuestionnary']);
 
-    });
+       Route::get('/get/column/{id}' , [RetroController::class, 'getColumn'])->name('retro.column');
+
+
+
 
     Route::middleware('role:admin,teacher')->group(function () {
         // Create knowledge 
@@ -77,12 +82,34 @@ Route::middleware('auth')->group(function () {
         Route::post ('/knowledge-student-save-score', [KnowledgeStudentController::class, 'saveScore'])->name('knowledge.student.save.score');
         // Get all score questionnary for admin panel
         Route::get('/get-score/{id}', [KnowledgeStudentController::class, 'getScore'])->name('knowledge.student.get.score');
+
+        Route::post('/create-retro', [RetroController::class, 'store'])->name('retro.create');
+
+        Route::get('/kanban', function () {
+            return view('pages.retros.kanban');
+        })->name('kanban.index');
+
+        Route::get('/kanban-data', [RetroController::class, 'getKanbanData']);
+
+        Route::post('/retro/{retro_id}/columns', [RetroController::class, 'createColumn']);
+
+        Route::post('/retro/{column_id}/cards', [RetroController::class, 'createCard']);
+
+        Route::get('/retro/{id}/{school_id}/{name}', [RetroController::class, 'show'])->name('retro.show');
+
+
+
     });
+});
 
     Route::middleware('role:student')->group(function () {
         // Save score questionnary to bdd
         Route::post ('/knowledge-student-save-score', [KnowledgeStudentController::class, 'saveScore'])->name('knowledge.student.save.score');
     });
 
-});
+    });
+       
+
+
+
 require __DIR__.'/auth.php';
