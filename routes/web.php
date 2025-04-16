@@ -49,23 +49,7 @@ Route::middleware('auth')->group(function () {
 
         // Common life
         Route::get('common-life', [CommonLifeController::class, 'index'])->name('common-life.index');
-
-        Route::get('/playQuestionnary/{id}/{knowledgeId}', [KnowledgeStudentController::class, 'playQuestionnary'])->name('knowledge.play.questionnary');
-
-        // Get questionnary for modal detail
-        Route::get('/get-questionnary/{id}', action: [KnowledgeStudentController::class, 'getQuestionnary'])->name('knowledge.student.get.questionnary');
-
-        // Create questionnary whith ai
-        Route::post('/generate-questionnary', [AiController::class, 'generate'])->name('ai.generate');
-
-        // launch questionnary
-        Route::get('/play-training-questionnary', [KnowledgeStudentController::class, 'showQuestionnary'])->name('play-training-questionnary');
-
-        // Send questionnary json to session for play
-        Route::post('/play-training-questionnary', [KnowledgeStudentController::class, 'playTrainingQuestionnary']);
-
-       Route::get('/get/column/{id}' , [RetroController::class, 'getColumn'])->name('retro.column');
-
+    });
 
 
 
@@ -83,42 +67,90 @@ Route::middleware('auth')->group(function () {
         // Get all score questionnary for admin panel
         Route::get('/get-score/{id}', [KnowledgeStudentController::class, 'getScore'])->name('knowledge.student.get.score');
 
+        //Get questionnary for play 
+        Route::get('/playQuestionnary/{id}/{knowledgeId}', [KnowledgeStudentController::class, 'playQuestionnary'])->name('knowledge.play.questionnary');
+
+        // Get questionnary for modal detail
+        Route::get('/get-questionnary/{id}', action: [KnowledgeStudentController::class, 'getQuestionnary'])->name('knowledge.student.get.questionnary');
+
+        // Create questionnary whith ai
+        Route::post('/generate-questionnary', [AiController::class, 'generate'])->name('ai.generate');
+
+        // launch questionnary
+        Route::get('/play-training-questionnary', [KnowledgeStudentController::class, 'showQuestionnary'])->name('play-training-questionnary');
+
+        // Send questionnary json to session for play
+        Route::post('/play-training-questionnary', [KnowledgeStudentController::class, 'playTrainingQuestionnary']);
+
+        // Create Retrospective 
         Route::post('/create-retro', [RetroController::class, 'store'])->name('retro.create');
 
-        Route::get('/kanban', function () {
-            return view('pages.retros.kanban');
-        })->name('kanban.index');
+        //Delete retro
+        Route::delete('deleteRetro/{id}', [RetroController::class, 'deleteRetro'])->name('retro.delete');
 
-        Route::get('/kanban-data', [RetroController::class, 'getKanbanData']);
-
-        Route::post('/retro/{retro_id}/columns', [RetroController::class, 'createColumn']);
-
-        Route::post('/retro/{column_id}/cards', [RetroController::class, 'createCard']);
-
+        //Get and show retrospectives
         Route::get('/retro/{id}/{school_id}/{name}', [RetroController::class, 'show'])->name('retro.show');
 
-        Route::get('test',function() {
-            return view('pages.retros.kanbantest');
-        })->name('test');
+        //Create retro column
+        Route::post('/retro/{retro_id}/columns', [RetroController::class, 'createColumn']);
 
-
-        Route::put('/retro/card/update', [RetroController::class, 'moveCard'])->name('retro.card.update');
-
+        //Delete column
         Route::delete('/retro/column/delete/{id}/', [RetroController::class, 'deleteColumn'])->name('retro.column.delete');
 
+        //Create retro card
+        Route::post('/retro/{column_id}/cards', [RetroController::class, 'createCard']);
+
+        //Move card
+        Route::put('/retro/card/update', [RetroController::class, 'moveCard'])->name('retro.card.update');
+
+        //Update card title
         Route::put('/retro/card/update/{id}/', [RetroController::class, 'updateCard'])->name('retro.column.update');
 
+        //Delete card
         Route::delete('/retro/card/delete/{id}/', [RetroController::class, 'destroyCard'])->name('retro.card.destroy');
 
     });
-});
+
 
     Route::middleware('role:student')->group(function () {
         // Save score questionnary to bdd
         Route::post ('/knowledge-student-save-score', [KnowledgeStudentController::class, 'saveScore'])->name('knowledge.student.save.score');
+
+        // Play questionnary
+        Route::get('/playQuestionnary/{id}/{knowledgeId}', [KnowledgeStudentController::class, 'playQuestionnary'])->name('knowledge.play.questionnary');
+
+        // Create questionnary whith ai
+        Route::post('/generate-questionnary', [AiController::class, 'generate'])->name('ai.generate');
+
+        // launch questionnary
+        Route::get('/play-training-questionnary', [KnowledgeStudentController::class, 'showQuestionnary'])->name('play-training-questionnary');
+
+        // Send questionnary json to session for play
+        Route::post('/play-training-questionnary', [KnowledgeStudentController::class, 'playTrainingQuestionnary']);
+
+        //Get and show retrospectives
+        Route::get('/retro/{id}/{school_id}/{name}', [RetroController::class, 'show'])->name('retro.show');
+
+        //Create retro card
+        Route::post('/retro/{column_id}/cards', [RetroController::class, 'createCard']);
+
+        //Move card
+        Route::put('/retro/card/update', [RetroController::class, 'moveCard'])->name('retro.card.update');
+
+        //Update card title
+        Route::put('/retro/card/update/{id}/', [RetroController::class, 'updateCard'])->name('retro.column.update');
+
+        //Delete card
+        Route::delete('/retro/card/delete/{id}/', [RetroController::class, 'destroyCard'])->name('retro.card.destroy');
+
+        //Create retro column
+        Route::post('/retro/{retro_id}/columns', [RetroController::class, 'createColumn']);
+
+        //Delete column
+        Route::delete('/retro/column/delete/{id}/', [RetroController::class, 'deleteColumn'])->name('retro.column.delete');
     });
 
-    });
+});
        
 
 

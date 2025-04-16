@@ -437,6 +437,18 @@ document.getElementById('download-button').addEventListener('click', function ()
     var finalScore = data.scores;
     var title = data.title;
     var numberQuestions = data.numberQuestions;
+    if (finalScore && Object.keys(finalScore).length <= 0) {
+      Swal.fire({
+        title: 'Aucun score disponible',
+        text: 'Aucun score n\'est disponible pour le téléchargement.',
+        icon: 'warning',
+        confirmButtonText: 'OK',
+        customClass: {
+          confirmButton: 'btn btn-primary'
+        }
+      });
+      return;
+    }
     if (finalScore && Object.keys(finalScore).length > 0) {
       Swal.fire({
         title: 'Choisissez un format de téléchargement',

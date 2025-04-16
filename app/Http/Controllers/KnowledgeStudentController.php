@@ -35,9 +35,12 @@ class KnowledgeStudentController extends Controller
         }
     
         $schoolId = $userSchool->school_id ?? null;
+
+        $knowledgeStudent = KnowledgeStudent::where('school_id', $schoolId)->get();
+
     
         return view('pages.knowledge.index-student', [
-            'knowledgeStudent' => KnowledgeStudent::where('school_id', $schoolId)->get(),
+            'knowledgeStudent' => $knowledgeStudent,
             'user' => $user,
         ]);
     }

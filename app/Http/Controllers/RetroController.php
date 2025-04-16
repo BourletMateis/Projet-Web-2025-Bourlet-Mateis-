@@ -26,12 +26,19 @@ class RetroController extends Controller
      * @return Factory|View|Application|object
      */
     public function index() {
-        $school = School::all();
-        $retro = Retro::all();
-        return view('pages.retros.index', [
-            'school' => $school,
-            'retro' => $retro,
-        ]);
+        $user = auth()->user();
+        $userSchool = $user->userSchools()->first();
+        $role = $userSchool->role ?? 'student';
+
+        if (in_array($role, ['admin', 'teacher'])) {
+            $school = School::all();
+            $retro = Retro::all();
+            $retro = Retro::with(['school', 'creator'])->get();
+            return view('pages.retros.index', [
+                'school' => $school,
+                'retro' => $retro,
+            ]);
+        }
     }
 
     /**
@@ -51,7 +58,7 @@ class RetroController extends Controller
             'name' => $request->input('name'),
             'creator_id' => $request->user()->id, 
         ]);
-        return redirect()->route('retro.index')->with('success', 'School created successfully.');
+        return response()->json(['message' => 'Rétrospective créée avec succès']);
     }
 
     /**
@@ -300,6 +307,15 @@ class RetroController extends Controller
 
         event(new CardDeleted($id, $retroId, $user_id));
 
+        return response()->json(['success' => true]);
+    }
+
+    public function deleteRetro($id) {
+        $retro = Retro::find($id);
+        if (!$retro) {
+            return response()->json(['error' => 'Retro not found'], 404);
+        }
+        $retro->delete();
         return response()->json(['success' => true]);
     }
 }

@@ -12,7 +12,6 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
 
             <!-- Loop to initialize gradients (used below) -->
-            @foreach ($knowledgeStudent as $knowledgeStudents)
                 @php
                     // Available gradient backgrounds
                     $gradients = [
@@ -26,8 +25,6 @@
                     ];
                     $randomGradients = $gradients[array_rand($gradients)];
                 @endphp
-            @endforeach
-
             <!-- Training quiz card -->
             <div class="card mb-3">
                 <div class="card-header {{ $randomGradients }} p-4">

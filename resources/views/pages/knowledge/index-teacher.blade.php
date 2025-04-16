@@ -210,9 +210,9 @@
 @include('pages.knowledge.modal-create-knowledge')
 
 
-
-<script src="{{ asset('js/knowledge-student-create.js') }}" defer></script>
 <script src="{{ asset('js/knowledge-student-details.js') }}" defer></script>
+<script src="{{ asset('js/knowledge-student-create.js') }}" defer></script>
+
 
     <script src="{{ asset('js/modal.js') }}"></script>
 
