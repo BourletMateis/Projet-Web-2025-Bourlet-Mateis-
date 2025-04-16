@@ -4,32 +4,25 @@ namespace App\Events;
 
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;
-use Illuminate\Broadcasting\PresenceChannel;
-use Illuminate\Broadcasting\PrivateChannel;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Support\Facades\Log;
-use Laravel\Pail\ValueObjects\Origin\Console;
 
-class CardCreated implements ShouldBroadcast
+class CardDeleted implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
-    public $card;
+    public $card_id;
     public $retro_id;
+
     public $user_id;
 
     /**
      * Create a new event instance.
-     *
-     * @param $card
-     * @param $retro_id
-     * @param $user_id
      */
-    public function __construct($card, $retro_id, $user_id)
+    public function __construct($card_id, $retro_id,$user_id)
     {
-        $this->card = $card;
+        $this->card_id = $card_id;
         $this->retro_id = $retro_id;
         $this->user_id = $user_id;
     }
@@ -41,7 +34,7 @@ class CardCreated implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        return new Channel('retro.' . $this->retro_id); 
+        return new Channel('retro.' . $this->retro_id);
     }
 
     /**
@@ -50,11 +43,9 @@ class CardCreated implements ShouldBroadcast
      * @return array
      */
     public function broadcastWith()
-    {  
+    {
         return [
-            'id' => $this->card->id,
-            'name' => $this->card->name,
-            'retro_column_id' => $this->card->retro_column_id,
+            'cardId' => $this->card_id,
             'user_id' => $this->user_id,
         ];
     }
@@ -66,6 +57,6 @@ class CardCreated implements ShouldBroadcast
      */
     public function broadcastAs()
     {
-        return 'card.created';
+        return 'card.deleted';
     }
 }

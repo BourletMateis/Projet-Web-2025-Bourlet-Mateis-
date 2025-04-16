@@ -9,39 +9,37 @@ use Illuminate\Broadcasting\PrivateChannel;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Support\Facades\Log;
-use Laravel\Pail\ValueObjects\Origin\Console;
 
-class CardCreated implements ShouldBroadcast
+class ColumnCreated implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
-    public $card;
     public $retro_id;
+    public $column_id;
+    public $column_name;
+
     public $user_id;
 
     /**
      * Create a new event instance.
-     *
-     * @param $card
-     * @param $retro_id
-     * @param $user_id
      */
-    public function __construct($card, $retro_id, $user_id)
+    public function __construct($retro_id, $column_id, $column_name, $user_id)
+
     {
-        $this->card = $card;
         $this->retro_id = $retro_id;
+        $this->column_id = $column_id;
+        $this->column_name = $column_name;
         $this->user_id = $user_id;
     }
 
     /**
      * Get the channels the event should broadcast on.
      *
-     * @return \Illuminate\Broadcasting\Channel
+     * @return array<int, \Illuminate\Broadcasting\Channel>
      */
-    public function broadcastOn()
+    public function broadcastOn(): array
     {
-        return new Channel('retro.' . $this->retro_id); 
+        return [new Channel('retro.' . $this->retro_id)];
     }
 
     /**
@@ -50,11 +48,10 @@ class CardCreated implements ShouldBroadcast
      * @return array
      */
     public function broadcastWith()
-    {  
+    {
         return [
-            'id' => $this->card->id,
-            'name' => $this->card->name,
-            'retro_column_id' => $this->card->retro_column_id,
+            'columnId' => $this->column_id,
+            'columnName' => $this->column_name,
             'user_id' => $this->user_id,
         ];
     }
@@ -66,6 +63,6 @@ class CardCreated implements ShouldBroadcast
      */
     public function broadcastAs()
     {
-        return 'card.created';
+        return 'column.created';
     }
 }

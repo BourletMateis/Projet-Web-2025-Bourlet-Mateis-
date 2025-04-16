@@ -16,7 +16,6 @@ return new class extends Migration
             $table->unsignedBigInteger('retro_column_id');
             $table->foreign('retro_column_id')->references('id')->on('retros_columns')->onDelete('cascade');
             $table->string('name');
-            $table->string('description')->nullable();
             $table->timestamps();
         });
     }

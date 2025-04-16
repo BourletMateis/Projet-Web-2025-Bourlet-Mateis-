@@ -343,6 +343,7 @@ var dragula = require('dragula');
         }
         //footer board
         var footerBoard = document.createElement('footer')
+        footerBoard.classList.add('kanban-footer-board')
         // if add button is true, add button to the board
         if (addButton) {
           var btn = document.createElement('BUTTON')

@@ -97,7 +97,18 @@ Route::middleware('auth')->group(function () {
 
         Route::get('/retro/{id}/{school_id}/{name}', [RetroController::class, 'show'])->name('retro.show');
 
+        Route::get('test',function() {
+            return view('pages.retros.kanbantest');
+        })->name('test');
 
+
+        Route::put('/retro/card/update', [RetroController::class, 'moveCard'])->name('retro.card.update');
+
+        Route::delete('/retro/column/delete/{id}/', [RetroController::class, 'deleteColumn'])->name('retro.column.delete');
+
+        Route::put('/retro/card/update/{id}/', [RetroController::class, 'updateCard'])->name('retro.column.update');
+
+        Route::delete('/retro/card/delete/{id}/', [RetroController::class, 'destroyCard'])->name('retro.card.destroy');
 
     });
 });
