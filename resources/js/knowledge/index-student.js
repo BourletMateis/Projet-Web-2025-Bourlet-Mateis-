@@ -1,3 +1,5 @@
+const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+
 const dropdown = document.getElementById('languageDropdown');
 const box = dropdown.querySelector('.select-box');
 
@@ -32,6 +34,7 @@ btnCreate.forEach(btn => {
 document.querySelectorAll('.btnPlay').forEach(btn => {
     btn.addEventListener('click', function() {
         const knowledgeId = btn.getAttribute('data-knowledge-id');
+        const knowledgeStudentId = btn.getAttribute('data-knowledge-student-id');
         const jsonScore = btn.getAttribute('data-knowlege-score');
         const userId = btn.getAttribute('data-user-id');
         const numberQuestion = btn.getAttribute('data-number-question');
@@ -62,7 +65,7 @@ document.querySelectorAll('.btnPlay').forEach(btn => {
                 console.error('Erreur lors du parsing du JSON:', error);
             }
         } else {
-            window.location.href = '/playQuestionnary/' + knowledgeId;
+            window.location.href = '/playQuestionnary/' + knowledgeId+'/'+knowledgeStudentId;
         }
     });
 });

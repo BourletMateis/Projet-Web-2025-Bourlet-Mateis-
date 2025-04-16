@@ -1,4 +1,15 @@
 {
     "/js/app.js": "/js/app.js",
+    "/js/Kanban.js": "/js/Kanban.js",
+    "/js/jkanban.js": "/js/jkanban.js",
+    "/js/jkanban.min.js": "/js/jkanban.min.js",
+    "/js/index-student.js": "/js/index-student.js",
+    "/js/knowledge-student-create.js": "/js/knowledge-student-create.js",
+    "/js/knowledge-student-details.js": "/js/knowledge-student-details.js",
+    "/js/questionnary.js": "/js/questionnary.js",
+    "/css/questionnary.css": "/css/questionnary.css",
+    "/css/custom-knowledge.css": "/css/custom-knowledge.css",
+    "/css/jkanban.min.css": "/css/jkanban.min.css",
+    "/css/jkanban.css": "/css/jkanban.css",
     "/css/app.css": "/css/app.css"
 }

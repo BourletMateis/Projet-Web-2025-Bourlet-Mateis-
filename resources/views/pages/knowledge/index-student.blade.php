@@ -1,5 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
+    <link href="{{ asset('css/custom-knowledge.css') }}" rel="stylesheet">
     </x-slot>
 
     <!-- Section title -->
@@ -126,7 +127,8 @@
                             data-knowledge-end-date="{{ $knowledgeStudents->end_date }}" 
                             data-number-question="{{ $knowledgeStudents->knowledge->number_questions }}" 
                             data-user-id="{{ $user->id }}" 
-                            data-knowledge-id="{{ $knowledgeStudents->id_knowledge }}">
+                            data-knowledge-id="{{ $knowledgeStudents->id_knowledge }}"
+                            data-knowledge-student-id="{{ $knowledgeStudents->id }}">
                             Faire le questionnaire
                         </button>
 
@@ -142,6 +144,6 @@
     </div>
 
     <!-- JS & CSS -->
-    <script src="{{ asset('js/knowledge/index-student.js') }}"></script>
-    <link href="{{ asset('css/custom-knowledge.css') }}" rel="stylesheet">
+    <script src="{{ asset('js/index-student.js') }}" defer></script>
+    
 </x-app-layout>

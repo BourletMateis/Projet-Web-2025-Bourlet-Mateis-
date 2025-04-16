@@ -81,12 +81,30 @@ class User extends Authenticatable
      */
     public function school(): ?School
     {
-        $school = $this->belongsToMany(School::class, 'users_schools')->withPivot('role')->first();
-        if ($school) {
-            return $school;
-        }
-        return null;
+        return $this->schools()->first();
     }
+
+        public function roleInSchool(): ?string
+    {
+        return $this->currentSchool()?->pivot->role;
+    }
+
+    public function userSchools()
+    {
+        return $this->hasMany(UserSchool::class);
+    }
+
+    public function schools()
+    {
+        return $this->belongsToMany(School::class, 'users_schools')->withPivot('role');
+    }
+    
+public function currentSchool(): ?School
+{
+    return $this->schools()->first(); // si l'utilisateur a une seule école
+}
+
+    
 
     /**
      * Retrieve all associated schools of the user.
@@ -97,10 +115,7 @@ class User extends Authenticatable
      * @return \Illuminate\Database\Eloquent\Collection
      */
 
-    public function schools(): BelongsToMany
-    {
-        return $this->belongsToMany(School::class, 'users_schools')->withPivot('role');
-    }
+
     
     
 

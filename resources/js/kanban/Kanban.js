@@ -15,6 +15,53 @@ document.addEventListener("DOMContentLoaded", function () {
   userId = currentUserId.getAttribute('data-id');
   retroId = retroElement.getAttribute('data-id');
 
+    // Initialize Kanban board
+    var KanbanTest = new jKanban({
+      element: "#myKanban",
+      gutter: "10px",
+      widthBoard: "300px",
+      itemHandleOptions: { enabled: true },
+      click: function (el) {
+        updateCard(el);
+      },
+      dropEl: function (el, target, source, sibling) {
+        const cardId = el.getAttribute('data-eid');
+        const columnId = target.parentElement.getAttribute('data-id');
+        updateCardInDatabase(columnId, cardId);
+      },
+      buttonClick: function (el, boardId) {
+        // Show prompt to add new card
+        Swal.fire({
+          title: 'Ajouter une carte',
+          input: 'text',
+          inputLabel: 'Nom de la carte',
+          inputPlaceholder: 'Nom de la carte...',
+          focusConfirm: false,
+          showCancelButton: true,
+          confirmButtonText: 'Ajouter',
+          cancelButtonText: 'Annuler',
+          preConfirm: () => {
+            const title = Swal.getInput().value;
+            if (!title) {
+              Swal.showValidationMessage(`Veuillez entrer un nom pour la carte`)
+            }
+            return { title };
+          }
+        }).then((result) => {
+          if (result.isConfirmed) {
+            createCardInDatabase(boardId, result.value.title, userId);
+          }
+        });
+      },
+      itemAddOptions: {
+        enabled: true,
+        content: '+ Add New Card',
+        class: ' add-card-button ',
+        footer: true
+      },
+      boards: []
+    });
+
   // Initialize Kanban with existing columns/cards
   initKanban(retroId);
 
@@ -59,7 +106,6 @@ document.addEventListener("DOMContentLoaded", function () {
         KanbanTest.addElement(e.retro_column_id, {
           id: e.id,
           title: e.name,
-          description: e.description,
         });
       }
     });
@@ -97,56 +143,8 @@ document.addEventListener("DOMContentLoaded", function () {
         if (cardElement) cardElement.remove();
       }
     });
-});
 
-// Initialize Kanban board
-var KanbanTest = new jKanban({
-  element: "#myKanban",
-  gutter: "10px",
-  widthBoard: "300px",
-  itemHandleOptions: { enabled: true },
-  click: function (el) {
-    updateCard(el);
-  },
-  dropEl: function (el, target, source, sibling) {
-    const cardId = el.getAttribute('data-eid');
-    const columnId = target.parentElement.getAttribute('data-id');
-    updateCardInDatabase(columnId, cardId);
-  },
-  buttonClick: function (el, boardId) {
-    // Show prompt to add new card
-    Swal.fire({
-      title: 'Ajouter une carte',
-      input: 'text',
-      inputLabel: 'Nom de la carte',
-      inputPlaceholder: 'Nom de la carte...',
-      focusConfirm: false,
-      showCancelButton: true,
-      confirmButtonText: 'Ajouter',
-      cancelButtonText: 'Annuler',
-      preConfirm: () => {
-        const title = Swal.getInput().value;
-        if (!title) {
-          Swal.showValidationMessage(`Veuillez entrer un nom pour la carte`)
-        }
-        return { title };
-      }
-    }).then((result) => {
-      if (result.isConfirmed) {
-        createCardInDatabase(boardId, result.value.title, userId);
-      }
-    });
-  },
-  itemAddOptions: {
-    enabled: true,
-    content: '+ Add New Card',
-    class: ' add-card-button ',
-    footer: true
-  },
-  boards: []
-});
-
-// Add new column with a given name
+    // Add new column with a given name
 function addColumnWithName(boardName) {
   if (!boardName || boardName.trim() === "") {
     Swal.fire({
@@ -158,6 +156,7 @@ function addColumnWithName(boardName) {
   }
   createColumnInDatabase(boardName);
 }
+
 
 // API call to create column
 function createColumnInDatabase(boardName) {
@@ -322,125 +321,130 @@ function removeCardFromColumn(columnId, cardId) {
   if (card) card.remove();
 }
 
-// Delete a board (column) with confirmation
-function deleteBoard(boardId) {
-  Swal.fire({
-    title: 'Êtes-vous sûr ?',
-    text: "Vous ne pourrez pas revenir en arrière !",
-    icon: 'warning',
-    showCancelButton: true,
-    confirmButtonText: 'Oui, supprimer !',
-    cancelButtonText: 'Annuler'
-  }).then((result) => {
-    if (result.isConfirmed) {
-      fetch(`/retro/column/delete/${boardId}/`, {
-        method: 'DELETE',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-CSRF-TOKEN': csrfToken
-        },
-        body: JSON.stringify({ id: boardId })
-      }) .then(response => {
-        if (response.ok) {
-          const boardElement = document.querySelector(`[data-id="${boardId}"]`);
-          if (boardElement) {
-            boardElement.remove();
-            Swal.fire('Supprimé !', 'La colonne a été supprimée.', 'success');
+  // Delete a board (column) with confirmation
+  window.deleteBoard = function(boardId) {
+    Swal.fire({
+      title: 'Êtes-vous sûr ?',
+      text: "Vous ne pourrez pas revenir en arrière !",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Oui, supprimer !',
+      cancelButtonText: 'Annuler'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`/retro/column/delete/${boardId}/`, {
+          method: 'DELETE',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-TOKEN': csrfToken
+          },
+          body: JSON.stringify({ id: boardId })
+        }) .then(response => {
+          if (response.ok) {
+            const boardElement = document.querySelector(`[data-id="${boardId}"]`);
+            if (boardElement) {
+              boardElement.remove();
+              Swal.fire('Supprimé !', 'La colonne a été supprimée.', 'success');
+            }
+          } else {
+            Swal.fire('Erreur', 'La suppression a échoué.', 'error');
           }
-        } else {
-          Swal.fire('Erreur', 'La suppression a échoué.', 'error');
-        }
-      })
-      .catch(error => {
-        console.error('Erreur lors de la suppression de la colonne :', error);
-        Swal.fire('Erreur', 'Une erreur est survenue.', 'error');
-      });
-    }
-  });
-}
-
-// Update card title or delete card
-function updateCard(el) {
-  Swal.fire({
-    title: `
-      <div style="display: flex; justify-content: space-between; align-items: center;">
-        <span style="font-size: 1.3em; font-weight: 600;">Modifier la carte</span>
-        <i id="deleteCardBtn" class="fas fa-trash" style="cursor: pointer; font-size: 1em; color: #3b82f6;" title="Supprimer la carte"></i>
-      </div>
-    `,
-    input: 'textarea',
-    inputValue: el.innerText,
-    inputAttributes: { 'style': 'height: 30rem; resize: none;' },
-    focusConfirm: false,
-    showCancelButton: true,
-    confirmButtonText: 'Enregistrer',
-    cancelButtonText: 'Annuler',
-    preConfirm: () => {
-      const title = Swal.getInput().value;
-      if (!title) {
-        Swal.showValidationMessage(`Veuillez entrer un nom pour la carte`);
-      }
-      return { title };
-    },
-    didOpen: () => {
-      document.getElementById('deleteCardBtn').addEventListener('click', () => {
-        Swal.fire({
-          title: 'Confirmer la suppression ?',
-          text: "Cette action est irréversible.",
-          icon: 'warning',
-          showCancelButton: true,
-          confirmButtonText: 'Oui, supprimer',
-          cancelButtonText: 'Annuler'
-        }).then((result) => {
-          if (result.isConfirmed) {
-            const cardId = el.getAttribute('data-eid');
-            fetch(`/retro/card/delete/${cardId}`, {
-              method: 'DELETE',
-              headers: {
-                'Content-Type': 'application/json',
-                'X-CSRF-TOKEN': csrfToken,
-              }
-            }).then(() => {
-              const cardElement = document.querySelector(`[data-eid="${cardId}"]`);
-              if (cardElement) cardElement.remove();
-              Swal.fire('Supprimée !', 'La carte a été supprimée.', 'success');
-            }).catch(() => {
-              Swal.fire('Erreur', 'Une erreur est survenue.', 'error');
-            });
-          }
-        });
-      });
-    }
-  }).then((result) => {
-    if (result.isConfirmed) {
-      const titles = result.value.title;
-      const cardId = el.getAttribute('data-eid');
-
-      fetch(`/retro/card/update/${cardId}`, {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-CSRF-TOKEN': csrfToken
-        },
-        body: JSON.stringify({
-          id: cardId,
-          name: titles,
         })
-      }).then(response => {
-        if (response.ok) {
-          const cardElement = document.querySelector(`[data-eid="${cardId}"]`);
-          if (cardElement) {
-            const textElement = cardElement.querySelector('div:not(.item_handle)');
-            if (textElement) textElement.innerText = titles;
-          }
-          Swal.fire('Modifiée !', 'La carte a été modifiée.', 'success');
-        } else {
-          Swal.fire('Erreur', 'Impossible de modifier la carte.', 'error');
+        .catch(error => {
+          console.error('Erreur lors de la suppression de la colonne :', error);
+          Swal.fire('Erreur', 'Une erreur est survenue.', 'error');
+        });
+      }
+    });
+  }
+
+  // Update card title or delete card
+  function updateCard(el) {
+    Swal.fire({
+      title: `
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <span style="font-size: 1.3em; font-weight: 600;">Modifier la carte</span>
+          <i id="deleteCardBtn" class="fas fa-trash" style="cursor: pointer; font-size: 1em; color: #3b82f6;" title="Supprimer la carte"></i>
+        </div>
+      `,
+      input: 'textarea',
+      inputValue: el.innerText,
+      inputAttributes: { 'style': 'height: 30rem; resize: none;' },
+      focusConfirm: false,
+      showCancelButton: true,
+      confirmButtonText: 'Enregistrer',
+      cancelButtonText: 'Annuler',
+      preConfirm: () => {
+        const title = Swal.getInput().value;
+        if (!title) {
+          Swal.showValidationMessage(`Veuillez entrer un nom pour la carte`);
         }
-      })
-      .catch(() => {
-        Swal.fire('Erreur', 'Impossible de modifier la carte.', 'error');
-      });
-    }
-  });
-}
+        return { title };
+      },
+      didOpen: () => {
+        document.getElementById('deleteCardBtn').addEventListener('click', () => {
+          Swal.fire({
+            title: 'Confirmer la suppression ?',
+            text: "Cette action est irréversible.",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Oui, supprimer',
+            cancelButtonText: 'Annuler'
+          }).then((result) => {
+            if (result.isConfirmed) {
+              const cardId = el.getAttribute('data-eid');
+              fetch(`/retro/card/delete/${cardId}`, {
+                method: 'DELETE',
+                headers: {
+                  'Content-Type': 'application/json',
+                  'X-CSRF-TOKEN': csrfToken,
+                }
+              }).then(() => {
+                const cardElement = document.querySelector(`[data-eid="${cardId}"]`);
+                if (cardElement) cardElement.remove();
+                Swal.fire('Supprimée !', 'La carte a été supprimée.', 'success');
+              }).catch(() => {
+                Swal.fire('Erreur', 'Une erreur est survenue.', 'error');
+              });
+            }
+          });
+        });
+      }
+    }).then((result) => {
+      if (result.isConfirmed) {
+        const titles = result.value.title;
+        const cardId = el.getAttribute('data-eid');
+
+        fetch(`/retro/card/update/${cardId}`, {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-TOKEN': csrfToken
+          },
+          body: JSON.stringify({
+            id: cardId,
+            name: titles,
+          })
+        }).then(response => {
+          if (response.ok) {
+            const cardElement = document.querySelector(`[data-eid="${cardId}"]`);
+            if (cardElement) {
+              const textElement = cardElement.querySelector('div:not(.item_handle)');
+              if (textElement) textElement.innerText = titles;
+            }
+            Swal.fire('Modifiée !', 'La carte a été modifiée.', 'success');
+          } else {
+            Swal.fire('Erreur', 'Impossible de modifier la carte.', 'error');
+          }
+        })
+        .catch(() => {
+          Swal.fire('Erreur', 'Impossible de modifier la carte.', 'error');
+        });
+      }
+    });
+  }
+});
+
+
+
+

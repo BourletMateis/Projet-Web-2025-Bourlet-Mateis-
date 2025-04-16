@@ -1,4 +1,6 @@
 <x-app-layout>
+<link rel="stylesheet" href="{{ asset('css/jkanban.min.css') }} " defer>
+<link rel="stylesheet" href="{{ asset('css/jkanban.css') }}" defer>
     <x-slot name="header">
         <h1 class="flex items-center gap-1 text-sm font-normal">
             <span class="text-gray-700">
@@ -8,8 +10,7 @@
     </x-slot>
 
 
-    <link rel="stylesheet" href="{{ asset('css/jkanban.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/jkanban.css') }}">
+
     
     <div>
     <div id="retro" data-id="{{ $retro->id }}"></div>
@@ -36,8 +37,14 @@
     });
 </script>
     <!-- Scripts jKanban -->
-    <script src="{{ asset('js/jkanban.js') }}"></script>
-    <script   src="{{ asset('js/kanban2.js') }}"></script>
+
+
+<script src="{{ asset('js/jkanban.min.js') }}" defer></script>
+<script src="{{ asset('js/jkanban.js') }}" defer></script>
+<script src="{{ asset('js/kanban.js') }}" defer></script>
+
+
+
 </x-app-layout>
 
 

@@ -8,6 +8,7 @@
         <!-- Hidden data passed from backend for JS use (timer, ID, end date) -->
         <div id="time" data-knowledge-time={{ $knowledgeStudent->time_finish ?? "Training" }}></div>
         <div id="id" data-knowledge-id="{{ $knowledgeStudent->id ?? "Training" }}"></div>
+        <div id="knowledge-student-id" data-knowledge-student-id="{{$knowledgeStudentId ?? 'Training'}}"></div>
         <div id="end-date" data-knowledge-end-date="{{ $knowledgeStudent->end_date ?? 'Training' }}"></div>
 
         <!-- Loop through all questions in the questionnaire -->
@@ -80,5 +81,5 @@
     <link href="{{ asset('css/questionnary.css') }}" rel="stylesheet">
 
     <!-- JS logic for managing the quiz interaction -->
-    <script src="{{ asset('js/knowledge/questionnary.js') }}"></script>
+    <script src="{{ asset('js/questionnary.js') }}"></script>
 </x-app-layout>

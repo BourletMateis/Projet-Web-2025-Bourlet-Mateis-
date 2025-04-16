@@ -50,7 +50,7 @@ public function view(User $user, KnowledgeStudent $knowledgeStudent): bool
  */
 public function update(User $user, KnowledgeStudent $knowledgeStudent): bool
 {
-    $userSchools = $user->schools();
+    $userSchools = $user->schools()->get(); 
 
     foreach ($userSchools as $school) {
         if ($school->pivot->role === 'admin') {
@@ -61,9 +61,9 @@ public function update(User $user, KnowledgeStudent $knowledgeStudent): bool
             return true;
         }
     }
-
     return false;
 }
+
 
 /**
  * Determine if the user is authorized to delete the KnowledgeStudent.

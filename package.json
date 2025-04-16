@@ -24,6 +24,7 @@
     "dependencies": {
         "laravel-echo": "^2.0.2",
         "pusher-js": "^8.4.0",
-        "sweetalert2": "^11.17.2"
+        "sweetalert2": "^11.17.2",
+        "vite": "^6.3.0"
     }
 }

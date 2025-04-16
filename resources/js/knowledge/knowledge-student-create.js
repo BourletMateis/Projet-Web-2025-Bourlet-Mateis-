@@ -1,4 +1,4 @@
- 
+const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 // This script handles the modal for adding a questionnaire in the select dropdown
 document.addEventListener("DOMContentLoaded", function () {
     const select = document.getElementById("mySelect");
