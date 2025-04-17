@@ -99,12 +99,10 @@ class User extends Authenticatable
         return $this->belongsToMany(School::class, 'users_schools')->withPivot('role');
     }
     
-public function currentSchool(): ?School
-{
-    return $this->schools()->first(); // si l'utilisateur a une seule école
-}
-
-    
+    public function currentSchool(): ?School
+    {
+        return $this->schools()->first(); // si l'utilisateur a une seule école
+    }
 
     /**
      * Retrieve all associated schools of the user.
@@ -114,11 +112,6 @@ public function currentSchool(): ?School
      * 
      * @return \Illuminate\Database\Eloquent\Collection
      */
-
-
-    
-    
-
     public function schoolRoles(){
         return $this -> hasMany(UserSchool::class);
     }
