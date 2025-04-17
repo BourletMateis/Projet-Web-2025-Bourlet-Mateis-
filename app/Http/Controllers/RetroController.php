@@ -7,7 +7,7 @@ use App\Models\RetroColumn;
 use App\Models\RetroData;
 use Illuminate\Http\Request;
 use App\Models\School;
-use App\Models\Retro;
+
 use App\Events\ColumnCreated;
 use App\Models\Data; 
 use App\Models\Column;
