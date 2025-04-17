@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /vendor/
 node_modules/
 npm-debug.log
@@ -28,3 +29,15 @@ Homestead.json
 .env.production
 .phpactor.json
 auth.json
+=======
+/node_modules
+/vendor
+
+/public/storage
+/storage/*.key
+
+.env
+
+.idea/*
+.idea/workspace.xml
+>>>>>>> kanban

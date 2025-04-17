@@ -1,0 +1,122 @@
+DEBUG:root:Argument brut reçu : {theme: python}
+ERROR:root:Erreur lors du décodage du JSON : Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reçu : { python}
+ERROR:root:Erreur lors du décodage du JSON : Expecting property name enclosed in double quotes: line 1 column 3 (char 2)
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reçu : {python}
+ERROR:root:Erreur lors du décodage du JSON : Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reçu : {python}
+ERROR:root:Erreur lors du décodage du JSON : Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x00000238C7401DC0>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x00000238C73FC350> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x00000238C73D8E90>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 14:21:39 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-reset', b'32'), (b'ratelimitbysize-remaining', b'467779'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-remaining-minute', b'467779'), (b'ratelimitbysize-limit', b'500000'), (b'x-ratelimitbysize-remaining-month', b'996134031'), (b'ratelimitbysize-query-cost', b'32221'), (b'x-envoy-upstream-service-time', b'10605'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'10621'), (b'x-kong-proxy-latency', b'6'), (b'x-kong-request-id', b'f8529d62c6b24c0c99cf171dd8673567'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=BtfpvZKdMRtHhhx4beODtbNIUNvoUs41oe05ZC.CanI-1744208499-1.0.1.1-vw4sIH7MfveX5gOopmWF4tVD3W7wcLOPNlr9T_LyzMKU0H3a5h7RJYz836uNmMZKm.xani2ep9cUuIinrcKcnXvdfrCXrxWaA2wVAXgSKso; path=/; expires=Wed, 09-Apr-25 14:51:39 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92daa6afb9762a14-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reçu : {python}
+ERROR:root:Erreur lors du décodage du JSON : Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reçu : {theme: python}
+ERROR:root:Erreur lors du décodage du JSON : Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reçu : {theme: python}
+ERROR:root:Erreur lors du décodage du JSON : Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reçu : {python}
+ERROR:root:Erreur lors du décodage du JSON : Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reçu : {python}
+ERROR:root:Erreur lors du décodage du JSON : Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reçu : {theme: python}
+ERROR:root:Erreur lors du décodage du JSON : Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reçu : {python}
+ERROR:root:Erreur lors du décodage du JSON : Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reçu : {theme: python}
+ERROR:root:Erreur lors du décodage du JSON : Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reçu : {theme: python}
+ERROR:root:Erreur lors du décodage du JSON : Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reçu : {\
+ERROR:root:Erreur lors du décodage du JSON : Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reçu : {"theme": "python"}
+DEBUG:root:Données décodées : {'theme': 'python'}
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002ADEE65E2A0>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x000002ADEE79C450> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002ADEE3A8F50>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 14:27:29 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'x-ratelimitbysize-remaining-minute', b'467779'), (b'ratelimitbysize-reset', b'19'), (b'ratelimitbysize-query-cost', b'32221'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-remaining', b'467779'), (b'x-ratelimitbysize-remaining-month', b'996101810'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-envoy-upstream-service-time', b'48261'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'48261'), (b'x-kong-proxy-latency', b'5'), (b'x-kong-request-id', b'2108761252d97c3396df9b54f5593f0d'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=xZJIaU4BsCCvAJRj9JSoSPFWT48O3vnk96Ee6OHCoSQ-1744208849-1.0.1.1-BpWEjkKFfTtCYVIkZ.UgL7HO.SBRjehAtAmjlVLngIt6bCS3GFxqd5Q5WWad_yTgRFzv73JVWYzT58V0Zaq9opkbDO9cnwUJmVR7uRNBP30; path=/; expires=Wed, 09-Apr-25 14:57:29 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92daae518944d0b2-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reçu : {"theme": "python"}
+DEBUG:root:Données décodées : {'theme': 'python'}
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001B413FBAAE0>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x000001B413FDC450> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001B413E0AE40>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 14:50:04 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-query-cost', b'32221'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-remaining', b'467779'), (b'x-ratelimitbysize-remaining-month', b'995940703'), (b'ratelimitbysize-reset', b'35'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-ratelimitbysize-remaining-minute', b'467779'), (b'x-envoy-upstream-service-time', b'38488'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'38489'), (b'x-kong-proxy-latency', b'7'), (b'x-kong-request-id', b'04a5ed487c241e64f09a1e4b60ba1230'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=dS_l355XIWLcnPukJc1VeQITV.XQ_GZ5l.4oylOyycY-1744210204-1.0.1.1-hzeDIkDeOIgxdvP7yZei.NoJ1CbC0th_S7GiOAzeCJC_L7t8KBwcfO7Wn648W3kEehMvgbcdekvwdie8izCK3XC4jENfgfpWj6IdHXkmVj8; path=/; expires=Wed, 09-Apr-25 15:20:04 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92dacfa12c9002cf-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reçu : {"theme": "python"}
+DEBUG:root:Données décodées : {'theme': 'python'}
+DEBUG:httpcore.connection:connect_tcp.started host='api.mistral.ai' port=443 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001BCFFB3A330>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x000001BCFFB5C4D0> server_hostname='api.mistral.ai' timeout=None
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001BCFFB38AA0>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 09 Apr 2025 14:53:56 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'ratelimitbysize-query-cost', b'32223'), (b'x-ratelimitbysize-remaining-month', b'995844036'), (b'ratelimitbysize-remaining', b'449537'), (b'ratelimitbysize-limit', b'500000'), (b'ratelimitbysize-reset', b'34'), (b'x-ratelimitbysize-limit-month', b'1000000000'), (b'x-ratelimitbysize-remaining-minute', b'449537'), (b'x-ratelimitbysize-limit-minute', b'500000'), (b'x-envoy-upstream-service-time', b'30156'), (b'access-control-allow-origin', b'*'), (b'x-kong-upstream-latency', b'30157'), (b'x-kong-proxy-latency', b'7'), (b'x-kong-request-id', b'9838373ceb30dd19cd846317dc458612'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=dHyFiZ7kMF.9kjfiv1WJzmbEm6bIfSs8aKNCJudYzLw-1744210436-1.0.1.1-c_Ulu56uzUIyWHwZpkbDyH8taHGfhSznFM1u7P7Sba_PhUP391LMucBTlRiB_ZSz.HLS8TCBlHFSWmDZGJKqDqwDJJQtBuDthxAVj2tVLXk; path=/; expires=Wed, 09-Apr-25 15:23:56 GMT; domain=.mistral.ai; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92dad57d8f206f48-CDG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+INFO:httpx:HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:asyncio:Using proactor: IocpProactor
+DEBUG:root:Argument brut reçu : {\
+ERROR:root:Erreur lors du décodage du JSON : Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+DEBUG:asyncio:Using proactor: IocpProactor
