@@ -6,85 +6,112 @@ use App\Models\Retro;
 use App\Models\RetroColumn;
 use App\Models\RetroData;
 use Illuminate\Http\Request;
+use App\Models\School;
+use App\Models\Retro;
+use App\Events\ColumnCreated;
+use App\Models\Data; 
+use App\Models\Column;
+use App\Events\CardCreated;
+use App\Events\CardMoved;
+use App\Events\ColumnDeleted;
+use App\Events\CardUpdated;
+use App\Events\CardDeleted;
 use Illuminate\Support\Facades\Auth;
-use App\Events\RetroCardAdded;
+
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class RetroController extends Controller
 {
-    // Liste des rétros par rôle
-    public function index()
-    {
-        $user = Auth::user();
+    use AuthorizesRequests;
+    /**
+     * Display the page with schools and retrospectives
+     *
+     * @return Factory|View|Application|object
+     */
+    public function index() {
+        $user = auth()->user();
+        $userSchool = $user->userSchools()->first();
+        $role = $userSchool->role ?? 'student';
 
-        if ($user->is_admin) {
-            return Retro::with('columns.data')->get();
-        }
-
-        return Retro::with('columns.data')->where('created_by', $user->id)->get();
-    }
-
-
-    public function store(Request $request)
-    {
-        $request->validate([
-            'name' => 'required|string',
-            'promotion_id' => 'required|integer',
-            'columns' => 'required|array|min:1',
-            'columns.*' => 'required|string',
-        ]);
-
-        $retro = Retro::create([
-            'name' => $request->name,
-            'promotion_id' => $request->promotion_id,
-            'created_by' => Auth::id(),
-        ]);
-
-        foreach ($request->columns as $colName) {
-            RetroColumn::create([
-                'retro_id' => $retro->id,
-                'name' => $colName,
+        if (in_array($role, ['admin'])) {
+            $school = School::all();
+            $retro = Retro::all();
+            $retro = Retro::with(['school', 'creator'])->get();
+            return view('pages.retros.index-teacher', [
+                'school' => $school,
+                'retro' => $retro,
             ]);
         }
 
-        return response()->json($retro->load('columns'), 201);
+        if (in_array($role, ['teacher'])) {
+            $school = School::all();
+            $user_id = $user->id;
+            $retro = Retro::where('creator_id', $user_id)->get();
+            return view('pages.retros.index-teacher', [
+                'school' => $school,
+                'retro' => $retro,
+            ]);
+        }
+
+        if (in_array($role, ['student'])) {
+            $retros = Retro::with('creator')->get();
+            $school = School::all();
+            $user_id = $user->id;
+            $userSchool = $user->userSchools()->first();
+            $retro = Retro::where('school_id', $userSchool->school_id)->get();
+            return view('pages.retros.index-student', [
+                'school' => $school,
+                'retro' => $retro,
+            ]);
+        }
     }
 
-
-    public function show(Retro $retro)
-    {
-        return $retro->load('columns.data');
-    }
-
-    public function addCard(Request $request, Retro $retro, RetroColumn $column)
-    {
+    /**
+     * Store a new retrospective
+     *
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function store(Request $request) {
+        $this->authorize('create', Retro::class);
+        
         $request->validate([
-            'name' => 'required|string',
-            'description' => 'nullable|string',
+            'select' => 'required|exists:schools,id',
+            'name' => 'required|string|max:255',
         ]);
 
-        $card = RetroData::create([
-            'retro_column_id' => $column->id,
-            'name' => $request->name,
-            'description' => $request->description,
+        $retro = Retro::create([
+            'school_id' => $request->input('select'),
+            'name' => $request->input('name'),
+            'creator_id' => $request->user()->id, 
         ]);
-
-        event(new \App\Events\RetroCardAdded($retro->id, $column->id, $card));
-
-        return response()->json($card, 201);
+        return response()->json(['message' => 'Rétrospective créée avec succès']);
     }
 
-    public function moveCard(Request $request, RetroData $card)
-    {
-        $request->validate([
-            'new_column_id' => 'required|exists:retros_columns,id',
-        ]);
+    /**
+     * Display the Kanban board for a specific retrospective
+     *
+     * @param int $id
+     * @param int $school_id
+     * @param string $name
+     * @return View
+     */
 
-        $oldColumnId = $card->retro_column_id;
-        $card->update(['retro_column_id' => $request->new_column_id]);
+    public function show($id, $school_id, $name) {
+        $retro = Retro::findOrFail($id); 
+        return view('pages.retros.kanban', compact('retro'));
+    }
 
-        // Diffusion Pusher (ex: event RetroCardMoved)
-        event(new \App\Events\RetroCardMoved($card->id, $oldColumnId, $request->new_column_id));
+    public function deleteRetro($id) {
+        $retro = Retro::find($id);
+        if (!$retro) {
+            return response()->json(['error' => 'Retro not found'], 404);
+        }
 
-        return response()->json(['message' => 'Carte déplacée']);
+        $this->authorize('delete', $retro);
+
+        $retro->delete();
+        
+        return response()->json(['success' => true]);
     }
 }

@@ -12,6 +12,19 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
+    .js('resources/js/kanban/Kanban.js', 'public/js')
+    .js('resources/js/kanban/config/jkanban.js', 'public/js')
+    .js('resources/js/kanban/config/jkanban.min.js', 'public/js')
+    .js('resources/js/knowledge/index-student.js', 'public/js')
+    .js('resources/js/knowledge/knowledge-student-create.js', 'public/js')
+    .js('resources/js/knowledge/knowledge-student-details.js', 'public/js')
+    .js('resources/js/knowledge/questionnary.js', 'public/js')
+    .js('resources/js/kanban/index-admin.js', 'public/js')
+    .js('resources/js/kanban/kanban-student.js', 'public/js')
+    .css('resources/css/kanban/jkanban.css', 'public/css')
+    .css('resources/css/kanban/jkanban.min.css', 'public/css')
+    .css('resources/css/knowledge/custom-knowledge.css', 'public/css')
+    .css('resources/css/knowledge/questionnary.css', 'public/css')
     .sass('resources/scss/app.scss', 'public/css', [
         //
     ]);

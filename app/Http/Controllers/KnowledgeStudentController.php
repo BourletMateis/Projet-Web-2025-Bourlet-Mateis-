@@ -20,40 +20,29 @@ class KnowledgeStudentController extends Controller
      * If the user is an 'admin' or 'teacher', all knowledge, schools, and knowledge student records are fetched and passed to the view.
      * If the user is a 'student', only the knowledge students related to the user's school are retrieved and passed to the student-specific view.
      */
-    public function index() {
+    public function index()
+    {
         $user = auth()->user();
-        $userRole = \App\Models\UserSchool::where('user_id', $user->id)->first();
-
-        if ($userRole){
-            $role = $userRole->role; 
-        } else {
-            $role = 'student'; 
-        }
-
-        if ($role == 'admin' || $role == 'teacher') {
-            $knowledge = KnowLedge::all(); 
-            $schools = School::all(); 
-            $knowledgeStudent = KnowledgeStudent::all(); 
-            return view('pages.knowledge.index-teacher',[
-                'knowledge' => $knowledge,
-                'schools' => $schools,
-                'knowledgeStudent' => $knowledgeStudent,
+        $userSchool = $user->userSchools()->first(); // Relation hasMany à définir dans le modèle User
+        $role = $userSchool->role ?? 'student';
+    
+        if (in_array($role, ['admin', 'teacher'])) {
+            return view('pages.knowledge.index-teacher', [
+                'knowledge' => KnowLedge::all(),
+                'schools' => School::all(),
+                'knowledgeStudent' => KnowledgeStudent::all(),
             ]);
         }
-        else {
-            $userSchool = \App\Models\UserSchool::where('user_id', $user->id)->first();
+    
+        $schoolId = $userSchool->school_id ?? null;
 
-            if ($userSchool) {
-                $schoolId = $userSchool->school_id;
-            } else {
-                $schoolId = null; 
-            }
-            $knowledgeStudent = KnowledgeStudent::where('school_id', $schoolId)->get(); 
-            return view('pages.knowledge.index-student',[
-                'knowledgeStudent' => $knowledgeStudent,
-                'user' => $user,
-            ]);
-        }
+        $knowledgeStudent = KnowledgeStudent::where('school_id', $schoolId)->get();
+
+    
+        return view('pages.knowledge.index-student', [
+            'knowledgeStudent' => $knowledgeStudent,
+            'user' => $user,
+        ]);
     }
 
     /**
@@ -146,18 +135,20 @@ class KnowledgeStudentController extends Controller
      * the student's knowledge record, retrieves the associated knowledge entry and its questionnary, 
      * and then returns a view displaying the questionnary along with the knowledge student data.
      */
-    public function playQuestionnary($id)
+    public function playQuestionnary($id, $knowledgeStudentId)
     {
-        $knowledgeStudent = KnowledgeStudent::findOrFail($id);
-
+        $knowledgeStudent = KnowledgeStudent::findOrFail($knowledgeStudentId);
         $this->authorize('view', $knowledgeStudent);
 
         $idKnowledge = $knowledgeStudent->id_knowledge; 
         $knowledge = KnowLedge::where('id', $idKnowledge)->first(); 
         $questionnary = $knowledge->questionnary; 
+        
+        
         return view('pages.knowledge.questionnary', compact('questionnary') ,
         [
             'knowledgeStudent' => $knowledgeStudent, 
+            'knowledgeStudentId' => $knowledgeStudentId,
         ]);
     }
 
@@ -208,7 +199,7 @@ class KnowledgeStudentController extends Controller
     {
         $validatedData = $request->validate([ 
             'knowledge_student_id' => 'required|integer', 
-            'score' => 'required|integer', 
+            'score' => 'required|numeric|regex:/^\d+(\.\d{1,2})?$/',
         ]);
         $user_id = auth()->user()->id; 
         $knowledgeStudent = KnowledgeStudent::findOrFail($validatedData['knowledge_student_id']);

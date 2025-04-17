@@ -2,27 +2,22 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Retro extends Model
 {
-    use HasFactory;
+    protected $table        = 'retros';
 
-    protected $fillable = ['name', 'promotion_id', 'created_by'];
+    protected $fillable     = ['school_id', 'name', 'creator_id'];
 
-    public function columns()
-    {
-        return $this->hasMany(RetroColumn::class);
-    }
 
-    public function creator()
-    {
-        return $this->belongsTo(User::class, 'created_by');
-    }
+    public function school()
+{
+    return $this->belongsTo(School::class);
+}
 
-    public function promotion()
-    {
-        return $this->belongsTo(School::class); 
-    }
+public function creator()
+{
+    return $this->belongsTo(User::class, 'creator_id');
+}
 }

@@ -11,7 +11,10 @@
     <link href="{{ asset('metronic/vendors/apexcharts/apexcharts.css') }}" rel="stylesheet"/>
     <link href="{{ asset('metronic/vendors/keenicons/styles.bundle.css') }}" rel="stylesheet"/>
     <link href="{{ asset('metronic/css/styles.css') }}" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <meta name="csrf-token" content="{{ csrf_token() }}">
+
 </head>
 <body class="antialiased flex h-full text-base text-gray-700 [--tw-page-bg:#F6F6F9] [--tw-page-bg-dark:var(--tw-coal-200)]
                 [--tw-content-bg:var(--tw-light)] [--tw-content-bg-dark:var(--tw-coal-500)]
@@ -85,15 +88,15 @@
 <script src="{{ asset('metronic/js/core.bundle.js') }}"></script>
 <script src="{{ asset('metronic/vendors/apexcharts/apexcharts.min.js') }}"></script>
 <script src="{{ asset('metronic/js/widgets/general.js') }}"></script>
-<script src="{{ asset('js/knowledge/knowledge-student-details.js') }}"></script>
-<script src="{{ asset('js/knowledge/knowledge-student-create.js') }}"></script>
-<script src="../path/to/flowbite/dist/flowbite.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <!-- CDN pour jsPDF -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <!-- CDN pour xlsx.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.1/xlsx.full.min.js"></script>
+
+
+
 
 <!-- End of Scripts -->
 </body>

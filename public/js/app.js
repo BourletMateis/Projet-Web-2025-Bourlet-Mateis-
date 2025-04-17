@@ -10430,6 +10430,58 @@ process.umask = function() { return 0; };
 
 /***/ }),
 
+/***/ "./resources/css/kanban/jkanban.css":
+/*!******************************************!*\
+  !*** ./resources/css/kanban/jkanban.css ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./resources/css/kanban/jkanban.min.css":
+/*!**********************************************!*\
+  !*** ./resources/css/kanban/jkanban.min.css ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./resources/css/knowledge/custom-knowledge.css":
+/*!******************************************************!*\
+  !*** ./resources/css/knowledge/custom-knowledge.css ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./resources/css/knowledge/questionnary.css":
+/*!**************************************************!*\
+  !*** ./resources/css/knowledge/questionnary.css ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
@@ -10439,11 +10491,37 @@ process.umask = function() { return 0; };
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
-/* harmony import */ var alpinejs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! alpinejs */ "./node_modules/alpinejs/dist/module.esm.js");
+/* harmony import */ var _kanban_config_jkanban_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./kanban/config/jkanban.js */ "./resources/js/kanban/config/jkanban.js");
+/* harmony import */ var _kanban_config_jkanban_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_kanban_config_jkanban_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _kanban_config_jkanban_min_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./kanban/config/jkanban.min.js */ "./resources/js/kanban/config/jkanban.min.js");
+/* harmony import */ var _kanban_config_jkanban_min_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_kanban_config_jkanban_min_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _knowledge_index_student_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./knowledge/index-student.js */ "./resources/js/knowledge/index-student.js");
+/* harmony import */ var _knowledge_index_student_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_knowledge_index_student_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _knowledge_knowledge_student_create_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./knowledge/knowledge-student-create.js */ "./resources/js/knowledge/knowledge-student-create.js");
+/* harmony import */ var _knowledge_knowledge_student_create_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_knowledge_knowledge_student_create_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _knowledge_knowledge_student_details_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./knowledge/knowledge-student-details.js */ "./resources/js/knowledge/knowledge-student-details.js");
+/* harmony import */ var _knowledge_knowledge_student_details_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_knowledge_knowledge_student_details_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _knowledge_questionnary_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./knowledge/questionnary.js */ "./resources/js/knowledge/questionnary.js");
+/* harmony import */ var _kanban_Kanban_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./kanban/Kanban.js */ "./resources/js/kanban/Kanban.js");
+/* harmony import */ var _kanban_Kanban_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_kanban_Kanban_js__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _kanban_index_admin_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./kanban/index-admin.js */ "./resources/js/kanban/index-admin.js");
+/* harmony import */ var _kanban_index_admin_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_kanban_index_admin_js__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _kanban_kanban_student_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./kanban/kanban-student.js */ "./resources/js/kanban/kanban-student.js");
+/* harmony import */ var _kanban_kanban_student_js__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_kanban_kanban_student_js__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var alpinejs__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! alpinejs */ "./node_modules/alpinejs/dist/module.esm.js");
 
 
-window.Alpine = alpinejs__WEBPACK_IMPORTED_MODULE_1__["default"];
-alpinejs__WEBPACK_IMPORTED_MODULE_1__["default"].start();
+
+
+
+
+
+
+
+
+
+window.Alpine = alpinejs__WEBPACK_IMPORTED_MODULE_10__["default"];
+alpinejs__WEBPACK_IMPORTED_MODULE_10__["default"].start();
 
 /***/ }),
 
@@ -10459,6 +10537,4570 @@ __webpack_require__.r(__webpack_exports__);
 
 window.axios = axios__WEBPACK_IMPORTED_MODULE_0__["default"];
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+
+/***/ }),
+
+/***/ "./resources/js/kanban/Kanban.js":
+/*!***************************************!*\
+  !*** ./resources/js/kanban/Kanban.js ***!
+  \***************************************/
+/***/ (() => {
+
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return e; }; var t, e = {}, r = Object.prototype, n = r.hasOwnProperty, o = Object.defineProperty || function (t, e, r) { t[e] = r.value; }, i = "function" == typeof Symbol ? Symbol : {}, a = i.iterator || "@@iterator", c = i.asyncIterator || "@@asyncIterator", u = i.toStringTag || "@@toStringTag"; function define(t, e, r) { return Object.defineProperty(t, e, { value: r, enumerable: !0, configurable: !0, writable: !0 }), t[e]; } try { define({}, ""); } catch (t) { define = function define(t, e, r) { return t[e] = r; }; } function wrap(t, e, r, n) { var i = e && e.prototype instanceof Generator ? e : Generator, a = Object.create(i.prototype), c = new Context(n || []); return o(a, "_invoke", { value: makeInvokeMethod(t, r, c) }), a; } function tryCatch(t, e, r) { try { return { type: "normal", arg: t.call(e, r) }; } catch (t) { return { type: "throw", arg: t }; } } e.wrap = wrap; var h = "suspendedStart", l = "suspendedYield", f = "executing", s = "completed", y = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var p = {}; define(p, a, function () { return this; }); var d = Object.getPrototypeOf, v = d && d(d(values([]))); v && v !== r && n.call(v, a) && (p = v); var g = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(p); function defineIteratorMethods(t) { ["next", "throw", "return"].forEach(function (e) { define(t, e, function (t) { return this._invoke(e, t); }); }); } function AsyncIterator(t, e) { function invoke(r, o, i, a) { var c = tryCatch(t[r], t, o); if ("throw" !== c.type) { var u = c.arg, h = u.value; return h && "object" == _typeof(h) && n.call(h, "__await") ? e.resolve(h.__await).then(function (t) { invoke("next", t, i, a); }, function (t) { invoke("throw", t, i, a); }) : e.resolve(h).then(function (t) { u.value = t, i(u); }, function (t) { return invoke("throw", t, i, a); }); } a(c.arg); } var r; o(this, "_invoke", { value: function value(t, n) { function callInvokeWithMethodAndArg() { return new e(function (e, r) { invoke(t, n, e, r); }); } return r = r ? r.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(e, r, n) { var o = h; return function (i, a) { if (o === f) throw Error("Generator is already running"); if (o === s) { if ("throw" === i) throw a; return { value: t, done: !0 }; } for (n.method = i, n.arg = a;;) { var c = n.delegate; if (c) { var u = maybeInvokeDelegate(c, n); if (u) { if (u === y) continue; return u; } } if ("next" === n.method) n.sent = n._sent = n.arg;else if ("throw" === n.method) { if (o === h) throw o = s, n.arg; n.dispatchException(n.arg); } else "return" === n.method && n.abrupt("return", n.arg); o = f; var p = tryCatch(e, r, n); if ("normal" === p.type) { if (o = n.done ? s : l, p.arg === y) continue; return { value: p.arg, done: n.done }; } "throw" === p.type && (o = s, n.method = "throw", n.arg = p.arg); } }; } function maybeInvokeDelegate(e, r) { var n = r.method, o = e.iterator[n]; if (o === t) return r.delegate = null, "throw" === n && e.iterator["return"] && (r.method = "return", r.arg = t, maybeInvokeDelegate(e, r), "throw" === r.method) || "return" !== n && (r.method = "throw", r.arg = new TypeError("The iterator does not provide a '" + n + "' method")), y; var i = tryCatch(o, e.iterator, r.arg); if ("throw" === i.type) return r.method = "throw", r.arg = i.arg, r.delegate = null, y; var a = i.arg; return a ? a.done ? (r[e.resultName] = a.value, r.next = e.nextLoc, "return" !== r.method && (r.method = "next", r.arg = t), r.delegate = null, y) : a : (r.method = "throw", r.arg = new TypeError("iterator result is not an object"), r.delegate = null, y); } function pushTryEntry(t) { var e = { tryLoc: t[0] }; 1 in t && (e.catchLoc = t[1]), 2 in t && (e.finallyLoc = t[2], e.afterLoc = t[3]), this.tryEntries.push(e); } function resetTryEntry(t) { var e = t.completion || {}; e.type = "normal", delete e.arg, t.completion = e; } function Context(t) { this.tryEntries = [{ tryLoc: "root" }], t.forEach(pushTryEntry, this), this.reset(!0); } function values(e) { if (e || "" === e) { var r = e[a]; if (r) return r.call(e); if ("function" == typeof e.next) return e; if (!isNaN(e.length)) { var o = -1, i = function next() { for (; ++o < e.length;) if (n.call(e, o)) return next.value = e[o], next.done = !1, next; return next.value = t, next.done = !0, next; }; return i.next = i; } } throw new TypeError(_typeof(e) + " is not iterable"); } return GeneratorFunction.prototype = GeneratorFunctionPrototype, o(g, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), o(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, u, "GeneratorFunction"), e.isGeneratorFunction = function (t) { var e = "function" == typeof t && t.constructor; return !!e && (e === GeneratorFunction || "GeneratorFunction" === (e.displayName || e.name)); }, e.mark = function (t) { return Object.setPrototypeOf ? Object.setPrototypeOf(t, GeneratorFunctionPrototype) : (t.__proto__ = GeneratorFunctionPrototype, define(t, u, "GeneratorFunction")), t.prototype = Object.create(g), t; }, e.awrap = function (t) { return { __await: t }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, c, function () { return this; }), e.AsyncIterator = AsyncIterator, e.async = function (t, r, n, o, i) { void 0 === i && (i = Promise); var a = new AsyncIterator(wrap(t, r, n, o), i); return e.isGeneratorFunction(r) ? a : a.next().then(function (t) { return t.done ? t.value : a.next(); }); }, defineIteratorMethods(g), define(g, u, "Generator"), define(g, a, function () { return this; }), define(g, "toString", function () { return "[object Generator]"; }), e.keys = function (t) { var e = Object(t), r = []; for (var n in e) r.push(n); return r.reverse(), function next() { for (; r.length;) { var t = r.pop(); if (t in e) return next.value = t, next.done = !1, next; } return next.done = !0, next; }; }, e.values = values, Context.prototype = { constructor: Context, reset: function reset(e) { if (this.prev = 0, this.next = 0, this.sent = this._sent = t, this.done = !1, this.delegate = null, this.method = "next", this.arg = t, this.tryEntries.forEach(resetTryEntry), !e) for (var r in this) "t" === r.charAt(0) && n.call(this, r) && !isNaN(+r.slice(1)) && (this[r] = t); }, stop: function stop() { this.done = !0; var t = this.tryEntries[0].completion; if ("throw" === t.type) throw t.arg; return this.rval; }, dispatchException: function dispatchException(e) { if (this.done) throw e; var r = this; function handle(n, o) { return a.type = "throw", a.arg = e, r.next = n, o && (r.method = "next", r.arg = t), !!o; } for (var o = this.tryEntries.length - 1; o >= 0; --o) { var i = this.tryEntries[o], a = i.completion; if ("root" === i.tryLoc) return handle("end"); if (i.tryLoc <= this.prev) { var c = n.call(i, "catchLoc"), u = n.call(i, "finallyLoc"); if (c && u) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } else if (c) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); } else { if (!u) throw Error("try statement without catch or finally"); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } } } }, abrupt: function abrupt(t, e) { for (var r = this.tryEntries.length - 1; r >= 0; --r) { var o = this.tryEntries[r]; if (o.tryLoc <= this.prev && n.call(o, "finallyLoc") && this.prev < o.finallyLoc) { var i = o; break; } } i && ("break" === t || "continue" === t) && i.tryLoc <= e && e <= i.finallyLoc && (i = null); var a = i ? i.completion : {}; return a.type = t, a.arg = e, i ? (this.method = "next", this.next = i.finallyLoc, y) : this.complete(a); }, complete: function complete(t, e) { if ("throw" === t.type) throw t.arg; return "break" === t.type || "continue" === t.type ? this.next = t.arg : "return" === t.type ? (this.rval = this.arg = t.arg, this.method = "return", this.next = "end") : "normal" === t.type && e && (this.next = e), y; }, finish: function finish(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.finallyLoc === t) return this.complete(r.completion, r.afterLoc), resetTryEntry(r), y; } }, "catch": function _catch(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.tryLoc === t) { var n = r.completion; if ("throw" === n.type) { var o = n.arg; resetTryEntry(r); } return o; } } throw Error("illegal catch attempt"); }, delegateYield: function delegateYield(e, r, n) { return this.delegate = { iterator: values(e), resultName: r, nextLoc: n }, "next" === this.method && (this.arg = t), y; } }, e; }
+function asyncGeneratorStep(n, t, e, r, o, a, c) { try { var i = n[a](c), u = i.value; } catch (n) { return void e(n); } i.done ? t(u) : Promise.resolve(u).then(r, o); }
+function _asyncToGenerator(n) { return function () { var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, "next", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, "throw", n); } _next(void 0); }); }; }
+// Get CSRF token from meta tag
+var csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+var userId;
+var retroId;
+
+// Wait for the DOM to be fully loaded
+document.addEventListener("DOMContentLoaded", function () {
+  var retroElement = document.getElementById('retro');
+  var currentUserId = document.getElementById('user');
+
+  // Ensure necessary elements are present
+  if (!retroElement || !currentUserId) return;
+  userId = currentUserId.getAttribute('data-id');
+  retroId = retroElement.getAttribute('data-id');
+
+  // Initialize Kanban board
+  var KanbanTest = new jKanban({
+    element: "#myKanban",
+    gutter: "10px",
+    widthBoard: "300px",
+    itemHandleOptions: {
+      enabled: true
+    },
+    click: function click(el) {
+      updateCard(el);
+    },
+    dropEl: function dropEl(el, target, source, sibling) {
+      var cardId = el.getAttribute('data-eid');
+      var columnId = target.parentElement.getAttribute('data-id');
+      updateCardInDatabase(columnId, cardId);
+    },
+    buttonClick: function buttonClick(el, boardId) {
+      // Show prompt to add new card
+      Swal.fire({
+        title: 'Ajouter une carte',
+        input: 'text',
+        inputLabel: 'Nom de la carte',
+        inputPlaceholder: 'Nom de la carte...',
+        focusConfirm: false,
+        showCancelButton: true,
+        confirmButtonText: 'Ajouter',
+        cancelButtonText: 'Annuler',
+        preConfirm: function preConfirm() {
+          var title = Swal.getInput().value;
+          if (!title) {
+            Swal.showValidationMessage("Veuillez entrer un nom pour la carte");
+          }
+          return {
+            title: title
+          };
+        }
+      }).then(function (result) {
+        if (result.isConfirmed) {
+          createCardInDatabase(boardId, result.value.title, userId);
+        }
+      });
+    },
+    itemAddOptions: {
+      enabled: true,
+      content: '+ Add New Card',
+      "class": ' add-card-button ',
+      footer: true
+    },
+    boards: []
+  });
+
+  // Initialize Kanban with existing columns/cards
+  initKanban(retroId);
+
+  // Listen to column creation from other users
+  window.Echo.channel('retro.' + retroId).listen('.column.created', function (e) {
+    var boardId = e.columnId;
+    if (e.user_id != userId) {
+      if (!document.querySelector("[data-id=\"".concat(boardId, "\"]"))) {
+        KanbanTest.addBoards([{
+          id: String(boardId),
+          title: "\n              <div style=\"display: flex; justify-content: space-between; align-items: center;\">\n                <span>".concat(e.columnName, "</span>\n                <i class=\"fa fa-trash trash-icon\" onclick=\"deleteBoard('").concat(boardId, "')\" style=\"cursor: pointer;\"></i>\n              </div>\n            "),
+          "class": "info"
+        }]);
+      }
+    }
+  });
+
+  // Listen to card creation in real-time
+  window.Echo.channel('retro.' + retroId).listen('.card.created', function (e) {
+    console.log(e.user_id, userId);
+    if (e.user_id != userId) {
+      KanbanTest.addElement(e.retro_column_id, {
+        id: e.id,
+        title: e.name,
+        description: e.Description
+      });
+    }
+  });
+
+  // Listen to card movement and update only if not current user
+  window.Echo.channel('retro.' + retroId).listen('.card.moved', function (e) {
+    if (e.user_id != userId) {
+      removeCardFromColumn(e.old_column_id, e.id);
+      KanbanTest.addElement(e.retro_column_id, {
+        id: e.id,
+        title: e.name
+      });
+    }
+  });
+
+  // Listen to column deletion
+  window.Echo.channel('retro.' + retroId).listen('.kanban.column.deleted', function (e) {
+    console.log(e.user_id, userId);
+    if (e.user_id != userId) {
+      var boardId = e.columnId;
+      var boardElement = document.querySelector("[data-id=\"".concat(boardId, "\"]"));
+      if (boardElement) boardElement.remove();
+    }
+  });
+
+  // Listen to card title updates
+  window.Echo.channel('retro.' + retroId).listen('.card.updated', function (e) {
+    console.log(e.user_id, userId);
+    if (e.user_id != userId) {
+      var cardElement = document.querySelector("[data-eid=\"".concat(e.id, "\"]"));
+      if (cardElement) {
+        var textElement = cardElement.querySelector('div:not(.item_handle)');
+        if (textElement) textElement.innerText = e.newTitle;
+      }
+    }
+  });
+
+  // Listen to card deletion
+  window.Echo.channel('retro.' + retroId).listen('.card.deleted', function (e) {
+    console.log(e.user_id, userId);
+    if (e.user_id != userId) {
+      var cardElement = document.querySelector("[data-eid=\"".concat(e.cardId, "\"]"));
+      if (cardElement) cardElement.remove();
+    }
+  });
+
+  // Add new column with a given name
+  function addColumnWithName(boardName) {
+    if (!boardName || boardName.trim() === "") {
+      Swal.fire({
+        icon: 'error',
+        title: 'Erreur',
+        text: "Le nom de la colonne ne peut pas être vide."
+      });
+      return;
+    }
+    createColumnInDatabase(boardName);
+  }
+
+  // API call to create column
+  function createColumnInDatabase(boardName) {
+    fetch("/retro/".concat(retroId, "/columns"), {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-TOKEN': csrfToken
+      },
+      body: JSON.stringify({
+        name: boardName,
+        retro_id: retroId
+      })
+    }).then(function (response) {
+      return response.json();
+    }).then(function (data) {
+      if (data.success) {
+        KanbanTest.addBoards([{
+          id: String(data.column_id),
+          title: "\n            <div style=\"display: flex; justify-content: space-between; align-items: center;\">\n              <span>".concat(data.column_name, "</span>\n              <i class=\"fa fa-trash trash-icon\" onclick=\"deleteBoard('").concat(data.column_id, "')\" style=\"cursor: pointer;\"></i>\n            </div>\n          "),
+          "class": "info"
+        }]);
+        Swal.fire({
+          icon: 'success',
+          title: 'Colonne ajoutée',
+          text: "La colonne \"".concat(boardName, "\" a \xE9t\xE9 ajout\xE9e avec succ\xE8s.")
+        });
+      } else {
+        Swal.fire({
+          icon: 'error',
+          title: 'Erreur',
+          text: 'Une erreur est survenue lors de la création de la colonne.'
+        });
+      }
+    })["catch"](function () {
+      Swal.fire({
+        icon: 'error',
+        title: 'Erreur',
+        text: 'Une erreur est survenue.'
+      });
+    });
+  }
+
+  // API call to create a new card
+  function createCardInDatabase(column_id, titles, userId) {
+    fetch("/retro/".concat(column_id, "/cards"), {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-TOKEN': csrfToken
+      },
+      body: JSON.stringify({
+        name: titles,
+        retro_column_id: column_id,
+        user_id: userId
+      })
+    }).then(function (response) {
+      return response.json();
+    }).then(function (data) {
+      if (data.success) {
+        KanbanTest.addElement(column_id, {
+          id: data.id,
+          title: titles
+        });
+        Swal.fire({
+          icon: 'success',
+          title: 'Carte ajoutée',
+          text: "La card ".concat(titles, " \xE0 \xE9t\xE9 ajout\xE9e avec succ\xE8s.")
+        });
+      } else {
+        Swal.fire({
+          icon: 'error',
+          title: 'Erreur',
+          text: 'Une erreur est survenue lors de la création de la colonne.'
+        });
+      }
+    })["catch"](function () {
+      Swal.fire({
+        icon: 'error',
+        title: 'Erreur',
+        text: 'Une erreur est survenue.'
+      });
+    });
+  }
+
+  // Handle Add Column button click
+  document.getElementById("addColumnBtn").addEventListener("click", function () {
+    Swal.fire({
+      title: 'Nom de la nouvelle colonne',
+      input: 'text',
+      inputLabel: 'Entrez le nom de la colonne',
+      inputPlaceholder: 'Nom de la colonne...',
+      showCancelButton: true,
+      confirmButtonText: 'Ajouter',
+      cancelButtonText: 'Annuler',
+      inputValidator: function inputValidator(value) {
+        if (!value) return 'Vous devez entrer un nom pour la colonne!';
+      }
+    }).then(function (result) {
+      if (result.isConfirmed) {
+        addColumnWithName(result.value);
+      }
+    });
+  });
+
+  // Load existing columns/cards when initializing Kanban
+  function initKanban(id) {
+    fetch("/get/column/".concat(id)).then(function (response) {
+      return response.json();
+    }).then(function (data) {
+      if (data && Array.isArray(data.boards)) {
+        data.boards.forEach(function (board) {
+          KanbanTest.addBoards([{
+            id: String(board.id),
+            title: "\n            <div style=\"display: flex; justify-content: space-between; align-items: center;\">\n              <span>".concat(board.name, "</span>\n              <i class=\"fa fa-trash trash-icon\" onclick=\"deleteBoard('").concat(board.id, "')\" style=\"cursor: pointer;\"></i>\n            </div>\n          "),
+            "class": "info",
+            item: board.items.map(function (item) {
+              return {
+                id: String(item.id),
+                title: item.name
+              };
+            })
+          }]);
+        });
+      }
+    })["catch"](function (error) {
+      console.error("Erreur lors de la récupération des colonnes :", error);
+    });
+  }
+
+  // API call to update card when moved
+  function updateCardInDatabase(columnId, cardId) {
+    fetch("/retro/card/update", {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-TOKEN': csrfToken
+      },
+      body: JSON.stringify({
+        column_id: columnId,
+        card_id: cardId
+      })
+    });
+  }
+
+  // Remove card from old column (used for syncing)
+  function removeCardFromColumn(columnId, cardId) {
+    var column = document.querySelector("[data-id=\"".concat(columnId, "\"]"));
+    if (!column) return;
+    var card = column.querySelector(".kanban-item[data-eid=\"".concat(cardId, "\"]"));
+    if (card) card.remove();
+  }
+
+  // Delete a board (column) with confirmation
+  window.deleteBoard = function (boardId) {
+    Swal.fire({
+      title: 'Êtes-vous sûr ?',
+      text: "Vous ne pourrez pas revenir en arrière !",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Oui, supprimer !',
+      cancelButtonText: 'Annuler'
+    }).then(function (result) {
+      if (result.isConfirmed) {
+        fetch("/retro/column/delete/".concat(boardId, "/"), {
+          method: 'DELETE',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-TOKEN': csrfToken
+          },
+          body: JSON.stringify({
+            id: boardId
+          })
+        }).then(function (response) {
+          if (response.ok) {
+            var boardElement = document.querySelector("[data-id=\"".concat(boardId, "\"]"));
+            if (boardElement) {
+              boardElement.remove();
+              Swal.fire('Supprimé !', 'La colonne a été supprimée.', 'success');
+            }
+          } else {
+            Swal.fire('Erreur', 'La suppression a échoué.', 'error');
+          }
+        })["catch"](function (error) {
+          console.error('Erreur lors de la suppression de la colonne :', error);
+          Swal.fire('Erreur', 'Une erreur est survenue.', 'error');
+        });
+      }
+    });
+  };
+
+  // Update card title or delete card
+  function updateCard(el) {
+    Swal.fire({
+      title: "\n        <div style=\"display: flex; justify-content: space-between; align-items: center;\">\n          <span style=\"font-size: 1.3em; font-weight: 600;\">Modifier la carte</span>\n          <i id=\"deleteCardBtn\" class=\"fas fa-trash\" style=\"cursor: pointer; font-size: 1em; color: #3b82f6;\" title=\"Supprimer la carte\"></i>\n        </div>\n      ",
+      input: 'textarea',
+      inputValue: el.innerText,
+      inputAttributes: {
+        'style': 'height: 30rem; resize: none;'
+      },
+      focusConfirm: false,
+      showCancelButton: true,
+      confirmButtonText: 'Enregistrer',
+      cancelButtonText: 'Annuler',
+      preConfirm: function preConfirm() {
+        var title = Swal.getInput().value;
+        if (!title) {
+          Swal.showValidationMessage("Veuillez entrer un nom pour la carte");
+        }
+        return {
+          title: title
+        };
+      },
+      didOpen: function didOpen() {
+        document.getElementById('deleteCardBtn').addEventListener('click', function () {
+          Swal.fire({
+            title: 'Confirmer la suppression ?',
+            text: "Cette action est irréversible.",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Oui, supprimer',
+            cancelButtonText: 'Annuler'
+          }).then(function (result) {
+            if (result.isConfirmed) {
+              var cardId = el.getAttribute('data-eid');
+              fetch("/retro/card/delete/".concat(cardId), {
+                method: 'DELETE',
+                headers: {
+                  'Content-Type': 'application/json',
+                  'X-CSRF-TOKEN': csrfToken
+                }
+              }).then(/*#__PURE__*/function () {
+                var _ref = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee(response) {
+                  var cardElement, data;
+                  return _regeneratorRuntime().wrap(function _callee$(_context) {
+                    while (1) switch (_context.prev = _context.next) {
+                      case 0:
+                        if (!response.ok) {
+                          _context.next = 6;
+                          break;
+                        }
+                        cardElement = document.querySelector("[data-eid=\"".concat(cardId, "\"]"));
+                        if (cardElement) cardElement.remove();
+                        Swal.fire('Supprimée !', 'La carte a été supprimée.', 'success');
+                        _context.next = 14;
+                        break;
+                      case 6:
+                        if (!(response.status === 403)) {
+                          _context.next = 10;
+                          break;
+                        }
+                        Swal.fire('Non autorisé', 'Vous n\'avez pas la permission de supprimer cette carte.', 'error');
+                        _context.next = 14;
+                        break;
+                      case 10:
+                        _context.next = 12;
+                        return response.json();
+                      case 12:
+                        data = _context.sent;
+                        Swal.fire('Erreur', data.error || 'Une erreur est survenue.', 'error');
+                      case 14:
+                      case "end":
+                        return _context.stop();
+                    }
+                  }, _callee);
+                }));
+                return function (_x) {
+                  return _ref.apply(this, arguments);
+                };
+              }())["catch"](function () {
+                Swal.fire('Erreur', 'Impossible de contacter le serveur.', 'error');
+              });
+            }
+          });
+        });
+      }
+    }).then(function (result) {
+      if (result.isConfirmed) {
+        var titles = result.value.title;
+        var cardId = el.getAttribute('data-eid');
+        fetch("/retro/card/update/".concat(cardId), {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-TOKEN': csrfToken
+          },
+          body: JSON.stringify({
+            id: cardId,
+            name: titles
+          })
+        }).then(function (response) {
+          if (response.ok) {
+            var cardElement = document.querySelector("[data-eid=\"".concat(cardId, "\"]"));
+            if (cardElement) {
+              var textElement = cardElement.querySelector('div:not(.item_handle)');
+              if (textElement) textElement.innerText = titles;
+            }
+            Swal.fire('Modifiée !', 'La carte a été modifiée.', 'success');
+          } else if (response.status === 403) {
+            Swal.fire('Non autorisé', 'Vous n\'avez pas la permission de modifier cette carte.', 'error');
+          } else {
+            Swal.fire('Erreur', 'Impossible de modifier la carte.', 'error');
+          }
+        })["catch"](function () {
+          Swal.fire('Erreur', 'Impossible de modifier la carte.', 'error');
+        });
+      }
+    });
+  }
+});
+
+/***/ }),
+
+/***/ "./resources/js/kanban/config/jkanban.js":
+/*!***********************************************!*\
+  !*** ./resources/js/kanban/config/jkanban.js ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+(function () {
+  function r(e, n, t) {
+    function o(i, f) {
+      if (!n[i]) {
+        if (!e[i]) {
+          var c = undefined;
+          if (!f && c) return require(i, !0);
+          if (u) return u(i, !0);
+          var a = new Error("Cannot find module '" + i + "'");
+          throw a.code = "MODULE_NOT_FOUND", a;
+        }
+        var p = n[i] = {
+          exports: {}
+        };
+        e[i][0].call(p.exports, function (r) {
+          var n = e[i][1][r];
+          return o(n || r);
+        }, p, p.exports, r, e, n, t);
+      }
+      return n[i].exports;
+    }
+    for (var u = undefined, i = 0; i < t.length; i++) o(t[i]);
+    return o;
+  }
+  return r;
+})()({
+  1: [function (require, module, exports) {
+    /**
+     * jKanban
+     * Vanilla Javascript plugin for manage kanban boards
+     *
+     * @site: http://www.riccardotartaglia.it/jkanban/
+     * @author: Riccardo Tartaglia
+     */
+
+    //Require dragula
+    var dragula = require('dragula');
+    (function () {
+      this.jKanban = function () {
+        var self = this;
+        var __DEFAULT_ITEM_HANDLE_OPTIONS = {
+          enabled: false
+        };
+        var __DEFAULT_ITEM_ADD_OPTIONS = {
+          enabled: false
+        };
+        this._disallowedItemProperties = ['id', 'title', 'click', 'context', 'drag', 'dragend', 'drop', 'order'];
+        this.element = '';
+        this.container = '';
+        this.boardContainer = [];
+        this.handlers = [];
+        this.dragula = dragula;
+        this.drake = '';
+        this.drakeBoard = '';
+        this.itemAddOptions = __DEFAULT_ITEM_ADD_OPTIONS;
+        this.itemHandleOptions = __DEFAULT_ITEM_HANDLE_OPTIONS;
+        var defaults = {
+          element: '',
+          gutter: '15px',
+          widthBoard: '250px',
+          responsive: '700',
+          responsivePercentage: false,
+          boards: [],
+          dragBoards: true,
+          dragItems: true,
+          //whether can drag cards or not, useful when set permissions on it.
+          itemAddOptions: __DEFAULT_ITEM_ADD_OPTIONS,
+          itemHandleOptions: __DEFAULT_ITEM_HANDLE_OPTIONS,
+          dragEl: function dragEl(el, source) {},
+          dragendEl: function dragendEl(el) {},
+          dropEl: function dropEl(el, target, source, sibling) {},
+          dragBoard: function dragBoard(el, source) {},
+          dragendBoard: function dragendBoard(el) {},
+          dropBoard: function dropBoard(el, target, source, sibling) {},
+          click: function click(el) {},
+          context: function context(el, e) {},
+          buttonClick: function buttonClick(el, boardId) {},
+          propagationHandlers: []
+        };
+        if (arguments[0] && _typeof(arguments[0]) === 'object') {
+          this.options = __extendDefaults(defaults, arguments[0]);
+        }
+        this.__getCanMove = function (handle) {
+          if (!self.options.itemHandleOptions.enabled) {
+            return !!self.options.dragItems;
+          }
+          if (self.options.itemHandleOptions.handleClass) {
+            return handle.classList.contains(self.options.itemHandleOptions.handleClass);
+          }
+          return handle.classList.contains('item_handle');
+        };
+        this.init = function () {
+          //set initial boards
+          __setBoard();
+          //set drag with dragula
+          if (window.innerWidth > self.options.responsive) {
+            //Init Drag Board
+            self.drakeBoard = self.dragula([self.container], {
+              moves: function moves(el, source, handle, sibling) {
+                if (!self.options.dragBoards) return false;
+                return handle.classList.contains('kanban-board-header') || handle.classList.contains('kanban-title-board');
+              },
+              accepts: function accepts(el, target, source, sibling) {
+                return target.classList.contains('kanban-container');
+              },
+              revertOnSpill: true,
+              direction: 'horizontal'
+            }).on('drag', function (el, source) {
+              el.classList.add('is-moving');
+              self.options.dragBoard(el, source);
+              if (typeof el.dragfn === 'function') el.dragfn(el, source);
+            }).on('dragend', function (el) {
+              __updateBoardsOrder();
+              el.classList.remove('is-moving');
+              self.options.dragendBoard(el);
+              if (typeof el.dragendfn === 'function') el.dragendfn(el);
+            }).on('drop', function (el, target, source, sibling) {
+              el.classList.remove('is-moving');
+              self.options.dropBoard(el, target, source, sibling);
+              if (typeof el.dropfn === 'function') el.dropfn(el, target, source, sibling);
+            });
+
+            //Init Drag Item
+            self.drake = self.dragula(self.boardContainer, {
+              moves: function moves(el, source, handle, sibling) {
+                return self.__getCanMove(handle);
+              },
+              revertOnSpill: true
+            }).on('cancel', function (el, container, source) {
+              self.enableAllBoards();
+            }).on('drag', function (el, source) {
+              var elClass = el.getAttribute('class');
+              if (elClass !== '' && elClass.indexOf('not-draggable') > -1) {
+                self.drake.cancel(true);
+                return;
+              }
+              el.classList.add('is-moving');
+              self.options.dragEl(el, source);
+              var boardJSON = __findBoardJSON(source.parentNode.dataset.id);
+              if (boardJSON.dragTo !== undefined) {
+                self.options.boards.map(function (board) {
+                  if (boardJSON.dragTo.indexOf(board.id) === -1 && board.id !== source.parentNode.dataset.id) {
+                    self.findBoard(board.id).classList.add('disabled-board');
+                  }
+                });
+              }
+              if (el !== null && typeof el.dragfn === 'function') el.dragfn(el, source);
+            }).on('dragend', function (el) {
+              self.options.dragendEl(el);
+              if (el !== null && typeof el.dragendfn === 'function') el.dragendfn(el);
+            }).on('drop', function (el, target, source, sibling) {
+              self.enableAllBoards();
+              var boardJSON = __findBoardJSON(source.parentNode.dataset.id);
+              if (boardJSON.dragTo !== undefined) {
+                if (boardJSON.dragTo.indexOf(target.parentNode.dataset.id) === -1 && target.parentNode.dataset.id !== source.parentNode.dataset.id) {
+                  self.drake.cancel(true);
+                }
+              }
+              if (el !== null) {
+                var result = self.options.dropEl(el, target, source, sibling);
+                if (result === false) {
+                  self.drake.cancel(true);
+                }
+                el.classList.remove('is-moving');
+                if (typeof el.dropfn === 'function') el.dropfn(el, target, source, sibling);
+              }
+            });
+          }
+        };
+        this.enableAllBoards = function () {
+          var allB = document.querySelectorAll('.kanban-board');
+          if (allB.length > 0 && allB !== undefined) {
+            for (var i = 0; i < allB.length; i++) {
+              allB[i].classList.remove('disabled-board');
+            }
+          }
+        };
+        this.addElement = function (boardID, element, position) {
+          if (typeof position === 'undefined') {
+            position = -1;
+          }
+          var board = self.element.querySelector('[data-id="' + boardID + '"] .kanban-drag');
+          var refElement = board.childNodes[position];
+          var nodeItem = document.createElement('div');
+          nodeItem.classList.add('kanban-item');
+          if (typeof element.id !== 'undefined' && element.id !== '') {
+            nodeItem.setAttribute('data-eid', element.id);
+          }
+          if (element["class"] && Array.isArray(element["class"])) {
+            element["class"].forEach(function (cl) {
+              nodeItem.classList.add(cl);
+            });
+          }
+          nodeItem.innerHTML = __buildItemCard(element);
+          //add function
+          nodeItem.clickfn = element.click;
+          nodeItem.contextfn = element.context;
+          nodeItem.dragfn = element.drag;
+          nodeItem.dragendfn = element.dragend;
+          nodeItem.dropfn = element.drop;
+          __appendCustomProperties(nodeItem, element);
+          __onclickHandler(nodeItem);
+          __onContextHandler(nodeItem);
+          if (self.options.itemHandleOptions.enabled) {
+            nodeItem.style.cursor = 'default';
+          }
+          board.insertBefore(nodeItem, refElement);
+          return self;
+        };
+        this.addForm = function (boardID, formItem) {
+          var board = self.element.querySelector('[data-id="' + boardID + '"] .kanban-drag');
+          var _attribute = formItem.getAttribute('class');
+          formItem.setAttribute('class', _attribute + ' not-draggable');
+          board.appendChild(formItem);
+          return self;
+        };
+        this.addBoards = function (boards, isInit) {
+          if (self.options.responsivePercentage) {
+            self.container.style.width = '100%';
+            self.options.gutter = '1%';
+            if (window.innerWidth > self.options.responsive) {
+              var boardWidth = (100 - boards.length * 2) / boards.length;
+            } else {
+              var boardWidth = 100 - boards.length * 2;
+            }
+          } else {
+            var boardWidth = self.options.widthBoard;
+          }
+          var addButton = self.options.itemAddOptions.enabled;
+          var buttonContent = self.options.itemAddOptions.content;
+          var buttonClass = self.options.itemAddOptions["class"];
+          var buttonFooter = self.options.itemAddOptions.footer;
+
+          //for on all the boards
+          for (var boardkey in boards) {
+            // single board
+            var board = boards[boardkey];
+            if (!isInit) {
+              self.options.boards.push(board);
+            }
+            if (!self.options.responsivePercentage) {
+              //add width to container
+              if (self.container.style.width === '') {
+                self.container.style.width = parseInt(boardWidth) + parseInt(self.options.gutter) * 2 + 'px';
+              } else {
+                self.container.style.width = parseInt(self.container.style.width) + parseInt(boardWidth) + parseInt(self.options.gutter) * 2 + 'px';
+              }
+            }
+            //create node
+            var boardNode = document.createElement('div');
+            boardNode.dataset.id = board.id;
+            boardNode.dataset.order = self.container.childNodes.length + 1;
+            boardNode.classList.add('kanban-board');
+            //set style
+            if (self.options.responsivePercentage) {
+              boardNode.style.width = boardWidth + '%';
+            } else {
+              boardNode.style.width = boardWidth;
+            }
+            boardNode.style.marginLeft = self.options.gutter;
+            boardNode.style.marginRight = self.options.gutter;
+            // header board
+            var headerBoard = document.createElement('header');
+            if (board["class"] !== '' && board["class"] !== undefined) var allClasses = board["class"].split(',');else allClasses = [];
+            headerBoard.classList.add('kanban-board-header');
+            allClasses.map(function (value) {
+              // Remove empty spaces
+              value = value.replace(/^[ ]+/g, '');
+              headerBoard.classList.add(value);
+            });
+            headerBoard.innerHTML = '<div class="kanban-title-board">' + board.title + '</div>';
+            //content board
+            var contentBoard = document.createElement('main');
+            contentBoard.classList.add('kanban-drag');
+            if (board.bodyClass !== '' && board.bodyClass !== undefined) var bodyClasses = board.bodyClass.split(',');else bodyClasses = [];
+            bodyClasses.map(function (value) {
+              contentBoard.classList.add(value);
+            });
+            //add drag to array for dragula
+            self.boardContainer.push(contentBoard);
+            for (var itemkey in board.item) {
+              //create item
+              var itemKanban = board.item[itemkey];
+              var nodeItem = document.createElement('div');
+              nodeItem.classList.add('kanban-item');
+              if (itemKanban.id) {
+                nodeItem.dataset.eid = itemKanban.id;
+              }
+              if (itemKanban["class"] && Array.isArray(itemKanban["class"])) {
+                itemKanban["class"].forEach(function (cl) {
+                  nodeItem.classList.add(cl);
+                });
+              }
+              nodeItem.innerHTML = __buildItemCard(itemKanban);
+              //add function
+              nodeItem.clickfn = itemKanban.click;
+              nodeItem.contextfn = itemKanban.context;
+              nodeItem.dragfn = itemKanban.drag;
+              nodeItem.dragendfn = itemKanban.dragend;
+              nodeItem.dropfn = itemKanban.drop;
+              __appendCustomProperties(nodeItem, itemKanban);
+              //add click handler of item
+              __onclickHandler(nodeItem);
+              __onContextHandler(nodeItem);
+              if (self.options.itemHandleOptions.enabled) {
+                nodeItem.style.cursor = 'default';
+              }
+              contentBoard.appendChild(nodeItem);
+            }
+            //footer board
+            var footerBoard = document.createElement('footer');
+            footerBoard.classList.add('kanban-footer-board');
+            // if add button is true, add button to the board
+            if (addButton) {
+              var btn = document.createElement('BUTTON');
+              var t = document.createTextNode(buttonContent ? buttonContent : '+');
+              btn.setAttribute('class', buttonClass ? buttonClass : 'kanban-title-button btn btn-default btn-xs');
+              btn.appendChild(t);
+              //var buttonHtml = '<button class="kanban-title-button btn btn-default btn-xs">'+buttonContent+'</button>'
+              if (buttonFooter) {
+                footerBoard.appendChild(btn);
+              } else {
+                headerBoard.appendChild(btn);
+              }
+              __onButtonClickHandler(btn, board.id);
+            }
+            //board assembly
+            boardNode.appendChild(headerBoard);
+            boardNode.appendChild(contentBoard);
+            boardNode.appendChild(footerBoard);
+            //board add
+            self.container.appendChild(boardNode);
+          }
+          return self;
+        };
+        this.findBoard = function (id) {
+          var el = self.element.querySelector('[data-id="' + id + '"]');
+          return el;
+        };
+        this.getParentBoardID = function (el) {
+          if (typeof el === 'string') {
+            el = self.element.querySelector('[data-eid="' + el + '"]');
+          }
+          if (el === null) {
+            return null;
+          }
+          return el.parentNode.parentNode.dataset.id;
+        };
+        this.moveElement = function (targetBoardID, elementID, element) {
+          if (targetBoardID === this.getParentBoardID(elementID)) {
+            return;
+          }
+          this.removeElement(elementID);
+          return this.addElement(targetBoardID, element);
+        };
+        this.replaceElement = function (el, element) {
+          var nodeItem = el;
+          if (typeof nodeItem === 'string') {
+            nodeItem = self.element.querySelector('[data-eid="' + el + '"]');
+          }
+          nodeItem.innerHTML = __buildItemCard(element);
+          // add function
+          nodeItem.clickfn = element.click;
+          nodeItem.contextfn = element.context;
+          nodeItem.dragfn = element.drag;
+          nodeItem.dragendfn = element.dragend;
+          nodeItem.dropfn = element.drop;
+          __appendCustomProperties(nodeItem, element);
+          __onclickHandler(nodeItem);
+          __onContextHandler(nodeItem);
+          return self;
+        };
+        this.findElement = function (id) {
+          var el = self.element.querySelector('[data-eid="' + id + '"]');
+          return el;
+        };
+        this.getBoardElements = function (id) {
+          var board = self.element.querySelector('[data-id="' + id + '"] .kanban-drag');
+          return board.childNodes;
+        };
+        this.removeElement = function (el) {
+          if (typeof el === 'string') el = self.element.querySelector('[data-eid="' + el + '"]');
+          if (el !== null) {
+            //fallback for IE
+            if (typeof el.remove == 'function') {
+              el.remove();
+            } else {
+              el.parentNode.removeChild(el);
+            }
+          }
+          return self;
+        };
+        this.removeBoard = function (board) {
+          var boardElement = null;
+          if (typeof board === 'string') boardElement = self.element.querySelector('[data-id="' + board + '"]');
+          if (boardElement !== null) {
+            //fallback for IE
+            if (typeof boardElement.remove == 'function') {
+              boardElement.remove();
+            } else {
+              boardElement.parentNode.removeChild(boardElement);
+            }
+          }
+
+          // remove thboard in options.boards
+          for (var i = 0; i < self.options.boards.length; i++) {
+            if (self.options.boards[i].id === board) {
+              self.options.boards.splice(i, 1);
+              break;
+            }
+          }
+          return self;
+        };
+
+        // board button on click function
+        this.onButtonClick = function (el) {};
+
+        //PRIVATE FUNCTION
+        function __extendDefaults(source, properties) {
+          var property;
+          for (property in properties) {
+            if (properties.hasOwnProperty(property)) {
+              source[property] = properties[property];
+            }
+          }
+          return source;
+        }
+        function __setBoard() {
+          self.element = document.querySelector(self.options.element);
+          //create container
+          var boardContainer = document.createElement('div');
+          boardContainer.classList.add('kanban-container');
+          self.container = boardContainer;
+          //add boards
+
+          if (document.querySelector(self.options.element).dataset.hasOwnProperty('board')) {
+            url = document.querySelector(self.options.element).dataset.board;
+            window.fetch(url, {
+              method: 'GET',
+              headers: {
+                'Content-Type': 'application/json'
+              }
+            }).then(function (response) {
+              // log response text
+              response.json().then(function (data) {
+                self.options.boards = data;
+                self.addBoards(self.options.boards, true);
+              });
+            })["catch"](function (error) {
+              console.log('Error: ', error);
+            });
+          } else {
+            self.addBoards(self.options.boards, true);
+          }
+
+          //appends to container
+          self.element.appendChild(self.container);
+        }
+        function __onclickHandler(nodeItem, clickfn) {
+          nodeItem.addEventListener('click', function (e) {
+            if (!self.options.propagationHandlers.includes('click')) e.preventDefault();
+            self.options.click(this);
+            if (typeof this.clickfn === 'function') this.clickfn(this);
+          });
+        }
+        function __onContextHandler(nodeItem, contextfn) {
+          if (nodeItem.addEventListener) {
+            nodeItem.addEventListener('contextmenu', function (e) {
+              if (!self.options.propagationHandlers.includes('context')) e.preventDefault();
+              self.options.context(this, e);
+              if (typeof this.contextfn === 'function') this.contextfn(this, e);
+            }, false);
+          } else {
+            nodeItem.attachEvent('oncontextmenu', function () {
+              self.options.context(this);
+              if (typeof this.contextfn === 'function') this.contextfn(this);
+              if (!self.options.propagationHandlers.includes('context')) window.event.returnValue = false;
+            });
+          }
+        }
+        function __onButtonClickHandler(nodeItem, boardId) {
+          nodeItem.addEventListener('click', function (e) {
+            e.preventDefault();
+            self.options.buttonClick(this, boardId);
+            // if(typeof(this.clickfn) === 'function')
+            //     this.clickfn(this);
+          });
+        }
+        function __findBoardJSON(id) {
+          var el = [];
+          self.options.boards.map(function (board) {
+            if (board.id === id) {
+              return el.push(board);
+            }
+          });
+          return el[0];
+        }
+        function __appendCustomProperties(element, parentObject) {
+          for (var propertyName in parentObject) {
+            if (self._disallowedItemProperties.indexOf(propertyName) > -1) {
+              continue;
+            }
+            element.setAttribute('data-' + propertyName, parentObject[propertyName]);
+          }
+        }
+        function __updateBoardsOrder() {
+          var index = 1;
+          for (var i = 0; i < self.container.childNodes.length; i++) {
+            self.container.childNodes[i].dataset.order = index++;
+          }
+        }
+        function __buildItemCard(item) {
+          var result = 'title' in item ? item.title : '';
+          if (self.options.itemHandleOptions.enabled) {
+            if ((self.options.itemHandleOptions.customHandler || undefined) === undefined) {
+              var customCssHandler = self.options.itemHandleOptions.customCssHandler;
+              var customCssIconHandler = self.options.itemHandleOptions.customCssIconHandler;
+              var customItemLayout = self.options.itemHandleOptions.customItemLayout;
+              if ((customCssHandler || undefined) === undefined) {
+                customCssHandler = 'drag_handler';
+              }
+              if ((customCssIconHandler || undefined) === undefined) {
+                customCssIconHandler = customCssHandler + '_icon';
+              }
+              if ((customItemLayout || undefined) === undefined) {
+                customItemLayout = '';
+              }
+              result = '<div class=\'item_handle ' + customCssHandler + '\'><i class=\'item_handle ' + customCssIconHandler + '\'></i></div><div>' + result + '</div>';
+            } else {
+              result = '<div> ' + self.options.itemHandleOptions.customHandler.replace(/%([^%]+)%/g, function (match, key) {
+                return item[key] !== undefined ? item[key] : '';
+              }) + ' </div>';
+              return result;
+            }
+          }
+          return result;
+        }
+
+        //init plugin
+        this.init();
+      };
+    })();
+  }, {
+    "dragula": 9
+  }],
+  2: [function (require, module, exports) {
+    module.exports = function atoa(a, n) {
+      return Array.prototype.slice.call(a, n);
+    };
+  }, {}],
+  3: [function (require, module, exports) {
+    'use strict';
+
+    var ticky = require('ticky');
+    module.exports = function debounce(fn, args, ctx) {
+      if (!fn) {
+        return;
+      }
+      ticky(function run() {
+        fn.apply(ctx || null, args || []);
+      });
+    };
+  }, {
+    "ticky": 11
+  }],
+  4: [function (require, module, exports) {
+    'use strict';
+
+    var atoa = require('atoa');
+    var debounce = require('./debounce');
+    module.exports = function emitter(thing, options) {
+      var opts = options || {};
+      var evt = {};
+      if (thing === undefined) {
+        thing = {};
+      }
+      thing.on = function (type, fn) {
+        if (!evt[type]) {
+          evt[type] = [fn];
+        } else {
+          evt[type].push(fn);
+        }
+        return thing;
+      };
+      thing.once = function (type, fn) {
+        fn._once = true; // thing.off(fn) still works!
+        thing.on(type, fn);
+        return thing;
+      };
+      thing.off = function (type, fn) {
+        var c = arguments.length;
+        if (c === 1) {
+          delete evt[type];
+        } else if (c === 0) {
+          evt = {};
+        } else {
+          var et = evt[type];
+          if (!et) {
+            return thing;
+          }
+          et.splice(et.indexOf(fn), 1);
+        }
+        return thing;
+      };
+      thing.emit = function () {
+        var args = atoa(arguments);
+        return thing.emitterSnapshot(args.shift()).apply(this, args);
+      };
+      thing.emitterSnapshot = function (type) {
+        var et = (evt[type] || []).slice(0);
+        return function () {
+          var args = atoa(arguments);
+          var ctx = this || thing;
+          if (type === 'error' && opts["throws"] !== false && !et.length) {
+            throw args.length === 1 ? args[0] : args;
+          }
+          et.forEach(function emitter(listen) {
+            if (opts.async) {
+              debounce(listen, args, ctx);
+            } else {
+              listen.apply(ctx, args);
+            }
+            if (listen._once) {
+              thing.off(type, listen);
+            }
+          });
+          return thing;
+        };
+      };
+      return thing;
+    };
+  }, {
+    "./debounce": 3,
+    "atoa": 2
+  }],
+  5: [function (require, module, exports) {
+    (function (global) {
+      (function () {
+        'use strict';
+
+        var customEvent = require('custom-event');
+        var eventmap = require('./eventmap');
+        var doc = global.document;
+        var addEvent = addEventEasy;
+        var removeEvent = removeEventEasy;
+        var hardCache = [];
+        if (!global.addEventListener) {
+          addEvent = addEventHard;
+          removeEvent = removeEventHard;
+        }
+        module.exports = {
+          add: addEvent,
+          remove: removeEvent,
+          fabricate: fabricateEvent
+        };
+        function addEventEasy(el, type, fn, capturing) {
+          return el.addEventListener(type, fn, capturing);
+        }
+        function addEventHard(el, type, fn) {
+          return el.attachEvent('on' + type, wrap(el, type, fn));
+        }
+        function removeEventEasy(el, type, fn, capturing) {
+          return el.removeEventListener(type, fn, capturing);
+        }
+        function removeEventHard(el, type, fn) {
+          var listener = unwrap(el, type, fn);
+          if (listener) {
+            return el.detachEvent('on' + type, listener);
+          }
+        }
+        function fabricateEvent(el, type, model) {
+          var e = eventmap.indexOf(type) === -1 ? makeCustomEvent() : makeClassicEvent();
+          if (el.dispatchEvent) {
+            el.dispatchEvent(e);
+          } else {
+            el.fireEvent('on' + type, e);
+          }
+          function makeClassicEvent() {
+            var e;
+            if (doc.createEvent) {
+              e = doc.createEvent('Event');
+              e.initEvent(type, true, true);
+            } else if (doc.createEventObject) {
+              e = doc.createEventObject();
+            }
+            return e;
+          }
+          function makeCustomEvent() {
+            return new customEvent(type, {
+              detail: model
+            });
+          }
+        }
+        function wrapperFactory(el, type, fn) {
+          return function wrapper(originalEvent) {
+            var e = originalEvent || global.event;
+            e.target = e.target || e.srcElement;
+            e.preventDefault = e.preventDefault || function preventDefault() {
+              e.returnValue = false;
+            };
+            e.stopPropagation = e.stopPropagation || function stopPropagation() {
+              e.cancelBubble = true;
+            };
+            e.which = e.which || e.keyCode;
+            fn.call(el, e);
+          };
+        }
+        function wrap(el, type, fn) {
+          var wrapper = unwrap(el, type, fn) || wrapperFactory(el, type, fn);
+          hardCache.push({
+            wrapper: wrapper,
+            element: el,
+            type: type,
+            fn: fn
+          });
+          return wrapper;
+        }
+        function unwrap(el, type, fn) {
+          var i = find(el, type, fn);
+          if (i) {
+            var wrapper = hardCache[i].wrapper;
+            hardCache.splice(i, 1); // free up a tad of memory
+            return wrapper;
+          }
+        }
+        function find(el, type, fn) {
+          var i, item;
+          for (i = 0; i < hardCache.length; i++) {
+            item = hardCache[i];
+            if (item.element === el && item.type === type && item.fn === fn) {
+              return i;
+            }
+          }
+        }
+      }).call(this);
+    }).call(this, typeof __webpack_require__.g !== "undefined" ? __webpack_require__.g : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {});
+  }, {
+    "./eventmap": 6,
+    "custom-event": 7
+  }],
+  6: [function (require, module, exports) {
+    (function (global) {
+      (function () {
+        'use strict';
+
+        var eventmap = [];
+        var eventname = '';
+        var ron = /^on/;
+        for (eventname in global) {
+          if (ron.test(eventname)) {
+            eventmap.push(eventname.slice(2));
+          }
+        }
+        module.exports = eventmap;
+      }).call(this);
+    }).call(this, typeof __webpack_require__.g !== "undefined" ? __webpack_require__.g : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {});
+  }, {}],
+  7: [function (require, module, exports) {
+    (function (global) {
+      (function () {
+        var NativeCustomEvent = global.CustomEvent;
+        function useNative() {
+          try {
+            var p = new NativeCustomEvent('cat', {
+              detail: {
+                foo: 'bar'
+              }
+            });
+            return 'cat' === p.type && 'bar' === p.detail.foo;
+          } catch (e) {}
+          return false;
+        }
+
+        /**
+         * Cross-browser `CustomEvent` constructor.
+         *
+         * https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent.CustomEvent
+         *
+         * @public
+         */
+
+        module.exports = useNative() ? NativeCustomEvent :
+        // IE >= 9
+        'undefined' !== typeof document && 'function' === typeof document.createEvent ? function CustomEvent(type, params) {
+          var e = document.createEvent('CustomEvent');
+          if (params) {
+            e.initCustomEvent(type, params.bubbles, params.cancelable, params.detail);
+          } else {
+            e.initCustomEvent(type, false, false, void 0);
+          }
+          return e;
+        } :
+        // IE <= 8
+        function CustomEvent(type, params) {
+          var e = document.createEventObject();
+          e.type = type;
+          if (params) {
+            e.bubbles = Boolean(params.bubbles);
+            e.cancelable = Boolean(params.cancelable);
+            e.detail = params.detail;
+          } else {
+            e.bubbles = false;
+            e.cancelable = false;
+            e.detail = void 0;
+          }
+          return e;
+        };
+      }).call(this);
+    }).call(this, typeof __webpack_require__.g !== "undefined" ? __webpack_require__.g : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {});
+  }, {}],
+  8: [function (require, module, exports) {
+    'use strict';
+
+    var cache = {};
+    var start = '(?:^|\\s)';
+    var end = '(?:\\s|$)';
+    function lookupClass(className) {
+      var cached = cache[className];
+      if (cached) {
+        cached.lastIndex = 0;
+      } else {
+        cache[className] = cached = new RegExp(start + className + end, 'g');
+      }
+      return cached;
+    }
+    function addClass(el, className) {
+      var current = el.className;
+      if (!current.length) {
+        el.className = className;
+      } else if (!lookupClass(className).test(current)) {
+        el.className += ' ' + className;
+      }
+    }
+    function rmClass(el, className) {
+      el.className = el.className.replace(lookupClass(className), ' ').trim();
+    }
+    module.exports = {
+      add: addClass,
+      rm: rmClass
+    };
+  }, {}],
+  9: [function (require, module, exports) {
+    (function (global) {
+      (function () {
+        'use strict';
+
+        var emitter = require('contra/emitter');
+        var crossvent = require('crossvent');
+        var classes = require('./classes');
+        var doc = document;
+        var documentElement = doc.documentElement;
+        function dragula(initialContainers, options) {
+          var len = arguments.length;
+          if (len === 1 && Array.isArray(initialContainers) === false) {
+            options = initialContainers;
+            initialContainers = [];
+          }
+          var _mirror; // mirror image
+          var _source; // source container
+          var _item; // item being dragged
+          var _offsetX; // reference x
+          var _offsetY; // reference y
+          var _moveX; // reference move x
+          var _moveY; // reference move y
+          var _initialSibling; // reference sibling when grabbed
+          var _currentSibling; // reference sibling now
+          var _copy; // item used for copying
+          var _renderTimer; // timer for setTimeout renderMirrorImage
+          var _lastDropTarget = null; // last container item was over
+          var _grabbed; // holds mousedown context until first mousemove
+
+          var o = options || {};
+          if (o.moves === void 0) {
+            o.moves = always;
+          }
+          if (o.accepts === void 0) {
+            o.accepts = always;
+          }
+          if (o.invalid === void 0) {
+            o.invalid = invalidTarget;
+          }
+          if (o.containers === void 0) {
+            o.containers = initialContainers || [];
+          }
+          if (o.isContainer === void 0) {
+            o.isContainer = never;
+          }
+          if (o.copy === void 0) {
+            o.copy = false;
+          }
+          if (o.copySortSource === void 0) {
+            o.copySortSource = false;
+          }
+          if (o.revertOnSpill === void 0) {
+            o.revertOnSpill = false;
+          }
+          if (o.removeOnSpill === void 0) {
+            o.removeOnSpill = false;
+          }
+          if (o.direction === void 0) {
+            o.direction = 'vertical';
+          }
+          if (o.ignoreInputTextSelection === void 0) {
+            o.ignoreInputTextSelection = true;
+          }
+          if (o.mirrorContainer === void 0) {
+            o.mirrorContainer = doc.body;
+          }
+          var drake = emitter({
+            containers: o.containers,
+            start: manualStart,
+            end: end,
+            cancel: cancel,
+            remove: remove,
+            destroy: destroy,
+            canMove: canMove,
+            dragging: false
+          });
+          if (o.removeOnSpill === true) {
+            drake.on('over', spillOver).on('out', spillOut);
+          }
+          events();
+          return drake;
+          function isContainer(el) {
+            return drake.containers.indexOf(el) !== -1 || o.isContainer(el);
+          }
+          function events(remove) {
+            var op = remove ? 'remove' : 'add';
+            touchy(documentElement, op, 'mousedown', grab);
+            touchy(documentElement, op, 'mouseup', release);
+          }
+          function eventualMovements(remove) {
+            var op = remove ? 'remove' : 'add';
+            touchy(documentElement, op, 'mousemove', startBecauseMouseMoved);
+          }
+          function movements(remove) {
+            var op = remove ? 'remove' : 'add';
+            crossvent[op](documentElement, 'selectstart', preventGrabbed); // IE8
+            crossvent[op](documentElement, 'click', preventGrabbed);
+          }
+          function destroy() {
+            events(true);
+            release({});
+          }
+          function preventGrabbed(e) {
+            if (_grabbed) {
+              e.preventDefault();
+            }
+          }
+          function grab(e) {
+            _moveX = e.clientX;
+            _moveY = e.clientY;
+            var ignore = whichMouseButton(e) !== 1 || e.metaKey || e.ctrlKey;
+            if (ignore) {
+              return; // we only care about honest-to-god left clicks and touch events
+            }
+            var item = e.target;
+            var context = canStart(item);
+            if (!context) {
+              return;
+            }
+            _grabbed = context;
+            eventualMovements();
+            if (e.type === 'mousedown') {
+              if (isInput(item)) {
+                // see also: https://github.com/bevacqua/dragula/issues/208
+                item.focus(); // fixes https://github.com/bevacqua/dragula/issues/176
+              } else {
+                e.preventDefault(); // fixes https://github.com/bevacqua/dragula/issues/155
+              }
+            }
+          }
+          function startBecauseMouseMoved(e) {
+            if (!_grabbed) {
+              return;
+            }
+            if (whichMouseButton(e) === 0) {
+              release({});
+              return; // when text is selected on an input and then dragged, mouseup doesn't fire. this is our only hope
+            }
+
+            // truthy check fixes #239, equality fixes #207, fixes #501
+            if (e.clientX !== void 0 && Math.abs(e.clientX - _moveX) <= (o.slideFactorX || 0) && e.clientY !== void 0 && Math.abs(e.clientY - _moveY) <= (o.slideFactorY || 0)) {
+              return;
+            }
+            if (o.ignoreInputTextSelection) {
+              var clientX = getCoord('clientX', e) || 0;
+              var clientY = getCoord('clientY', e) || 0;
+              var elementBehindCursor = doc.elementFromPoint(clientX, clientY);
+              if (isInput(elementBehindCursor)) {
+                return;
+              }
+            }
+            var grabbed = _grabbed; // call to end() unsets _grabbed
+            eventualMovements(true);
+            movements();
+            end();
+            start(grabbed);
+            var offset = getOffset(_item);
+            _offsetX = getCoord('pageX', e) - offset.left;
+            _offsetY = getCoord('pageY', e) - offset.top;
+            classes.add(_copy || _item, 'gu-transit');
+            renderMirrorImage();
+            drag(e);
+          }
+          function canStart(item) {
+            if (drake.dragging && _mirror) {
+              return;
+            }
+            if (isContainer(item)) {
+              return; // don't drag container itself
+            }
+            var handle = item;
+            while (getParent(item) && isContainer(getParent(item)) === false) {
+              if (o.invalid(item, handle)) {
+                return;
+              }
+              item = getParent(item); // drag target should be a top element
+              if (!item) {
+                return;
+              }
+            }
+            var source = getParent(item);
+            if (!source) {
+              return;
+            }
+            if (o.invalid(item, handle)) {
+              return;
+            }
+            var movable = o.moves(item, source, handle, nextEl(item));
+            if (!movable) {
+              return;
+            }
+            return {
+              item: item,
+              source: source
+            };
+          }
+          function canMove(item) {
+            return !!canStart(item);
+          }
+          function manualStart(item) {
+            var context = canStart(item);
+            if (context) {
+              start(context);
+            }
+          }
+          function start(context) {
+            if (isCopy(context.item, context.source)) {
+              _copy = context.item.cloneNode(true);
+              drake.emit('cloned', _copy, context.item, 'copy');
+            }
+            _source = context.source;
+            _item = context.item;
+            _initialSibling = _currentSibling = nextEl(context.item);
+            drake.dragging = true;
+            drake.emit('drag', _item, _source);
+          }
+          function invalidTarget() {
+            return false;
+          }
+          function end() {
+            if (!drake.dragging) {
+              return;
+            }
+            var item = _copy || _item;
+            drop(item, getParent(item));
+          }
+          function ungrab() {
+            _grabbed = false;
+            eventualMovements(true);
+            movements(true);
+          }
+          function release(e) {
+            ungrab();
+            if (!drake.dragging) {
+              return;
+            }
+            var item = _copy || _item;
+            var clientX = getCoord('clientX', e) || 0;
+            var clientY = getCoord('clientY', e) || 0;
+            var elementBehindCursor = getElementBehindPoint(_mirror, clientX, clientY);
+            var dropTarget = findDropTarget(elementBehindCursor, clientX, clientY);
+            if (dropTarget && (_copy && o.copySortSource || !_copy || dropTarget !== _source)) {
+              drop(item, dropTarget);
+            } else if (o.removeOnSpill) {
+              remove();
+            } else {
+              cancel();
+            }
+          }
+          function drop(item, target) {
+            var parent = getParent(item);
+            if (_copy && o.copySortSource && target === _source) {
+              parent.removeChild(_item);
+            }
+            if (isInitialPlacement(target)) {
+              drake.emit('cancel', item, _source, _source);
+            } else {
+              drake.emit('drop', item, target, _source, _currentSibling);
+            }
+            cleanup();
+          }
+          function remove() {
+            if (!drake.dragging) {
+              return;
+            }
+            var item = _copy || _item;
+            var parent = getParent(item);
+            if (parent) {
+              parent.removeChild(item);
+            }
+            drake.emit(_copy ? 'cancel' : 'remove', item, parent, _source);
+            cleanup();
+          }
+          function cancel(revert) {
+            if (!drake.dragging) {
+              return;
+            }
+            var reverts = arguments.length > 0 ? revert : o.revertOnSpill;
+            var item = _copy || _item;
+            var parent = getParent(item);
+            var initial = isInitialPlacement(parent);
+            if (initial === false && reverts) {
+              if (_copy) {
+                if (parent) {
+                  parent.removeChild(_copy);
+                }
+              } else {
+                _source.insertBefore(item, _initialSibling);
+              }
+            }
+            if (initial || reverts) {
+              drake.emit('cancel', item, _source, _source);
+            } else {
+              drake.emit('drop', item, parent, _source, _currentSibling);
+            }
+            cleanup();
+          }
+          function cleanup() {
+            var item = _copy || _item;
+            ungrab();
+            removeMirrorImage();
+            if (item) {
+              classes.rm(item, 'gu-transit');
+            }
+            if (_renderTimer) {
+              clearTimeout(_renderTimer);
+            }
+            drake.dragging = false;
+            if (_lastDropTarget) {
+              drake.emit('out', item, _lastDropTarget, _source);
+            }
+            drake.emit('dragend', item);
+            _source = _item = _copy = _initialSibling = _currentSibling = _renderTimer = _lastDropTarget = null;
+          }
+          function isInitialPlacement(target, s) {
+            var sibling;
+            if (s !== void 0) {
+              sibling = s;
+            } else if (_mirror) {
+              sibling = _currentSibling;
+            } else {
+              sibling = nextEl(_copy || _item);
+            }
+            return target === _source && sibling === _initialSibling;
+          }
+          function findDropTarget(elementBehindCursor, clientX, clientY) {
+            var target = elementBehindCursor;
+            while (target && !accepted()) {
+              target = getParent(target);
+            }
+            return target;
+            function accepted() {
+              var droppable = isContainer(target);
+              if (droppable === false) {
+                return false;
+              }
+              var immediate = getImmediateChild(target, elementBehindCursor);
+              var reference = getReference(target, immediate, clientX, clientY);
+              var initial = isInitialPlacement(target, reference);
+              if (initial) {
+                return true; // should always be able to drop it right back where it was
+              }
+              return o.accepts(_item, target, _source, reference);
+            }
+          }
+          function drag(e) {
+            if (!_mirror) {
+              return;
+            }
+            e.preventDefault();
+            var clientX = getCoord('clientX', e) || 0;
+            var clientY = getCoord('clientY', e) || 0;
+            var x = clientX - _offsetX;
+            var y = clientY - _offsetY;
+            _mirror.style.left = x + 'px';
+            _mirror.style.top = y + 'px';
+            var item = _copy || _item;
+            var elementBehindCursor = getElementBehindPoint(_mirror, clientX, clientY);
+            var dropTarget = findDropTarget(elementBehindCursor, clientX, clientY);
+            var changed = dropTarget !== null && dropTarget !== _lastDropTarget;
+            if (changed || dropTarget === null) {
+              out();
+              _lastDropTarget = dropTarget;
+              over();
+            }
+            var parent = getParent(item);
+            if (dropTarget === _source && _copy && !o.copySortSource) {
+              if (parent) {
+                parent.removeChild(item);
+              }
+              return;
+            }
+            var reference;
+            var immediate = getImmediateChild(dropTarget, elementBehindCursor);
+            if (immediate !== null) {
+              reference = getReference(dropTarget, immediate, clientX, clientY);
+            } else if (o.revertOnSpill === true && !_copy) {
+              reference = _initialSibling;
+              dropTarget = _source;
+            } else {
+              if (_copy && parent) {
+                parent.removeChild(item);
+              }
+              return;
+            }
+            if (reference === null && changed || reference !== item && reference !== nextEl(item)) {
+              _currentSibling = reference;
+              dropTarget.insertBefore(item, reference);
+              drake.emit('shadow', item, dropTarget, _source);
+            }
+            function moved(type) {
+              drake.emit(type, item, _lastDropTarget, _source);
+            }
+            function over() {
+              if (changed) {
+                moved('over');
+              }
+            }
+            function out() {
+              if (_lastDropTarget) {
+                moved('out');
+              }
+            }
+          }
+          function spillOver(el) {
+            classes.rm(el, 'gu-hide');
+          }
+          function spillOut(el) {
+            if (drake.dragging) {
+              classes.add(el, 'gu-hide');
+            }
+          }
+          function renderMirrorImage() {
+            if (_mirror) {
+              return;
+            }
+            var rect = _item.getBoundingClientRect();
+            _mirror = _item.cloneNode(true);
+            _mirror.style.width = getRectWidth(rect) + 'px';
+            _mirror.style.height = getRectHeight(rect) + 'px';
+            classes.rm(_mirror, 'gu-transit');
+            classes.add(_mirror, 'gu-mirror');
+            o.mirrorContainer.appendChild(_mirror);
+            touchy(documentElement, 'add', 'mousemove', drag);
+            classes.add(o.mirrorContainer, 'gu-unselectable');
+            drake.emit('cloned', _mirror, _item, 'mirror');
+          }
+          function removeMirrorImage() {
+            if (_mirror) {
+              classes.rm(o.mirrorContainer, 'gu-unselectable');
+              touchy(documentElement, 'remove', 'mousemove', drag);
+              getParent(_mirror).removeChild(_mirror);
+              _mirror = null;
+            }
+          }
+          function getImmediateChild(dropTarget, target) {
+            var immediate = target;
+            while (immediate !== dropTarget && getParent(immediate) !== dropTarget) {
+              immediate = getParent(immediate);
+            }
+            if (immediate === documentElement) {
+              return null;
+            }
+            return immediate;
+          }
+          function getReference(dropTarget, target, x, y) {
+            var horizontal = o.direction === 'horizontal';
+            var reference = target !== dropTarget ? inside() : outside();
+            return reference;
+            function outside() {
+              // slower, but able to figure out any position
+              var len = dropTarget.children.length;
+              var i;
+              var el;
+              var rect;
+              for (i = 0; i < len; i++) {
+                el = dropTarget.children[i];
+                rect = el.getBoundingClientRect();
+                if (horizontal && rect.left + rect.width / 2 > x) {
+                  return el;
+                }
+                if (!horizontal && rect.top + rect.height / 2 > y) {
+                  return el;
+                }
+              }
+              return null;
+            }
+            function inside() {
+              // faster, but only available if dropped inside a child element
+              var rect = target.getBoundingClientRect();
+              if (horizontal) {
+                return resolve(x > rect.left + getRectWidth(rect) / 2);
+              }
+              return resolve(y > rect.top + getRectHeight(rect) / 2);
+            }
+            function resolve(after) {
+              return after ? nextEl(target) : target;
+            }
+          }
+          function isCopy(item, container) {
+            return typeof o.copy === 'boolean' ? o.copy : o.copy(item, container);
+          }
+        }
+        function touchy(el, op, type, fn) {
+          var touch = {
+            mouseup: 'touchend',
+            mousedown: 'touchstart',
+            mousemove: 'touchmove'
+          };
+          var pointers = {
+            mouseup: 'pointerup',
+            mousedown: 'pointerdown',
+            mousemove: 'pointermove'
+          };
+          var microsoft = {
+            mouseup: 'MSPointerUp',
+            mousedown: 'MSPointerDown',
+            mousemove: 'MSPointerMove'
+          };
+          if (global.navigator.pointerEnabled) {
+            crossvent[op](el, pointers[type], fn);
+          } else if (global.navigator.msPointerEnabled) {
+            crossvent[op](el, microsoft[type], fn);
+          } else {
+            crossvent[op](el, touch[type], fn);
+            crossvent[op](el, type, fn);
+          }
+        }
+        function whichMouseButton(e) {
+          if (e.touches !== void 0) {
+            return e.touches.length;
+          }
+          if (e.which !== void 0 && e.which !== 0) {
+            return e.which;
+          } // see https://github.com/bevacqua/dragula/issues/261
+          if (e.buttons !== void 0) {
+            return e.buttons;
+          }
+          var button = e.button;
+          if (button !== void 0) {
+            // see https://github.com/jquery/jquery/blob/99e8ff1baa7ae341e94bb89c3e84570c7c3ad9ea/src/event.js#L573-L575
+            return button & 1 ? 1 : button & 2 ? 3 : button & 4 ? 2 : 0;
+          }
+        }
+        function getOffset(el) {
+          var rect = el.getBoundingClientRect();
+          return {
+            left: rect.left + getScroll('scrollLeft', 'pageXOffset'),
+            top: rect.top + getScroll('scrollTop', 'pageYOffset')
+          };
+        }
+        function getScroll(scrollProp, offsetProp) {
+          if (typeof global[offsetProp] !== 'undefined') {
+            return global[offsetProp];
+          }
+          if (documentElement.clientHeight) {
+            return documentElement[scrollProp];
+          }
+          return doc.body[scrollProp];
+        }
+        function getElementBehindPoint(point, x, y) {
+          point = point || {};
+          var state = point.className || '';
+          var el;
+          point.className += ' gu-hide';
+          el = doc.elementFromPoint(x, y);
+          point.className = state;
+          return el;
+        }
+        function never() {
+          return false;
+        }
+        function always() {
+          return true;
+        }
+        function getRectWidth(rect) {
+          return rect.width || rect.right - rect.left;
+        }
+        function getRectHeight(rect) {
+          return rect.height || rect.bottom - rect.top;
+        }
+        function getParent(el) {
+          return el.parentNode === doc ? null : el.parentNode;
+        }
+        function isInput(el) {
+          return el.tagName === 'INPUT' || el.tagName === 'TEXTAREA' || el.tagName === 'SELECT' || isEditable(el);
+        }
+        function isEditable(el) {
+          if (!el) {
+            return false;
+          } // no parents were editable
+          if (el.contentEditable === 'false') {
+            return false;
+          } // stop the lookup
+          if (el.contentEditable === 'true') {
+            return true;
+          } // found a contentEditable element in the chain
+          return isEditable(getParent(el)); // contentEditable is set to 'inherit'
+        }
+        function nextEl(el) {
+          return el.nextElementSibling || manually();
+          function manually() {
+            var sibling = el;
+            do {
+              sibling = sibling.nextSibling;
+            } while (sibling && sibling.nodeType !== 1);
+            return sibling;
+          }
+        }
+        function getEventHost(e) {
+          // on touchend event, we have to use `e.changedTouches`
+          // see http://stackoverflow.com/questions/7192563/touchend-event-properties
+          // see https://github.com/bevacqua/dragula/issues/34
+          if (e.targetTouches && e.targetTouches.length) {
+            return e.targetTouches[0];
+          }
+          if (e.changedTouches && e.changedTouches.length) {
+            return e.changedTouches[0];
+          }
+          return e;
+        }
+        function getCoord(coord, e) {
+          var host = getEventHost(e);
+          var missMap = {
+            pageX: 'clientX',
+            // IE8
+            pageY: 'clientY' // IE8
+          };
+          if (coord in missMap && !(coord in host) && missMap[coord] in host) {
+            coord = missMap[coord];
+          }
+          return host[coord];
+        }
+        module.exports = dragula;
+      }).call(this);
+    }).call(this, typeof __webpack_require__.g !== "undefined" ? __webpack_require__.g : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {});
+  }, {
+    "./classes": 8,
+    "contra/emitter": 4,
+    "crossvent": 5
+  }],
+  10: [function (require, module, exports) {
+    // shim for using process in browser
+    var process = module.exports = {};
+
+    // cached from whatever global is present so that test runners that stub it
+    // don't break things.  But we need to wrap it in a try catch in case it is
+    // wrapped in strict mode code which doesn't define any globals.  It's inside a
+    // function because try/catches deoptimize in certain engines.
+
+    var cachedSetTimeout;
+    var cachedClearTimeout;
+    function defaultSetTimout() {
+      throw new Error('setTimeout has not been defined');
+    }
+    function defaultClearTimeout() {
+      throw new Error('clearTimeout has not been defined');
+    }
+    (function () {
+      try {
+        if (typeof setTimeout === 'function') {
+          cachedSetTimeout = setTimeout;
+        } else {
+          cachedSetTimeout = defaultSetTimout;
+        }
+      } catch (e) {
+        cachedSetTimeout = defaultSetTimout;
+      }
+      try {
+        if (typeof clearTimeout === 'function') {
+          cachedClearTimeout = clearTimeout;
+        } else {
+          cachedClearTimeout = defaultClearTimeout;
+        }
+      } catch (e) {
+        cachedClearTimeout = defaultClearTimeout;
+      }
+    })();
+    function runTimeout(fun) {
+      if (cachedSetTimeout === setTimeout) {
+        //normal enviroments in sane situations
+        return setTimeout(fun, 0);
+      }
+      // if setTimeout wasn't available but was latter defined
+      if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
+        cachedSetTimeout = setTimeout;
+        return setTimeout(fun, 0);
+      }
+      try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedSetTimeout(fun, 0);
+      } catch (e) {
+        try {
+          // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
+          return cachedSetTimeout.call(null, fun, 0);
+        } catch (e) {
+          // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
+          return cachedSetTimeout.call(this, fun, 0);
+        }
+      }
+    }
+    function runClearTimeout(marker) {
+      if (cachedClearTimeout === clearTimeout) {
+        //normal enviroments in sane situations
+        return clearTimeout(marker);
+      }
+      // if clearTimeout wasn't available but was latter defined
+      if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
+        cachedClearTimeout = clearTimeout;
+        return clearTimeout(marker);
+      }
+      try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedClearTimeout(marker);
+      } catch (e) {
+        try {
+          // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
+          return cachedClearTimeout.call(null, marker);
+        } catch (e) {
+          // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
+          // Some versions of I.E. have different rules for clearTimeout vs setTimeout
+          return cachedClearTimeout.call(this, marker);
+        }
+      }
+    }
+    var queue = [];
+    var draining = false;
+    var currentQueue;
+    var queueIndex = -1;
+    function cleanUpNextTick() {
+      if (!draining || !currentQueue) {
+        return;
+      }
+      draining = false;
+      if (currentQueue.length) {
+        queue = currentQueue.concat(queue);
+      } else {
+        queueIndex = -1;
+      }
+      if (queue.length) {
+        drainQueue();
+      }
+    }
+    function drainQueue() {
+      if (draining) {
+        return;
+      }
+      var timeout = runTimeout(cleanUpNextTick);
+      draining = true;
+      var len = queue.length;
+      while (len) {
+        currentQueue = queue;
+        queue = [];
+        while (++queueIndex < len) {
+          if (currentQueue) {
+            currentQueue[queueIndex].run();
+          }
+        }
+        queueIndex = -1;
+        len = queue.length;
+      }
+      currentQueue = null;
+      draining = false;
+      runClearTimeout(timeout);
+    }
+    process.nextTick = function (fun) {
+      var args = new Array(arguments.length - 1);
+      if (arguments.length > 1) {
+        for (var i = 1; i < arguments.length; i++) {
+          args[i - 1] = arguments[i];
+        }
+      }
+      queue.push(new Item(fun, args));
+      if (queue.length === 1 && !draining) {
+        runTimeout(drainQueue);
+      }
+    };
+
+    // v8 likes predictible objects
+    function Item(fun, array) {
+      this.fun = fun;
+      this.array = array;
+    }
+    Item.prototype.run = function () {
+      this.fun.apply(null, this.array);
+    };
+    process.title = 'browser';
+    process.browser = true;
+    process.env = {};
+    process.argv = [];
+    process.version = ''; // empty string to avoid regexp issues
+    process.versions = {};
+    function noop() {}
+    process.on = noop;
+    process.addListener = noop;
+    process.once = noop;
+    process.off = noop;
+    process.removeListener = noop;
+    process.removeAllListeners = noop;
+    process.emit = noop;
+    process.prependListener = noop;
+    process.prependOnceListener = noop;
+    process.listeners = function (name) {
+      return [];
+    };
+    process.binding = function (name) {
+      throw new Error('process.binding is not supported');
+    };
+    process.cwd = function () {
+      return '/';
+    };
+    process.chdir = function (dir) {
+      throw new Error('process.chdir is not supported');
+    };
+    process.umask = function () {
+      return 0;
+    };
+  }, {}],
+  11: [function (require, module, exports) {
+    (function (setImmediate) {
+      (function () {
+        var si = typeof setImmediate === 'function',
+          tick;
+        if (si) {
+          tick = function tick(fn) {
+            setImmediate(fn);
+          };
+        } else {
+          tick = function tick(fn) {
+            setTimeout(fn, 0);
+          };
+        }
+        module.exports = tick;
+      }).call(this);
+    }).call(this, require("timers").setImmediate);
+  }, {
+    "timers": 12
+  }],
+  12: [function (require, module, exports) {
+    (function (setImmediate, clearImmediate) {
+      (function () {
+        var nextTick = require('process/browser.js').nextTick;
+        var apply = Function.prototype.apply;
+        var slice = Array.prototype.slice;
+        var immediateIds = {};
+        var nextImmediateId = 0;
+
+        // DOM APIs, for completeness
+
+        exports.setTimeout = function () {
+          return new Timeout(apply.call(setTimeout, window, arguments), clearTimeout);
+        };
+        exports.setInterval = function () {
+          return new Timeout(apply.call(setInterval, window, arguments), clearInterval);
+        };
+        exports.clearTimeout = exports.clearInterval = function (timeout) {
+          timeout.close();
+        };
+        function Timeout(id, clearFn) {
+          this._id = id;
+          this._clearFn = clearFn;
+        }
+        Timeout.prototype.unref = Timeout.prototype.ref = function () {};
+        Timeout.prototype.close = function () {
+          this._clearFn.call(window, this._id);
+        };
+
+        // Does not start the time, just sets up the members needed.
+        exports.enroll = function (item, msecs) {
+          clearTimeout(item._idleTimeoutId);
+          item._idleTimeout = msecs;
+        };
+        exports.unenroll = function (item) {
+          clearTimeout(item._idleTimeoutId);
+          item._idleTimeout = -1;
+        };
+        exports._unrefActive = exports.active = function (item) {
+          clearTimeout(item._idleTimeoutId);
+          var msecs = item._idleTimeout;
+          if (msecs >= 0) {
+            item._idleTimeoutId = setTimeout(function onTimeout() {
+              if (item._onTimeout) item._onTimeout();
+            }, msecs);
+          }
+        };
+
+        // That's not how node.js implements it but the exposed api is the same.
+        exports.setImmediate = typeof setImmediate === "function" ? setImmediate : function (fn) {
+          var id = nextImmediateId++;
+          var args = arguments.length < 2 ? false : slice.call(arguments, 1);
+          immediateIds[id] = true;
+          nextTick(function onNextTick() {
+            if (immediateIds[id]) {
+              // fn.call() is faster so we optimize for the common use-case
+              // @see http://jsperf.com/call-apply-segu
+              if (args) {
+                fn.apply(null, args);
+              } else {
+                fn.call(null);
+              }
+              // Prevent ids from leaking
+              exports.clearImmediate(id);
+            }
+          });
+          return id;
+        };
+        exports.clearImmediate = typeof clearImmediate === "function" ? clearImmediate : function (id) {
+          delete immediateIds[id];
+        };
+      }).call(this);
+    }).call(this, require("timers").setImmediate, require("timers").clearImmediate);
+  }, {
+    "process/browser.js": 10,
+    "timers": 12
+  }]
+}, {}, [1]);
+
+/***/ }),
+
+/***/ "./resources/js/kanban/config/jkanban.min.js":
+/*!***************************************************!*\
+  !*** ./resources/js/kanban/config/jkanban.min.js ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+!function () {
+  return function e(t, n, o) {
+    function i(a, c) {
+      if (!n[a]) {
+        if (!t[a]) {
+          var d = undefined;
+          if (!c && d) return require(a, !0);
+          if (r) return r(a, !0);
+          var s = new Error("Cannot find module '" + a + "'");
+          throw s.code = "MODULE_NOT_FOUND", s;
+        }
+        var l = n[a] = {
+          exports: {}
+        };
+        t[a][0].call(l.exports, function (e) {
+          return i(t[a][1][e] || e);
+        }, l, l.exports, e, t, n, o);
+      }
+      return n[a].exports;
+    }
+    for (var r = undefined, a = 0; a < o.length; a++) i(o[a]);
+    return i;
+  };
+}()({
+  1: [function (e, t, n) {
+    var o = e("dragula");
+    !function () {
+      this.jKanban = function () {
+        var e = this,
+          t = {
+            enabled: !1
+          },
+          n = {
+            enabled: !1
+          };
+        this._disallowedItemProperties = ["id", "title", "click", "context", "drag", "dragend", "drop", "order"], this.element = "", this.container = "", this.boardContainer = [], this.handlers = [], this.dragula = o, this.drake = "", this.drakeBoard = "", this.itemAddOptions = n, this.itemHandleOptions = t;
+        var i = {
+          element: "",
+          gutter: "15px",
+          widthBoard: "250px",
+          responsive: "700",
+          responsivePercentage: !1,
+          boards: [],
+          dragBoards: !0,
+          dragItems: !0,
+          itemAddOptions: n,
+          itemHandleOptions: t,
+          dragEl: function dragEl(e, t) {},
+          dragendEl: function dragendEl(e) {},
+          dropEl: function dropEl(e, t, n, o) {},
+          dragBoard: function dragBoard(e, t) {},
+          dragendBoard: function dragendBoard(e) {},
+          dropBoard: function dropBoard(e, t, n, o) {},
+          click: function click(e) {},
+          context: function context(e, t) {},
+          buttonClick: function buttonClick(e, t) {},
+          propagationHandlers: []
+        };
+        function r(t, n) {
+          t.addEventListener("click", function (t) {
+            e.options.propagationHandlers.includes("click") || t.preventDefault(), e.options.click(this), "function" == typeof this.clickfn && this.clickfn(this);
+          });
+        }
+        function a(t, n) {
+          t.addEventListener ? t.addEventListener("contextmenu", function (t) {
+            e.options.propagationHandlers.includes("context") || t.preventDefault(), e.options.context(this, t), "function" == typeof this.contextfn && this.contextfn(this, t);
+          }, !1) : t.attachEvent("oncontextmenu", function () {
+            e.options.context(this), "function" == typeof this.contextfn && this.contextfn(this), e.options.propagationHandlers.includes("context") || (window.event.returnValue = !1);
+          });
+        }
+        function c(t, n) {
+          t.addEventListener("click", function (t) {
+            t.preventDefault(), e.options.buttonClick(this, n);
+          });
+        }
+        function d(t) {
+          var n = [];
+          return e.options.boards.map(function (e) {
+            if (e.id === t) return n.push(e);
+          }), n[0];
+        }
+        function s(t, n) {
+          for (var o in n) e._disallowedItemProperties.indexOf(o) > -1 || t.setAttribute("data-" + o, n[o]);
+        }
+        function l(t) {
+          var n = "title" in t ? t.title : "";
+          if (e.options.itemHandleOptions.enabled) {
+            if (void 0 !== (e.options.itemHandleOptions.customHandler || void 0)) return n = "<div> " + e.options.itemHandleOptions.customHandler.replace(/%([^%]+)%/g, function (e, n) {
+              return void 0 !== t[n] ? t[n] : "";
+            }) + " </div>";
+            var o = e.options.itemHandleOptions.customCssHandler,
+              i = e.options.itemHandleOptions.customCssIconHandler,
+              r = e.options.itemHandleOptions.customItemLayout;
+            void 0 === (o || void 0) && (o = "drag_handler"), void 0 === (i || void 0) && (i = o + "_icon"), void 0 === (r || void 0) && (r = ""), n = "<div class='item_handle " + o + "'><i class='item_handle " + i + "'></i></div><div>" + n + "</div>";
+          }
+          return n;
+        }
+        arguments[0] && "object" == _typeof(arguments[0]) && (this.options = function (e, t) {
+          var n;
+          for (n in t) t.hasOwnProperty(n) && (e[n] = t[n]);
+          return e;
+        }(i, arguments[0])), this.__getCanMove = function (t) {
+          return e.options.itemHandleOptions.enabled ? e.options.itemHandleOptions.handleClass ? t.classList.contains(e.options.itemHandleOptions.handleClass) : t.classList.contains("item_handle") : !!e.options.dragItems;
+        }, this.init = function () {
+          !function () {
+            e.element = document.querySelector(e.options.element);
+            var t = document.createElement("div");
+            t.classList.add("kanban-container"), e.container = t, document.querySelector(e.options.element).dataset.hasOwnProperty("board") ? (url = document.querySelector(e.options.element).dataset.board, window.fetch(url, {
+              method: "GET",
+              headers: {
+                "Content-Type": "application/json"
+              }
+            }).then(function (t) {
+              t.json().then(function (t) {
+                e.options.boards = t, e.addBoards(e.options.boards, !0);
+              });
+            })["catch"](function (e) {
+              console.log("Error: ", e);
+            })) : e.addBoards(e.options.boards, !0);
+            e.element.appendChild(e.container);
+          }(), window.innerWidth > e.options.responsive && (e.drakeBoard = e.dragula([e.container], {
+            moves: function moves(t, n, o, i) {
+              return !!e.options.dragBoards && (o.classList.contains("kanban-board-header") || o.classList.contains("kanban-title-board"));
+            },
+            accepts: function accepts(e, t, n, o) {
+              return t.classList.contains("kanban-container");
+            },
+            revertOnSpill: !0,
+            direction: "horizontal"
+          }).on("drag", function (t, n) {
+            t.classList.add("is-moving"), e.options.dragBoard(t, n), "function" == typeof t.dragfn && t.dragfn(t, n);
+          }).on("dragend", function (t) {
+            !function () {
+              for (var t = 1, n = 0; n < e.container.childNodes.length; n++) e.container.childNodes[n].dataset.order = t++;
+            }(), t.classList.remove("is-moving"), e.options.dragendBoard(t), "function" == typeof t.dragendfn && t.dragendfn(t);
+          }).on("drop", function (t, n, o, i) {
+            t.classList.remove("is-moving"), e.options.dropBoard(t, n, o, i), "function" == typeof t.dropfn && t.dropfn(t, n, o, i);
+          }), e.drake = e.dragula(e.boardContainer, {
+            moves: function moves(t, n, o, i) {
+              return e.__getCanMove(o);
+            },
+            revertOnSpill: !0
+          }).on("cancel", function (t, n, o) {
+            e.enableAllBoards();
+          }).on("drag", function (t, n) {
+            var o = t.getAttribute("class");
+            if ("" !== o && o.indexOf("not-draggable") > -1) e.drake.cancel(!0);else {
+              t.classList.add("is-moving"), e.options.dragEl(t, n);
+              var i = d(n.parentNode.dataset.id);
+              void 0 !== i.dragTo && e.options.boards.map(function (t) {
+                -1 === i.dragTo.indexOf(t.id) && t.id !== n.parentNode.dataset.id && e.findBoard(t.id).classList.add("disabled-board");
+              }), null !== t && "function" == typeof t.dragfn && t.dragfn(t, n);
+            }
+          }).on("dragend", function (t) {
+            e.options.dragendEl(t), null !== t && "function" == typeof t.dragendfn && t.dragendfn(t);
+          }).on("drop", function (t, n, o, i) {
+            e.enableAllBoards();
+            var r = d(o.parentNode.dataset.id);
+            (void 0 !== r.dragTo && -1 === r.dragTo.indexOf(n.parentNode.dataset.id) && n.parentNode.dataset.id !== o.parentNode.dataset.id && e.drake.cancel(!0), null !== t) && (!1 === e.options.dropEl(t, n, o, i) && e.drake.cancel(!0), t.classList.remove("is-moving"), "function" == typeof t.dropfn && t.dropfn(t, n, o, i));
+          }));
+        }, this.enableAllBoards = function () {
+          var e = document.querySelectorAll(".kanban-board");
+          if (e.length > 0 && void 0 !== e) for (var t = 0; t < e.length; t++) e[t].classList.remove("disabled-board");
+        }, this.addElement = function (t, n, o) {
+          void 0 === o && (o = -1);
+          var i = e.element.querySelector('[data-id="' + t + '"] .kanban-drag'),
+            c = i.childNodes[o],
+            d = document.createElement("div");
+          return d.classList.add("kanban-item"), void 0 !== n.id && "" !== n.id && d.setAttribute("data-eid", n.id), n["class"] && Array.isArray(n["class"]) && n["class"].forEach(function (e) {
+            d.classList.add(e);
+          }), d.innerHTML = l(n), d.clickfn = n.click, d.contextfn = n.context, d.dragfn = n.drag, d.dragendfn = n.dragend, d.dropfn = n.drop, s(d, n), r(d), a(d), e.options.itemHandleOptions.enabled && (d.style.cursor = "default"), i.insertBefore(d, c), e;
+        }, this.addForm = function (t, n) {
+          var o = e.element.querySelector('[data-id="' + t + '"] .kanban-drag'),
+            i = n.getAttribute("class");
+          return n.setAttribute("class", i + " not-draggable"), o.appendChild(n), e;
+        }, this.addBoards = function (t, n) {
+          if (e.options.responsivePercentage) {
+            if (e.container.style.width = "100%", e.options.gutter = "1%", window.innerWidth > e.options.responsive) var o = (100 - 2 * t.length) / t.length;else o = 100 - 2 * t.length;
+          } else o = e.options.widthBoard;
+          var i = e.options.itemAddOptions.enabled,
+            d = e.options.itemAddOptions.content,
+            u = e.options.itemAddOptions["class"],
+            f = e.options.itemAddOptions.footer;
+          for (var p in t) {
+            var v = t[p];
+            n || e.options.boards.push(v), e.options.responsivePercentage || ("" === e.container.style.width ? e.container.style.width = parseInt(o) + 2 * parseInt(e.options.gutter) + "px" : e.container.style.width = parseInt(e.container.style.width) + parseInt(o) + 2 * parseInt(e.options.gutter) + "px");
+            var m = document.createElement("div");
+            m.dataset.id = v.id, m.dataset.order = e.container.childNodes.length + 1, m.classList.add("kanban-board"), e.options.responsivePercentage ? m.style.width = o + "%" : m.style.width = o, m.style.marginLeft = e.options.gutter, m.style.marginRight = e.options.gutter;
+            var h = document.createElement("header");
+            if ("" !== v["class"] && void 0 !== v["class"]) var g = v["class"].split(",");else g = [];
+            h.classList.add("kanban-board-header"), g.map(function (e) {
+              e = e.replace(/^[ ]+/g, ""), h.classList.add(e);
+            }), h.innerHTML = '<div class="kanban-title-board">' + v.title + "</div>";
+            var y = document.createElement("main");
+            if (y.classList.add("kanban-drag"), "" !== v.bodyClass && void 0 !== v.bodyClass) var b = v.bodyClass.split(",");else b = [];
+            for (var w in b.map(function (e) {
+              y.classList.add(e);
+            }), e.boardContainer.push(y), v.item) {
+              var E = v.item[w],
+                T = document.createElement("div");
+              T.classList.add("kanban-item"), E.id && (T.dataset.eid = E.id), E["class"] && Array.isArray(E["class"]) && E["class"].forEach(function (e) {
+                T.classList.add(e);
+              }), T.innerHTML = l(E), T.clickfn = E.click, T.contextfn = E.context, T.dragfn = E.drag, T.dragendfn = E.dragend, T.dropfn = E.drop, s(T, E), r(T), a(T), e.options.itemHandleOptions.enabled && (T.style.cursor = "default"), y.appendChild(T);
+            }
+            var x = document.createElement("footer");
+            if (i) {
+              var C = document.createElement("BUTTON"),
+                O = document.createTextNode(d || "+");
+              C.setAttribute("class", u || "kanban-title-button btn btn-default btn-xs"), C.appendChild(O), f ? x.appendChild(C) : h.appendChild(C), c(C, v.id);
+            }
+            m.appendChild(h), m.appendChild(y), m.appendChild(x), e.container.appendChild(m);
+          }
+          return e;
+        }, this.findBoard = function (t) {
+          return e.element.querySelector('[data-id="' + t + '"]');
+        }, this.getParentBoardID = function (t) {
+          return "string" == typeof t && (t = e.element.querySelector('[data-eid="' + t + '"]')), null === t ? null : t.parentNode.parentNode.dataset.id;
+        }, this.moveElement = function (e, t, n) {
+          if (e !== this.getParentBoardID(t)) return this.removeElement(t), this.addElement(e, n);
+        }, this.replaceElement = function (t, n) {
+          var o = t;
+          return "string" == typeof o && (o = e.element.querySelector('[data-eid="' + t + '"]')), o.innerHTML = l(n), o.clickfn = n.click, o.contextfn = n.context, o.dragfn = n.drag, o.dragendfn = n.dragend, o.dropfn = n.drop, s(o, n), r(o), a(o), e;
+        }, this.findElement = function (t) {
+          return e.element.querySelector('[data-eid="' + t + '"]');
+        }, this.getBoardElements = function (t) {
+          return e.element.querySelector('[data-id="' + t + '"] .kanban-drag').childNodes;
+        }, this.removeElement = function (t) {
+          return "string" == typeof t && (t = e.element.querySelector('[data-eid="' + t + '"]')), null !== t && ("function" == typeof t.remove ? t.remove() : t.parentNode.removeChild(t)), e;
+        }, this.removeBoard = function (t) {
+          var n = null;
+          "string" == typeof t && (n = e.element.querySelector('[data-id="' + t + '"]')), null !== n && ("function" == typeof n.remove ? n.remove() : n.parentNode.removeChild(n));
+          for (var o = 0; o < e.options.boards.length; o++) if (e.options.boards[o].id === t) {
+            e.options.boards.splice(o, 1);
+            break;
+          }
+          return e;
+        }, this.onButtonClick = function (e) {}, this.init();
+      };
+    }();
+  }, {
+    dragula: 9
+  }],
+  2: [function (e, t, n) {
+    t.exports = function (e, t) {
+      return Array.prototype.slice.call(e, t);
+    };
+  }, {}],
+  3: [function (e, t, n) {
+    "use strict";
+
+    var o = e("ticky");
+    t.exports = function (e, t, n) {
+      e && o(function () {
+        e.apply(n || null, t || []);
+      });
+    };
+  }, {
+    ticky: 11
+  }],
+  4: [function (e, t, n) {
+    "use strict";
+
+    var o = e("atoa"),
+      i = e("./debounce");
+    t.exports = function (e, t) {
+      var n = t || {},
+        r = {};
+      return void 0 === e && (e = {}), e.on = function (t, n) {
+        return r[t] ? r[t].push(n) : r[t] = [n], e;
+      }, e.once = function (t, n) {
+        return n._once = !0, e.on(t, n), e;
+      }, e.off = function (t, n) {
+        var o = arguments.length;
+        if (1 === o) delete r[t];else if (0 === o) r = {};else {
+          var i = r[t];
+          if (!i) return e;
+          i.splice(i.indexOf(n), 1);
+        }
+        return e;
+      }, e.emit = function () {
+        var t = o(arguments);
+        return e.emitterSnapshot(t.shift()).apply(this, t);
+      }, e.emitterSnapshot = function (t) {
+        var a = (r[t] || []).slice(0);
+        return function () {
+          var r = o(arguments),
+            c = this || e;
+          if ("error" === t && !1 !== n["throws"] && !a.length) throw 1 === r.length ? r[0] : r;
+          return a.forEach(function (o) {
+            n.async ? i(o, r, c) : o.apply(c, r), o._once && e.off(t, o);
+          }), e;
+        };
+      }, e;
+    };
+  }, {
+    "./debounce": 3,
+    atoa: 2
+  }],
+  5: [function (e, t, n) {
+    (function (n) {
+      (function () {
+        "use strict";
+
+        var o = e("custom-event"),
+          i = e("./eventmap"),
+          r = n.document,
+          a = function a(e, t, n, o) {
+            return e.addEventListener(t, n, o);
+          },
+          c = function c(e, t, n, o) {
+            return e.removeEventListener(t, n, o);
+          },
+          d = [];
+        function s(e, t, n) {
+          var o = function (e, t, n) {
+            var o, i;
+            for (o = 0; o < d.length; o++) if ((i = d[o]).element === e && i.type === t && i.fn === n) return o;
+          }(e, t, n);
+          if (o) {
+            var i = d[o].wrapper;
+            return d.splice(o, 1), i;
+          }
+        }
+        n.addEventListener || (a = function a(e, t, o) {
+          return e.attachEvent("on" + t, function (e, t, o) {
+            var i = s(e, t, o) || function (e, t, o) {
+              return function (t) {
+                var i = t || n.event;
+                i.target = i.target || i.srcElement, i.preventDefault = i.preventDefault || function () {
+                  i.returnValue = !1;
+                }, i.stopPropagation = i.stopPropagation || function () {
+                  i.cancelBubble = !0;
+                }, i.which = i.which || i.keyCode, o.call(e, i);
+              };
+            }(e, 0, o);
+            return d.push({
+              wrapper: i,
+              element: e,
+              type: t,
+              fn: o
+            }), i;
+          }(e, t, o));
+        }, c = function c(e, t, n) {
+          var o = s(e, t, n);
+          if (o) return e.detachEvent("on" + t, o);
+        }), t.exports = {
+          add: a,
+          remove: c,
+          fabricate: function fabricate(e, t, n) {
+            var a = -1 === i.indexOf(t) ? new o(t, {
+              detail: n
+            }) : function () {
+              var e;
+              r.createEvent ? (e = r.createEvent("Event")).initEvent(t, !0, !0) : r.createEventObject && (e = r.createEventObject());
+              return e;
+            }();
+            e.dispatchEvent ? e.dispatchEvent(a) : e.fireEvent("on" + t, a);
+          }
+        };
+      }).call(this);
+    }).call(this, "undefined" != typeof __webpack_require__.g ? __webpack_require__.g : "undefined" != typeof self ? self : "undefined" != typeof window ? window : {});
+  }, {
+    "./eventmap": 6,
+    "custom-event": 7
+  }],
+  6: [function (e, t, n) {
+    (function (e) {
+      (function () {
+        "use strict";
+
+        var n = [],
+          o = "",
+          i = /^on/;
+        for (o in e) i.test(o) && n.push(o.slice(2));
+        t.exports = n;
+      }).call(this);
+    }).call(this, "undefined" != typeof __webpack_require__.g ? __webpack_require__.g : "undefined" != typeof self ? self : "undefined" != typeof window ? window : {});
+  }, {}],
+  7: [function (e, t, n) {
+    (function (e) {
+      (function () {
+        var n = e.CustomEvent;
+        t.exports = function () {
+          try {
+            var e = new n("cat", {
+              detail: {
+                foo: "bar"
+              }
+            });
+            return "cat" === e.type && "bar" === e.detail.foo;
+          } catch (e) {}
+          return !1;
+        }() ? n : "undefined" != typeof document && "function" == typeof document.createEvent ? function (e, t) {
+          var n = document.createEvent("CustomEvent");
+          return t ? n.initCustomEvent(e, t.bubbles, t.cancelable, t.detail) : n.initCustomEvent(e, !1, !1, void 0), n;
+        } : function (e, t) {
+          var n = document.createEventObject();
+          return n.type = e, t ? (n.bubbles = Boolean(t.bubbles), n.cancelable = Boolean(t.cancelable), n.detail = t.detail) : (n.bubbles = !1, n.cancelable = !1, n.detail = void 0), n;
+        };
+      }).call(this);
+    }).call(this, "undefined" != typeof __webpack_require__.g ? __webpack_require__.g : "undefined" != typeof self ? self : "undefined" != typeof window ? window : {});
+  }, {}],
+  8: [function (e, t, n) {
+    "use strict";
+
+    var o = {},
+      i = "(?:^|\\s)",
+      r = "(?:\\s|$)";
+    function a(e) {
+      var t = o[e];
+      return t ? t.lastIndex = 0 : o[e] = t = new RegExp(i + e + r, "g"), t;
+    }
+    t.exports = {
+      add: function add(e, t) {
+        var n = e.className;
+        n.length ? a(t).test(n) || (e.className += " " + t) : e.className = t;
+      },
+      rm: function rm(e, t) {
+        e.className = e.className.replace(a(t), " ").trim();
+      }
+    };
+  }, {}],
+  9: [function (e, t, n) {
+    (function (n) {
+      (function () {
+        "use strict";
+
+        var o = e("contra/emitter"),
+          i = e("crossvent"),
+          r = e("./classes"),
+          a = document,
+          c = a.documentElement;
+        function d(e, t, o, r) {
+          n.navigator.pointerEnabled ? i[t](e, {
+            mouseup: "pointerup",
+            mousedown: "pointerdown",
+            mousemove: "pointermove"
+          }[o], r) : n.navigator.msPointerEnabled ? i[t](e, {
+            mouseup: "MSPointerUp",
+            mousedown: "MSPointerDown",
+            mousemove: "MSPointerMove"
+          }[o], r) : (i[t](e, {
+            mouseup: "touchend",
+            mousedown: "touchstart",
+            mousemove: "touchmove"
+          }[o], r), i[t](e, o, r));
+        }
+        function s(e) {
+          if (void 0 !== e.touches) return e.touches.length;
+          if (void 0 !== e.which && 0 !== e.which) return e.which;
+          if (void 0 !== e.buttons) return e.buttons;
+          var t = e.button;
+          return void 0 !== t ? 1 & t ? 1 : 2 & t ? 3 : 4 & t ? 2 : 0 : void 0;
+        }
+        function l(e, t) {
+          return void 0 !== n[t] ? n[t] : c.clientHeight ? c[e] : a.body[e];
+        }
+        function u(e, t, n) {
+          var o,
+            i = (e = e || {}).className || "";
+          return e.className += " gu-hide", o = a.elementFromPoint(t, n), e.className = i, o;
+        }
+        function f() {
+          return !1;
+        }
+        function p() {
+          return !0;
+        }
+        function v(e) {
+          return e.width || e.right - e.left;
+        }
+        function m(e) {
+          return e.height || e.bottom - e.top;
+        }
+        function h(e) {
+          return e.parentNode === a ? null : e.parentNode;
+        }
+        function g(e) {
+          return "INPUT" === e.tagName || "TEXTAREA" === e.tagName || "SELECT" === e.tagName || function e(t) {
+            if (!t) return !1;
+            if ("false" === t.contentEditable) return !1;
+            if ("true" === t.contentEditable) return !0;
+            return e(h(t));
+          }(e);
+        }
+        function y(e) {
+          return e.nextElementSibling || function () {
+            var t = e;
+            do {
+              t = t.nextSibling;
+            } while (t && 1 !== t.nodeType);
+            return t;
+          }();
+        }
+        function b(e, t) {
+          var n = function (e) {
+              return e.targetTouches && e.targetTouches.length ? e.targetTouches[0] : e.changedTouches && e.changedTouches.length ? e.changedTouches[0] : e;
+            }(t),
+            o = {
+              pageX: "clientX",
+              pageY: "clientY"
+            };
+          return e in o && !(e in n) && o[e] in n && (e = o[e]), n[e];
+        }
+        t.exports = function (e, t) {
+          var n, w, E, T, x, C, O, k, S, L, B;
+          1 === arguments.length && !1 === Array.isArray(e) && (t = e, e = []);
+          var N,
+            I = null,
+            A = t || {};
+          void 0 === A.moves && (A.moves = p), void 0 === A.accepts && (A.accepts = p), void 0 === A.invalid && (A.invalid = function () {
+            return !1;
+          }), void 0 === A.containers && (A.containers = e || []), void 0 === A.isContainer && (A.isContainer = f), void 0 === A.copy && (A.copy = !1), void 0 === A.copySortSource && (A.copySortSource = !1), void 0 === A.revertOnSpill && (A.revertOnSpill = !1), void 0 === A.removeOnSpill && (A.removeOnSpill = !1), void 0 === A.direction && (A.direction = "vertical"), void 0 === A.ignoreInputTextSelection && (A.ignoreInputTextSelection = !0), void 0 === A.mirrorContainer && (A.mirrorContainer = a.body);
+          var _ = o({
+            containers: A.containers,
+            start: function start(e) {
+              var t = j(e);
+              t && F(t);
+            },
+            end: R,
+            cancel: W,
+            remove: V,
+            destroy: function destroy() {
+              P(!0), K({});
+            },
+            canMove: function canMove(e) {
+              return !!j(e);
+            },
+            dragging: !1
+          });
+          return !0 === A.removeOnSpill && _.on("over", function (e) {
+            r.rm(e, "gu-hide");
+          }).on("out", function (e) {
+            _.dragging && r.add(e, "gu-hide");
+          }), P(), _;
+          function H(e) {
+            return -1 !== _.containers.indexOf(e) || A.isContainer(e);
+          }
+          function P(e) {
+            var t = e ? "remove" : "add";
+            d(c, t, "mousedown", X), d(c, t, "mouseup", K);
+          }
+          function q(e) {
+            d(c, e ? "remove" : "add", "mousemove", Y);
+          }
+          function M(e) {
+            var t = e ? "remove" : "add";
+            i[t](c, "selectstart", D), i[t](c, "click", D);
+          }
+          function D(e) {
+            N && e.preventDefault();
+          }
+          function X(e) {
+            if (C = e.clientX, O = e.clientY, 1 === s(e) && !e.metaKey && !e.ctrlKey) {
+              var t = e.target,
+                n = j(t);
+              n && (N = n, q(), "mousedown" === e.type && (g(t) ? t.focus() : e.preventDefault()));
+            }
+          }
+          function Y(e) {
+            if (N) if (0 !== s(e)) {
+              if (!(void 0 !== e.clientX && Math.abs(e.clientX - C) <= (A.slideFactorX || 0) && void 0 !== e.clientY && Math.abs(e.clientY - O) <= (A.slideFactorY || 0))) {
+                if (A.ignoreInputTextSelection) {
+                  var t = b("clientX", e) || 0,
+                    o = b("clientY", e) || 0;
+                  if (g(a.elementFromPoint(t, o))) return;
+                }
+                var i = N;
+                q(!0), M(), R(), F(i);
+                var u,
+                  f = {
+                    left: (u = E.getBoundingClientRect()).left + l("scrollLeft", "pageXOffset"),
+                    top: u.top + l("scrollTop", "pageYOffset")
+                  };
+                T = b("pageX", e) - f.left, x = b("pageY", e) - f.top, r.add(L || E, "gu-transit"), function () {
+                  if (!n) {
+                    var e = E.getBoundingClientRect();
+                    (n = E.cloneNode(!0)).style.width = v(e) + "px", n.style.height = m(e) + "px", r.rm(n, "gu-transit"), r.add(n, "gu-mirror"), A.mirrorContainer.appendChild(n), d(c, "add", "mousemove", Q), r.add(A.mirrorContainer, "gu-unselectable"), _.emit("cloned", n, E, "mirror");
+                  }
+                }(), Q(e);
+              }
+            } else K({});
+          }
+          function j(e) {
+            if (!(_.dragging && n || H(e))) {
+              for (var t = e; h(e) && !1 === H(h(e));) {
+                if (A.invalid(e, t)) return;
+                if (!(e = h(e))) return;
+              }
+              var o = h(e);
+              if (o && !A.invalid(e, t) && A.moves(e, o, t, y(e))) return {
+                item: e,
+                source: o
+              };
+            }
+          }
+          function F(e) {
+            var t, n;
+            t = e.item, n = e.source, ("boolean" == typeof A.copy ? A.copy : A.copy(t, n)) && (L = e.item.cloneNode(!0), _.emit("cloned", L, e.item, "copy")), w = e.source, E = e.item, k = S = y(e.item), _.dragging = !0, _.emit("drag", E, w);
+          }
+          function R() {
+            if (_.dragging) {
+              var e = L || E;
+              z(e, h(e));
+            }
+          }
+          function U() {
+            N = !1, q(!0), M(!0);
+          }
+          function K(e) {
+            if (U(), _.dragging) {
+              var t = L || E,
+                o = b("clientX", e) || 0,
+                i = b("clientY", e) || 0,
+                r = J(u(n, o, i), o, i);
+              r && (L && A.copySortSource || !L || r !== w) ? z(t, r) : A.removeOnSpill ? V() : W();
+            }
+          }
+          function z(e, t) {
+            var n = h(e);
+            L && A.copySortSource && t === w && n.removeChild(E), $(t) ? _.emit("cancel", e, w, w) : _.emit("drop", e, t, w, S), G();
+          }
+          function V() {
+            if (_.dragging) {
+              var e = L || E,
+                t = h(e);
+              t && t.removeChild(e), _.emit(L ? "cancel" : "remove", e, t, w), G();
+            }
+          }
+          function W(e) {
+            if (_.dragging) {
+              var t = arguments.length > 0 ? e : A.revertOnSpill,
+                n = L || E,
+                o = h(n),
+                i = $(o);
+              !1 === i && t && (L ? o && o.removeChild(L) : w.insertBefore(n, k)), i || t ? _.emit("cancel", n, w, w) : _.emit("drop", n, o, w, S), G();
+            }
+          }
+          function G() {
+            var e = L || E;
+            U(), n && (r.rm(A.mirrorContainer, "gu-unselectable"), d(c, "remove", "mousemove", Q), h(n).removeChild(n), n = null), e && r.rm(e, "gu-transit"), B && clearTimeout(B), _.dragging = !1, I && _.emit("out", e, I, w), _.emit("dragend", e), w = E = L = k = S = B = I = null;
+          }
+          function $(e, t) {
+            var o;
+            return o = void 0 !== t ? t : n ? S : y(L || E), e === w && o === k;
+          }
+          function J(e, t, n) {
+            for (var o = e; o && !i();) o = h(o);
+            return o;
+            function i() {
+              if (!1 === H(o)) return !1;
+              var i = Z(o, e),
+                r = ee(o, i, t, n);
+              return !!$(o, r) || A.accepts(E, o, w, r);
+            }
+          }
+          function Q(e) {
+            if (n) {
+              e.preventDefault();
+              var t = b("clientX", e) || 0,
+                o = b("clientY", e) || 0,
+                i = t - T,
+                r = o - x;
+              n.style.left = i + "px", n.style.top = r + "px";
+              var a = L || E,
+                c = u(n, t, o),
+                d = J(c, t, o),
+                s = null !== d && d !== I;
+              (s || null === d) && (I && v("out"), I = d, s && v("over"));
+              var l = h(a);
+              if (d !== w || !L || A.copySortSource) {
+                var f,
+                  p = Z(d, c);
+                if (null !== p) f = ee(d, p, t, o);else {
+                  if (!0 !== A.revertOnSpill || L) return void (L && l && l.removeChild(a));
+                  f = k, d = w;
+                }
+                (null === f && s || f !== a && f !== y(a)) && (S = f, d.insertBefore(a, f), _.emit("shadow", a, d, w));
+              } else l && l.removeChild(a);
+            }
+            function v(e) {
+              _.emit(e, a, I, w);
+            }
+          }
+          function Z(e, t) {
+            for (var n = t; n !== e && h(n) !== e;) n = h(n);
+            return n === c ? null : n;
+          }
+          function ee(e, t, n, o) {
+            var i,
+              r = "horizontal" === A.direction;
+            return t !== e ? (i = t.getBoundingClientRect(), a(r ? n > i.left + v(i) / 2 : o > i.top + m(i) / 2)) : function () {
+              var t,
+                i,
+                a,
+                c = e.children.length;
+              for (t = 0; t < c; t++) {
+                if (i = e.children[t], a = i.getBoundingClientRect(), r && a.left + a.width / 2 > n) return i;
+                if (!r && a.top + a.height / 2 > o) return i;
+              }
+              return null;
+            }();
+            function a(e) {
+              return e ? y(t) : t;
+            }
+          }
+        };
+      }).call(this);
+    }).call(this, "undefined" != typeof __webpack_require__.g ? __webpack_require__.g : "undefined" != typeof self ? self : "undefined" != typeof window ? window : {});
+  }, {
+    "./classes": 8,
+    "contra/emitter": 4,
+    crossvent: 5
+  }],
+  10: [function (e, t, n) {
+    var o,
+      i,
+      r = t.exports = {};
+    function a() {
+      throw new Error("setTimeout has not been defined");
+    }
+    function c() {
+      throw new Error("clearTimeout has not been defined");
+    }
+    function d(e) {
+      if (o === setTimeout) return setTimeout(e, 0);
+      if ((o === a || !o) && setTimeout) return o = setTimeout, setTimeout(e, 0);
+      try {
+        return o(e, 0);
+      } catch (t) {
+        try {
+          return o.call(null, e, 0);
+        } catch (t) {
+          return o.call(this, e, 0);
+        }
+      }
+    }
+    !function () {
+      try {
+        o = "function" == typeof setTimeout ? setTimeout : a;
+      } catch (e) {
+        o = a;
+      }
+      try {
+        i = "function" == typeof clearTimeout ? clearTimeout : c;
+      } catch (e) {
+        i = c;
+      }
+    }();
+    var s,
+      l = [],
+      u = !1,
+      f = -1;
+    function p() {
+      u && s && (u = !1, s.length ? l = s.concat(l) : f = -1, l.length && v());
+    }
+    function v() {
+      if (!u) {
+        var e = d(p);
+        u = !0;
+        for (var t = l.length; t;) {
+          for (s = l, l = []; ++f < t;) s && s[f].run();
+          f = -1, t = l.length;
+        }
+        s = null, u = !1, function (e) {
+          if (i === clearTimeout) return clearTimeout(e);
+          if ((i === c || !i) && clearTimeout) return i = clearTimeout, clearTimeout(e);
+          try {
+            i(e);
+          } catch (t) {
+            try {
+              return i.call(null, e);
+            } catch (t) {
+              return i.call(this, e);
+            }
+          }
+        }(e);
+      }
+    }
+    function m(e, t) {
+      this.fun = e, this.array = t;
+    }
+    function h() {}
+    r.nextTick = function (e) {
+      var t = new Array(arguments.length - 1);
+      if (arguments.length > 1) for (var n = 1; n < arguments.length; n++) t[n - 1] = arguments[n];
+      l.push(new m(e, t)), 1 !== l.length || u || d(v);
+    }, m.prototype.run = function () {
+      this.fun.apply(null, this.array);
+    }, r.title = "browser", r.browser = !0, r.env = {}, r.argv = [], r.version = "", r.versions = {}, r.on = h, r.addListener = h, r.once = h, r.off = h, r.removeListener = h, r.removeAllListeners = h, r.emit = h, r.prependListener = h, r.prependOnceListener = h, r.listeners = function (e) {
+      return [];
+    }, r.binding = function (e) {
+      throw new Error("process.binding is not supported");
+    }, r.cwd = function () {
+      return "/";
+    }, r.chdir = function (e) {
+      throw new Error("process.chdir is not supported");
+    }, r.umask = function () {
+      return 0;
+    };
+  }, {}],
+  11: [function (e, t, n) {
+    (function (e) {
+      (function () {
+        var n;
+        n = "function" == typeof e ? function (t) {
+          e(t);
+        } : function (e) {
+          setTimeout(e, 0);
+        }, t.exports = n;
+      }).call(this);
+    }).call(this, e("timers").setImmediate);
+  }, {
+    timers: 12
+  }],
+  12: [function (e, t, n) {
+    (function (t, o) {
+      (function () {
+        var i = e("process/browser.js").nextTick,
+          r = Function.prototype.apply,
+          a = Array.prototype.slice,
+          c = {},
+          d = 0;
+        function s(e, t) {
+          this._id = e, this._clearFn = t;
+        }
+        n.setTimeout = function () {
+          return new s(r.call(setTimeout, window, arguments), clearTimeout);
+        }, n.setInterval = function () {
+          return new s(r.call(setInterval, window, arguments), clearInterval);
+        }, n.clearTimeout = n.clearInterval = function (e) {
+          e.close();
+        }, s.prototype.unref = s.prototype.ref = function () {}, s.prototype.close = function () {
+          this._clearFn.call(window, this._id);
+        }, n.enroll = function (e, t) {
+          clearTimeout(e._idleTimeoutId), e._idleTimeout = t;
+        }, n.unenroll = function (e) {
+          clearTimeout(e._idleTimeoutId), e._idleTimeout = -1;
+        }, n._unrefActive = n.active = function (e) {
+          clearTimeout(e._idleTimeoutId);
+          var t = e._idleTimeout;
+          t >= 0 && (e._idleTimeoutId = setTimeout(function () {
+            e._onTimeout && e._onTimeout();
+          }, t));
+        }, n.setImmediate = "function" == typeof t ? t : function (e) {
+          var t = d++,
+            o = !(arguments.length < 2) && a.call(arguments, 1);
+          return c[t] = !0, i(function () {
+            c[t] && (o ? e.apply(null, o) : e.call(null), n.clearImmediate(t));
+          }), t;
+        }, n.clearImmediate = "function" == typeof o ? o : function (e) {
+          delete c[e];
+        };
+      }).call(this);
+    }).call(this, e("timers").setImmediate, e("timers").clearImmediate);
+  }, {
+    "process/browser.js": 10,
+    timers: 12
+  }]
+}, {}, [1]);
+
+/***/ }),
+
+/***/ "./resources/js/kanban/index-admin.js":
+/*!********************************************!*\
+  !*** ./resources/js/kanban/index-admin.js ***!
+  \********************************************/
+/***/ (() => {
+
+var csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+document.addEventListener('DOMContentLoaded', function () {
+  var deleteBtns = document.querySelectorAll('.deleteBtn');
+  deleteBtns.forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault(); // Prevent default link behavior
+      var retroId = btn.dataset.id;
+
+      // Confirmation dialog before deletion
+      Swal.fire({
+        title: 'Êtes-vous sûr ?',
+        text: "Cette action est irréversible !",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#d33',
+        cancelButtonColor: '#3085d6',
+        confirmButtonText: 'Oui, supprimer !',
+        cancelButtonText: 'Annuler'
+      }).then(function (result) {
+        if (result.isConfirmed) {
+          // Proceed with deletion
+          fetch("/deleteRetro/".concat(retroId), {
+            method: 'DELETE',
+            headers: {
+              'Content-Type': 'application/json',
+              'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+            }
+          }).then(function (response) {
+            if (response.ok) {
+              Swal.fire('Supprimé !', 'La rétrospective a bien été supprimée.', 'success');
+              setTimeout(function () {
+                window.location.reload(); // Reload the page after success
+              }, 1000);
+            } else {
+              Swal.fire('Erreur', 'La suppression a échoué.', 'error');
+            }
+          })["catch"](function (error) {
+            Swal.fire('Erreur', 'Une erreur est survenue.', 'error');
+          });
+        }
+      });
+    });
+  });
+  var form = document.getElementById('retroForm');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevent the form from submitting normally
+
+    var formData = new FormData(form);
+
+    // Get values from the form fields
+    var name = form.querySelector('input[name="name"]').value.trim();
+    var schoolId = document.getElementById("school_id").value;
+
+    // Check if the required fields are filled
+    if (!name || !schoolId || schoolId === '-- Sélectionnez une promotion --') {
+      Swal.fire({
+        title: 'Champs manquants',
+        text: 'Veuillez remplir tous les champs.',
+        icon: 'warning',
+        confirmButtonText: 'OK'
+      });
+      return;
+    }
+
+    // Submit the form using fetch
+    fetch(form.action, {
+      method: 'POST',
+      body: formData,
+      headers: {
+        csrfToken: csrfToken
+      }
+    }).then(function (response) {
+      if (response.status === 422) {
+        // Handle validation errors here
+      } else if (response.ok) {
+        return response.json().then(function (data) {
+          // Success message after successful submission
+          Swal.fire({
+            title: 'Succès 🎉',
+            text: 'La rétrospective a bien été ajoutée.',
+            icon: 'success'
+          });
+          form.reset();
+          setTimeout(function () {
+            window.location.reload(); // Reload the page after success
+          }, 1000);
+        });
+      } else {
+        // Handle unexpected errors
+        Swal.fire({
+          title: 'Erreur',
+          text: 'Une erreur inattendue est survenue.',
+          icon: 'error'
+        });
+      }
+    })["catch"](function (error) {
+      // Handle fetch errors
+      console.error(error);
+      Swal.fire({
+        title: 'Erreur',
+        text: 'Une erreur inattendue est survenue.',
+        icon: 'error'
+      });
+    });
+  });
+});
+
+/***/ }),
+
+/***/ "./resources/js/kanban/kanban-student.js":
+/*!***********************************************!*\
+  !*** ./resources/js/kanban/kanban-student.js ***!
+  \***********************************************/
+/***/ (() => {
+
+document.querySelectorAll('.btnPlay').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var kanbanId = btn.getAttribute('data-kanban-id');
+    var kanbanStudentId = btn.getAttribute('data-kanban-school-id');
+    var kanbanName = btn.getAttribute('data-kanban-name');
+    window.location.href = "/retro/".concat(kanbanId, "/").concat(kanbanStudentId, "/").concat(kanbanName);
+  });
+});
+
+/***/ }),
+
+/***/ "./resources/js/knowledge/index-student.js":
+/*!*************************************************!*\
+  !*** ./resources/js/knowledge/index-student.js ***!
+  \*************************************************/
+/***/ (() => {
+
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return e; }; var t, e = {}, r = Object.prototype, n = r.hasOwnProperty, o = Object.defineProperty || function (t, e, r) { t[e] = r.value; }, i = "function" == typeof Symbol ? Symbol : {}, a = i.iterator || "@@iterator", c = i.asyncIterator || "@@asyncIterator", u = i.toStringTag || "@@toStringTag"; function define(t, e, r) { return Object.defineProperty(t, e, { value: r, enumerable: !0, configurable: !0, writable: !0 }), t[e]; } try { define({}, ""); } catch (t) { define = function define(t, e, r) { return t[e] = r; }; } function wrap(t, e, r, n) { var i = e && e.prototype instanceof Generator ? e : Generator, a = Object.create(i.prototype), c = new Context(n || []); return o(a, "_invoke", { value: makeInvokeMethod(t, r, c) }), a; } function tryCatch(t, e, r) { try { return { type: "normal", arg: t.call(e, r) }; } catch (t) { return { type: "throw", arg: t }; } } e.wrap = wrap; var h = "suspendedStart", l = "suspendedYield", f = "executing", s = "completed", y = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var p = {}; define(p, a, function () { return this; }); var d = Object.getPrototypeOf, v = d && d(d(values([]))); v && v !== r && n.call(v, a) && (p = v); var g = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(p); function defineIteratorMethods(t) { ["next", "throw", "return"].forEach(function (e) { define(t, e, function (t) { return this._invoke(e, t); }); }); } function AsyncIterator(t, e) { function invoke(r, o, i, a) { var c = tryCatch(t[r], t, o); if ("throw" !== c.type) { var u = c.arg, h = u.value; return h && "object" == _typeof(h) && n.call(h, "__await") ? e.resolve(h.__await).then(function (t) { invoke("next", t, i, a); }, function (t) { invoke("throw", t, i, a); }) : e.resolve(h).then(function (t) { u.value = t, i(u); }, function (t) { return invoke("throw", t, i, a); }); } a(c.arg); } var r; o(this, "_invoke", { value: function value(t, n) { function callInvokeWithMethodAndArg() { return new e(function (e, r) { invoke(t, n, e, r); }); } return r = r ? r.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(e, r, n) { var o = h; return function (i, a) { if (o === f) throw Error("Generator is already running"); if (o === s) { if ("throw" === i) throw a; return { value: t, done: !0 }; } for (n.method = i, n.arg = a;;) { var c = n.delegate; if (c) { var u = maybeInvokeDelegate(c, n); if (u) { if (u === y) continue; return u; } } if ("next" === n.method) n.sent = n._sent = n.arg;else if ("throw" === n.method) { if (o === h) throw o = s, n.arg; n.dispatchException(n.arg); } else "return" === n.method && n.abrupt("return", n.arg); o = f; var p = tryCatch(e, r, n); if ("normal" === p.type) { if (o = n.done ? s : l, p.arg === y) continue; return { value: p.arg, done: n.done }; } "throw" === p.type && (o = s, n.method = "throw", n.arg = p.arg); } }; } function maybeInvokeDelegate(e, r) { var n = r.method, o = e.iterator[n]; if (o === t) return r.delegate = null, "throw" === n && e.iterator["return"] && (r.method = "return", r.arg = t, maybeInvokeDelegate(e, r), "throw" === r.method) || "return" !== n && (r.method = "throw", r.arg = new TypeError("The iterator does not provide a '" + n + "' method")), y; var i = tryCatch(o, e.iterator, r.arg); if ("throw" === i.type) return r.method = "throw", r.arg = i.arg, r.delegate = null, y; var a = i.arg; return a ? a.done ? (r[e.resultName] = a.value, r.next = e.nextLoc, "return" !== r.method && (r.method = "next", r.arg = t), r.delegate = null, y) : a : (r.method = "throw", r.arg = new TypeError("iterator result is not an object"), r.delegate = null, y); } function pushTryEntry(t) { var e = { tryLoc: t[0] }; 1 in t && (e.catchLoc = t[1]), 2 in t && (e.finallyLoc = t[2], e.afterLoc = t[3]), this.tryEntries.push(e); } function resetTryEntry(t) { var e = t.completion || {}; e.type = "normal", delete e.arg, t.completion = e; } function Context(t) { this.tryEntries = [{ tryLoc: "root" }], t.forEach(pushTryEntry, this), this.reset(!0); } function values(e) { if (e || "" === e) { var r = e[a]; if (r) return r.call(e); if ("function" == typeof e.next) return e; if (!isNaN(e.length)) { var o = -1, i = function next() { for (; ++o < e.length;) if (n.call(e, o)) return next.value = e[o], next.done = !1, next; return next.value = t, next.done = !0, next; }; return i.next = i; } } throw new TypeError(_typeof(e) + " is not iterable"); } return GeneratorFunction.prototype = GeneratorFunctionPrototype, o(g, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), o(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, u, "GeneratorFunction"), e.isGeneratorFunction = function (t) { var e = "function" == typeof t && t.constructor; return !!e && (e === GeneratorFunction || "GeneratorFunction" === (e.displayName || e.name)); }, e.mark = function (t) { return Object.setPrototypeOf ? Object.setPrototypeOf(t, GeneratorFunctionPrototype) : (t.__proto__ = GeneratorFunctionPrototype, define(t, u, "GeneratorFunction")), t.prototype = Object.create(g), t; }, e.awrap = function (t) { return { __await: t }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, c, function () { return this; }), e.AsyncIterator = AsyncIterator, e.async = function (t, r, n, o, i) { void 0 === i && (i = Promise); var a = new AsyncIterator(wrap(t, r, n, o), i); return e.isGeneratorFunction(r) ? a : a.next().then(function (t) { return t.done ? t.value : a.next(); }); }, defineIteratorMethods(g), define(g, u, "Generator"), define(g, a, function () { return this; }), define(g, "toString", function () { return "[object Generator]"; }), e.keys = function (t) { var e = Object(t), r = []; for (var n in e) r.push(n); return r.reverse(), function next() { for (; r.length;) { var t = r.pop(); if (t in e) return next.value = t, next.done = !1, next; } return next.done = !0, next; }; }, e.values = values, Context.prototype = { constructor: Context, reset: function reset(e) { if (this.prev = 0, this.next = 0, this.sent = this._sent = t, this.done = !1, this.delegate = null, this.method = "next", this.arg = t, this.tryEntries.forEach(resetTryEntry), !e) for (var r in this) "t" === r.charAt(0) && n.call(this, r) && !isNaN(+r.slice(1)) && (this[r] = t); }, stop: function stop() { this.done = !0; var t = this.tryEntries[0].completion; if ("throw" === t.type) throw t.arg; return this.rval; }, dispatchException: function dispatchException(e) { if (this.done) throw e; var r = this; function handle(n, o) { return a.type = "throw", a.arg = e, r.next = n, o && (r.method = "next", r.arg = t), !!o; } for (var o = this.tryEntries.length - 1; o >= 0; --o) { var i = this.tryEntries[o], a = i.completion; if ("root" === i.tryLoc) return handle("end"); if (i.tryLoc <= this.prev) { var c = n.call(i, "catchLoc"), u = n.call(i, "finallyLoc"); if (c && u) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } else if (c) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); } else { if (!u) throw Error("try statement without catch or finally"); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } } } }, abrupt: function abrupt(t, e) { for (var r = this.tryEntries.length - 1; r >= 0; --r) { var o = this.tryEntries[r]; if (o.tryLoc <= this.prev && n.call(o, "finallyLoc") && this.prev < o.finallyLoc) { var i = o; break; } } i && ("break" === t || "continue" === t) && i.tryLoc <= e && e <= i.finallyLoc && (i = null); var a = i ? i.completion : {}; return a.type = t, a.arg = e, i ? (this.method = "next", this.next = i.finallyLoc, y) : this.complete(a); }, complete: function complete(t, e) { if ("throw" === t.type) throw t.arg; return "break" === t.type || "continue" === t.type ? this.next = t.arg : "return" === t.type ? (this.rval = this.arg = t.arg, this.method = "return", this.next = "end") : "normal" === t.type && e && (this.next = e), y; }, finish: function finish(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.finallyLoc === t) return this.complete(r.completion, r.afterLoc), resetTryEntry(r), y; } }, "catch": function _catch(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.tryLoc === t) { var n = r.completion; if ("throw" === n.type) { var o = n.arg; resetTryEntry(r); } return o; } } throw Error("illegal catch attempt"); }, delegateYield: function delegateYield(e, r, n) { return this.delegate = { iterator: values(e), resultName: r, nextLoc: n }, "next" === this.method && (this.arg = t), y; } }, e; }
+function asyncGeneratorStep(n, t, e, r, o, a, c) { try { var i = n[a](c), u = i.value; } catch (n) { return void e(n); } i.done ? t(u) : Promise.resolve(u).then(r, o); }
+function _asyncToGenerator(n) { return function () { var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, "next", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, "throw", n); } _next(void 0); }); }; }
+var csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+var dropdown = document.getElementById('languageDropdown');
+var box = dropdown.querySelector('.select-box');
+box.addEventListener('click', function () {
+  dropdown.classList.toggle('open');
+});
+document.addEventListener('click', function (e) {
+  if (!dropdown.contains(e.target)) {
+    dropdown.classList.remove('open');
+  }
+});
+var btnCreate = document.querySelectorAll('.btnCreateAndPlay');
+btnCreate.forEach(function (btn) {
+  btn.addEventListener('click', submitQuestionnaire);
+});
+
+/**
+ * Handles the click event on all buttons with the class `.btnPlay`.
+ * 
+ * For each button:
+ * 1. Retrieves the quiz (knowledge) ID, score JSON, user ID, number of questions, and the quiz's end date.
+ * 2. Compares the current date with the quiz's end date:
+ *    - If the quiz has expired, shows an alert.
+ * 3. If the quiz is still available:
+ *    - Parses the JSON score to check if the current user has already played.
+ *    - If not, redirects the user to the play route.
+ *    - If the user has already played, shows their score using SweetAlert2.
+ * 4. If there's no score data, assumes it's the first time and redirects to the play page.
+ */
+document.querySelectorAll('.btnPlay').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var knowledgeId = btn.getAttribute('data-knowledge-id');
+    var knowledgeStudentId = btn.getAttribute('data-knowledge-student-id');
+    var jsonScore = btn.getAttribute('data-knowlege-score');
+    var userId = btn.getAttribute('data-user-id');
+    var numberQuestion = btn.getAttribute('data-number-question');
+    var endDate = btn.getAttribute('data-knowledge-end-date');
+    var finishDate = new Date(endDate).toISOString().slice(0, 10);
+    var currentDate = new Date().toISOString().slice(0, 10);
+    if (currentDate > finishDate) {
+      Swal.fire({
+        title: 'Le questionnaire est terminé !',
+        text: 'Vous ne pouvez plus le faire.',
+        icon: 'warning'
+      });
+      return;
+    }
+    if (jsonScore && jsonScore.trim() !== '') {
+      try {
+        var parsedJsonScore = JSON.parse(jsonScore);
+        if (!parsedJsonScore.hasOwnProperty(userId)) {
+          window.location.href = '/playQuestionnary/' + knowledgeId;
+        } else {
+          Swal.fire({
+            title: 'Vous avez déjà réalisé ce questionnaire !',
+            text: 'Votre score est de ' + parsedJsonScore[userId] + ' sur ' + numberQuestion,
+            icon: 'warning'
+          });
+        }
+      } catch (error) {
+        console.error('Erreur lors du parsing du JSON:', error);
+      }
+    } else {
+      window.location.href = '/playQuestionnary/' + knowledgeId + '/' + knowledgeStudentId;
+    }
+  });
+});
+
+/**
+ * Handles the questionnaire generation process when the user submits the form.
+ * 
+ * This function:
+ * 1. Retrieves the selected number of questions, difficulty, and programming languages.
+ * 2. Validates the inputs (number between 1–30, difficulty selected, at least one language selected).
+ * 3. Shows a loading popup while the questionnaire is being generated.
+ * 4. Sends a POST request to the backend (`/generate-questionnary`) to generate the training questionnaire using AI.
+ * 5. If successful, sends the generated data to `/play-training-questionnary` and redirects the user to the training view.
+ * 6. Displays error messages using SweetAlert2 if validation fails or an error occurs during processing.
+ */
+function submitQuestionnaire() {
+  return _submitQuestionnaire.apply(this, arguments);
+}
+function _submitQuestionnaire() {
+  _submitQuestionnaire = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+    var numberQuestions, languages, dropdown, loadingSwal, response, data, jsonStrignify;
+    return _regeneratorRuntime().wrap(function _callee$(_context) {
+      while (1) switch (_context.prev = _context.next) {
+        case 0:
+          numberQuestions = document.querySelector('input[name="number-questions"]').value;
+          languages = Array.from(document.querySelectorAll('input[name="languages[]"]:checked')).map(function (el) {
+            return el.value;
+          });
+          dropdown = document.getElementById("difficulty");
+          if (!(numberQuestions < 1 || numberQuestions > 30)) {
+            _context.next = 6;
+            break;
+          }
+          Swal.fire({
+            title: 'Erreur',
+            text: 'Le nombre de questions doit être compris entre 1 et 30.',
+            icon: 'error'
+          });
+          return _context.abrupt("return");
+        case 6:
+          if (!(dropdown.value == 0 || !dropdown.value)) {
+            _context.next = 9;
+            break;
+          }
+          Swal.fire({
+            title: 'Erreur',
+            text: 'Veuillez sélectionner une difficulté.',
+            icon: 'error'
+          });
+          return _context.abrupt("return");
+        case 9:
+          if (!(languages.length === 0)) {
+            _context.next = 12;
+            break;
+          }
+          Swal.fire({
+            title: 'Erreur',
+            text: 'Veuillez sélectionner au moins un langage.',
+            icon: 'error'
+          });
+          return _context.abrupt("return");
+        case 12:
+          loadingSwal = Swal.fire({
+            title: 'Génération du questionnaire...',
+            text: 'Veuillez patienter, cela peut prendre quelques secondes.',
+            icon: 'info',
+            showConfirmButton: false,
+            didOpen: function didOpen() {
+              Swal.showLoading();
+            }
+          });
+          _context.next = 15;
+          return fetch('/generate-questionnary', {
+            method: 'POST',
+            headers: {
+              'X-CSRF-TOKEN': csrfToken,
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              languages: languages,
+              number_questions: numberQuestions,
+              difficulty: dropdown.value,
+              title: "Training",
+              training: true
+            })
+          });
+        case 15:
+          response = _context.sent;
+          if (!response.ok) {
+            _context.next = 22;
+            break;
+          }
+          _context.next = 19;
+          return response.json();
+        case 19:
+          data = _context.sent;
+          jsonStrignify = JSON.stringify(data);
+          fetch('/play-training-questionnary', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'X-CSRF-TOKEN': csrfToken
+            },
+            body: jsonStrignify
+          }).then(function (response) {
+            return response.json();
+          }).then(function (data) {
+            if (data.redirect_url) {
+              window.location.href = data.redirect_url;
+            } else {
+              Swal.fire({
+                title: 'Erreur',
+                text: 'Une erreur est survenue lors de la création du questionnaire.',
+                icon: 'error'
+              });
+            }
+          })["catch"](function (error) {
+            return console.error('Error:', error);
+          });
+        case 22:
+        case "end":
+          return _context.stop();
+      }
+    }, _callee);
+  }));
+  return _submitQuestionnaire.apply(this, arguments);
+}
+
+/***/ }),
+
+/***/ "./resources/js/knowledge/knowledge-student-create.js":
+/*!************************************************************!*\
+  !*** ./resources/js/knowledge/knowledge-student-create.js ***!
+  \************************************************************/
+/***/ (() => {
+
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return e; }; var t, e = {}, r = Object.prototype, n = r.hasOwnProperty, o = Object.defineProperty || function (t, e, r) { t[e] = r.value; }, i = "function" == typeof Symbol ? Symbol : {}, a = i.iterator || "@@iterator", c = i.asyncIterator || "@@asyncIterator", u = i.toStringTag || "@@toStringTag"; function define(t, e, r) { return Object.defineProperty(t, e, { value: r, enumerable: !0, configurable: !0, writable: !0 }), t[e]; } try { define({}, ""); } catch (t) { define = function define(t, e, r) { return t[e] = r; }; } function wrap(t, e, r, n) { var i = e && e.prototype instanceof Generator ? e : Generator, a = Object.create(i.prototype), c = new Context(n || []); return o(a, "_invoke", { value: makeInvokeMethod(t, r, c) }), a; } function tryCatch(t, e, r) { try { return { type: "normal", arg: t.call(e, r) }; } catch (t) { return { type: "throw", arg: t }; } } e.wrap = wrap; var h = "suspendedStart", l = "suspendedYield", f = "executing", s = "completed", y = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var p = {}; define(p, a, function () { return this; }); var d = Object.getPrototypeOf, v = d && d(d(values([]))); v && v !== r && n.call(v, a) && (p = v); var g = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(p); function defineIteratorMethods(t) { ["next", "throw", "return"].forEach(function (e) { define(t, e, function (t) { return this._invoke(e, t); }); }); } function AsyncIterator(t, e) { function invoke(r, o, i, a) { var c = tryCatch(t[r], t, o); if ("throw" !== c.type) { var u = c.arg, h = u.value; return h && "object" == _typeof(h) && n.call(h, "__await") ? e.resolve(h.__await).then(function (t) { invoke("next", t, i, a); }, function (t) { invoke("throw", t, i, a); }) : e.resolve(h).then(function (t) { u.value = t, i(u); }, function (t) { return invoke("throw", t, i, a); }); } a(c.arg); } var r; o(this, "_invoke", { value: function value(t, n) { function callInvokeWithMethodAndArg() { return new e(function (e, r) { invoke(t, n, e, r); }); } return r = r ? r.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(e, r, n) { var o = h; return function (i, a) { if (o === f) throw Error("Generator is already running"); if (o === s) { if ("throw" === i) throw a; return { value: t, done: !0 }; } for (n.method = i, n.arg = a;;) { var c = n.delegate; if (c) { var u = maybeInvokeDelegate(c, n); if (u) { if (u === y) continue; return u; } } if ("next" === n.method) n.sent = n._sent = n.arg;else if ("throw" === n.method) { if (o === h) throw o = s, n.arg; n.dispatchException(n.arg); } else "return" === n.method && n.abrupt("return", n.arg); o = f; var p = tryCatch(e, r, n); if ("normal" === p.type) { if (o = n.done ? s : l, p.arg === y) continue; return { value: p.arg, done: n.done }; } "throw" === p.type && (o = s, n.method = "throw", n.arg = p.arg); } }; } function maybeInvokeDelegate(e, r) { var n = r.method, o = e.iterator[n]; if (o === t) return r.delegate = null, "throw" === n && e.iterator["return"] && (r.method = "return", r.arg = t, maybeInvokeDelegate(e, r), "throw" === r.method) || "return" !== n && (r.method = "throw", r.arg = new TypeError("The iterator does not provide a '" + n + "' method")), y; var i = tryCatch(o, e.iterator, r.arg); if ("throw" === i.type) return r.method = "throw", r.arg = i.arg, r.delegate = null, y; var a = i.arg; return a ? a.done ? (r[e.resultName] = a.value, r.next = e.nextLoc, "return" !== r.method && (r.method = "next", r.arg = t), r.delegate = null, y) : a : (r.method = "throw", r.arg = new TypeError("iterator result is not an object"), r.delegate = null, y); } function pushTryEntry(t) { var e = { tryLoc: t[0] }; 1 in t && (e.catchLoc = t[1]), 2 in t && (e.finallyLoc = t[2], e.afterLoc = t[3]), this.tryEntries.push(e); } function resetTryEntry(t) { var e = t.completion || {}; e.type = "normal", delete e.arg, t.completion = e; } function Context(t) { this.tryEntries = [{ tryLoc: "root" }], t.forEach(pushTryEntry, this), this.reset(!0); } function values(e) { if (e || "" === e) { var r = e[a]; if (r) return r.call(e); if ("function" == typeof e.next) return e; if (!isNaN(e.length)) { var o = -1, i = function next() { for (; ++o < e.length;) if (n.call(e, o)) return next.value = e[o], next.done = !1, next; return next.value = t, next.done = !0, next; }; return i.next = i; } } throw new TypeError(_typeof(e) + " is not iterable"); } return GeneratorFunction.prototype = GeneratorFunctionPrototype, o(g, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), o(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, u, "GeneratorFunction"), e.isGeneratorFunction = function (t) { var e = "function" == typeof t && t.constructor; return !!e && (e === GeneratorFunction || "GeneratorFunction" === (e.displayName || e.name)); }, e.mark = function (t) { return Object.setPrototypeOf ? Object.setPrototypeOf(t, GeneratorFunctionPrototype) : (t.__proto__ = GeneratorFunctionPrototype, define(t, u, "GeneratorFunction")), t.prototype = Object.create(g), t; }, e.awrap = function (t) { return { __await: t }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, c, function () { return this; }), e.AsyncIterator = AsyncIterator, e.async = function (t, r, n, o, i) { void 0 === i && (i = Promise); var a = new AsyncIterator(wrap(t, r, n, o), i); return e.isGeneratorFunction(r) ? a : a.next().then(function (t) { return t.done ? t.value : a.next(); }); }, defineIteratorMethods(g), define(g, u, "Generator"), define(g, a, function () { return this; }), define(g, "toString", function () { return "[object Generator]"; }), e.keys = function (t) { var e = Object(t), r = []; for (var n in e) r.push(n); return r.reverse(), function next() { for (; r.length;) { var t = r.pop(); if (t in e) return next.value = t, next.done = !1, next; } return next.done = !0, next; }; }, e.values = values, Context.prototype = { constructor: Context, reset: function reset(e) { if (this.prev = 0, this.next = 0, this.sent = this._sent = t, this.done = !1, this.delegate = null, this.method = "next", this.arg = t, this.tryEntries.forEach(resetTryEntry), !e) for (var r in this) "t" === r.charAt(0) && n.call(this, r) && !isNaN(+r.slice(1)) && (this[r] = t); }, stop: function stop() { this.done = !0; var t = this.tryEntries[0].completion; if ("throw" === t.type) throw t.arg; return this.rval; }, dispatchException: function dispatchException(e) { if (this.done) throw e; var r = this; function handle(n, o) { return a.type = "throw", a.arg = e, r.next = n, o && (r.method = "next", r.arg = t), !!o; } for (var o = this.tryEntries.length - 1; o >= 0; --o) { var i = this.tryEntries[o], a = i.completion; if ("root" === i.tryLoc) return handle("end"); if (i.tryLoc <= this.prev) { var c = n.call(i, "catchLoc"), u = n.call(i, "finallyLoc"); if (c && u) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } else if (c) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); } else { if (!u) throw Error("try statement without catch or finally"); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } } } }, abrupt: function abrupt(t, e) { for (var r = this.tryEntries.length - 1; r >= 0; --r) { var o = this.tryEntries[r]; if (o.tryLoc <= this.prev && n.call(o, "finallyLoc") && this.prev < o.finallyLoc) { var i = o; break; } } i && ("break" === t || "continue" === t) && i.tryLoc <= e && e <= i.finallyLoc && (i = null); var a = i ? i.completion : {}; return a.type = t, a.arg = e, i ? (this.method = "next", this.next = i.finallyLoc, y) : this.complete(a); }, complete: function complete(t, e) { if ("throw" === t.type) throw t.arg; return "break" === t.type || "continue" === t.type ? this.next = t.arg : "return" === t.type ? (this.rval = this.arg = t.arg, this.method = "return", this.next = "end") : "normal" === t.type && e && (this.next = e), y; }, finish: function finish(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.finallyLoc === t) return this.complete(r.completion, r.afterLoc), resetTryEntry(r), y; } }, "catch": function _catch(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.tryLoc === t) { var n = r.completion; if ("throw" === n.type) { var o = n.arg; resetTryEntry(r); } return o; } } throw Error("illegal catch attempt"); }, delegateYield: function delegateYield(e, r, n) { return this.delegate = { iterator: values(e), resultName: r, nextLoc: n }, "next" === this.method && (this.arg = t), y; } }, e; }
+function asyncGeneratorStep(n, t, e, r, o, a, c) { try { var i = n[a](c), u = i.value; } catch (n) { return void e(n); } i.done ? t(u) : Promise.resolve(u).then(r, o); }
+function _asyncToGenerator(n) { return function () { var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, "next", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, "throw", n); } _next(void 0); }); }; }
+var csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+// This script handles the modal for adding a questionnaire in the select dropdown
+document.addEventListener("DOMContentLoaded", function () {
+  var select = document.getElementById("mySelect");
+  var modal = document.getElementById("modal_7");
+  var submitBtn = modal.querySelector('[data-modal-submit="true"]');
+  var input = modal.querySelector('input[name="title"]');
+  var numberQuestionsInput = document.querySelector('input[name="number-questions"]');
+  var closeBtn = modal.querySelector('#closeBtn');
+  var cancelBtn = modal.querySelector('#cancelBtn');
+
+  // Get the value of the input field TITLE
+
+  // When the "add a questionnaire" option is selected, open the modal
+  select.addEventListener("change", function () {
+    if (this.value === "add") {
+      modal.style.display = "block";
+      modal.classList.add("open");
+      input.focus();
+    }
+  });
+  // Close the modal when click X
+  closeBtn.addEventListener("click", function () {
+    modal.style.display = "none";
+    modal.classList.remove("open");
+    select.value = "0";
+  });
+  // Close the modal when click button close
+  cancelBtn.addEventListener("click", function () {
+    modal.style.display = "none";
+    modal.classList.remove("open");
+    select.value = "0";
+  });
+
+  /**
+   * Handles the click event on the submit button to create a questionnaire.
+   * This process includes:
+   * 1. Title validation (checking if it is not empty and contains only letters, numbers, and spaces).
+   * 2. Validation of the number of questions (between 1 and 50).
+   * 3. Asking for confirmation before creating the questionnaire.
+   * 4. Generating the questionnaire using the Mistral AI API.
+   * 
+   * If any validation fails, an error message is displayed using SweetAlert.
+   * If the creation is successful, a success message is shown and the page reloads.
+   */
+  submitBtn.addEventListener("click", /*#__PURE__*/_asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
+    var title, numberQuestions;
+    return _regeneratorRuntime().wrap(function _callee2$(_context2) {
+      while (1) switch (_context2.prev = _context2.next) {
+        case 0:
+          // Step 1: Title validation at the very beginning
+          title = input.value; // Get the value of the TITLE input field
+          numberQuestions = numberQuestionsInput.value; // Get the value of the number of questions input field
+          // Check if the title is valid before proceeding
+          if (!(!title || !/^[A-Za-z0-9\s]+$/.test(title))) {
+            _context2.next = 5;
+            break;
+          }
+          Swal.fire({
+            title: "Erreur",
+            text: "Veuillez entrer un titre valide. Le titre ne doit pas être vide et ne doit contenir que des lettres, des chiffres et des espaces.",
+            icon: "error"
+          });
+          return _context2.abrupt("return");
+        case 5:
+          if (!(!numberQuestions || isNaN(numberQuestions) || numberQuestions <= 0 || numberQuestions > 30)) {
+            _context2.next = 8;
+            break;
+          }
+          Swal.fire({
+            title: "Erreur",
+            text: "Veuillez entrer un nombre valide de questions (entre 1 et 30).",
+            icon: "error"
+          });
+          return _context2.abrupt("return");
+        case 8:
+          Swal.fire({
+            title: "Confirmer la création du questionnaire",
+            text: "Êtes-vous sûr de vouloir créer ce questionnaire avec les informations saisies ?",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonText: "Oui, créer le questionnaire !",
+            cancelButtonText: "Non, annuler !",
+            reverseButtons: true
+          }).then(/*#__PURE__*/function () {
+            var _ref2 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee(result) {
+              var loadingSwal, difficulty, selectedValues, response;
+              return _regeneratorRuntime().wrap(function _callee$(_context) {
+                while (1) switch (_context.prev = _context.next) {
+                  case 0:
+                    if (!result.isConfirmed) {
+                      _context.next = 19;
+                      break;
+                    }
+                    loadingSwal = Swal.fire({
+                      title: 'Création en cours...',
+                      text: 'Veuillez patienter, cela peut prendre quelques instants.',
+                      icon: 'info',
+                      showConfirmButton: false,
+                      allowOutsideClick: false,
+                      didOpen: function didOpen() {
+                        Swal.showLoading();
+                      }
+                    });
+                    _context.prev = 2;
+                    difficulty = getDifficultyValues();
+                    selectedValues = getCheckedValues(); // Step 2: Create the questionnaire using /create-questionnary and Mistral AI
+                    _context.next = 7;
+                    return fetch('/generate-questionnary', {
+                      method: 'POST',
+                      headers: {
+                        'X-CSRF-TOKEN': csrfToken,
+                        'Content-Type': 'application/json'
+                      },
+                      body: JSON.stringify({
+                        languages: selectedValues,
+                        // Use the selected languages from the checkboxes
+                        number_questions: numberQuestions,
+                        // Use the value from the input field for number of questions
+                        difficulty: difficulty,
+                        // Use the selected difficulty from the dropdown
+                        title: title,
+                        // Use verified title
+                        training: false
+                      })
+                    });
+                  case 7:
+                    response = _context.sent;
+                    loadingSwal.close();
+                    if (response.ok) {
+                      Swal.fire({
+                        title: "Questionnaire créé !",
+                        text: "Le questionnaire a été créé avec succès.",
+                        icon: "success"
+                      });
+                      setTimeout(function () {
+                        document.location.reload(true);
+                      }, 100);
+                    } else {
+                      Swal.fire({
+                        title: "Erreur",
+                        text: "Une erreur s'est produite lors de la création du questionnaire.",
+                        icon: "error"
+                      });
+                    }
+                    _context.next = 17;
+                    break;
+                  case 12:
+                    _context.prev = 12;
+                    _context.t0 = _context["catch"](2);
+                    console.error('Caught error:', _context.t0.message);
+                    loadingSwal.close();
+                    Swal.fire({
+                      title: "Erreur",
+                      text: "Une erreur s'est produite lors de la création du questionnaire.",
+                      icon: "error"
+                    });
+                  case 17:
+                    _context.next = 20;
+                    break;
+                  case 19:
+                    if (result.dismiss === Swal.DismissReason.cancel) {
+                      Swal.fire({
+                        title: "Annulé",
+                        text: "La création du questionnaire a été annulée.",
+                        icon: "error"
+                      });
+                    }
+                  case 20:
+                  case "end":
+                    return _context.stop();
+                }
+              }, _callee, null, [[2, 12]]);
+            }));
+            return function (_x) {
+              return _ref2.apply(this, arguments);
+            };
+          }());
+        case 9:
+        case "end":
+          return _context2.stop();
+      }
+    }, _callee2);
+  })));
+});
+
+/*
+* This function handles the following:
+* 1. Retrieves form input values for school, title, description, questionnaire, end date, and finish time.
+* 2. Validates all the required fields. If any field is empty or invalid, it shows an error message using SweetAlert.
+* 3. Validates the title and description to ensure they only contain letters, numbers, and spaces.
+* 4. Checks if the time finish value is a valid integer.
+* 5. Verifies that the end date is later than the current date.
+* 6. Sends a POST request to the server to store the knowledge data if all validations pass.
+* 7. If the POST request is successful, it displays a success message and reloads the page.
+* 8. If the request fails, it shows an error message with SweetAlert.
+*/
+document.addEventListener("DOMContentLoaded", function () {
+  var submitBtn = document.getElementById("knowledge-submit");
+  submitBtn.addEventListener("click", /*#__PURE__*/_asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee3() {
+    var school, title, description, questionnary, endDate, timeFinish, currentDate, selectedDate, postResponse;
+    return _regeneratorRuntime().wrap(function _callee3$(_context3) {
+      while (1) switch (_context3.prev = _context3.next) {
+        case 0:
+          school = parseInt(getSchoolValues());
+          title = document.getElementById("knowledge-title").value;
+          description = document.getElementById("knowledge-description").value;
+          questionnary = parseInt(getQuestionnaryValues());
+          endDate = document.getElementById("end-date").value;
+          timeFinish = document.getElementById("time-finish").value; //validate all the fields is not nul 
+          if (!(!school || !title || !description || !questionnary || !endDate || !timeFinish)) {
+            _context3.next = 9;
+            break;
+          }
+          Swal.fire({
+            title: 'Erreur',
+            text: 'Veuillez remplir tous les champs.',
+            icon: 'error',
+            confirmButtonText: 'OK',
+            customClass: {
+              confirmButton: 'btn btn-danger'
+            }
+          });
+          return _context3.abrupt("return");
+        case 9:
+          if (!(!title || !/^[A-Za-z0-9\s]+$/.test(title))) {
+            _context3.next = 12;
+            break;
+          }
+          Swal.fire({
+            title: 'Erreur',
+            text: 'Veuillez entrer un titre valide. Le titre ne doit pas être vide et ne doit contenir que des lettres, des chiffres et des espaces.',
+            icon: 'error',
+            confirmButtonText: 'OK',
+            customClass: {
+              confirmButton: 'btn btn-danger'
+            }
+          });
+          return _context3.abrupt("return");
+        case 12:
+          if (!(!description || !/^[A-Za-z0-9\s]+$/.test(description))) {
+            _context3.next = 15;
+            break;
+          }
+          Swal.fire({
+            title: 'Erreur',
+            text: 'Veuillez entrer une description valide. La description ne doit pas être vide et ne doit contenir que des lettres, des chiffres et des espaces.',
+            icon: 'error',
+            confirmButtonText: 'OK',
+            customClass: {
+              confirmButton: 'btn btn-danger'
+            }
+          });
+          return _context3.abrupt("return");
+        case 15:
+          if (!(!timeFinish || isNaN(parseInt(timeFinish)))) {
+            _context3.next = 18;
+            break;
+          }
+          Swal.fire({
+            title: 'Erreur',
+            text: 'Veuillez entrer une valeur entière valide pour le temps.',
+            icon: 'error',
+            confirmButtonText: 'OK',
+            customClass: {
+              confirmButton: 'btn btn-danger'
+            }
+          });
+          return _context3.abrupt("return");
+        case 18:
+          // Validate the end date
+          currentDate = new Date();
+          selectedDate = new Date(endDate);
+          if (!(selectedDate < currentDate)) {
+            _context3.next = 23;
+            break;
+          }
+          Swal.fire({
+            title: 'Erreur',
+            text: 'La date de fin doit être supérieure à la date actuelle.',
+            icon: 'error',
+            confirmButtonText: 'OK',
+            customClass: {
+              confirmButton: 'btn btn-danger'
+            }
+          });
+          return _context3.abrupt("return");
+        case 23:
+          _context3.next = 25;
+          return fetch('/knowledge-student-store', {
+            method: 'POST',
+            headers: {
+              'X-CSRF-TOKEN': csrfToken,
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              title: title,
+              description: description,
+              id_knowledge: questionnary,
+              school_id: school,
+              end_date: endDate,
+              time_finish: timeFinish
+            })
+          });
+        case 25:
+          postResponse = _context3.sent;
+          if (postResponse.ok) {
+            Swal.fire({
+              title: 'Succès',
+              text: 'La connaissance a été liée à l\'étudiant avec succès!',
+              icon: 'success',
+              confirmButtonText: 'OK',
+              customClass: {
+                confirmButton: 'btn btn-success'
+              }
+            }).then(function () {
+              document.location.reload(true);
+            });
+          } else {
+            Swal.fire({
+              title: 'Erreur',
+              text: 'Une erreur est survenue lors de la sauvegarde de la connaissance.',
+              icon: 'error',
+              confirmButtonText: 'OK',
+              customClass: {
+                confirmButton: 'btn btn-danger'
+              }
+            });
+          }
+        case 27:
+        case "end":
+          return _context3.stop();
+      }
+    }, _callee3);
+  })));
+});
+
+// Function to get the values of checked checkboxes
+function getCheckedValues() {
+  var checkboxes = document.querySelectorAll('input[name="languages"]:checked');
+  var values = Array.from(checkboxes).map(function (cb) {
+    return cb.value;
+  });
+  console.log(values);
+  return values;
+}
+// Function to get the selected difficulty from the dropdown
+function getDifficultyValues() {
+  var dropdown = document.getElementById("difficulty");
+  return dropdown ? dropdown.value : null;
+}
+/// Function to get the selected school from the dropdown
+function getSchoolValues() {
+  var dropdown = document.getElementById("school-list");
+  return dropdown ? dropdown.value : null;
+}
+// Function to get the selected questionnary from the dropdown
+function getQuestionnaryValues() {
+  var dropdown = document.getElementById("mySelect");
+  return dropdown ? dropdown.value : null;
+}
+
+/***/ }),
+
+/***/ "./resources/js/knowledge/knowledge-student-details.js":
+/*!*************************************************************!*\
+  !*** ./resources/js/knowledge/knowledge-student-details.js ***!
+  \*************************************************************/
+/***/ (() => {
+
+function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
+var csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+
+/**
+ * Handles the behavior of a modal for editing knowledge entries in a student questionnaire.
+ * - When a row with class `.clickable-row` is clicked, the modal is opened, and the data from the clicked row is displayed in the modal's input fields.
+ * - The modal contains an edit button which toggles between read-only and editable fields.
+ * - If the "Save" button is clicked after editing, the fields are validated (description, title, end date), and the user is prompted with a confirmation before saving.
+ * - Upon confirmation, the updated data is sent to the server using a POST request. Success or error messages are displayed based on the response.
+ * - The modal can be dismissed by clicking the "X" button.
+ */
+var score;
+var id;
+document.addEventListener("DOMContentLoaded", function () {
+  var clickableRows = document.querySelectorAll(".clickable-row");
+  var modal = document.getElementById("knowledgeModal");
+  var dismissBtn = modal.querySelector('[data-modal-dismiss="true"]');
+  var editBtn = document.getElementById("editButton");
+  var deleteBtn = document.getElementById("deleteButton");
+  clickableRows.forEach(function (row) {
+    row.addEventListener("click", function () {
+      modal.style.display = "block";
+      modal.classList.add("open");
+      var school = this.getAttribute("data-school");
+      var title = this.getAttribute("data-title");
+      var description = this.getAttribute("data-description");
+      var knowledgeTitle = this.getAttribute("data-knowledge-title");
+      var languages = this.getAttribute("data-languages");
+      var endDate = this.getAttribute("data-end-date");
+      var finish = this.getAttribute("data-finish");
+      var creator = this.getAttribute("data-creator");
+      id = this.getAttribute("data-id");
+      id = this.getAttribute("data-id");
+      document.getElementById("modalId").value = id;
+      document.getElementById("modalTitle").value = title;
+      document.getElementById("modalSchool").value = school;
+      document.getElementById("modalDescription").value = description;
+      document.getElementById("modalKnowledgeTitle").value = knowledgeTitle;
+      document.getElementById("modalLanguages").value = languages;
+      document.getElementById("modalEndDate").value = endDate;
+      document.getElementById("modalFinish").value = finish + " minutes";
+      document.getElementById("modalCreator").value = creator;
+      getQuestionnary(id);
+      getScore(id);
+    });
+  });
+  var swalWithBootstrapButtons = Swal.mixin({
+    customClass: {
+      confirmButton: "btn btn-success",
+      cancelButton: "btn btn-danger"
+    },
+    buttonsStyling: false
+  });
+
+  // Close the modal when click X
+  dismissBtn.addEventListener("click", function () {
+    modal.classList.remove("open");
+    setTimeout(function () {
+      return modal.style.display = "none";
+    }, 300);
+  });
+  // Management of the edit button 
+  editBtn.addEventListener("click", function () {
+    var modalDescription = document.getElementById("modalDescription");
+    var modalTitle = document.getElementById("modalTitle");
+    var endDateInput = document.getElementById("modalEndDate");
+    var isReadOnly = endDateInput.hasAttribute("readonly");
+    if (isReadOnly) {
+      modalDescription.removeAttribute("readonly");
+      modalTitle.removeAttribute("readonly");
+      endDateInput.removeAttribute("readonly");
+      editBtn.innerText = "Enregistrer";
+    } else {
+      var updatedDescription = modalDescription.value;
+      var updatedTitle = modalTitle.value;
+      var updatedEndDate = endDateInput.value;
+
+      //validate all the fields is not nul 
+      if (!updatedDescription || !updatedTitle || !updatedEndDate) {
+        Swal.fire({
+          title: 'Erreur',
+          text: 'Veuillez remplir tous les champs.',
+          icon: 'error',
+          confirmButtonText: 'OK',
+          customClass: {
+            confirmButton: 'btn btn-danger'
+          }
+        });
+        return;
+      }
+
+      // Validate the title
+      if (!updatedTitle || !/^[A-Za-z0-9\s]+$/.test(updatedTitle)) {
+        Swal.fire({
+          title: 'Erreur',
+          text: 'Veuillez entrer un titre valide. Le titre ne doit pas être vide et ne doit contenir que des lettres, des chiffres et des espaces.',
+          icon: 'error',
+          confirmButtonText: 'OK',
+          customClass: {
+            confirmButton: 'btn btn-danger'
+          }
+        });
+        return;
+      }
+
+      // Validate the description
+      if (!updatedDescription || !/^[A-Za-z0-9\s]+$/.test(updatedDescription)) {
+        Swal.fire({
+          title: 'Erreur',
+          text: 'Veuillez entrer une description valide. La description ne doit pas être vide et ne doit contenir que des lettres, des chiffres et des espaces.',
+          icon: 'error',
+          confirmButtonText: 'OK',
+          customClass: {
+            confirmButton: 'btn btn-danger'
+          }
+        });
+        return;
+      }
+
+      // Validate the end date
+      var currentDate = new Date();
+      var selectedDate = new Date(updatedEndDate);
+      if (selectedDate < currentDate) {
+        Swal.fire({
+          title: 'Erreur',
+          text: 'La date de fin doit être supérieure à la date actuelle.',
+          icon: 'error',
+          confirmButtonText: 'OK',
+          customClass: {
+            confirmButton: 'btn btn-danger'
+          }
+        });
+        return;
+      }
+
+      // Confirmation before saving
+      Swal.fire({
+        title: "Voulez-vous sauvegarder les modifications ?",
+        text: "Vous ne pourrez pas revenir en arrière après avoir sauvegardé !",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonText: "Oui, sauvegarder",
+        cancelButtonText: "Non, annuler",
+        reverseButtons: true
+      }).then(function (result) {
+        if (result.isConfirmed) {
+          // user confirms, proceed with the update
+          fetch("/knowledge-student-update/".concat(id), {
+            method: 'POST',
+            body: JSON.stringify({
+              description: updatedDescription,
+              title: updatedTitle,
+              end_date: updatedEndDate
+            }),
+            headers: {
+              'Content-Type': 'application/json',
+              'X-CSRF-TOKEN': csrfToken
+            }
+          }).then(function (response) {
+            if (response.ok) {
+              Swal.fire({
+                title: "Mis à jour !",
+                text: "Les modifications ont été enregistrées avec succès.",
+                icon: "success"
+              });
+              setTimeout(function () {
+                document.location.reload(true);
+              }, 100);
+            } else {
+              Swal.fire({
+                title: "Erreur",
+                text: "Une erreur est survenue lors de la mise à jour de l'élément.",
+                icon: "error"
+              });
+            }
+          })["catch"](function (error) {
+            console.error('Erreur:', error);
+            Swal.fire({
+              title: "Erreur",
+              text: "Une erreur est survenue. Essayez à nouveau.",
+              icon: "error"
+            });
+          });
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+          Swal.fire({
+            title: "Annulé",
+            text: "La mise à jour a été annulée. L'élément reste inchangé.",
+            icon: "error"
+          });
+        }
+      });
+    }
+  });
+
+  /**
+   * Handles the deletion of a knowledge entry when the delete button is clicked.
+   * - When the delete button is clicked, a confirmation prompt (SweetAlert) appears asking if the user is sure they want to delete the item.
+   * - If the user confirms, a DELETE request is sent to the server to remove the knowledge entry identified by `id`.
+   * - Upon success, a success message is shown, and the page reloads after 1 second.
+   * - If the deletion fails, an error message is displayed.
+   * - If the user cancels the deletion, a message confirming the item is still in place is displayed.
+   */
+  deleteBtn.addEventListener("click", function () {
+    Swal.fire({
+      title: "Êtes-vous sûr ?",
+      text: "Vous ne pourrez pas revenir en arrière !",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonText: "Oui, supprimez-le !",
+      cancelButtonText: "Non, annulez !",
+      reverseButtons: true
+    }).then(function (result) {
+      if (result.isConfirmed) {
+        fetch("/knowledge-student-delete/".concat(id), {
+          method: 'DELETE',
+          headers: {
+            'X-CSRF-TOKEN': csrfToken,
+            'Content-Type': 'application/json'
+          }
+        }).then(function (response) {
+          if (response.ok) {
+            Swal.fire({
+              title: "Supprimé !",
+              text: "L'élément a été supprimé avec succès.",
+              icon: "success"
+            });
+            setTimeout(function () {
+              document.location.reload(true);
+            }, 1000);
+          } else {
+            Swal.fire({
+              title: "Erreur",
+              text: "Erreur lors de la suppression de l'élément.",
+              icon: "error"
+            });
+          }
+        })["catch"](function (error) {
+          console.error('Erreur:', error);
+          Swal.fire({
+            title: "Erreur",
+            text: "Une erreur est survenue. Essayez à nouveau.",
+            icon: "error"
+          });
+        });
+      } else if (result.dismiss === Swal.DismissReason.cancel) {
+        Swal.fire({
+          title: "Annulé",
+          text: "L'élément est toujours en place :)",
+          icon: "error"
+        });
+      }
+    });
+  });
+});
+/**
+ * Displays a list of questions and their corresponding options on the page.
+ * 
+ * @param {Object|String} json - The JSON object or string containing the questions data.
+ * @param {String} divId - The ID of the container div where the questions will be displayed.
+ * 
+ * This function does the following:
+ * 1. Parses the provided JSON data (if it's a string).
+ * 2. Clears the container div before rendering new content.
+ * 3. Creates a wrapper element to hold the questions.
+ * 4. Loops through each question, creating elements to display:
+ *    - The question text.
+ *    - The options with a visual indicator for the correct answer.
+ *    - An explanation for each question.
+ * 5. Appends each question block to the container.
+ */
+function displayQuestionContent(json, divId) {
+  var questions = typeof json === 'string' ? JSON.parse(json) : json;
+  var container = document.getElementById(divId);
+  if (!container) {
+    console.error("Container with id ".concat(divId, " not found"));
+    return;
+  }
+  container.innerHTML = '';
+  container.className = 'min-h-screen bg-gray-100 dark:bg-gray-900 p-3';
+  var questionsWrapper = document.createElement('div');
+  questionsWrapper.className = 'max-w-2xl mx-auto space-y-4';
+  questions.forEach(function (questionData, index) {
+    var questionBlock = document.createElement('div');
+    questionBlock.className = 'bg-gray-100 dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 mb-3';
+
+    // Question Header
+    var header = document.createElement('div');
+    header.className = 'p-3 border-b border-gray-200 dark:border-gray-700';
+    header.innerHTML = "\n      <span class=\"text-[10px] font-medium text-primary dark:text-primary\">\n        Question ".concat(index + 1, "\n      </span>\n      <h2 class=\"text-sm font-medium text-gray-900 dark:text-white mt-0.5\">\n        ").concat(questionData.question, "\n      </h2>\n    ");
+
+    // Options List
+    var optionsList = document.createElement('ul');
+    optionsList.className = 'p-3 space-y-1.5';
+    questionData.options.forEach(function (option, i) {
+      var isCorrect = i === questionData.answer - 1;
+      var listItem = document.createElement('li');
+      listItem.className = "flex items-center p-1.5 rounded ".concat(isCorrect ? 'bg-primary/10 dark:bg-primary/10 border border-primary/20 dark:border-primary/20' : 'bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600');
+      var iconContainer = document.createElement('div');
+      iconContainer.className = 'flex-shrink-0 w-4 h-4 mr-1.5';
+      if (isCorrect) {
+        iconContainer.innerHTML = "\n          <svg class=\"w-4 h-4 text-primary dark:text-primary\" \n               fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\">\n            <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M5 13l4 4L19 7\"></path>\n          </svg>\n        ";
+      }
+      var optionText = document.createElement('span');
+      optionText.className = "text-xs ".concat(isCorrect ? 'font-medium text-primary dark:text-primary' : 'text-gray-900 dark:text-gray-100');
+      optionText.textContent = option;
+      listItem.appendChild(iconContainer);
+      listItem.appendChild(optionText);
+      optionsList.appendChild(listItem);
+    });
+
+    // Explanation
+    var explanation = document.createElement('div');
+    explanation.className = 'p-3 bg-primary/10 dark:bg-primary/10 rounded-b-lg';
+    explanation.innerHTML = "\n      <div class=\"flex items-center mb-1\">\n        <svg class=\"w-4 h-4 mr-1 text-primary dark:text-primary\" \n             fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\">\n          <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" \n                d=\"M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"></path>\n        </svg>\n        <span class=\"text-xs font-medium text-primary dark:text-primary\">\n          Explication\n        </span>\n      </div>\n      <p class=\"text-xs text-gray-900 dark:text-gray-100\">".concat(questionData.explanation, "</p>\n    ");
+    questionBlock.appendChild(header);
+    questionBlock.appendChild(optionsList);
+    questionBlock.appendChild(explanation);
+    questionsWrapper.appendChild(questionBlock);
+  });
+  container.appendChild(questionsWrapper);
+}
+/**
+ * Fetches the questionnaire data from the server based on the provided ID.
+ * 
+ * @param {String} id - The ID used to fetch the specific questionnaire data.
+ * 
+ * This function performs the following:
+ * 1. Sends a GET request to the server at `/get-questionnary/${id}`.
+ * 2. Includes a CSRF token in the request headers for security.
+ * 3. Parses the JSON response from the server.
+ * 4. If the response contains valid question data (an array), it calls the `displayQuestionContent` function 
+ *    to render the questions on the page.
+ * 5. If the response data is invalid (not an array or empty), it shows an error message with SweetAlert.
+ * 6. If an error occurs during the fetch operation (network error, etc.), it shows a generic error message.
+ */
+function getQuestionnary(id) {
+  fetch("/get-questionnary/".concat(id), {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-CSRF-TOKEN': csrfToken
+    }
+  }).then(function (response) {
+    return response.json();
+  }).then(function (data) {
+    if (data && Array.isArray(data)) {
+      displayQuestionContent(data, "questionContainer");
+    } else {
+      Swal.fire({
+        title: "Erreur",
+        text: "Le questionnaire est vide ou mal formaté.",
+        icon: "error"
+      });
+    }
+  })["catch"](function (error) {
+    console.error('Erreur:', error);
+    Swal.fire({
+      title: "Erreur",
+      text: "Une erreur est survenue lors de la récupération du questionnaire.",
+      icon: "error"
+    });
+  });
+}
+/**
+ * getScore(id)
+ * ------------
+ * This function fetches the quiz results of a specific test (`id`) from the backend.
+ * It then dynamically populates a section of the DOM with student names and their scores
+ * (including the total number of questions). If the fetch fails, an error is logged.
+ */
+
+function getScore(id) {
+  // Make an API call to retrieve the score data based on the given ID
+  fetch("/get-score/".concat(id), {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-CSRF-TOKEN': csrfToken
+    }
+  }).then(function (response) {
+    if (!response.ok) {
+      throw new Error('Échec de la récupération des scores');
+    }
+    return response.json();
+  }).then(function (data) {
+    var finalScore = data.scores;
+    var title = data.title;
+    var numberQuestions = data.numberQuestions;
+    if (finalScore && Object.keys(finalScore).length > 0) {
+      var scoreContainer = document.getElementById("score-details");
+      scoreContainer.innerHTML = '';
+
+      // Loop through the scores and create elements for each
+      Object.entries(finalScore).forEach(function (_ref, index) {
+        var _ref2 = _slicedToArray(_ref, 2),
+          name = _ref2[0],
+          scoreValue = _ref2[1];
+        var scoreItem = document.createElement('div');
+        scoreItem.className = 'score-item';
+        scoreItem.innerHTML = "\n          <span class=\"text-sm font-medium text-gray-900 dark:text-white\">\n            ".concat(name, " \u2192 Note : ").concat(scoreValue, " / ").concat(numberQuestions, "\n          </span>\n        ");
+        scoreContainer.appendChild(scoreItem);
+      });
+    }
+  })["catch"](function (error) {
+    // Log errors if fetch fails
+    console.error('Erreur lors de la récupération des scores:', error);
+  });
+}
+
+/**
+* Event listener for "download-button":
+* --------------------------------------
+* When the user clicks the download button, it shows a SweetAlert2 modal that lets them 
+* choose between exporting the results in Excel or PDF format. The data is formatted and 
+* downloaded accordingly using either `xlsx.js` for Excel or `jsPDF` for PDF.
+ */
+document.getElementById('download-button').addEventListener('click', function () {
+  // Make an API call to get the score again before downloading
+  fetch("/get-score/".concat(id), {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-CSRF-TOKEN': csrfToken
+    }
+  }).then(function (response) {
+    return response.json();
+  }).then(function (data) {
+    var finalScore = data.scores;
+    var title = data.title;
+    var numberQuestions = 20;
+    if (finalScore && Object.keys(finalScore).length <= 0) {
+      Swal.fire({
+        title: 'Aucun score disponible',
+        text: 'Aucun score n\'est disponible pour le téléchargement.',
+        icon: 'warning',
+        confirmButtonText: 'OK',
+        customClass: {
+          confirmButton: 'btn btn-primary'
+        }
+      });
+      return;
+    }
+    if (finalScore && Object.keys(finalScore).length > 0) {
+      Swal.fire({
+        title: 'Choisissez un format de téléchargement',
+        showCancelButton: true,
+        confirmButtonText: 'Télécharger',
+        cancelButtonText: 'Annuler',
+        input: 'radio',
+        inputOptions: {
+          'excel': 'Excel',
+          'pdf': 'PDF'
+        },
+        inputValidator: function inputValidator(value) {
+          if (!value) {
+            return 'Vous devez choisir un format!';
+          }
+        }
+      }).then(function (result) {
+        if (result.isConfirmed) {
+          var choice = result.value;
+
+          // If Excel format is selected
+          if (choice === 'excel') {
+            var rows = [['Titre', title], ['Élève', 'Note', 'Nombre de questions']];
+            Object.entries(finalScore).forEach(function (_ref3) {
+              var _ref4 = _slicedToArray(_ref3, 2),
+                name = _ref4[0],
+                scoreValue = _ref4[1];
+              rows.push([name, scoreValue, numberQuestions]);
+            });
+            var ws = XLSX.utils.aoa_to_sheet(rows);
+            var wb = XLSX.utils.book_new();
+            XLSX.utils.book_append_sheet(wb, ws, 'Scores');
+            XLSX.writeFile(wb, 'score.xlsx');
+          }
+
+          // If PDF format is selected
+          if (choice === 'pdf') {
+            var jsPDF = window.jspdf.jsPDF;
+            var doc = new jsPDF();
+            doc.setFontSize(16);
+            doc.text("Questionnaire - ".concat(title), 20, 20);
+            var y = 30; // Initial Y position for content
+
+            // Loop through scores and write each entry to PDF
+            Object.entries(finalScore).forEach(function (_ref5) {
+              var _ref6 = _slicedToArray(_ref5, 2),
+                name = _ref6[0],
+                scoreValue = _ref6[1];
+              var cleanedname = name.replace(/[^\w\s]/g, '');
+              var cleanedScoreValue = scoreValue.toString();
+              console.log(cleanedname);
+              console.log(cleanedScoreValue);
+              doc.text("".concat(cleanedname, " : ").concat(cleanedScoreValue, " / ").concat(numberQuestions), 20, y);
+              y += 10;
+            });
+            doc.save('score.pdf');
+          }
+        }
+      });
+    }
+  })["catch"](function (error) {
+    console.error('Erreur lors du téléchargement du fichier:', error);
+  });
+});
+
+/***/ }),
+
+/***/ "./resources/js/knowledge/questionnary.js":
+/*!************************************************!*\
+  !*** ./resources/js/knowledge/questionnary.js ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var alpinejs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! alpinejs */ "./node_modules/alpinejs/dist/module.esm.js");
+
+var csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+var timer;
+var isRunning = false;
+var remainingSeconds;
+var timeDisplay = document.getElementById('timeDisplay');
+var modal = document.getElementById('modal_3');
+var knowledgeTime;
+var questionnary = window.questionnary;
+var submitQuestionnary = false;
+var knowledgeId;
+var knowledgeStudentId;
+var endDate;
+
+/**
+ * Triggered when the window finishes loading.
+ * - Gets the quiz time, student ID, and end date from data attributes.
+ * - Displays a confirmation popup before starting the quiz.
+ * - Starts the timer if the user confirms, otherwise redirects.
+ */
+window.onload = function () {
+  knowledgeTime = document.getElementById('time').dataset.knowledgeTime;
+  knowledgeId = document.getElementById('id').dataset.knowledgeId;
+  endDate = document.getElementById('end-date').dataset.knowledgeEndDate;
+  knowledgeStudentId = document.getElementById('knowledge-student-id').dataset.knowledgeStudentId;
+  Swal.fire({
+    title: 'Prêt à commencer ?',
+    text: 'Nous allons commencer un questionnaire pour évaluer vos connaissances. Votre temps sera limité et le chronomètre s’affichera dans la barre de navigation en haut à gauche. Cliquez sur "OK" pour débuter.',
+    icon: 'question',
+    showCancelButton: true,
+    confirmButtonText: 'OK',
+    cancelButtonText: 'Annuler'
+  }).then(function (result) {
+    if (result.isConfirmed) {
+      startTimer();
+    } else if (result.isDismissed) {
+      window.location.href = '/knowledge';
+    }
+  });
+};
+
+/**
+ * After the DOM is fully loaded:
+ * - Enables one-answer-only selection per question.
+ * - Updates icon and style based on selection.
+ */
+document.addEventListener('DOMContentLoaded', function () {
+  var allOptions = document.querySelectorAll('.options-container');
+  if (submitQuestionnary === false) {
+    allOptions.forEach(function (container) {
+      var labels = container.querySelectorAll('.option-label');
+      labels.forEach(function (label) {
+        label.addEventListener('click', function () {
+          labels.forEach(function (l) {
+            l.classList.remove('selected');
+            var icon = l.querySelector('.radio-icon');
+            icon.innerHTML = "\n                            <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\"\n                                viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\"\n                                stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n                                <circle cx=\"12\" cy=\"12\" r=\"10\"></circle>\n                            </svg>";
+          });
+          label.classList.add('selected');
+          var icon = label.querySelector('.radio-icon');
+          icon.innerHTML = "\n                        <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\"\n                            viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\"\n                            stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n                            <path d=\"M22 11.08V12a10 10 0 1 1-5.93-9.14\"></path>\n                            <polyline points=\"22 4 12 14.01 9 11.01\"></polyline>\n                        </svg>";
+        });
+      });
+    });
+  }
+});
+
+/**
+ * Submits the quiz:
+ * - Prevents resubmission.
+ * - Compares selected answers to correct ones.
+ * - Calculates score and displays feedback per question.
+ * - Disables all inputs.
+ * - Saves result in the database (if eligible).
+ */
+window.submitQuiz = function () {
+  if (submitQuestionnary) {
+    return;
+  }
+  var correctAnswers = 0;
+  var totalQuestions = questionnary.length;
+  var explanationsHTML = '';
+  var modalContentHTML = '';
+  questionnary.forEach(function (q, index) {
+    var selectedOption = document.querySelector("input[name=\"question".concat(index, "\"]:checked"));
+    var selectedAnswer = selectedOption ? parseInt(selectedOption.value) : null;
+    var isCorrect = selectedAnswer === q.answer - 1;
+    if (isCorrect) {
+      correctAnswers++;
+    }
+    q.question = escapeHTML(q.question);
+    q.explanation = escapeHTML(q.explanation);
+    q.options = q.options.map(function (option) {
+      return escapeHTML(option);
+    });
+    explanationsHTML += "\n            <div class=\"explanation-card ".concat(isCorrect ? 'correct' : 'incorrect', "\">\n                <div class=\"explanation-header\">\n                    <h3>Question ").concat(index + 1, "</h3>\n                    <span class=\"result-badge ").concat(isCorrect ? 'correct' : 'incorrect', "\">\n                        ").concat(isCorrect ? 'Correct' : 'Incorrect', "\n                    </span>\n                </div>\n                <p class=\"selected-answer\">\n                    Votre r\xE9ponse : ").concat(selectedAnswer !== null ? q.options[selectedAnswer] : 'Aucune réponse', "\n                </p>\n                <p class=\"correct-answer\">\n                    Bonne r\xE9ponse : ").concat(q.options[q.answer - 1], "\n                </p>\n                <p class=\"explanation-text\">").concat(q.explanation, "</p>\n            </div>\n        ");
+    modalContentHTML += "\n            <div class=\"modal-question ".concat(isCorrect ? 'correct' : 'incorrect', "\">\n                <h4>Question ").concat(index + 1, "</h4>\n                <p><strong>Question :</strong> ").concat(q.question, "</p>\n                <p><strong>Votre r\xE9ponse :</strong> ").concat(selectedAnswer !== null ? q.options[selectedAnswer] : 'Aucune réponse', "</p>\n                <p><strong>Bonne r\xE9ponse :</strong> ").concat(q.options[q.answer - 1], "</p>\n                <p><strong>Explication :</strong> ").concat(q.explanation, "</p>\n            </div>\n        ");
+  });
+  var scorePercentage = correctAnswers / totalQuestions * 100;
+  scorePercentage = scorePercentage.toFixed(0);
+  var modalContent = "\n        <div class=\"score-header\">\n            <h2>R\xE9sultat Final</h2>\n            <div class=\"score-circle ".concat(getScoreClass(scorePercentage), "\">\n                ").concat(scorePercentage, "%\n            </div>\n        </div>\n        <p class=\"score-text\">\n            Vous avez obtenu ").concat(correctAnswers, " bonne").concat(correctAnswers > 1 ? 's' : '', " r\xE9ponse").concat(correctAnswers > 1 ? 's' : '', " sur ").concat(totalQuestions, " questions\n        </p>\n        ").concat(modalContentHTML, "\n    ");
+  document.getElementById('modal-content-container').innerHTML = modalContent;
+  var allInputs = document.querySelectorAll('input[type="radio"]');
+  allInputs.forEach(function (input) {
+    return input.disabled = true;
+  });
+  var allLabels = document.querySelectorAll('.option-label');
+  allLabels.forEach(function (label) {
+    label.style.cursor = 'not-allowed';
+    label.classList.add('disabled');
+  });
+  submitQuestionnary = true;
+  isRunning = false;
+  modal.classList.remove('hidden');
+  modal.classList.add('open');
+  modal.classList.add('modal-open');
+  modal.style.display = 'block';
+  var score20 = correctAnswers / totalQuestions * 20;
+  var score20Rounded = score20.toFixed(2);
+  console.log('Score sur 20:', score20Rounded);
+  saveQuiz(knowledgeId, score20Rounded, knowledgeStudentId);
+};
+
+/**
+ * Returns a CSS class name based on the score percentage.
+ * Used to change color of the score circle.
+ */
+window.getScoreClass = function (percentage) {
+  if (percentage >= 80) return 'excellent';
+  if (percentage >= 60) return 'good';
+  if (percentage >= 40) return 'average';
+  return 'needs-improvement';
+};
+
+/**
+ * Updates the countdown timer text in MM:SS format.
+ */
+window.updateTimeDisplay = function (seconds) {
+  var minutes = Math.floor(seconds / 60);
+  var remainingSec = seconds % 60;
+  var min = minutes < 10 ? "0".concat(minutes) : minutes;
+  var sec = remainingSec < 10 ? "0".concat(remainingSec) : remainingSec;
+  timeDisplay.textContent = "".concat(min, ":").concat(sec);
+};
+
+/**
+ * Starts the countdown timer if the quiz is not "Training".
+ */
+window.startTimer = function () {
+  if (knowledgeTime === "Training") {
+    return;
+  }
+  var minutes = parseInt(knowledgeTime);
+  remainingSeconds = minutes * 60;
+  if (isRunning) return;
+  timer = setInterval(function () {
+    if (remainingSeconds > 0) {
+      remainingSeconds--;
+      updateTimeDisplay(remainingSeconds);
+    } else {
+      submitQuiz();
+      clearInterval(timer);
+      isRunning = false;
+    }
+  }, 1000);
+  isRunning = true;
+};
+
+/**
+ * Sends the final score to the backend only if within deadline.
+ */
+window.saveQuiz = function (knowledgeId, score, knowledgeStudentId) {
+  var currentDate = new Date();
+  var end = new Date(endDate + 'T23:59:59');
+  if (currentDate > end) {
+    Swal.fire({
+      title: 'Le questionnaire est terminé ! Depuis le ' + endDate,
+      text: 'Votre score n\'a pas été enregistré !',
+      icon: 'warning',
+      confirmButtonText: 'OK'
+    });
+    return;
+  }
+  if (knowledgeId === "Training") {
+    return;
+  }
+  fetch('/knowledge-student-save-score', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-CSRF-TOKEN': csrfToken
+    },
+    body: JSON.stringify({
+      knowledge_student_id: knowledgeStudentId,
+      score: score
+    })
+  }).then(function (response) {
+    return response.json();
+  }).then(function (data) {
+    if (data.message === 'Score sauvegardé avec succès') {} else {
+      Swal.fire({
+        title: 'Error',
+        text: data.message,
+        icon: 'error'
+      });
+    }
+  })["catch"](function (error) {
+    console.error('Error:', error);
+    console.error(score, knowledgeStudentId);
+    Swal.fire({
+      title: 'Error',
+      text: 'An error occurred while saving the score',
+      icon: 'error'
+    });
+  });
+};
+
+/**
+ * Escapes HTML tags from strings to prevent XSS attacks.
+ */
+window.escapeHTML = function (str) {
+  str = String(str);
+  return str.replace(/[&<>"']/g, function (_char) {
+    return {
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      "'": '&#39;'
+    }[_char];
+  });
+};
 
 /***/ }),
 
@@ -10537,6 +15179,18 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -10586,6 +15240,10 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/js/app": 0,
+/******/ 			"css/questionnary": 0,
+/******/ 			"css/custom-knowledge": 0,
+/******/ 			"css/jkanban.min": 0,
+/******/ 			"css/jkanban": 0,
 /******/ 			"css/app": 0
 /******/ 		};
 /******/ 		
@@ -10636,8 +15294,12 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/js/app.js")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/scss/app.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/questionnary","css/custom-knowledge","css/jkanban.min","css/jkanban","css/app"], () => (__webpack_require__("./resources/js/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/questionnary","css/custom-knowledge","css/jkanban.min","css/jkanban","css/app"], () => (__webpack_require__("./resources/scss/app.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/questionnary","css/custom-knowledge","css/jkanban.min","css/jkanban","css/app"], () => (__webpack_require__("./resources/css/kanban/jkanban.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/questionnary","css/custom-knowledge","css/jkanban.min","css/jkanban","css/app"], () => (__webpack_require__("./resources/css/kanban/jkanban.min.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/questionnary","css/custom-knowledge","css/jkanban.min","css/jkanban","css/app"], () => (__webpack_require__("./resources/css/knowledge/custom-knowledge.css")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/questionnary","css/custom-knowledge","css/jkanban.min","css/jkanban","css/app"], () => (__webpack_require__("./resources/css/knowledge/questionnary.css")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

@@ -22,13 +22,20 @@ class RoleInSchoolMiddleware
      * @param mixed ...$role One or more roles that are authorized to access the route.
      * @return Response
      */
-     public function handle(Request $request, Closure $next, ...$role): Response
+    public function handle(Request $request, Closure $next, ...$role): Response
     {
         $user = auth()->user();
+
+        if (!$user->schools()->exists()) {
+            abort(403, 'Aucune école associée trouvée.');
+        }
+
+        $role = ['student', 'teacher','admin']; 
         $hasRole = \App\Models\UserSchool::where('user_id', $user->id)
             ->whereIn('role', $role)
             ->exists();
         if (!$hasRole) {
+            dd($hasRole, $user->id, $role);
             abort(403, 'Accès refusé');
         }
         return $next($request);

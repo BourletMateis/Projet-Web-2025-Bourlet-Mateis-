@@ -482,7 +482,20 @@ document.getElementById('download-button').addEventListener('click', function ()
   .then(data => {
     const finalScore = data.scores;  
     const title = data.title;       
-    const numberQuestions = data.numberQuestions; 
+    const numberQuestions = 20; 
+
+    if(finalScore && Object.keys(finalScore).length <= 0){
+      Swal.fire({
+        title: 'Aucun score disponible',
+        text: 'Aucun score n\'est disponible pour le téléchargement.',
+        icon: 'warning',
+        confirmButtonText: 'OK',
+        customClass: {
+          confirmButton: 'btn btn-primary'
+        }
+      });
+      return;
+    }
 
     if (finalScore && Object.keys(finalScore).length > 0) {
       Swal.fire({
@@ -527,7 +540,7 @@ document.getElementById('download-button').addEventListener('click', function ()
             // Loop through scores and write each entry to PDF
             Object.entries(finalScore).forEach(([name, scoreValue]) => {
               const cleanedname = name.replace(/[^\w\s]/g, '');  
-              const cleanedScoreValue = scoreValue.toString().replace(/[^\w\s]/g, ''); 
+              const cleanedScoreValue = scoreValue.toString(); 
               console.log(cleanedname);
               console.log(cleanedScoreValue);
               doc.text(`${cleanedname} : ${cleanedScoreValue} / ${numberQuestions}`, 20, y);

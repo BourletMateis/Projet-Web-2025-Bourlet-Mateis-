@@ -1,5 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
+    <link href="{{ asset('css/custom-knowledge.css') }}" rel="stylesheet">
     </x-slot>
 
     <!-- Section title -->
@@ -11,7 +12,6 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
 
             <!-- Loop to initialize gradients (used below) -->
-            @foreach ($knowledgeStudent as $knowledgeStudents)
                 @php
                     // Available gradient backgrounds
                     $gradients = [
@@ -25,8 +25,6 @@
                     ];
                     $randomGradients = $gradients[array_rand($gradients)];
                 @endphp
-            @endforeach
-
             <!-- Training quiz card -->
             <div class="card mb-3">
                 <div class="card-header {{ $randomGradients }} p-4">
@@ -126,13 +124,14 @@
                             data-knowledge-end-date="{{ $knowledgeStudents->end_date }}" 
                             data-number-question="{{ $knowledgeStudents->knowledge->number_questions }}" 
                             data-user-id="{{ $user->id }}" 
-                            data-knowledge-id="{{ $knowledgeStudents->id_knowledge }}">
+                            data-knowledge-id="{{ $knowledgeStudents->id_knowledge }}"
+                            data-knowledge-student-id="{{ $knowledgeStudents->id }}">
                             Faire le questionnaire
                         </button>
 
                         <!-- Score display -->
                         @if(isset($scores[$userId]))
-                            <div class="text-green-600 font-semibold mt-2">🏅 Ton score : {{ $scores[$userId] }} sur {{ $knowledgeStudents->knowledge->number_questions }}</div>
+                            <div class="text-green-600 font-semibold mt-2">🏅 Ton score : {{ $scores[$userId] }} sur 20</div>
                         @endif
                     </div>
                 </div>
@@ -142,6 +141,6 @@
     </div>
 
     <!-- JS & CSS -->
-    <script src="{{ asset('js/knowledge/index-student.js') }}"></script>
-    <link href="{{ asset('css/custom-knowledge.css') }}" rel="stylesheet">
+    <script src="{{ asset('js/index-student.js') }}" defer></script>
+    
 </x-app-layout>

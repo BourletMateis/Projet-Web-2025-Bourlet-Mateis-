@@ -1,3 +1,7 @@
+import { data } from "alpinejs";
+
+const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+
 let timer;
 let isRunning = false;
 let remainingSeconds;
@@ -6,8 +10,10 @@ const modal = document.getElementById('modal_3');
 let knowledgeTime;
 const questionnary = window.questionnary;
 let submitQuestionnary = false;
+let knowledgeId;
 let knowledgeStudentId;
 let endDate;
+
 
 /**
  * Triggered when the window finishes loading.
@@ -17,8 +23,9 @@ let endDate;
  */
 window.onload = () => {
     knowledgeTime = document.getElementById('time').dataset.knowledgeTime;
-    knowledgeStudentId = document.getElementById('id').dataset.knowledgeId;   
+    knowledgeId = document.getElementById('id').dataset.knowledgeId;   
     endDate = document.getElementById('end-date').dataset.knowledgeEndDate;
+    knowledgeStudentId = document.getElementById('knowledge-student-id').dataset.knowledgeStudentId;
     Swal.fire({
         title: 'Prêt à commencer ?',
         text: 'Nous allons commencer un questionnaire pour évaluer vos connaissances. Votre temps sera limité et le chronomètre s’affichera dans la barre de navigation en haut à gauche. Cliquez sur "OK" pour débuter.',
@@ -83,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
  * - Disables all inputs.
  * - Saves result in the database (if eligible).
  */
-function submitQuiz() {
+window.submitQuiz = function() {
     if (submitQuestionnary) {
         return;
     }
@@ -161,14 +168,17 @@ function submitQuiz() {
     modal.classList.add('open');
     modal.classList.add('modal-open');
     modal.style.display = 'block';   
-    saveQuiz(knowledgeStudentId, correctAnswers);
+    const score20 = (correctAnswers / totalQuestions) * 20;
+    const score20Rounded = score20.toFixed(2);
+    console.log('Score sur 20:', score20Rounded);
+    saveQuiz(knowledgeId, score20Rounded,knowledgeStudentId);
 }
 
 /**
  * Returns a CSS class name based on the score percentage.
  * Used to change color of the score circle.
  */
-function getScoreClass(percentage) {
+window.getScoreClass = function(percentage) {
     if (percentage >= 80) return 'excellent';
     if (percentage >= 60) return 'good';
     if (percentage >= 40) return 'average';
@@ -178,7 +188,7 @@ function getScoreClass(percentage) {
 /**
  * Updates the countdown timer text in MM:SS format.
  */
-function updateTimeDisplay(seconds) {
+window.updateTimeDisplay = function(seconds) {
     let minutes = Math.floor(seconds / 60);
     let remainingSec = seconds % 60;
     let min = minutes < 10 ? `0${minutes}` : minutes;
@@ -189,7 +199,7 @@ function updateTimeDisplay(seconds) {
 /**
  * Starts the countdown timer if the quiz is not "Training".
  */
-function startTimer() {
+window.startTimer = function() {
     if(knowledgeTime === "Training") {
         return;
     }
@@ -214,7 +224,8 @@ function startTimer() {
 /**
  * Sends the final score to the backend only if within deadline.
  */
-function saveQuiz(knowledgeStudentId, score) {
+window.saveQuiz = function(knowledgeId, score,knowledgeStudentId) {
+
     const currentDate = new Date();
     const end = new Date(endDate + 'T23:59:59'); 
     if (currentDate > end) {
@@ -226,7 +237,7 @@ function saveQuiz(knowledgeStudentId, score) {
         });
         return; 
     }
-    if(knowledgeStudentId ==="Training"){
+    if(knowledgeId ==="Training"){
         return;
     }
     fetch('/knowledge-student-save-score', {
@@ -253,6 +264,7 @@ function saveQuiz(knowledgeStudentId, score) {
     })
     .catch(error => {
       console.error('Error:', error);
+      console.error( score, knowledgeStudentId);
       Swal.fire({
         title: 'Error',
         text: 'An error occurred while saving the score',
@@ -264,7 +276,7 @@ function saveQuiz(knowledgeStudentId, score) {
 /**
  * Escapes HTML tags from strings to prevent XSS attacks.
  */
-function escapeHTML(str) {
+window.escapeHTML = function(str) {
     str = String(str);
     return str.replace(/[&<>"']/g, function (char) {
       return {
