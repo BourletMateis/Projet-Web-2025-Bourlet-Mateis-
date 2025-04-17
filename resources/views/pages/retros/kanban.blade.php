@@ -21,6 +21,15 @@
     <!-- This button allows the user to add a new column to the Kanban board -->
     <button id="addColumnBtn"class="add-column-button">Ajouter une nouvelle colonne</button>
 
+
+<!-- Scripts jKanban -->
+<script src="{{ asset('js/jkanban.min.js') }}" defer></script>
+<script src="{{ asset('js/jkanban.js') }}" defer></script>
+<script src="{{ asset('js/kanban.js') }}" defer></script>
+
+<script src="https://js.pusher.com/7.2/pusher.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/laravel-echo@1.11.3/dist/echo.iife.js"></script>
+
 <script>
     window.Echo = new Echo({
         broadcaster: 'pusher',
@@ -30,14 +39,6 @@
         encrypted: false,
     });
 </script>
-
-<!-- Scripts jKanban -->
-<script src="{{ asset('js/jkanban.min.js') }}" defer></script>
-<script src="{{ asset('js/jkanban.js') }}" defer></script>
-<script src="{{ asset('js/kanban.js') }}" defer></script>
-
-<script src="https://js.pusher.com/7.2/pusher.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/laravel-echo@1.11.3/dist/echo.iife.js"></script>
 
 </x-app-layout>
 
