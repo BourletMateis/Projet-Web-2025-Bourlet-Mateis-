@@ -436,7 +436,7 @@ document.getElementById('download-button').addEventListener('click', function ()
   }).then(function (data) {
     var finalScore = data.scores;
     var title = data.title;
-    var numberQuestions = data.numberQuestions;
+    var numberQuestions = 20;
     if (finalScore && Object.keys(finalScore).length <= 0) {
       Swal.fire({
         title: 'Aucun score disponible',
@@ -498,7 +498,7 @@ document.getElementById('download-button').addEventListener('click', function ()
                 name = _ref6[0],
                 scoreValue = _ref6[1];
               var cleanedname = name.replace(/[^\w\s]/g, '');
-              var cleanedScoreValue = scoreValue.toString().replace(/[^\w\s]/g, '');
+              var cleanedScoreValue = scoreValue.toString();
               console.log(cleanedname);
               console.log(cleanedScoreValue);
               doc.text("".concat(cleanedname, " : ").concat(cleanedScoreValue, " / ").concat(numberQuestions), 20, y);

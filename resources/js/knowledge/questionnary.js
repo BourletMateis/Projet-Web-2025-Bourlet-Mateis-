@@ -1,3 +1,5 @@
+import { data } from "alpinejs";
+
 const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 
 let timer;
@@ -166,7 +168,10 @@ window.submitQuiz = function() {
     modal.classList.add('open');
     modal.classList.add('modal-open');
     modal.style.display = 'block';   
-    saveQuiz(knowledgeId, correctAnswers,knowledgeStudentId);
+    const score20 = (correctAnswers / totalQuestions) * 20;
+    const score20Rounded = score20.toFixed(2);
+    console.log('Score sur 20:', score20Rounded);
+    saveQuiz(knowledgeId, score20Rounded,knowledgeStudentId);
 }
 
 /**
@@ -220,6 +225,7 @@ window.startTimer = function() {
  * Sends the final score to the backend only if within deadline.
  */
 window.saveQuiz = function(knowledgeId, score,knowledgeStudentId) {
+
     const currentDate = new Date();
     const end = new Date(endDate + 'T23:59:59'); 
     if (currentDate > end) {
@@ -258,6 +264,7 @@ window.saveQuiz = function(knowledgeId, score,knowledgeStudentId) {
     })
     .catch(error => {
       console.error('Error:', error);
+      console.error( score, knowledgeStudentId);
       Swal.fire({
         title: 'Error',
         text: 'An error occurred while saving the score',

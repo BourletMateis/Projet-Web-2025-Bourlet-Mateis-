@@ -7,6 +7,7 @@ import './knowledge/knowledge-student-details.js';
 import './knowledge/questionnary.js';
 import './kanban/Kanban.js';
 import './kanban/index-admin.js';
+import './kanban/kanban-student.js';
 
 import Alpine from 'alpinejs';
 

@@ -26,9 +26,6 @@ class RoleInSchoolMiddleware
     {
         $user = auth()->user();
 
-        
-    
-        // Vérifie si l'utilisateur a une école associée
         if (!$user->schools()->exists()) {
             abort(403, 'Aucune école associée trouvée.');
         }
@@ -41,7 +38,6 @@ class RoleInSchoolMiddleware
             dd($hasRole, $user->id, $role);
             abort(403, 'Accès refusé');
         }
-    
         return $next($request);
     }
 }

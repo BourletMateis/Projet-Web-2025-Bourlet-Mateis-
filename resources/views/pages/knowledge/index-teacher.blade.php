@@ -185,7 +185,7 @@
                     <!-- Date-time picker for end date -->
                     <div class="flex flex-col gap-1 cursor-pointer" onclick="document.getElementById('end-date').showPicker()">
                         <label class="form-label font-normal text-gray-900">Date de fin</label>
-                        <input type="datetime-local" name="end-date" class="form-control input" id="end-date" required>
+                        <input type="date" name="end-date" class="form-control input" id="end-date" required>
                     </div>
 
                     <!-- Input for timer duration -->

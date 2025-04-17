@@ -8,6 +8,7 @@
     "/js/knowledge-student-details.js": "/js/knowledge-student-details.js",
     "/js/questionnary.js": "/js/questionnary.js",
     "/js/index-admin.js": "/js/index-admin.js",
+    "/js/kanban-student.js": "/js/kanban-student.js",
     "/css/questionnary.css": "/css/questionnary.css",
     "/css/custom-knowledge.css": "/css/custom-knowledge.css",
     "/css/jkanban.min.css": "/css/jkanban.min.css",

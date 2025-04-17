@@ -358,6 +358,9 @@ function removeCardFromColumn(columnId, cardId) {
     });
   }
 
+
+
+  
   // Update card title or delete card
   function updateCard(el) {
     Swal.fire({
@@ -399,12 +402,19 @@ function removeCardFromColumn(columnId, cardId) {
                   'Content-Type': 'application/json',
                   'X-CSRF-TOKEN': csrfToken,
                 }
-              }).then(() => {
-                const cardElement = document.querySelector(`[data-eid="${cardId}"]`);
-                if (cardElement) cardElement.remove();
-                Swal.fire('Supprimée !', 'La carte a été supprimée.', 'success');
+              }).then(async (response) => {
+                if (response.ok) {
+                  const cardElement = document.querySelector(`[data-eid="${cardId}"]`);
+                  if (cardElement) cardElement.remove();
+                  Swal.fire('Supprimée !', 'La carte a été supprimée.', 'success');
+                } else if (response.status === 403) {
+                  Swal.fire('Non autorisé', 'Vous n\'avez pas la permission de supprimer cette carte.', 'error');
+                } else {
+                  const data = await response.json();
+                  Swal.fire('Erreur', data.error || 'Une erreur est survenue.', 'error');
+                }
               }).catch(() => {
-                Swal.fire('Erreur', 'Une erreur est survenue.', 'error');
+                Swal.fire('Erreur', 'Impossible de contacter le serveur.', 'error');
               });
             }
           });
@@ -433,11 +443,12 @@ function removeCardFromColumn(columnId, cardId) {
               if (textElement) textElement.innerText = titles;
             }
             Swal.fire('Modifiée !', 'La carte a été modifiée.', 'success');
+          } else if (response.status === 403) {
+            Swal.fire('Non autorisé', 'Vous n\'avez pas la permission de modifier cette carte.', 'error');
           } else {
             Swal.fire('Erreur', 'Impossible de modifier la carte.', 'error');
           }
-        })
-        .catch(() => {
+        }).catch(() => {
           Swal.fire('Erreur', 'Impossible de modifier la carte.', 'error');
         });
       }

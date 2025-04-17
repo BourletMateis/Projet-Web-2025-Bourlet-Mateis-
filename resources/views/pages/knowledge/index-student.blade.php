@@ -131,7 +131,7 @@
 
                         <!-- Score display -->
                         @if(isset($scores[$userId]))
-                            <div class="text-green-600 font-semibold mt-2">🏅 Ton score : {{ $scores[$userId] }} sur {{ $knowledgeStudents->knowledge->number_questions }}</div>
+                            <div class="text-green-600 font-semibold mt-2">🏅 Ton score : {{ $scores[$userId] }} sur 20</div>
                         @endif
                     </div>
                 </div>

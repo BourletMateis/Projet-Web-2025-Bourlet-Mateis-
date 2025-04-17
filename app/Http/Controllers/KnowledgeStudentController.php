@@ -199,7 +199,7 @@ class KnowledgeStudentController extends Controller
     {
         $validatedData = $request->validate([ 
             'knowledge_student_id' => 'required|integer', 
-            'score' => 'required|integer', 
+            'score' => 'required|numeric|regex:/^\d+(\.\d{1,2})?$/',
         ]);
         $user_id = auth()->user()->id; 
         $knowledgeStudent = KnowledgeStudent::findOrFail($validatedData['knowledge_student_id']);

@@ -14,7 +14,7 @@
 
                 <div class="card-body">
                     <!-- DataTable container -->
-                    <div data-datatable="true" data-datatable-page-size="10" data-datatable-state-save="true" id="datatable_6">
+                    <div data-datatable="true" data-datatable-page-size="10" data-datatable-state-save="true" id="retroTable">
                         <div class="scrollable-x-auto">
                             <table class="table table-auto table-border" data-datatable-table="true">
                                 <thead>

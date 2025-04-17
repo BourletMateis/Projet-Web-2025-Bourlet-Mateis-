@@ -3,7 +3,6 @@
 return [
 
     'default' => env('BROADCAST_DRIVER', 'pusher'),
-
     'connections' => [
 
         'pusher' => [

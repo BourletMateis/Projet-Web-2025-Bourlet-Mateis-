@@ -16,6 +16,8 @@ return new class extends Migration
             $table->unsignedBigInteger('retro_column_id');
             $table->foreign('retro_column_id')->references('id')->on('retros_columns')->onDelete('cascade');
             $table->string('name');
+            $table->unsignedBigInteger('creator_id')->nullable();
+            $table->foreign('creator_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -25,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::dropIfExists('retros_data');
     }
 };
