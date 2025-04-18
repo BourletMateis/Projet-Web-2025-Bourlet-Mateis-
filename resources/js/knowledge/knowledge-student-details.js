@@ -541,8 +541,6 @@ document.getElementById('download-button').addEventListener('click', function ()
             Object.entries(finalScore).forEach(([name, scoreValue]) => {
               const cleanedname = name.replace(/[^\w\s]/g, '');  
               const cleanedScoreValue = scoreValue.toString(); 
-              console.log(cleanedname);
-              console.log(cleanedScoreValue);
               doc.text(`${cleanedname} : ${cleanedScoreValue} / ${numberQuestions}`, 20, y);
               y += 10; 
             });

@@ -499,8 +499,6 @@ document.getElementById('download-button').addEventListener('click', function ()
                 scoreValue = _ref6[1];
               var cleanedname = name.replace(/[^\w\s]/g, '');
               var cleanedScoreValue = scoreValue.toString();
-              console.log(cleanedname);
-              console.log(cleanedScoreValue);
               doc.text("".concat(cleanedname, " : ").concat(cleanedScoreValue, " / ").concat(numberQuestions), 20, y);
               y += 10;
             });
